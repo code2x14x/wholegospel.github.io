@@ -1,0 +1,111 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="post-title-box">
+    <div class="row">
+      <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
+        <span class="post__date">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
+        </span>
+
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+
+        <div class="post__info">
+          <div class="post__author">
+            <span class="author-name"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% assign no-image = nil %}
+  {% if page.image %}
+    <div class="post__head">
+      <!-- <div class="post-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div> -->
+      <img src="{{site.baseurl}}/images/{{page.image}}" alt="">
+    </div>
+  {% else %}
+    {% assign no-image = 'post-no-image' %}
+  {% endif %}
+
+  </div>
+
+
+  <div class="container">
+  <div class="row">
+    <!-- begin post -->
+    <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
+
+      <div class="post__content">
+        {{ content }}
+      </div>
+
+      <div class="slogan-wrapper-1"> 
+        <div class="slogan-wrapper-2">
+          <div class="slogan">
+            <span>上</span>
+            <span>帝</span>
+            <span>让</span>
+            <span>你</span>
+            <span>成</span>
+            <span>为</span>
+            <span>创</span>
+            <span>造</span>
+            <span>故</span>
+            <span>事</span>
+            <span>的</span>
+            <span>主</span>
+            <span>人</span>
+            <span>公</span>
+            <span>！</span>
+          </div>
+        </div>
+      </div>
+      
+
+    </article>
+    <!-- end post -->
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="post__navigation">
+    {% if page.previous.url %}
+    <div class="prev">
+      <a class="post__nav__image" href="{{ site.baseurl }}{{page.previous.url}}" style="background-image: url({{site.baseurl}}/images/{{page.previous.image}})"></a>
+      <h2 class="post__nav__title">
+        <a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a>
+        <i class="ion ion-md-arrow-forward"></i>
+      </h2>
+      <p class="prev__excerpt">
+        {% if page.previous.dscp %}
+          {{ page.previous.dscp }}
+        {% else %}
+          {{ page.previous.content | strip_html | truncate: 110 }}
+        {% endif %}
+      </p>
+    </div>
+    {% endif %}
+
+    {% if page.next.url %}
+    <div class="next">
+      <a class="post__nav__image" href="{{ site.baseurl }}{{page.next.url}}" style="background-image: url({{site.baseurl}}/images/{{page.next.image}})">
+      </a>
+      <h2 class="post__nav__title">
+        <i class="ion ion-md-arrow-back"></i>
+        <a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}}</a>
+      </h2>
+      <p class="next__excerpt">
+        {% if page.next.dscp %}
+          {{ page.next.dscp }}
+        {% else %}
+          {{ page.next.content | strip_html | truncate: 110 }}
+        {% endif %}
+      </p>
+    </div>
+    {% endif %}
+  </div>
+
+  </div>
