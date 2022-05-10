@@ -5,7 +5,7 @@ permalink: /pp7-intro/
 image: pp7/pp7-post.jpg
 ---
 
->   本教程使用 ProPresenter 7.4.0。
+<u>本教程使用 ProPresenter 7.4.0。</u>
 
 ProPresenter 的一切功能都是围绕“演示文稿”进行的，这一点很像 PowerPoint。但它是专门用于教会敬拜的分屏软件，可以播放音视频、为幻灯片设置动态背景、查找经文等功能。另外，掌握它并不困难。
 
