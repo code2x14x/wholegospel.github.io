@@ -42,7 +42,7 @@ layout: default
         {{ content }}
       </div>
 
-      {% if page.downloadPost %}
+      {% if page.dp%}
       <a class="download-post" href="/images/{{page.date | date: '%Y-%m-%d'}}-post.jpg" download="{{page.date | date: '%Y/%m/%d'}}-post.jpg">点我下载海报</a>
       {% endif %}
 
