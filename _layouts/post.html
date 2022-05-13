@@ -42,6 +42,10 @@ layout: default
         {{ content }}
       </div>
 
+      {% if page.downloadPost %}
+      <a class="download-post" href="/images/{{page.date | date: '%Y-%m-%d'}}-post.jpg" download="{{page.date | date: '%Y/%m/%d'}}-post.jpg">点我下载海报</a>
+      {% endif %}
+
       <div class="slogan-wrapper-1"> 
         <div class="slogan-wrapper-2">
           <div class="slogan">
