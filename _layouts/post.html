@@ -21,13 +21,12 @@ layout: default
   </div>
 
   {% assign no-image = nil %}
-    <div class="post__head">
       {% if page.image %}
+    <div class="post__head">
         <!-- <div class="post-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div> -->
         <img src="{{site.baseurl}}/images/{{page.image}}" alt="">
-      {% else %}
-        <img src="{{site.baseurl}}/images/{{page.date | date: '%Y/%m/%d'}}.jpg" alt="">
     </div>
+      {% else %}
     {% assign no-image = 'post-no-image' %}
   {% endif %}
 
