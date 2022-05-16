@@ -149,6 +149,7 @@ sp {
 
 .slogan-wrapper-1 {
   background-color: gray;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
   padding: 2px;
   margin: 40px 0;
   .slogan-wrapper-2 {
@@ -158,6 +159,7 @@ sp {
       padding: 0.3em 1.5em;
       font-size: 15px;
       background-color: gray;
+      background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
       color: #fff;
       line-height: 3rem;
       display: flex;
@@ -185,11 +187,43 @@ sp {
 }
 
 a.download-post {
-  color: #f4f2ee !important;
-  background-color: #1c1d1ed4 !important;
-  border-radius: 15px !important;
-  padding: 5px 10px !important;
-  font-size: .9em !important;
+  // color: #f4f2ee !important;
+  // background-color: #1c1d1ed4 !important;
+  // border-radius: 15px !important;
+  // padding: 5px 10px !important;
+  // font-size: .9em !important;
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 12px;
+  border-width: 0;
+  box-shadow: rgba(45,35,66,0.4) 0 2px 4px,rgba(45,35,66,0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #9cb012;
+  text-shadow: 0px 0px 0px #b4cc09;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 16px;
+  letter-spacing: 5px;
+  /* font-weight: bold; */
+  
 }
 
 .post__navigation {
