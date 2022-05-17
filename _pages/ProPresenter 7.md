@@ -27,7 +27,7 @@ permalink: /pp7-intro/
 下面的内容是要制作一个主题为“欢迎”的公告类型的演示文稿。
 
 1. [创建一个只包含一张幻灯片的演示文稿](/pp7-presentation/create)
-2. 给幻灯片添加文本内容：“欢迎来到北京佳全教会XX堂”
+2. 给幻灯片[添加文本内容](/pp7-presentation/edit)：“欢迎来到北京佳全教会XX堂”
 3. 调整文本样式：字体、字号、颜色、描边、阴影
 4. 播放。点击软件右上角的 Audience 按钮 <img src="/images/pp7/audience.jpg" alt="audience" style="zoom:50%;" />，使指示灯的颜色由红变绿。如未能播放，请参看[屏幕配置](/pp7-intro/#屏幕配置)。
 5. 给幻灯片添加图片、图形
