@@ -28,7 +28,11 @@ ProPresenter 的一切功能都是围绕“<top>演示文稿</top>”进行的�
 
 1. [创建](/pp7-presentation/create)一个只包含一张幻灯片的演示文稿
 2. 给幻灯片[添加文本](/pp7-presentation/edit)内容：“欢迎来到北京佳全教会XX堂”
-3. 调整文本样式：字体、字号、颜色、描边、阴影
+3. 调整样式：
+   -  演示文稿的尺寸
+   -  文本框的尺寸、位置
+   -  文本的字体、字号、颜色、描边、阴影
+
 4. 播放。点击软件右上角的 Audience 按钮 <img src="/images/pp7/audience.jpg" alt="audience" style="zoom:50%;" />，使指示灯的颜色由红变绿。如未能播放，请参看[屏幕配置](/pp7-intro/#屏幕配置)。
 5. 给幻灯片添加图片、图形
 6. 给幻灯片添加背景音乐
