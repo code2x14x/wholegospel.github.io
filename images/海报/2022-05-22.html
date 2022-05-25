@@ -34,10 +34,31 @@
             margin-right: auto;
             text-align: center;
             width: 100%;
+            top: 45%;
             color: #395d71;
          }
-         .line-1 {
-            top: 45%;
+         div.qr-code-wrapper {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 950px;
+            height: 100px;
+            display: flex;
+            justify-content: flex-start;
+         }
+         img.qr-code {
+            width: 90px;
+            height: 90px;
+         }
+         div.caption {
+            color: #f2f6f8;
+            font-size: 18px;
+            margin-left: 10px;
+            margin-bottom: 4px;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 0px;
+            left: 100px;
          }
       </style>
    </head>
@@ -46,6 +67,12 @@
          <div class="title">世界型的基督徒</div>
          <div class="sub-title line-1">
             把整个世界看作是自己的战场 以见证为主争战
+         </div>
+         <div class="qr-code-wrapper">
+            <div class="caption">
+               长按图片识别二维码。如无法打开，尝试关闭 WIFI，使用手机流量访问。
+            </div>
+            <img class="qr-code" src="../2022-05-22-QR.png" alt="" />
          </div>
       </div>
    </body>
