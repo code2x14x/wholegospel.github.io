@@ -47,6 +47,8 @@ layout: default
       <a class="download-post" href="/images/{{page.date | date: '%Y-%m-%d'}}-post.jpg">点我下载海报</a>
       {% endif %}
 
+      {% if page.no-slogan%}
+      {% else %}
       <div class="slogan-wrapper-1"> 
         <div class="slogan-wrapper-2">
           <div class="slogan">
@@ -68,7 +70,7 @@ layout: default
           </div>
         </div>
       </div>
-      
+      {% endif %}
 
     </article>
     <!-- end post -->
