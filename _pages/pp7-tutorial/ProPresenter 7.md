@@ -2,6 +2,7 @@
 layout: pp7
 title:  "ProPresenter 7"
 permalink: /pp7-intro/
+tags: hidden
 ---
 
 <u>本教程使用 ProPresenter 7.4.0。</u>
