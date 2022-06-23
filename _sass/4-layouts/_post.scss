@@ -232,3 +232,31 @@
     margin-bottom: 40px;
   }
 }
+
+div.article-img-wrapper {
+    padding: 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(17,17,17,0.125);
+    margin: 1em auto;
+    box-shadow: 1px 1px 8px 1px #969696;
+    -webkit-box-shadow: 1px 1px 8px 1px #969696;
+}
+
+div.article-img-wrapper img {
+    border: none;
+    max-width: 100%;
+    margin: 0 0;
+}
+
+div.article-img-wrapper .caption {
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin: 0.5em 0 1em;
+}
