@@ -1,7 +1,52 @@
 ---
-layout: post
+layout: default
 ---
+<div class="container">
+  <div class="row">
+    <!-- begin post -->
+    <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
 
-<div class="song" style="text-align: center;">
-  {{ content }}
-</div>
+      <div style="font-size: 15px; text-align: center;">
+        {{ content }}
+        <div class="post-title-box" style="padding: 0; border:none;">
+          {% assign no-image = nil %}
+          {% if page.image %}
+            <div class="post__head">
+                <!-- <div class="post-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div> -->
+                <img style="margin-top: 0;" src="{{site.baseurl}}/images/{{page.image}}" alt="">
+            </div>
+          {% else %}
+          {% assign no-image = 'post-no-image' %}
+          {% endif %}
+        </div>
+      </div>
+
+      {% if page.no-slogan%}
+      {% else %}
+      <div class="slogan-wrapper-1"> 
+        <div class="slogan-wrapper-2">
+          <div class="slogan">
+            <span>上</span>
+            <span>帝</span>
+            <span>让</span>
+            <span>你</span>
+            <span>成</span>
+            <span>为</span>
+            <span>创</span>
+            <span>造</span>
+            <span>故</span>
+            <span>事</span>
+            <span>的</span>
+            <span>主</span>
+            <span>人</span>
+            <span>公</span>
+            <span>！</span>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+    </article>
+    <!-- end post -->
+    </div>
+  </div>
