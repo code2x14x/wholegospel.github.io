@@ -268,6 +268,7 @@ a.audio {
 // 音乐动画 Music bars
 .bars {
   display: inline-block;
+  margin-left: 10px;
 }
 
 .now.bars .bar {
@@ -304,20 +305,20 @@ a.audio {
     margin-top: 0;
   }
   10% {
-    height: 17px;
-    margin-top: -17px;
-  }
-  50% {
     height: 10px;
     margin-top: -10px;
   }
+  50% {
+    height: 8px;
+    margin-top: -8px;
+  }
   60% {
-    height: 15px;
-    margin-top: -15px;
+    height: 13px;
+    margin-top: -13px;
   }
   80% {
-    height: 20px;
-    margin-top: -20px;
+    height: 17px;
+    margin-top: -17px;
   }
   100% {
     height: 1px;
