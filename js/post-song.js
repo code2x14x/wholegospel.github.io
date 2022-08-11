@@ -63,4 +63,11 @@ $(document).ready(function() {
     songs[index].classList.add("now");
   }
 
+  // 倒计时
+  const countDowns = document.getElementsByClassName("count-down");
+  Array.from(countDowns).forEach(ele => {
+    const duration = ele.getAttribute("data-value");
+    
+  })
+
 });
