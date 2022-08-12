@@ -76,15 +76,24 @@ $(document).ready(function () {
   let countDownDate = 0;
   let timer = 0;
   const countDowns = document.getElementsByClassName('count-down');
+  let durationLast = 0;
+  let durationClickCnt = 2;
   Array.from(countDowns).forEach((ele) => {
-    const duration = ele.getAttribute('data-value');
-    console.log(duration);
     ele.addEventListener('click', (event) => {
+      let duration = ele.getAttribute('data-value');
+      console.log(duration);
+
       clearInterval(timer);
-      if(duration == "forever") {
+      durationClickCnt++;
+      // 相邻两次点击同一个按钮时，就是开关
+      if(duration == durationLast && durationClickCnt % 2 == 0) {
+        // 1 开 2 关 3 开 4 关
         document.getElementById('count-down-timer').innerText = '';
         return;
+      } else {
+        durationLast = duration;
       }
+
       countDownDate = new Date().getTime() + duration * 60 * 1000;
       // find the interval between now and the countdown time
       let timeLeft = duration * 60 * 1000;
