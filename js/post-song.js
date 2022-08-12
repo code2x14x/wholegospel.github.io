@@ -3,7 +3,6 @@ $(document).ready(function () {
 
   const player = document.getElementById('player');
   const audios = document.getElementsByClassName('audio');
-  let currentSongIdx = 0;
 
   const loopAll = document.getElementById('loop-all');
   const songs = document.getElementsByClassName('song');
