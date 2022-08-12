@@ -42,8 +42,8 @@ $(document).ready(function () {
 
       // 如果点击的是歌曲
       // 如果是刚打开页面，尚无正在播放的音频
-      const dancing = document.getElementsByClassName('dancing');
-      if(dancing.length == 0){
+      const looping = document.getElementsByClassName('looping');
+      if(looping.length == 0){
         player.loop = true;
         document.getElementById('loop-all-indicator').innerText = '单曲循环...';
       } 
