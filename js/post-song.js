@@ -78,8 +78,13 @@ $(document).ready(function () {
   const countDowns = document.getElementsByClassName('count-down');
   Array.from(countDowns).forEach((ele) => {
     const duration = ele.getAttribute('data-value');
+    console.log(duration);
     ele.addEventListener('click', (event) => {
       clearInterval(timer);
+      if(duration == "forever") {
+        document.getElementById('count-down-timer').innerText = '';
+        return;
+      }
       countDownDate = new Date().getTime() + duration * 60 * 1000;
       // find the interval between now and the countdown time
       let timeLeft = duration * 60 * 1000;
