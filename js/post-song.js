@@ -8,6 +8,7 @@ $(document).ready(function () {
   for (const audio of audios) {
     audio.addEventListener('click', (e) => {
       e.preventDefault();
+      document.getElementById('loop-all-indicator').innerText = '';
       player.removeEventListener('ended', playEndedHandler, false);
       player.loop = true;
       var elm = e.target;
@@ -42,6 +43,7 @@ $(document).ready(function () {
   var accumulator = totalSongs;
   loopAll.addEventListener('click', (e) => {
     e.preventDefault();
+    document.getElementById('loop-all-indicator').innerText = '全部循环...';
 
     barsDancing(0);
 
