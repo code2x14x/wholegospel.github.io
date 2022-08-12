@@ -266,11 +266,11 @@ a.audio, a#loop-all, span#count-down-timer, span#loop-all-indicator {
 }
 
 #loop-all, #count-down{
-      padding: 4px 8px;
-      border-radius: 5px;
-      background-color: #9b40fc;
-      color: #fff;
-      background-image: linear-gradient(144deg, #AF40FF, #00DDEB);
+      padding: 5px 15px;
+      border-radius: 15px;
+      background-color: #f0f2f3;
+      font-size: 17px;
+      // background-image: linear-gradient(144deg, #AF40FF, #00DDEB);
 }
 
 // 音乐动画 Music bars
