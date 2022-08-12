@@ -3,33 +3,8 @@ $(document).ready(function () {
 
   const player = document.getElementById('player');
   const audios = document.getElementsByClassName('audio');
+  let currentSongIdx = 0;
 
-  // 点击歌曲名称时切换音乐
-  for (const audio of audios) {
-    audio.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.getElementById('loop-all-indicator').innerText = '';
-      player.removeEventListener('ended', playEndedHandler, false);
-      player.loop = true;
-      var elm = e.target;
-
-      // 音乐播放动画
-      var musicBars = document.getElementsByClassName('bars');
-      Array.from(musicBars).forEach((element) => {
-        element.classList.remove('now');
-      });
-      elm.classList.add('now');
-
-      // 更换源
-      player.src =
-        'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
-        elm.getAttribute('data-value');
-      player.load(); //call this to just preload the audio without playing
-      player.play();
-    });
-  }
-
-  // 顺序播放一遍全部音乐
   const loopAll = document.getElementById('loop-all');
   const songs = document.getElementsByClassName('song');
   const allSongsSources = [];
@@ -39,44 +14,107 @@ $(document).ready(function () {
         ele.getAttribute('data-value')
     );
   });
-  const totalSongs = allSongsSources.length;
-  let accumulator = totalSongs;
-  let loopAllClickCnt = 2;
+
+  // 点击歌曲名称时切换音乐
+  for (const audio of audios) {
+    audio.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // 如果点击的是当前正在播放的音频，则什么也不做
+      if(audio.classList.contains('dancing')){
+        return; 
+      }
+
+      // 如果点击的是证道录音
+      if(audio.classList.contains('teaching')) {
+        document.getElementById('loop-all-indicator').innerText = '主日证道...';
+        player.loop = true;
+        player.removeEventListener('ended', playEndedHandler, false);
+        player.src ='https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + audio.getAttribute('data-value');
+        player.load();
+        player.play();
+        Array.from(audios).forEach((element) => {
+          element.classList.remove('dancing');
+        });
+        audio.classList.add('dancing');
+        loopAll.classList.remove('looping');
+        return;
+      }
+
+      // 如果点击的是歌曲
+      // 如果是刚打开页面，尚无正在播放的音频
+      const dancing = document.getElementsByClassName('dancing');
+      if(dancing.length == 0){
+        player.loop = true;
+        document.getElementById('loop-all-indicator').innerText = '单曲循环...';
+      } 
+      const idx = parseInt(audio.getAttribute("data-index"));
+      barsDancing(idx); // 音乐播放动画
+      player.src = allSongsSources[idx]; 
+      player.load(); //call this to just preload the audio without playing
+      player.play();
+      
+    });
+  }
+
+  // 顺序播放一遍全部音乐
   loopAll.addEventListener('click', (e) => {
+
+    console.log('loop all')
+
     e.preventDefault();
-    if (++loopAllClickCnt % 2 == 0) {
-      document.getElementById('loop-all-indicator').innerText = '';
-      player.loop = true; //禁止循环，否则无法触发ended事件
-      player.removeEventListener('ended', playEndedHandler, false);
+
+    loopAll.classList.toggle('looping');
+
+    if(!loopAll.classList.contains('looping')){
+      // 改为单曲循环状态
+      singleLoop();
       return;
+    } 
+
+    // 改为全部(证道录音除外)循环状态
+    allLoop();
+
+    // 判断当前是否有正在播放的音乐
+    const dancing = document.getElementsByClassName('dancing');
+    if(dancing.length == 0 || dancing.length == 1 && !dancing[0].classList.contains('song')){
+      barsDancing(0);
+      allLoop();
+      player.src = allSongsSources[0]; //每次读数组最后一个元素
+      player.load();
+      player.play();
     }
-    document.getElementById('loop-all-indicator').innerText = '全部循环...';
-
-    barsDancing(0);
-
-    player.loop = false; //禁止循环，否则无法触发ended事件
-    player.src = allSongsSources[0]; //每次读数组最后一个元素
-    player.addEventListener('ended', playEndedHandler, false);
-    player.play();
   });
 
+  function allLoop(){
+      document.getElementById('loop-all-indicator').innerText = '全部循环...';
+      player.loop = false; //禁止单曲循环，否则无法触发ended事件
+      player.addEventListener('ended', playEndedHandler, false);
+  }
+
+  function singleLoop(){
+      document.getElementById('loop-all-indicator').innerText = '单曲循环...';
+      player.loop = true; 
+      player.removeEventListener('ended', playEndedHandler, false);
+  }
+
   function playEndedHandler() {
-    const index = ++accumulator % totalSongs;
-    barsDancing(index);
-    player.src = allSongsSources[index];
+    console.log('next song')
+    const current = document.getElementsByClassName('dancing')[0];
+    let idx = parseInt(current.getAttribute('data-index')) + 1;
+    idx = idx < allSongsSources.length ? idx : 0;
+    barsDancing(idx);
+    player.src = allSongsSources[idx];
     player.load();
     player.play();
-    !allSongsSources.length &&
-      player.removeEventListener('ended', playEndedHandler, false); //只有一个元素时解除绑定
   }
 
   // 音乐播放动画
   function barsDancing(index) {
-    var audio = document.getElementsByClassName('audio');
-    Array.from(audio).forEach((element) => {
-      element.classList.remove('now');
+    Array.from(audios).forEach((element) => {
+      element.classList.remove('dancing');
     });
-    songs[index].classList.add('now');
+    songs[index].classList.add('dancing');
   }
 
   // 倒计时
