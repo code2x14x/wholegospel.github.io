@@ -136,7 +136,7 @@ $(document).ready(function () {
       document.getElementById('count-down-timer').innerText = '';
       return;
     } else if (durationClickCnt % 5 == 1) {
-      duration = 1;
+      duration = 10;
     } else if (durationClickCnt % 5 == 2) {
       duration = 15;
     } else if (durationClickCnt % 5 == 3) {
