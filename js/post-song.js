@@ -136,7 +136,7 @@ $(document).ready(function () {
       document.getElementById('count-down-timer').innerText = '';
       return;
     } else if (durationClickCnt % 5 == 1) {
-      duration = 10;
+      duration = 1;
     } else if (durationClickCnt % 5 == 2) {
       duration = 15;
     } else if (durationClickCnt % 5 == 3) {
@@ -171,7 +171,17 @@ $(document).ready(function () {
       if (timeLeft < 0) {
         clearInterval(timer);
         countDownTimer.innerText = '';
-        player.pause();
+        let volumeTimer = setInterval(()=>{
+          let curVolume = player.volume;
+          console.log(curVolume);
+          if(curVolume < 0.1) {
+            clearInterval(volumeTimer);
+            player.pause();
+            player.volume = 1;
+          } else {
+            player.volume = curVolume * 0.8;
+          }
+        },500);
       }
     }, 1000);
   });
