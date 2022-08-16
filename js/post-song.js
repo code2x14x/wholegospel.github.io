@@ -170,6 +170,7 @@ $(document).ready(function () {
       // clearing countdown when complete
       if (timeLeft < 0) {
         clearInterval(timer);
+        durationClickCnt = 5;
         countDownTimer.innerText = '';
         let volumeTimer = setInterval(()=>{
           let curVolume = player.volume;
