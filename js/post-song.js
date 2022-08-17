@@ -18,6 +18,8 @@ $(document).ready(function () {
   for (const audio of audios) {
     audio.addEventListener('click', (e) => {
       e.preventDefault();
+      console.log(e.target)
+      console.log(e.target.classList)
 
       // 如果点击的是当前正在播放的音频，则什么也不做
       if(audio.classList.contains('dancing')){

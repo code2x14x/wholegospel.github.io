@@ -1,7 +1,27 @@
 ---
 layout: post
 ---
-<audio controls loop="loop" id="player" style='width: 100%'>   
+<audio controls id="player" style='width: 100%'>   
   <source id="audioSource" src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>
+{% if page.preach %}
+  <div class="audio teaching bars" data-value="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3">🎙️ 证道录音 
+    <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
+  </div><br>
+{% endif %}
+{% for song in page.songs %}
+  <div class="audio song bars" 
+    data-index="{{ song.dataIndex }}" 
+    data-value="{{ song.dataValue }}">🎸 《{{ song.title }}》
+    <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
+  </div><br>
+{% endfor %}
+<div style="margin-top: 10px;">
+  <a id="loop-all">♾️ 循环</a> 
+  <span id="count-down" data-value="1">🕓 定时</span> 
+  <span id="cancle-count-down" data-value="2" style="display: none;"> ☀️ </span> 
+  <span id='loop-all-indicator'>  </span>
+  <span id='count-down-timer'>  </span>
+</div><br>
+
 {{ content }}
