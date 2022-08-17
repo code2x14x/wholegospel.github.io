@@ -4,11 +4,14 @@ layout: post
 <audio controls id="player" style='width: 100%'>   
   <source id="audioSource" src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>
+
 {% if page.preach %}
   <div class="audio teaching bars" data-value="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3">🎙️ 证道录音 
     <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
   </div><br>
 {% endif %}
+
+{% if page.songs %}
 {% for song in page.songs %}
   <div class="audio song bars" 
     data-index="{{ song.dataIndex }}" 
@@ -26,4 +29,6 @@ layout: post
 <div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
   由于微信的限制，某些安卓手机可能出现音频经常停止的情况（比如当锁屏后），可使用浏览器打开此页面，通常能完全解决此问题。
 </div><br/>
+{% endif %}
+
 {{ content }}
