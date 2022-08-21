@@ -11,6 +11,11 @@ $(function () {
 
   const audios = document.getElementsByClassName('audio');
   const songs = document.getElementsByClassName('song');
+  if(songs.length == 0) {
+    document.getElementById('old-player').style.display = 'block';
+    document.getElementById('v-player').style.display = 'none';
+    return;
+  }
   const allSongsSources = [];
   Array.from(songs).forEach((ele) => {
     allSongsSources.push(
