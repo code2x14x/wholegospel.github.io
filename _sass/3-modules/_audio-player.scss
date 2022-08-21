@@ -186,9 +186,17 @@
   }
 }
 
-.audio, #loop-all, #count-down-timer, span#loop-all-indicator {
+.audio, 
+#loop-all,
+#count-down-timer, 
+span#loop-all-indicator {
   color: #393e46;
   font-size: 15px;
+}
+
+.audio, 
+#loop-all{
+  font-size: 17px;
 }
 
 // 音乐动画 Music bars
