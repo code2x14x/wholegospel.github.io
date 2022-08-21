@@ -269,14 +269,16 @@ $(function () {
         durationClickCnt = 5;
         countDownTimer.innerText = '';
         let volumeTimer = setInterval(()=>{
-          let curVolume = player.volume;
+          let curVolume = audioTrack.volume;
           console.log(curVolume);
           if(curVolume < 0.1) {
             clearInterval(volumeTimer);
-            player.pause();
-            player.volume = 1;
+            audioTrack.pause();
+            audioTrack.volume = 1;
+            playButton.fadeIn();
+            pauseButton.hide();
           } else {
-            player.volume = curVolume * 0.8;
+            audioTrack.volume = curVolume * 0.8;
           }
         },500);
       }
