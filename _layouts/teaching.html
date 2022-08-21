@@ -1,12 +1,12 @@
 ---
 layout: post
 ---
-<audio controls id="old-player" style='width: 100%; display: none;'>   
+<audio controls id="old-player" style='width: 100%; display: none;' preload="auto">   
   <source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
 <div id="v-player">
-  <audio id="audio-track" type="audio/mp3" loop>
+  <audio id="audio-track" type="audio/mp3" loop preload="auto">
   </audio>
   <div id="podcast-player">
     <p id="audio-title" class="episode-title"></p>
@@ -51,7 +51,7 @@ layout: post
 {% endfor %}
 <div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
   如果发现音频经常<span style="font-weight: bold;">意外停止</span>（比如当锁屏后），可<span
-    style="font-weight: bold;">使用浏览器打开</span>此页面，通常能完全解决此问题。
+    style="font-weight: bold;">使用浏览器打开</span>此页面，通常能完全解决此问题。<span id="volume"></span>
 </div><br />
 {% endif %}
 
