@@ -20,6 +20,9 @@ $(function () {
   });
 
 
+  parseTime();
+
+
   // 点击歌曲名称时切换音乐
   for (const audio of audios) {
     audio.addEventListener('click', (e) => {
@@ -91,6 +94,7 @@ $(function () {
       audioTrack.play();
     }
   });
+
   function allLoop() {
     // document.getElementById('loop-all-indicator').innerText = '全部循环...';
     audioTrack.loop = false; //禁止单曲循环，否则无法触发ended事件
@@ -104,7 +108,6 @@ $(function () {
   }
 
   function playEndedHandler() {
-    console.log('next song');
     const current = document.getElementsByClassName('dancing')[0];
     let idx = parseInt(current.getAttribute('data-index')) + 1;
     idx = idx < allSongsSources.length ? idx : 0;
