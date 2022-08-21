@@ -130,7 +130,8 @@ $(function () {
     const current = document.getElementsByClassName('dancing')[0];
     let idx = parseInt(current.getAttribute('data-index')) + 1;
     idx = idx < allSongsSources.length ? idx : 0;
-    barsDancing(songs[idx]);
+    currentPlayingAudio = songs[idx];
+    barsDancing(currentPlayingAudio);
     audioTrack.src = allSongsSources[idx];
     audioTrack.load();
     audioTrack.play();
