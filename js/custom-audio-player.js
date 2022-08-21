@@ -276,9 +276,9 @@ $(function () {
         let volumeTimer = setInterval(()=>{
           let curVolume = audioTrack.volume;
           console.log(curVolume);
-          document.getElementById('volume').innerText(curVolume);
+          document.getElementById('volume').innerText=curVolume;
           if(curVolume < 0.1) {
-            document.getElementById('volume').innerText("小于 0.1");
+            document.getElementById('volume').innerText="小于 0.1";
             clearInterval(volumeTimer);
             audioTrack.pause();
             playButton.fadeIn();
