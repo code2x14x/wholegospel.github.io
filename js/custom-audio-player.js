@@ -237,7 +237,7 @@ $(function () {
       document.getElementById('count-down-timer').innerText = '';
       return;
     } else if (durationClickCnt % 5 == 1) {
-      duration = 1;
+      duration = 10;
     } else if (durationClickCnt % 5 == 2) {
       duration = 15;
     } else if (durationClickCnt % 5 == 3) {
@@ -275,16 +275,16 @@ $(function () {
         countDownTimer.innerText = '';
         let volumeTimer = setInterval(()=>{
           let curVolume = audioTrack.volume;
-          console.log(curVolume);
-          document.getElementById('volume').innerText=curVolume;
+          // document.getElementById('volume').innerText=curVolume;
           if(curVolume < 0.1) {
-            document.getElementById('volume').innerText="小于 0.1";
+            // document.getElementById('volume').innerText="小于 0.1";
             clearInterval(volumeTimer);
             audioTrack.pause();
             playButton.fadeIn();
             pauseButton.hide();
             audioTrack.volume = 1;
           } else {
+            // document.getElementById('volume').innerText="小于 0.1";
             audioTrack.volume = curVolume * 0.8;
           }
         },500);
