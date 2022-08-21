@@ -19,9 +19,31 @@ $(function () {
     );
   });
 
+  const teachingAudio = document.getElementById('teachingAudio');
+  let currentPlayingAudio;
+  if(teachingAudio) {
+    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + teachingAudio.getAttribute('data-value');
+    currentPlayingAudio = teachingAudio;
+  } else {
+    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + audios[0].getAttribute('data-value');
+    currentPlayingAudio = audios[0];
+  }
+  audioTrack.load();
 
-  parseTime();
 
+  function playTeaching(teachingAudio){
+      // 如果点击的是证道录音
+      audioTrack.loop = true;
+      audioTrack.removeEventListener('ended', playEndedHandler, false);
+      audioTrack.src =
+        'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
+        teachingAudio.getAttribute('data-value');
+      audioTrack.load();
+      barsDancing(currentPlayingAudio);
+      parseTime();
+      audioTrack.play();
+      repeatButton.classList.remove('looping');
+  }
 
   // 点击歌曲名称时切换音乐
   for (const audio of audios) {
@@ -35,20 +57,12 @@ $(function () {
 
       pauseButton.fadeIn();
       playButton.hide();
+
+      currentPlayingAudio = audio;
+
       // 如果点击的是证道录音
       if (audio.classList.contains('teaching')) {
-        audioTrack.loop = true;
-        audioTrack.removeEventListener('ended', playEndedHandler, false);
-        audioTrack.src =
-          'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
-          audio.getAttribute('data-value');
-        audioTrack.load();
-        audioTrack.play();
-        Array.from(audios).forEach((element) => {
-          element.classList.remove('dancing');
-        });
-        audio.classList.add('dancing');
-        repeatButton.classList.remove('looping');
+        playTeaching(audio);
         return;
       }
 
@@ -59,7 +73,7 @@ $(function () {
         audioTrack.loop = true;
       }
       const idx = parseInt(audio.getAttribute('data-index'));
-      barsDancing(idx); // 音乐播放动画
+      barsDancing(songs[idx]); // 音乐播放动画
       audioTrack.src = allSongsSources[idx];
       audioTrack.load(); //call this to just preload the audio without playing
       audioTrack.play();
@@ -73,6 +87,11 @@ $(function () {
 
     e.preventDefault();
 
+
+    if(document.getElementsByClassName('looping').length == 0) {
+      pauseButton.fadeIn();
+      playButton.hide();
+    }
     repeatButton.classList.toggle('looping');
 
     if(!repeatButton.classList.contains('looping')){
@@ -87,7 +106,7 @@ $(function () {
     // 判断当前是否有正在播放的音乐
     const dancing = document.getElementsByClassName('dancing');
     if(dancing.length == 0 || dancing.length == 1 && !dancing[0].classList.contains('song')){
-      barsDancing(0);
+      barsDancing(songs[0]);
       allLoop();
       audioTrack.src = allSongsSources[0]; //每次读数组最后一个元素
       audioTrack.load();
@@ -111,34 +130,35 @@ $(function () {
     const current = document.getElementsByClassName('dancing')[0];
     let idx = parseInt(current.getAttribute('data-index')) + 1;
     idx = idx < allSongsSources.length ? idx : 0;
-    barsDancing(idx);
+    barsDancing(songs[idx]);
     audioTrack.src = allSongsSources[idx];
     audioTrack.load();
     audioTrack.play();
   }
 
   // 音乐播放动画
-  function barsDancing(idx) {
-    // down.href = songs[idx][]
+  function barsDancing(target) {
     // audioTitle.innerText = songs[idx].getAttribute("data-title");
     Array.from(audios).forEach((element) => {
       element.classList.remove('dancing');
     });
-    songs[idx].classList.add('dancing');
+    target.classList.add('dancing');
   }
 
   playButton.click(function () {
     pauseButton.fadeIn();
     playButton.hide();
     audioTrack.play();
-    waving.css({ 'animation-name': 'morph' });
+    barsDancing(currentPlayingAudio);
   });
 
   pauseButton.click(function () {
     playButton.fadeIn();
     pauseButton.hide();
     audioTrack.pause();
-    waving.css({ 'animation-name': 'none' });
+    Array.from(audios).forEach((element) => {
+      element.classList.remove('dancing');
+    });
   });
 
   prev_15.click(function () {

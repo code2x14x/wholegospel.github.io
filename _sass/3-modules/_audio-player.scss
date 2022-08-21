@@ -1,4 +1,3 @@
-
 #v-player {
   font-size: 15px;
   max-width: 560px;
@@ -48,7 +47,7 @@
 }
 
 #controls,
-.second-part, 
+.second-part,
 .third-part {
   color: #879EB4;
   font-weight: 500;
@@ -62,12 +61,12 @@
 .second-part,
 .third-part {
   width: 100%;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.second-part{ 
+.second-part {
   min-height: 40px;
 }
 
@@ -89,11 +88,15 @@
 #prev-15,
 #next-15,
 #count-down {
-  font-size: 18px;
+  font-size: 16px;
   color: #879EB4;
   min-width: 30px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.looping {
+  color: #6868d5 !important;
 }
 
 #prev-15,
@@ -186,16 +189,16 @@
   }
 }
 
-.audio, 
+.audio,
 #loop-all,
-#count-down-timer, 
+#count-down-timer,
 span#loop-all-indicator {
   color: #393e46;
   font-size: 15px;
 }
 
-.audio, 
-#loop-all{
+.audio,
+#loop-all {
   font-size: 17px;
 }
 
@@ -222,45 +225,57 @@ span#loop-all-indicator {
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
+
 .paused.bars .bar {
   animation-iteration-count: 1;
 }
+
 .n1 {
   animation-delay: 1.5s;
 }
+
 .n2 {
   animation-delay: 0.8s;
 }
+
 .n3 {
   animation-delay: 0.2s;
 }
+
 .n4 {
   animation-delay: 0.5s;
 }
+
 .n5 {
   animation-delay: 1.0s;
 }
+
 @keyframes pulse {
   0% {
     height: 1px;
     margin-top: 0;
   }
+
   10% {
     height: 8px;
     margin-top: -8px;
   }
+
   50% {
     height: 5px;
     margin-top: -5px;
   }
+
   60% {
     height: 11px;
     margin-top: -11px;
   }
+
   80% {
     height: 14px;
     margin-top: -14px;
   }
+
   100% {
     height: 1px;
     margin-top: 0;
