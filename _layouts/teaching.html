@@ -1,34 +1,53 @@
----
-layout: post
----
-<audio controls id="player" style='width: 100%'>   
-  <source id="audioSource" src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
-</audio>
+<link rel="stylesheet" href="fontawesome.css" crossorigin="anonymous">
+<div id="v-player">
+  <audio id="audio-track" src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/2022-08-14.mp3"
+    type="audio/mp3" preload="metadata">
+  </audio>
+  <div id="podcast-player">
+    <p id="audio-title" class="episode-title"></p>
+    <div id="controls">
+      <div class="first-part">
+        <i id="repeat" class="fas fa-sync-alt"></i>
+        <i id="prev-15" class="fas fa-undo-alt"></i>
+        <i id="play" class="fa fa-play"></i>
+        <i id="pause" class="fa fa-pause"></i>
+        <i id="next-15" class="fas fa-redo-alt"></i>
+        <i id="count-down" class="fas fa-clock"></i>
+      </div>
+      <div class="second-part">
+        <div class="time current"></div>
+        <span id='count-down-timer'></span>
+        <div id="end-time" class="time till-end"></div>
+      </div>
+      <div class="third-part">
+        <div class="progress-bar">
+          <div class="default-bar"></div>
+          <div class="fill-bar"></div>
+          <input type="range" id="seek" value="0" min="0" max="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% if page.preach %}
-  <div class="audio teaching bars" data-value="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3">🎙️ 证道录音 
-    <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
-  </div><br>
+<div class="audio teaching bars" data-value="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3">🎙️ 证道录音
+  <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
+    class="bar n5"></span>
+</div><br>
 {% endif %}
 
 {% if page.songs %}
 {% for song in page.songs %}
-  <div class="audio song bars" 
-    data-index="{{ song.dataIndex }}" 
-    data-value="{{ song.dataValue }}">🎸 《{{ song.title }}》
-    <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
-  </div><br>
+<div class="audio song bars" data-title="{{ song.title }}" data-index="{{ song.dataIndex }}" data-value="{{ song.dataValue }}">🎸 《{{ song.title }}》
+  <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
+    class="bar n5"></span>
+</div><br>
 {% endfor %}
-<div style="margin-top: 10px;">
-  <a id="loop-all">♾️ 循环</a> 
-  <span id="count-down" data-value="1">🕓 定时</span> 
-  <span id="cancle-count-down" data-value="2" style="display: none;"> ☀️ </span> 
-  <span id='loop-all-indicator'>  </span>
-  <span id='count-down-timer'>  </span>
-</div>
 <div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
-  如果发现音频经常<span style="font-weight: bold;">意外停止</span>（比如当锁屏后），可<span style="font-weight: bold;">使用浏览器打开</span>此页面，通常能完全解决此问题。
-</div><br/>
+  如果发现音频经常<span style="font-weight: bold;">意外停止</span>（比如当锁屏后），可<span
+    style="font-weight: bold;">使用浏览器打开</span>此页面，通常能完全解决此问题。
+</div><br />
 {% endif %}
 
 {{ content }}
