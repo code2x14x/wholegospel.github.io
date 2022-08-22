@@ -159,8 +159,8 @@
 
 #controls #seek::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background: #fff;
   cursor: ew-resize;
@@ -170,8 +170,8 @@
 
 #controls #seek::-moz-range-thumb {
   -webkit-appearance: none;
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background: #fff;
   cursor: ew-resize;
