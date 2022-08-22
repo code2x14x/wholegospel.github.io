@@ -226,6 +226,7 @@ $(function () {
   // 倒计时
   let countDownDate = 0;
   let timer = 0;
+  let volumeTimer = 0;
   // const countDown = document.getElementById('count-down');
   let durationClickCnt = 5;
   countDown.addEventListener('click', (event) => {
@@ -243,9 +244,9 @@ $(function () {
     } else if (durationClickCnt % 5 == 3) {
       duration = 20;
     } else if (durationClickCnt % 5 == 4) {
-      duration = 30;
+      duration = 1;
     }
-    console.log(duration);
+    // console.log(duration);
     countDownDate = new Date().getTime() + duration * 60 * 1000;
     // find the interval between now and the countdown time
     let timeLeft = duration * 60 * 1000;
@@ -273,11 +274,13 @@ $(function () {
         clearInterval(timer);
         durationClickCnt = 5;
         countDownTimer.innerText = '';
-        let volumeTimer = setInterval(()=>{
+        volumeTimer = setInterval(()=>{
           let curVolume = audioTrack.volume;
           // document.getElementById('volume').innerText=curVolume;
+          console.log(curVolume);
           if(curVolume < 0.1) {
             // document.getElementById('volume').innerText="小于 0.1";
+            console.log('curVolume < 0.1');
             clearInterval(volumeTimer);
             audioTrack.pause();
             playButton.fadeIn();
