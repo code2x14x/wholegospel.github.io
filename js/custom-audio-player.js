@@ -242,7 +242,7 @@ $(function () {
     } else if (durationClickCnt % 5 == 3) {
       duration = 20;
     } else if (durationClickCnt % 5 == 4) {
-      duration = 1;
+      duration = 30;
     }
     // console.log(duration);
     countDownDate = new Date().getTime() + duration * 60 * 1000;
