@@ -274,8 +274,8 @@ $(function () {
         clearInterval(timer);
         durationClickCnt = 5;
         countDownTimer.innerText = '';
+        let curVolume = audioTrack.volume;
         volumeTimer = setInterval(()=>{
-          let curVolume = audioTrack.volume;
           // document.getElementById('volume').innerText=curVolume;
           console.log(curVolume);
           if(curVolume < 0.1) {
@@ -288,7 +288,8 @@ $(function () {
             audioTrack.volume = 1;
           } else {
             // document.getElementById('volume').innerText="小于 0.1";
-            audioTrack.volume = curVolume * 0.8;
+            curVolume *= 0.7;
+            audioTrack.volume = curVolume;
           }
         },500);
       }
