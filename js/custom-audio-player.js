@@ -144,7 +144,6 @@ $(function () {
 
   // 音乐播放动画
   function barsDancing(target) {
-    // audioTitle.innerText = songs[idx].getAttribute("data-title");
     Array.from(audios).forEach((element) => {
       element.classList.remove('dancing');
     });
@@ -192,7 +191,6 @@ $(function () {
 
     var timeStamps = parseTime();
     $('.time.current').html(timeStamps[0]);
-    // $('.time.till-end').html(audioTrack.duration);
     // $('.time.till-end').html(timeStamps[1]);
 
     $('#seek').attr('max', audioTrack.duration);
@@ -276,18 +274,17 @@ $(function () {
         countDownTimer.innerText = '';
         let curVolume = audioTrack.volume;
         volumeTimer = setInterval(()=>{
-          // document.getElementById('volume').innerText=curVolume;
           console.log(curVolume);
           if(curVolume < 0.1) {
-            // document.getElementById('volume').innerText="小于 0.1";
-            console.log('curVolume < 0.1');
             clearInterval(volumeTimer);
             audioTrack.pause();
             playButton.fadeIn();
             pauseButton.hide();
+            Array.from(audios).forEach((element) => {
+              element.classList.remove('dancing');
+            });
             audioTrack.volume = 1;
           } else {
-            // document.getElementById('volume').innerText="小于 0.1";
             curVolume *= 0.7;
             audioTrack.volume = curVolume;
           }
