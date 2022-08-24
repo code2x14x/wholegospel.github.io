@@ -15,7 +15,7 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    padding: 40px 0 0;
+    padding: 15px 0 0;
 
     .post-title {
       margin: 10px 0;
@@ -260,7 +260,9 @@ div.article-img-wrapper .caption {
     margin: 0.5em 0 1em;
 }
 
-
+.container .post__head {
+  margin: 10px 0 0;
+}
 
 
 

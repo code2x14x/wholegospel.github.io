@@ -258,7 +258,7 @@ h3 {
 }
 
 .post {
-  margin: 10px auto !important;
+  margin: 10px auto  0 !important;
 }
 
 audio {
@@ -272,7 +272,8 @@ audio {
   text-align: left !important;
 }
 
-.post-title-box .post__date {
+.post-title-box .post__date, 
+.post-title-box .author {
   font-weight: normal !important;
   font-size: 16px;
 }
