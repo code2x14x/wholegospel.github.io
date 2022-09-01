@@ -205,6 +205,9 @@ $(function () {
     var durationMinute = Math.floor(duration / 60);
     var durationSecond = Math.floor(duration - durationMinute * 60);
     var durationLabel = durationMinute + ':' + durationSecond;
+    if(durationSecond < 10) {
+      durationLabel = durationMinute + ':0' + durationSecond;
+    }
     var tillendMinute = Math.floor(tillend / 60);
     var tillendSecond = Math.floor(tillend - tillendMinute * 60);
     if (tillendSecond < 10) {
