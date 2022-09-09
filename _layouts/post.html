@@ -21,7 +21,7 @@ layout: default
         {% assign no-image = 'post-no-image' %}
       {% else %}
         <div class="post__head">
-            <img src="{{page.img_url}}{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
+            <img src="{{post.img_url}}{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
         </div>
   {% endif %}
 
