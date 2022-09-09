@@ -78,7 +78,7 @@ layout: default
     <div class="prev">
       <a class="post__nav__image" 
       href="{{ site.baseurl }}{{page.previous.url}}" 
-      style="background-image: url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/{{page.previous.image}})"></a>
+      style="background-image: url({{page.img_url}}{{page.previous.date | date: '%Y-%m-%d'}})"></a>
       <h2 class="post__nav__title">
         <a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a>
         <i class="ion ion-md-arrow-forward"></i>
@@ -95,7 +95,7 @@ layout: default
 
     {% if page.next.url %}
     <div class="next">
-      <a class="post__nav__image" href="{{ site.baseurl }}{{page.next.url}}" style="background-image: url({{site.baseurl}}/images/{{page.next.image}})">
+      <a class="post__nav__image" href="{{ site.baseurl }}{{page.next.url}}" style="background-image: url({{site.baseurl}}/images/{{page.next.date | date: '%Y-%m-%d'}})">
       </a>
       <h2 class="post__nav__title">
         <i class="ion ion-md-arrow-back"></i>
