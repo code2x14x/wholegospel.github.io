@@ -17,13 +17,12 @@ layout: default
   </div>
 
   {% assign no-image = nil %}
-      {% if page.image %}
-    <div class="post__head">
-        <!-- <div class="post-image" style="background-image: url({{site.baseurl}}/images/{{page.image}})"></div> -->
-        <img src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/{{post.date | date: '%Y-%m-%d'}}.jpg" alt="">
-    </div>
+      {% if page.default_image %}
+        {% assign no-image = 'post-no-image' %}
       {% else %}
-    {% assign no-image = 'post-no-image' %}
+        <div class="post__head">
+            <img src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
+        </div>
   {% endif %}
 
   </div>
