@@ -6,10 +6,9 @@
     <div class="article__wrapper">
 
         {% if post.image %}
-          <a href="{{post.url | prepend: site.baseurl}}" class="article__image" style="background-image: url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/{{post.image}})">
-          </a>
-        {% else %}
           {% assign without-image = 'article-without-image' %}
+        {% else %}
+          <a href="{{post.url | prepend: site.baseurl}}" class="article__image" style="background-image: url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/{{post.image}})"></a>
         {% endif %}
 
         <div class="article__content {{ without-image }}">
