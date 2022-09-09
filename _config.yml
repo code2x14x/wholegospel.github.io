@@ -15,6 +15,8 @@ paginate: 5
 paginate_path: "/page/:num"
 
 
+img_url_prefix: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img
+
 # Pages Path
 defaults:
   - scope:
@@ -29,7 +31,6 @@ defaults:
       permalink: /:categories/:year/:month/:day.html
       image: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/default.jpg
       tags: 讲道
-      img_url: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/
 
 include:
   - _pages
