@@ -5,7 +5,7 @@
 
     <div class="article__wrapper">
 
-        {% if post.image %}
+        {% if post.default_image %}
           {% assign without-image = 'article-without-image' %}
         {% else %}
           <a href="{{post.url | prepend: site.baseurl}}" class="article__image" style="background-image: url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/{{post.image}})"></a>
