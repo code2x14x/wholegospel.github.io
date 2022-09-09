@@ -29,6 +29,7 @@ defaults:
       permalink: /:categories/:year/:month/:day.html
       image: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/default.jpg
       tags: 讲道
+      img_url: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/
 
 include:
   - _pages
