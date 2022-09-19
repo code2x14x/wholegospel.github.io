@@ -53,7 +53,7 @@ $(function () {
   // 点击歌曲名称时切换音乐
   for (const audio of audios) {
     audio.addEventListener('click', (e) => {
-      e.preventDefault();
+      // e.preventDefault();
 
       // 如果点击的是当前正在播放的音频，则什么也不做
       if (audio.classList.contains('dancing')) {
