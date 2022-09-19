@@ -15,10 +15,10 @@ layout: default
           {% endif %}
         </div>
 
-        <audio controls loop autoplay id="old-player" style='width: 100%; margin: 1rem 0 2rem;' preload="auto">   
+        <audio controls loop autoplay id="old-player" style='width: 100%;' preload="auto">   margin: 1rem 0 2rem;
           <source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/{{page.filename}}" type="audio/mpeg">   
         </audio>
-        <h1 class="post-title">{{page.title}}</h1>
+        <h1 class="post-title" style="margin: 1rem 0; letter-spacing: 4px;">{{page.title}}</h1>
         {{ content }}
       </div>
 
