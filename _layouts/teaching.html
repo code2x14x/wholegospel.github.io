@@ -45,6 +45,9 @@ layout: post
 {% if page.songs %}
 {% for song in page.songs %}
 <div class="audio song bars" data-title="{{ song.title }}" data-index="{{ song.dataIndex }}" data-value="{{ song.dataValue }}">🎸 《{{ song.title }}》
+  {% if page.songs %}
+    <a href="/songs/{{song.mainpage}}">歌词</a>
+  {% endif %}
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
     class="bar n5"></span>
 </div><br>
