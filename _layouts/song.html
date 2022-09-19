@@ -16,7 +16,7 @@ layout: default
           {% endif %}
         </div>
 
-        <audio controls id="old-player" style='width: 100%; display: none;' preload="auto">   
+        <audio controls loop autoplay id="old-player" style='width: 100%; display: none;' preload="auto">   
           <source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/{{page.filename}}" type="audio/mpeg">   
         </audio>
         {{ content }}
