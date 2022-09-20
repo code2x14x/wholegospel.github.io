@@ -48,7 +48,6 @@ $(function () {
       parseTime();
       audioTrack.play();
       repeatButton.classList.remove('looping');
-      repeatButton.classList.remove('fa-spin');
   }
 
   // 点击歌曲名称时切换音乐
@@ -99,7 +98,6 @@ $(function () {
       playButton.hide();
     }
     repeatButton.classList.toggle('looping');
-    repeatButton.classList.toggle('fa-spin');
 
     if(!repeatButton.classList.contains('looping')){
       // 改为单曲循环状态
