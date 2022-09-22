@@ -5,6 +5,7 @@ author: Sherin_Lan
 permalink: /songs/sdlsrm_sherin_lan
 tags: hidden
 filename: wg-song/神的良善荣美_Sherin_Lan.mp3
+image: 神的良善荣美_Sherin_Lan.jpg
 ---
 
 我深爱祢 祢的怜悯永不改变
