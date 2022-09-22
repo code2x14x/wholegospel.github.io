@@ -13,7 +13,7 @@ image: songs.jpeg
 
 [神的良善荣美/Sherin Lan](/songs/sdlsrm_sherin_lan)
 
-[祂从高处伸手](/songs/tcgcss)
+[祂从高处伸手/赞美之泉](/songs/tcgcss)
 
 [我的主](/songs/wdz)
 
