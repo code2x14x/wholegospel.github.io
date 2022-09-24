@@ -37,7 +37,7 @@ layout: post
 </div>
 
 {% if page.preach %}
-<div id="teachingAudio" class="audio teaching bars" data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3">🎤 证道录音
+<div id="teachingAudio" class="audio teaching bars" data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3">🎤《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
     class="bar n5"></span>
 </div><br>
@@ -46,7 +46,7 @@ layout: post
 {% if page.songs %}
   {% for py in page.songs %}
     {% assign song = site.data.songs[py] %}
-    <div class="audio song bars" data-title="{{ song.title }}" data-file="wg-song/{{ song.file }}">🎵 {{ song.title }}{% if song.singer %}<span class="singer"> {{ song.singer }}</span>{% endif %}
+    <div class="audio song bars" data-title="{{ song.title }}" data-file="wg-song/{{ song.file }}">🎵《{{ song.title }}》{% if song.singer %}<span class="singer"> {{ song.singer }}</span>{% endif %}
       {% if song.mainpage %}
         <a href="/songs/{{song.mainpage}}" class="lyrics">歌词</a>
       {% endif %}

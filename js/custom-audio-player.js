@@ -160,6 +160,11 @@ $(function () {
     pauseButton.fadeIn();
     playButton.hide();
     audioTrack.play();
+    if(repeatButton.classList.contains('looping')){
+      allLoop();
+    } else {
+      singleLoop();
+    }
     barsDancing(currentPlayingAudio);
   });
 
