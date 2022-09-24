@@ -157,8 +157,10 @@ $(function () {
   function barsDancing(target) {
     Array.from(audios).forEach((element) => {
       element.classList.remove('dancing');
+      element.firstElementChild.classList.remove('fa-spin');
     });
     target.classList.add('dancing');
+    target.firstElementChild.classList.add('fa-spin');
   }
 
   playButton.click(function () {
