@@ -46,7 +46,7 @@ layout: post
 {% if page.songs %}
   {% for py in page.songs %}
     {% assign song = site.data.songs[py] %}
-    <div class="audio song bars" data-title="{{ song.title }}" data-file="wg-song/{{ song.file }}"><i class="fas fa-fish">《{{ song.title }}{% if song.singer %}<span class="singer"> / {{ song.singer }}</span>{% endif %}》
+    <div class="audio song bars" data-title="{{ song.title }}" data-file="wg-song/{{ song.file }}"><i class="fas fa-fish"></i>《{{ song.title }}{% if song.singer %}<span class="singer"> / {{ song.singer }}</span>{% endif %}》
       {% if song.mainpage %}
         <a href="/songs/{{song.mainpage}}" class="lyrics">歌词</a>
       {% endif %}
