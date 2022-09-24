@@ -43,19 +43,20 @@ layout: post
 {% endif %}
 
 {% if page.songs %}
-{% for song in page.songs %}
-<div class="audio song bars" data-title="{{ song.title }}" data-index="{{ song.dataIndex }}" data-value="{{ song.dataValue }}">🎸 《{{ song.title }}》
-  {% if song.mainpage %}
-    <a href="/songs/{{song.mainpage}}">歌词</a>
-  {% endif %}
-  <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
-    class="bar n5"></span>
-</div><br>
-{% endfor %}
-<div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
-  <a href="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导。</a>如果发现音频经常<span style="font-weight: bold;">意外停止</span>（比如当锁屏后），可<span
-    style="font-weight: bold;">使用浏览器打开</span>此页面，通常能完全解决此问题。<span id="volume"></span>
-</div><br />
+  {% for py in page.songs %}
+    {% assign song = site.data.songs[py] %}
+    <div class="audio song bars" data-title="{{ song.title }}" data-value="wg-song/{{ song.file }}">🎸 《{{ song.title }}{% if song.singer %}<span style="color: gray "> / {{ song.singer }}</span>{% endif %}》
+      {% if song.mainpage %}
+        <a href="/songs/{{song.mainpage}}">歌词</a>
+      {% endif %}
+      <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
+        class="bar n5"></span>
+    </div><br>
+  {% endfor %}
+  <div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
+    <a href="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导。</a>如果发现音频经常<span style="color: #000">意外停止</span>（比如当锁屏后），可<span
+      style="color: #000">使用浏览器打开</span>此页面，通常能完全解决此问题。<span id="volume"></span>
+  </div><br />
 {% endif %}
 
 {{ content }}

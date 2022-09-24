@@ -10,7 +10,18 @@ $(function () {
   const countDown = document.getElementById("count-down");
 
   const audios = document.getElementsByClassName('audio');
+
+  for(let i=0; i<audios.length; i++) {
+    audios[i].dataset.index = i;
+  }
+
+  console.log('xxx')
+
   const songs = document.getElementsByClassName('song');
+  for(let i=0; i<songs.length; i++) {
+    songs[i].dataset.index = i;
+  }
+
   if(songs.length == 0) {
     document.getElementById('old-player').style.display = 'block';
     document.getElementById('v-player').style.display = 'none';
