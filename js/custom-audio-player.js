@@ -181,6 +181,7 @@ $(function () {
     audioTrack.pause();
     Array.from(audios).forEach((element) => {
       element.classList.remove('dancing');
+      element.firstElementChild.classList.remove('fa-spin');
     });
   });
 
