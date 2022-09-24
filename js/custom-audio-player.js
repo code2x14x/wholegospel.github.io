@@ -6,7 +6,6 @@ $(function () {
   var prev_15 = $('#prev-15');
   var next_15 = $('#next-15');
   var fillBar = $('.fill-bar');
-  var waving = $('.wave svg path');
   const countDown = document.getElementById("count-down");
 
   const audios = document.getElementsByClassName('audio');
@@ -14,8 +13,6 @@ $(function () {
   for(let i=0; i<audios.length; i++) {
     audios[i].dataset.index = i;
   }
-
-  console.log('xxx')
 
   const songs = document.getElementsByClassName('song');
   for(let i=0; i<songs.length; i++) {
@@ -31,17 +28,17 @@ $(function () {
   Array.from(songs).forEach((ele) => {
     allSongsSources.push(
       'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
-        ele.getAttribute('data-value')
+        ele.getAttribute('data-file')
     );
   });
 
   const teachingAudio = document.getElementById('teachingAudio');
   let currentPlayingAudio;
   if(teachingAudio) {
-    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + teachingAudio.getAttribute('data-value');
+    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + teachingAudio.getAttribute('data-file');
     currentPlayingAudio = teachingAudio;
   } else {
-    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + audios[0].getAttribute('data-value');
+    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + audios[0].getAttribute('data-file');
     currentPlayingAudio = audios[0];
   }
   audioTrack.load();
@@ -53,7 +50,7 @@ $(function () {
       audioTrack.removeEventListener('ended', playEndedHandler, false);
       audioTrack.src =
         'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
-        teachingAudio.getAttribute('data-value');
+        teachingAudio.getAttribute('data-file');
       audioTrack.load();
       barsDancing(currentPlayingAudio);
       parseTime();
@@ -64,8 +61,6 @@ $(function () {
   // 点击歌曲名称时切换音乐
   for (const audio of audios) {
     audio.addEventListener('click', (e) => {
-      // e.preventDefault();
-
       // 如果点击的是当前正在播放的音频，则什么也不做
       if (audio.classList.contains('dancing')) {
         return;
@@ -131,13 +126,13 @@ $(function () {
   });
 
   function allLoop() {
-    // document.getElementById('loop-all-indicator').innerText = '全部循环...';
+    document.getElementById('loop-indicator').innerText = '全部循环';
     audioTrack.loop = false; //禁止单曲循环，否则无法触发ended事件
     audioTrack.addEventListener('ended', playEndedHandler, false);
   }
 
   function singleLoop() {
-    // document.getElementById('loop-all-indicator').innerText = '单曲循环...';
+    document.getElementById('loop-indicator').innerText = '单曲循环';
     audioTrack.loop = true;
     audioTrack.removeEventListener('ended', playEndedHandler, false);
   }
