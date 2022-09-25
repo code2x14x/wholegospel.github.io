@@ -1,6 +1,9 @@
 ---
 layout: post
 ---
+{% if page.permalink == '/songs' %}
+<p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
+{% endif %}
 <audio controls id="old-player" style='width: 100%; display: none;' preload="auto">   
   <source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>
@@ -9,14 +12,21 @@ layout: post
   <audio id="audio-track" type="audio/mp3" loop preload="auto">
   </audio>
   <div id="podcast-player">
-    <!-- <p id="audio-title" class="episode-title"></p> -->
     <div id="controls">
       <div class="first-part">
         <i id="repeat" class="fas fa-sync-alt"></i>
+        {% if page.permalink == '/songs' %}
+        <i id="step-backward" class="fas fa-step-backward"></i>
+        {% else %}
         <i id="prev-15" class="fas fa-undo-alt"></i>
+        {% endif %}
         <i id="play" class="fa fa-play"></i>
         <i id="pause" class="fa fa-pause"></i>
+        {% if page.permalink == '/songs' %}
+        <i id="step-forward" class="fas fa-step-forward"></i>
+        {% else %}
         <i id="next-15" class="fas fa-redo-alt"></i>
+        {% endif %}
         <i id="count-down" class="fas fa-clock"></i>
       </div>
       <div class="second-part">

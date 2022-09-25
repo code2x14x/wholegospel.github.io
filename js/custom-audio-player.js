@@ -5,7 +5,10 @@ $(function () {
   var pauseButton = $('#pause');
   var prev_15 = $('#prev-15');
   var next_15 = $('#next-15');
+  var stepBackward = $('#step-backward');
+  var stepForkward = $('#step-forward');
   var fillBar = $('.fill-bar');
+  var trackTitle = $('#track-title');
   const countDown = document.getElementById("count-down");
 
   const audios = document.getElementsByClassName('audio');
@@ -75,6 +78,7 @@ $(function () {
       playButton.hide();
 
       currentPlayingAudio = audio;
+      trackTitle.html(currentPlayingAudio.dataset.title);
 
       // 如果点击的是证道录音
       if (audio.classList.contains('teaching')) {
@@ -151,6 +155,7 @@ $(function () {
     audioTrack.src = allSongsSources[idx];
     audioTrack.load();
     audioTrack.play();
+    trackTitle.html(currentPlayingAudio.dataset.title);
   }
 
   // 音乐播放动画
@@ -162,6 +167,20 @@ $(function () {
     target.classList.add('dancing');
     target.firstElementChild.classList.add('fa-spin');
   }
+
+  stepBackward.click(function(){
+    const current = document.getElementsByClassName('dancing')[0];
+    let idx = parseInt(current.getAttribute('data-index')) - 1;
+    idx = idx < 0 ? 0 : idx;
+    currentPlayingAudio = songs[idx];
+    barsDancing(currentPlayingAudio);
+    audioTrack.src = allSongsSources[idx];
+    trackTitle.html(currentPlayingAudio.dataset.title);
+    audioTrack.load();
+    audioTrack.play();
+  });
+
+  stepForkward.click(playEndedHandler);
 
   playButton.click(function () {
     pauseButton.fadeIn();

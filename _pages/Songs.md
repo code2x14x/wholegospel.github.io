@@ -1,7 +1,7 @@
 ---
 layout: teaching
 title:  "赞美诗"
-permalink: /songs/
+permalink: /songs
 image: songs.jpeg
 date: 2022-09-01
 dscp: 
