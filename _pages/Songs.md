@@ -1,22 +1,10 @@
 ---
-layout: page
+layout: teaching
 title:  "赞美诗"
 permalink: /songs/
 image: songs.jpeg
+date: 2022-09-21
+dscp: 
+songs: [asbbl,dsgm,dswwnk,czcdyw,edzl,edzy,gjg,jdswmz,jwjzzl,ndje,nbn,ntzrttjl,ourgod,qslyx,rhhjbyjp,sdlsrm,slqnlcmwx,smzg,ssdg,tfmsll,wake,wdsmxgn,wmztsdf,xgdyp,yhhbhn,yscwwzx,zcjwgx,znyyywtz,zwxx]
 ---
 
-
-
-[爱是不保留/陽詠存 & 何俊鴻](/songs/asbbl_yyc_hjh)
-
-[得胜冠冕/天堂敬拜](/songs/dsgm_ttjb)
-
-[神的良善荣美/Sherin Lan](/songs/sdlsrm_sherin_lan)
-
-[祂从高处伸手/赞美之泉](/songs/tcgcss)
-
-[我的主](/songs/wdz)
-
-[我们的神](/songs/wmds)
-
-[再次将我更新/小羊诗歌](/songs/zcjwgx_xysg)
