@@ -101,6 +101,15 @@
   transition: all 0.2s ease-in-out;
 }
 
+#step-backward,
+#step-forward {
+  font-size: 18px;
+}
+
+#count-down {
+  font-size: 16px;
+}
+
 a.lyrics {
     // background-color: #1675ee;
     // border-radius: 10px;

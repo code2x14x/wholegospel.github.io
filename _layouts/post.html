@@ -5,10 +5,13 @@ layout: default
   <div class="post-title-box">
     <div class="row">
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
+        <h1 class="post-title" style="text-align: center;">{{ page.title | escape }}</h1>
+        {% if page.permalink != '/songs' %}
         <span class="post__date">
           <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
         </span>
+        {% endif %}
+
         {% if page.author %}
         <span class="author">{{ page.author }}</span>
         {% endif %}

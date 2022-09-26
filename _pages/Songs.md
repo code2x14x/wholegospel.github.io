@@ -1,6 +1,6 @@
 ---
 layout: teaching
-title:  "赞美诗"
+title: 赞 美 诗
 permalink: /songs
 image: songs.jpeg
 date: 2022-09-01
