@@ -6,11 +6,13 @@
     <div class="article__wrapper">
         {% if post.image %}
           {% assign image = post.image %}
+          <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
+          style="background-image: url({{site.img_url_prefix}}/teaching/{{ post.image }})"></a>
         {% else %}
           {% assign image = post.date %}
+          <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
+          style="background-image: url({{site.img_url_prefix}}/teaching/{{ post.date | date: '%Y-%m-%d' }}.jpg)"></a>
         {% endif %}
-        <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
-        style="background-image: url({{site.img_url_prefix}}/teaching/{{ image | date: '%Y-%m-%d' }}.jpg)"></a>
 
         <div class="article__content {{ without-image }}">
       
