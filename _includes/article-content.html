@@ -4,14 +4,13 @@
   <div class="container">
 
     <div class="article__wrapper">
-
-        {% if post.default_image %}
-          {% assign without-image = 'article-without-image' %}
+        {% if post.image %}
+          {% assign image = post.image %}
         {% else %}
-          <a href="{{post.url | prepend: site.baseurl}}" 
-          class="article__image" 
-          style="background-image: url({{site.img_url_prefix}}/teaching/{{post.date | date: '%Y-%m-%d'}}.jpg)"></a>
+          {% assign image = post.date %}
         {% endif %}
+        <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
+        style="background-image: url({{site.img_url_prefix}}/teaching/{{ image | date: '%Y-%m-%d' }}.jpg)"></a>
 
         <div class="article__content {{ without-image }}">
       

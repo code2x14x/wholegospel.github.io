@@ -5,13 +5,14 @@ layout: default
   <div class="post-title-box">
     <div class="row">
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
-        <h1 class="post-title" style="text-align: center;">{{ page.title | escape }}</h1>
-        {% if page.permalink != '/songs' %}
-        <span class="post__date">
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
-        </span>
+        {% if page.permalink == '/songs' %}
+          <h1 class="post-title" style="text-align: center; letter-spacing: 1rem;">{{ page.title | escape }}</h1>
+        {% else %}
+          <h1 class="post-title">{{ page.title | escape }}</h1>
+          <span class="post__date">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
+          </span>
         {% endif %}
-
         {% if page.author %}
         <span class="author">{{ page.author }}</span>
         {% endif %}
@@ -19,15 +20,17 @@ layout: default
     </div>
   </div>
 
-  {% assign no-image = nil %}
+    <div class="post__head">
       {% if page.default_image %}
-        {% assign no-image = 'post-no-image' %}
+        <img src="{{site.img_url_prefix}}/teaching/default_image.jpg" alt="">
+      {% elsif page.permalink == '/songs' %}
+        <img src="{{site.img_url_prefix}}/teaching/songs.jpg" alt="">
+      {% elsif page.image == 'preview' %}
+        <img src="{{site.img_url_prefix}}/teaching/{{page.image}}.jpg" alt="">
       {% else %}
-        <div class="post__head">
-            <img src="{{site.img_url_prefix}}/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
-        </div>
-  {% endif %}
-
+        <img src="{{site.img_url_prefix}}/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
+      {% endif %}
+    </div>
   </div>
 
 
@@ -78,10 +81,14 @@ layout: default
   <div class="container">
   <div class="post__navigation">
     {% if page.previous.url %}
+      {% if page.previous.image %}
+        {% assign image = page.previous.image %}
+      {% else %}
+        {% assign image = page.previous.date %}
+      {% endif %}
     <div class="prev">
-      <a class="post__nav__image" 
-      href="{{ site.baseurl }}{{page.previous.url}}" 
-      style="background-image: url({{site.img_url_prefix}}/teaching/{{page.previous.date | date: '%Y-%m-%d'}}.jpg)"></a>
+      <a class="post__nav__image" href="{{ site.baseurl }}{{page.previous.url}}" 
+      style="background-image: url({{site.img_url_prefix}}/teaching/{{ image | date: '%Y-%m-%d'}}.jpg)"></a>
       <h2 class="post__nav__title">
         <a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a>
         <i class="ion ion-md-arrow-forward"></i>
@@ -97,10 +104,15 @@ layout: default
     {% endif %}
 
     {% if page.next.url %}
+      {% if page.next.image %}
+        {% assign image = page.next.image %}
+      {% else %}
+        {% assign image = page.next.date %}
+      {% endif %}
     <div class="next">
       <a class="post__nav__image" 
       href="{{ site.baseurl }}{{page.next.url}}" 
-      style="background-image: url({{site.img_url_prefix}}/teaching/{{page.next.date | date: '%Y-%m-%d'}}.jpg)">
+      style="background-image: url({{site.img_url_prefix}}/teaching/{{ image| date: '%Y-%m-%d'}}.jpg)">
       </a>
       <h2 class="post__nav__title">
         <i class="ion ion-md-arrow-back"></i>

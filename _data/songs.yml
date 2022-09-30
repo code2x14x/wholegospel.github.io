@@ -30,6 +30,16 @@ gjg:
   title: 更坚固 Stronger
   file: 更坚固Stronger.mp3
 
+hded:
+  title: 何等恩典.mp3
+  file: 何等恩典_赞美之泉.mp3
+  singer: 赞美之泉
+
+hzwmlm:
+  title: 活在我们里面.mp3
+  file: 活在我们里面_天堂敬拜.mp3
+  singer: 天堂敬拜
+
 jdswmz:
   title: 基督是我满足
   file: 基督是我满足.mp3
@@ -37,6 +47,10 @@ jdswmz:
 jwjzzl:
   title: 君王就在这里
   file: 君王就在这里.mp3
+
+klz:
+  title: 开路者/Way Maker
+  file: 开路者_Way Maker.mp3
 
 ndje:
   title: 祢的救恩
@@ -93,6 +107,11 @@ wake:
 wdsmxgn:
   title: 我的生命献给你
   file: 我的生命献给你.mp3
+
+wmds:
+  title: 我们的神
+  file: 我们的神_This is Our God_HTBBChurch.mp3
+  singer: HTBBChurch 
 
 wmztsdf:
   title: 我们在天上的父
