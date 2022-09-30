@@ -5,7 +5,7 @@ layout: default
   <div class="post-title-box">
     <div class="row">
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
-        {% if page.permalink == '/songs' %}
+        {% if page.permalink == '/songs' or page.permalink == '/baptism_lessons' %}
           <h1 class="post-title" style="text-align: center; letter-spacing: 1rem;">{{ page.title | escape }}</h1>
         {% else %}
           <h1 class="post-title">{{ page.title | escape }}</h1>
@@ -21,12 +21,8 @@ layout: default
   </div>
 
     <div class="post__head">
-      {% if page.default_image %}
-        <img src="{{site.img_url_prefix}}/teaching/default_image.jpg" alt="">
-      {% elsif page.permalink == '/songs' %}
-        <img src="{{site.img_url_prefix}}/teaching/songs.jpg" alt="">
-      {% elsif page.image == 'preview' %}
-        <img src="{{site.img_url_prefix}}/teaching/{{page.image}}.jpg" alt="">
+      {% if page.image %}
+        <img src="{{site.img_url_prefix}}/teaching/{{page.image}}" alt="">
       {% else %}
         <img src="{{site.img_url_prefix}}/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
       {% endif %}
