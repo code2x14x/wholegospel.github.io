@@ -1,9 +1,6 @@
 ---
 layout: post
 ---
-{% if page.permalink == '/songs' %}
-<p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
-{% endif %}
 <audio controls id="old-player" style='width: 100%; display: none;' preload="auto">   
   <source src="{{ site.os_url }}wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>

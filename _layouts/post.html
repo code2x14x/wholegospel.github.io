@@ -22,9 +22,12 @@ layout: default
 
     <div class="post__head">
       {% if page.image %}
-        <img src="{{site.img_url_prefix}}/teaching/{{page.image}}" alt="">
+        <img src="{{site.os_url}}wg-img/teaching/{{page.image}}" alt="">
       {% else %}
-        <img src="{{site.img_url_prefix}}/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
+        <img src="{{site.os_url}}wg-img/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
+      {% endif %}
+      {% if page.permalink == '/songs' %}
+      <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
       {% endif %}
     </div>
   </div>

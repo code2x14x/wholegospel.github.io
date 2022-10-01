@@ -262,6 +262,19 @@ div.article-img-wrapper .caption {
 
 .container .post__head {
   margin: 10px 0;
+  position: relative;
+  #track-title {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 5px;
+    background-color: #3f12144d;
+    font-size: 17px;
+    font-style: italic;
+  }
 }
 
 
