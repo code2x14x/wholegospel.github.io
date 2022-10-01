@@ -9,6 +9,7 @@ $(function () {
   var stepForkward = $('#step-forward');
   var fillBar = $('.fill-bar');
   var trackTitle = $('#track-title');
+  const os_url = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const countDown = document.getElementById("count-down");
 
   const audios = document.getElementsByClassName('audio');
@@ -29,16 +30,16 @@ $(function () {
   }
   const allSongsSources = [];
   Array.from(songs).forEach((ele) => {
-    allSongsSources.push('{{ site.os_url }}' + ele.getAttribute('data-file'));
+    allSongsSources.push(os_url + ele.getAttribute('data-file'));
   });
 
   const teachingAudio = document.getElementById('teachingAudio');
   let currentPlayingAudio;
   if(teachingAudio) {
-    audioTrack.src = '{{ site.os_url }}' + teachingAudio.getAttribute('data-file');
+    audioTrack.src = os_url + teachingAudio.getAttribute('data-file');
     currentPlayingAudio = teachingAudio;
   } else {
-    audioTrack.src = '{{ site.os_url }}' + audios[0].getAttribute('data-file');
+    audioTrack.src = os_url + audios[0].getAttribute('data-file');
     currentPlayingAudio = audios[0];
   }
   audioTrack.load();
@@ -48,7 +49,7 @@ $(function () {
       // 如果点击的是证道录音
       audioTrack.loop = true;
       audioTrack.removeEventListener('ended', playEndedHandler, false);
-      audioTrack.src = '{{ site.os_url }}' + teachingAudio.getAttribute('data-file');
+      audioTrack.src = os_url + teachingAudio.getAttribute('data-file');
       audioTrack.load();
       barsDancing(currentPlayingAudio);
       parseTime();
@@ -299,7 +300,6 @@ $(function () {
       const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
       const seconds = Math.floor((timeLeft / 1000) % 60);
 
-      console.log("ddddddddddddd");
       // const countDownTimer = document.getElementById('count-down-timer');
       const minutesStr = minutes < 10 ? '0' + minutes : minutes;
       const secondsStr = seconds < 10 ? '0' + seconds : seconds;
