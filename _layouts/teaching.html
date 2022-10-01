@@ -5,7 +5,7 @@ layout: post
 <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
 {% endif %}
 <audio controls id="old-player" style='width: 100%; display: none;' preload="auto">   
-  <source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
+  <source src="{{ site.os_url }}wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
 <div id="v-player">
@@ -60,13 +60,14 @@ layout: post
       {% if song.mainpage %}
         <a href="/songs/{{song.mainpage}}" class="lyrics">歌词</a>
       {% endif %}
+      <a href="{{ site.os_url }}wg-song/{{ song.file }}" download style="font-size: 15px;">下载</a>
       <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
         class="bar n5"></span>
     </div><br>
   {% endfor %}
   <div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
     <a href="/songs">以往赞美汇总。</a>
-    <a href="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导。</a>如果发现音频经常<span style="color: #ff5e3a">意外停止</span>（比如当锁屏后），可<span
+    <a href="{{ site.os_url }}wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导。</a>如果发现音频经常<span style="color: #ff5e3a">意外停止</span>（比如当锁屏后），可<span
       style="color: #ff5e3a">使用浏览器打开</span>此页面，通常能完全解决此问题。<span id="volume"></span>
   </div><br />
 {% endif %}

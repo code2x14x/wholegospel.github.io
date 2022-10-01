@@ -29,19 +29,16 @@ $(function () {
   }
   const allSongsSources = [];
   Array.from(songs).forEach((ele) => {
-    allSongsSources.push(
-      'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
-        ele.getAttribute('data-file')
-    );
+    allSongsSources.push('{{ site.os_url }}' + ele.getAttribute('data-file'));
   });
 
   const teachingAudio = document.getElementById('teachingAudio');
   let currentPlayingAudio;
   if(teachingAudio) {
-    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + teachingAudio.getAttribute('data-file');
+    audioTrack.src = '{{ site.os_url }}' + teachingAudio.getAttribute('data-file');
     currentPlayingAudio = teachingAudio;
   } else {
-    audioTrack.src = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' + audios[0].getAttribute('data-file');
+    audioTrack.src = '{{ site.os_url }}' + audios[0].getAttribute('data-file');
     currentPlayingAudio = audios[0];
   }
   audioTrack.load();
@@ -51,9 +48,7 @@ $(function () {
       // 如果点击的是证道录音
       audioTrack.loop = true;
       audioTrack.removeEventListener('ended', playEndedHandler, false);
-      audioTrack.src =
-        'https://typora-1259024198.cos.ap-beijing.myqcloud.com/' +
-        teachingAudio.getAttribute('data-file');
+      audioTrack.src = '{{ site.os_url }}' + teachingAudio.getAttribute('data-file');
       audioTrack.load();
       barsDancing(currentPlayingAudio);
       parseTime();
