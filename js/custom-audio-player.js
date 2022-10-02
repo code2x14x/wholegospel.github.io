@@ -12,24 +12,24 @@ $(function () {
   const os_url = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const countDown = document.getElementById("count-down");
 
-  const audios = document.getElementsByClassName('audio');
+  const allAudioElems = document.getElementsByClassName('audio');
 
-  for(let i=0; i<audios.length; i++) {
-    audios[i].dataset.index = i;
+  for(let i=0; i<allAudioElems.length; i++) {
+    allAudioElems[i].dataset.index = i;
   }
 
-  const songs = document.getElementsByClassName('song');
-  for(let i=0; i<songs.length; i++) {
-    songs[i].dataset.index = i;
+  const allSongElems = document.getElementsByClassName('song');
+  for(let i=0; i<allSongElems.length; i++) {
+    allSongElems[i].dataset.index = i;
   }
 
-  if(songs.length == 0) {
+  if(allSongElems.length == 0) {
     document.getElementById('old-player').style.display = 'block';
     document.getElementById('v-player').style.display = 'none';
     return;
   }
   const allSongsSources = [];
-  Array.from(songs).forEach((ele) => {
+  Array.from(allSongElems).forEach((ele) => {
     allSongsSources.push(os_url + ele.getAttribute('data-file'));
   });
 
@@ -39,8 +39,8 @@ $(function () {
     audioTrack.src = os_url + teachingAudio.getAttribute('data-file');
     currentPlayingAudio = teachingAudio;
   } else {
-    audioTrack.src = os_url + audios[0].getAttribute('data-file');
-    currentPlayingAudio = audios[0];
+    audioTrack.src = os_url + allAudioElems[0].getAttribute('data-file');
+    currentPlayingAudio = allAudioElems[0];
   }
   audioTrack.load();
 
@@ -58,7 +58,7 @@ $(function () {
   }
 
   // 点击歌曲名称时切换音乐
-  for (const audio of audios) {
+  for (const audio of allAudioElems) {
     audio.addEventListener('click', (e) => {
       if(e.target.nodeName === 'A') {
         e.preventDefault();
@@ -89,7 +89,7 @@ $(function () {
         audioTrack.loop = true;
       }
       const idx = parseInt(audio.getAttribute('data-index'));
-      barsDancing(songs[idx]); // 音乐播放动画
+      barsDancing(allSongElems[idx]); // 音乐播放动画
       audioTrack.src = allSongsSources[idx];
       audioTrack.load(); //call this to just preload the audio without playing
       audioTrack.play();
@@ -122,7 +122,7 @@ $(function () {
     // 判断当前是否有正在播放的音乐
     const dancing = document.getElementsByClassName('dancing');
     if(dancing.length == 0 || dancing.length == 1 && !dancing[0].classList.contains('song')){
-      barsDancing(songs[0]);
+      barsDancing(allSongElems[0]);
       allLoop();
       audioTrack.src = allSongsSources[0]; //每次读数组最后一个元素
       audioTrack.load();
@@ -146,7 +146,7 @@ $(function () {
     const current = document.getElementsByClassName('dancing')[0];
     let idx = parseInt(current.getAttribute('data-index')) + 1;
     idx = idx < allSongsSources.length ? idx : 0;
-    currentPlayingAudio = songs[idx];
+    currentPlayingAudio = allSongElems[idx];
     barsDancing(currentPlayingAudio);
     audioTrack.src = allSongsSources[idx];
     audioTrack.load();
@@ -156,7 +156,7 @@ $(function () {
 
   // 音乐播放动画
   function barsDancing(target) {
-    Array.from(audios).forEach((element) => {
+    Array.from(allAudioElems).forEach((element) => {
       element.classList.remove('dancing');
       element.firstElementChild.classList.remove('fa-spin');
     });
@@ -168,7 +168,7 @@ $(function () {
     const current = document.getElementsByClassName('dancing')[0];
     let idx = parseInt(current.getAttribute('data-index')) - 1;
     idx = idx < 0 ? 0 : idx;
-    currentPlayingAudio = songs[idx];
+    currentPlayingAudio = allSongElems[idx];
     barsDancing(currentPlayingAudio);
     audioTrack.src = allSongsSources[idx];
     trackTitle.html(currentPlayingAudio.dataset.title);
@@ -194,7 +194,7 @@ $(function () {
     playButton.fadeIn();
     pauseButton.hide();
     audioTrack.pause();
-    Array.from(audios).forEach((element) => {
+    Array.from(allAudioElems).forEach((element) => {
       element.classList.remove('dancing');
       element.firstElementChild.classList.remove('fa-spin');
     });
@@ -317,7 +317,7 @@ $(function () {
             audioTrack.pause();
             playButton.fadeIn();
             pauseButton.hide();
-            Array.from(audios).forEach((element) => {
+            Array.from(allAudioElems).forEach((element) => {
               element.classList.remove('dancing');
             });
             audioTrack.volume = 1;
