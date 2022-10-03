@@ -26,9 +26,11 @@ layout: default
       {% else %}
         {% assign image = page.date %}
       {% endif %}
-        <img src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt="">
+      <img id="post-img" src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt=""
+      data-default="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg">
+
       {% if page.permalink == '/songs' %}
-      <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
+        <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
       {% endif %}
     </div>
   </div>

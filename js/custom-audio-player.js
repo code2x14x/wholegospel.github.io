@@ -11,6 +11,9 @@ $(function () {
   const stepForkward = $('#step-forward');    // 按钮 下一曲
   const fillBar = $('.fill-bar');             // 进度条 填充条
   const countDown = document.getElementById("count-down"); // 按钮 倒计时
+
+  const postImgElem = document.querySelector("#post-img"); // 标题配图
+
   // 数据
   const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
@@ -264,6 +267,10 @@ $(function () {
     audioElem.classList.add('current-audio');
     audioTrackElem.src = osUrl + audioElem.getAttribute('data-file');
     audioTrackElem.load();
+    // 更改标题配图
+    const imgSrc = audioElem.dataset.image;
+    if(imgSrc) postImgElem.src = osUrl + imgSrc;
+    else postImgElem.src = postImgElem.dataset.default;
     play(audioElem);
   }
 
