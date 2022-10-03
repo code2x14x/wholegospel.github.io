@@ -13,7 +13,6 @@ $(function () {
   const countDown = document.getElementById("count-down"); // 按钮 倒计时
   // 数据
   const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
-  const teachingAudioElem = document.getElementById('teachingAudioElem');   // 证道音频 DOM
   const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
   const allSongElems = document.getElementsByClassName('song');             // 全部歌曲
   let allSongsSources = [];   // 全部歌曲的 source
@@ -68,6 +67,62 @@ $(function () {
   }
 
   init();
+  let list = document.querySelector("#list");
+  const searchInput = document.querySelector('#search-box');
+  if(searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      //获取搜索框的输入
+      let value = e.target.value
+      //检查输入是否长度大于 0
+      if (value && value.trim().length > 0){
+          //消除两端空格并转为小写 
+          value = value.trim().toLowerCase()
+          // 返回搜索结果
+          // we need to write code (a function for filtering through our data to include the search input value)
+                  //returning only the results of setList if the value of the search is included in the person's name
+          let allAudioElemsArr = [...allAudioElems];
+          setList(allAudioElemsArr.filter(song => {
+            return song.dataset.title.includes(value)
+          }));
+      } else {
+          //什么也不返回
+          clearList()
+      }
+    });
+  }
+
+  function setList(results){
+    clearList();
+    for (const person of results){
+        // creating a li element for each result item
+        const resultItem = document.createElement('li')
+
+        // adding a class to each item of the results
+        resultItem.classList.add('result-item')
+
+        // grabbing the name of the current point of the loop and adding the name as the list item's text
+        const text = document.createTextNode(person.dataset.title)
+
+        // appending the text to the result item
+        resultItem.appendChild(text)
+        resultItem.songIndex = person.dataset.index;
+        resultItem.addEventListener("click", function(e) {
+          singleLoop();
+          changeSourceAndPlay(allSongElems[e.target.songIndex]);
+        }, false); 
+
+        // appending the result item to the list
+        list.appendChild(resultItem)
+    }
+  }
+
+  //清空搜索结果集
+  function clearList(){
+    // looping through each child of the search results list and remove each child
+    while (list.firstChild){
+        list.removeChild(list.firstChild)
+    }
+  }
 
   // 点击循环按钮时
   repeatButton.addEventListener('click', (e) => {
