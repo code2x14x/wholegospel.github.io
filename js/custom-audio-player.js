@@ -51,15 +51,17 @@ $(function () {
     audio.addEventListener('click', (e) => {
       // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
       if(e.target.nodeName === 'A') {
-        e.preventDefault();
+        e.stopPropagation();
         window.open(e.target.href);
         return;
       }
+      console.log(audio.firstElementChild.classList);
       const isPlaying = document.getElementById("play").style.display;
       // 如果点击的是当前正在播放的音频，则什么也不做 
       if (isPlaying && audio.classList.contains('current-audio'))  return; 
       if (audio.classList.contains('teaching')) singleLoop();
-      changeSourceAndPlay(e.target);
+      // audio.firstElementChild.classList.add('fa-spin');
+      changeSourceAndPlay(audio);
     });
   }
 
@@ -250,7 +252,7 @@ $(function () {
       element.firstElementChild.classList.remove('fa-spin');
     });
     target.classList.add('dancing');
-    // target.firstElementChild.classList.add('fa-spin');
+    target.firstElementChild.classList.add('fa-spin');
   }
 
   function parseTime() {
