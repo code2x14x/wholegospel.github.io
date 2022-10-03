@@ -22,10 +22,11 @@ layout: default
 
     <div class="post__head">
       {% if page.image %}
-        <img src="{{site.os_url}}wg-img/teaching/{{page.image}}" alt="">
+        {% assign image = page.image %}
       {% else %}
-        <img src="{{site.os_url}}wg-img/teaching/{{page.date | date: '%Y-%m-%d'}}.jpg" alt="">
+        {% assign image = page.date %}
       {% endif %}
+        <img src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt="">
       {% if page.permalink == '/songs' %}
       <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
       {% endif %}
@@ -111,7 +112,7 @@ layout: default
     <div class="next">
       <a class="post__nav__image" 
       href="{{ site.baseurl }}{{page.next.url}}" 
-      style="background-image: url({{site.img_url_prefix}}/teaching/{{ image| date: '%Y-%m-%d'}}.jpg)">
+      style="background-image: url({{site.img_url_prefix}}/teaching/{{ image | date: '%Y-%m-%d'}}.jpg)">
       </a>
       <h2 class="post__nav__title">
         <i class="ion ion-md-arrow-back"></i>

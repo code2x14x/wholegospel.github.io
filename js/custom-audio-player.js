@@ -1,199 +1,103 @@
 $(function () {
-  var audioTrack = document.getElementById('audio-track');
-  var repeatButton = document.getElementById('repeat');
-  var playButton = $('#play');
-  var pauseButton = $('#pause');
-  var prev_15 = $('#prev-15');
-  var next_15 = $('#next-15');
-  var stepBackward = $('#step-backward');
-  var stepForkward = $('#step-forward');
-  var fillBar = $('.fill-bar');
-  var trackTitle = $('#track-title');
-  const os_url = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
-  const countDown = document.getElementById("count-down");
+  // 播放器
+  const audioTrackElem = document.getElementById('audio-track'); 
+  // 按钮
+  const repeatButton = document.getElementById('repeat'); // 按钮 循环播放
+  const playButton = $('#play');              // 按钮 播放
+  const pauseButton = $('#pause');            // 按钮 暂停
+  const prev_15 = $('#prev-15');              // 按钮 快退 15 秒
+  const next_15 = $('#next-15');              // 按钮 快进 15 秒
+  const stepBackward = $('#step-backward');   // 按钮 上一曲
+  const stepForkward = $('#step-forward');    // 按钮 下一曲
+  const fillBar = $('.fill-bar');             // 进度条 填充条
+  const countDown = document.getElementById("count-down"); // 按钮 倒计时
+  // 数据
+  const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
+  const teachingAudioElem = document.getElementById('teachingAudioElem');   // 证道音频 DOM
+  const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
+  const allSongElems = document.getElementsByClassName('song');             // 全部歌曲
+  let allSongsSources = [];   // 全部歌曲的 source
 
-  const allAudioElems = document.getElementsByClassName('audio');
-
-  for(let i=0; i<allAudioElems.length; i++) {
-    allAudioElems[i].dataset.index = i;
+  // 初始化 全部音频 DOM
+  for(let i = 0; i < allAudioElems.length; i++) {
+    const audio = allAudioElems[i]; 
+    audio.dataset.index = i;
+    if(i == 0) {
+      audio.classList.add('current-audio');
+      audioTrackElem.src = osUrl + audio.dataset.file;
+      audioTrackElem.load();
+    }
   }
 
-  const allSongElems = document.getElementsByClassName('song');
-  for(let i=0; i<allSongElems.length; i++) {
+  // 初始化 全部歌曲 DOM
+  for(let i = 0; i < allSongElems.length; i++) {
     allSongElems[i].dataset.index = i;
   }
 
+  // 兼容之前没有歌曲的 post：如果没有歌曲 DOM，则仍显示老版本的播放器（html 原生 audio 播放器）
   if(allSongElems.length == 0) {
     document.getElementById('old-player').style.display = 'block';
     document.getElementById('v-player').style.display = 'none';
     return;
   }
-  const allSongsSources = [];
+
+  // 初始化 全部歌曲的 source
   Array.from(allSongElems).forEach((ele) => {
-    allSongsSources.push(os_url + ele.getAttribute('data-file'));
+    allSongsSources.push(osUrl + ele.getAttribute('data-file'));
   });
 
-  const teachingAudio = document.getElementById('teachingAudio');
-  let currentPlayingAudio;
-  if(teachingAudio) {
-    audioTrack.src = os_url + teachingAudio.getAttribute('data-file');
-    currentPlayingAudio = teachingAudio;
-  } else {
-    audioTrack.src = os_url + allAudioElems[0].getAttribute('data-file');
-    currentPlayingAudio = allAudioElems[0];
-  }
-  audioTrack.load();
-
-
-  function playTeaching(teachingAudio){
-      // 如果点击的是证道录音
-      audioTrack.loop = true;
-      audioTrack.removeEventListener('ended', playEndedHandler, false);
-      audioTrack.src = os_url + teachingAudio.getAttribute('data-file');
-      audioTrack.load();
-      barsDancing(currentPlayingAudio);
-      parseTime();
-      audioTrack.play();
-      repeatButton.classList.remove('looping');
-  }
-
-  // 点击歌曲名称时切换音乐
+  // 给 证道、歌曲名称 和 歌词按钮 添加点击事件
   for (const audio of allAudioElems) {
     audio.addEventListener('click', (e) => {
+      // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
       if(e.target.nodeName === 'A') {
         e.preventDefault();
         window.open(e.target.href);
         return;
       }
-      // 如果点击的是当前正在播放的音频，则什么也不做
-      if (audio.classList.contains('dancing')) {
-        return;
-      }
-
-      pauseButton.fadeIn();
-      playButton.hide();
-
-      currentPlayingAudio = audio;
-      trackTitle.html(currentPlayingAudio.dataset.title);
-
-      // 如果点击的是证道录音
-      if (audio.classList.contains('teaching')) {
-        playTeaching(audio);
-        return;
-      }
-
-      // 如果点击的是歌曲
-      // 如果是刚打开页面，尚无正在播放的音频
-      const looping = document.getElementsByClassName('looping');
-      if (looping.length == 0) {
-        audioTrack.loop = true;
-      }
-      const idx = parseInt(audio.getAttribute('data-index'));
-      barsDancing(allSongElems[idx]); // 音乐播放动画
-      audioTrack.src = allSongsSources[idx];
-      audioTrack.load(); //call this to just preload the audio without playing
-      audioTrack.play();
+      const isPlaying = document.getElementById("play").style.display;
+      // 如果点击的是当前正在播放的音频，则什么也不做 
+      if (isPlaying && audio.classList.contains('current-audio'))  return; 
+      if (audio.classList.contains('teaching')) singleLoop();
+      changeSourceAndPlay(e.target);
     });
   }
 
-  // 顺序播放一遍全部音乐
+
+  // 点击循环按钮时
   repeatButton.addEventListener('click', (e) => {
-
-    console.log('loop all')
-
-    e.preventDefault();
-
-
-    if(document.getElementsByClassName('looping').length == 0) {
-      pauseButton.fadeIn();
-      playButton.hide();
+    const isPlaying = document.getElementById("play").style.display;
+    if (!isPlaying){
+      changeSourceAndPlay(allSongElems[0]); // 播放
     }
-    repeatButton.classList.toggle('looping');
-
-    if(!repeatButton.classList.contains('looping')){
-      // 改为单曲循环状态
-      singleLoop();
-      return;
-    } 
-
-    // 改为全部(证道录音除外)循环状态
-    allLoop();
-
-    // 判断当前是否有正在播放的音乐
-    const dancing = document.getElementsByClassName('dancing');
-    if(dancing.length == 0 || dancing.length == 1 && !dancing[0].classList.contains('song')){
-      barsDancing(allSongElems[0]);
-      allLoop();
-      audioTrack.src = allSongsSources[0]; //每次读数组最后一个元素
-      audioTrack.load();
-      audioTrack.play();
-    }
+    // 根据按钮当前样式，切换循环模式
+    if(repeatButton.classList.contains('all-loop')) singleLoop(); 
+    else allLoop();
   });
 
-  function allLoop() {
-    document.getElementById('loop-indicator').innerText = '全部循环';
-    audioTrack.loop = false; //禁止单曲循环，否则无法触发ended事件
-    audioTrack.addEventListener('ended', playEndedHandler, false);
-  }
-
-  function singleLoop() {
-    document.getElementById('loop-indicator').innerText = '单曲循环';
-    audioTrack.loop = true;
-    audioTrack.removeEventListener('ended', playEndedHandler, false);
-  }
-
-  function playEndedHandler() {
-    const current = document.getElementsByClassName('dancing')[0];
-    let idx = parseInt(current.getAttribute('data-index')) + 1;
-    idx = idx < allSongsSources.length ? idx : 0;
-    currentPlayingAudio = allSongElems[idx];
-    barsDancing(currentPlayingAudio);
-    audioTrack.src = allSongsSources[idx];
-    audioTrack.load();
-    audioTrack.play();
-    trackTitle.html(currentPlayingAudio.dataset.title);
-  }
-
-  // 音乐播放动画
-  function barsDancing(target) {
-    Array.from(allAudioElems).forEach((element) => {
-      element.classList.remove('dancing');
-      element.firstElementChild.classList.remove('fa-spin');
-    });
-    target.classList.add('dancing');
-    target.firstElementChild.classList.add('fa-spin');
-  }
-
+  // 上一首
   stepBackward.click(function(){
-    const current = document.getElementsByClassName('dancing')[0];
+    const current = document.getElementsByClassName('current-audio')[0];
     let idx = parseInt(current.getAttribute('data-index')) - 1;
     idx = idx < 0 ? 0 : idx;
-    currentPlayingAudio = allSongElems[idx];
-    barsDancing(currentPlayingAudio);
-    audioTrack.src = allSongsSources[idx];
-    trackTitle.html(currentPlayingAudio.dataset.title);
-    audioTrack.load();
-    audioTrack.play();
+    changeSourceAndPlay(allSongElems[idx]);
   });
 
+  // 下一首
   stepForkward.click(playEndedHandler);
 
   playButton.click(function () {
-    pauseButton.fadeIn();
-    playButton.hide();
-    audioTrack.play();
-    if(repeatButton.classList.contains('looping')){
-      allLoop();
-    } else {
+    if (!repeatButton.classList.contains('all-loop')){
       singleLoop();
-    }
-    barsDancing(currentPlayingAudio);
+    };
+    const current = document.getElementsByClassName("current-audio")[0];
+    play(current);
   });
 
   pauseButton.click(function () {
     playButton.fadeIn();
     pauseButton.hide();
-    audioTrack.pause();
+    audioTrackElem.pause();
     Array.from(allAudioElems).forEach((element) => {
       element.classList.remove('dancing');
       element.firstElementChild.classList.remove('fa-spin');
@@ -201,68 +105,39 @@ $(function () {
   });
 
   prev_15.click(function () {
-    audioTrack.currentTime = audioTrack.currentTime - 10;
-    if (audioTrack.currentTime < 0) audioTrack.currentTime = 0;
+    audioTrackElem.currentTime = audioTrackElem.currentTime - 10;
+    if (audioTrackElem.currentTime < 0) audioTrackElem.currentTime = 0;
   });
 
   next_15.click(function () {
-    audioTrack.currentTime = audioTrack.currentTime + 10;
+    audioTrackElem.currentTime = audioTrackElem.currentTime + 10;
   });
 
   $('#seek').on('change', function () {
-    audioTrack.currentTime = $(this).val();
+    audioTrackElem.currentTime = $(this).val();
   });
 
-  audioTrack.addEventListener('loadedmetadata', function () {
+  audioTrackElem.addEventListener('loadedmetadata', function () {
     var timeStamps = parseTime();
     $('.time.current').html(timeStamps[0]);
     $('.time.till-end').html(timeStamps[2]);
   });
 
-  audioTrack.addEventListener('timeupdate', function () {
-    var position = (100 / audioTrack.duration) * audioTrack.currentTime;
+  audioTrackElem.addEventListener('timeupdate', function () {
+    var position = (100 / audioTrackElem.duration) * audioTrackElem.currentTime;
     fillBar.css('width', position + '%');
 
     var timeStamps = parseTime();
     $('.time.current').html(timeStamps[0]);
-    // $('.time.till-end').html(timeStamps[1]);
 
-    $('#seek').attr('max', audioTrack.duration);
-    $('#seek').val(audioTrack.currentTime);
+    $('#seek').attr('max', audioTrackElem.duration);
+    $('#seek').val(audioTrackElem.currentTime);
   });
 
-  function parseTime() {
-    var current = audioTrack.currentTime;
-    var duration = audioTrack.duration;
-    // var tillend = audioTrack.duration - audioTrack.currentTime;
-    var tillend = audioTrack.duration;
-    var durationMinute = Math.floor(duration / 60);
-    var durationSecond = Math.floor(duration - durationMinute * 60);
-    var durationLabel = durationMinute + ':' + durationSecond;
-    if(durationSecond < 10) {
-      durationLabel = durationMinute + ':0' + durationSecond;
-    }
-    var tillendMinute = Math.floor(tillend / 60);
-    var tillendSecond = Math.floor(tillend - tillendMinute * 60);
-    if (tillendSecond < 10) {
-      tillendSecond = '0' + tillendSecond;
-    }
-    var tillendLabel = '-' + tillendMinute + ':' + tillendSecond;
-    currentSecond = Math.floor(current);
-    currentMinute = Math.floor(currentSecond / 60);
-    currentSecond = currentSecond - currentMinute * 60;
-    if (currentSecond < 10) {
-      currentSecond = '0' + currentSecond;
-    }
-    var currentLabel = currentMinute + ':' + currentSecond;
-    return [currentLabel, tillendLabel, durationLabel];
-  }
-
-  // 倒计时
+  // 给倒计时按钮添加点击事件
   let countDownDate = 0;
   let timer = 0;
   let volumeTimer = 0;
-  // const countDown = document.getElementById('count-down');
   let durationClickCnt = 5;
   countDown.addEventListener('click', (event) => {
     event.preventDefault();
@@ -309,24 +184,100 @@ $(function () {
         clearInterval(timer);
         durationClickCnt = 5;
         countDownTimer.innerText = '';
-        let curVolume = audioTrack.volume;
+        let curVolume = audioTrackElem.volume;
         volumeTimer = setInterval(()=>{
           console.log(curVolume);
           if(curVolume < 0.1) {
             clearInterval(volumeTimer);
-            audioTrack.pause();
+            audioTrackElem.pause();
             playButton.fadeIn();
             pauseButton.hide();
             Array.from(allAudioElems).forEach((element) => {
               element.classList.remove('dancing');
             });
-            audioTrack.volume = 1;
+            audioTrackElem.volume = 1;
           } else {
             curVolume *= 0.7;
-            audioTrack.volume = curVolume;
+            audioTrackElem.volume = curVolume;
           }
         },500);
       }
     }, 1000);
   });
+
+  function changeSourceAndPlay(audioElem){
+    if(document.getElementById('track-title')) 
+      $('#track-title').html(audioElem.dataset.title);
+    for(let e of allAudioElems) e.classList.remove('current-audio');
+    audioElem.classList.add('current-audio');
+    audioTrackElem.src = osUrl + audioElem.getAttribute('data-file');
+    audioTrackElem.load();
+    play(audioElem);
+  }
+
+  function play(audioElem){
+    barsDancing(audioElem);
+    playButton.hide();
+    pauseButton.fadeIn();
+    audioTrackElem.play();
+  }
+
+  function allLoop() {
+    document.getElementById('loop-indicator').innerText = '全部循环';
+    repeatButton.classList.add('all-loop');
+    audioTrackElem.loop = false; //禁止单曲循环，否则无法触发ended事件
+    audioTrackElem.addEventListener('ended', playEndedHandler, false);
+  }
+
+  function singleLoop() {
+    document.getElementById('loop-indicator').innerText = '单曲循环';
+    repeatButton.classList.remove('all-loop');
+    audioTrackElem.loop = true; //开启单曲循环
+    audioTrackElem.removeEventListener('ended', playEndedHandler, false);
+  }
+
+  function playEndedHandler() {
+    const current = document.getElementsByClassName('current-audio')[0];
+    let idx = parseInt(current.getAttribute('data-index')) + 1;
+    idx = idx < allSongsSources.length ? idx : 0;
+    changeSourceAndPlay(allSongElems[idx]);
+  }
+
+  // 音乐播放动画
+  function barsDancing(target) {
+    Array.from(allAudioElems).forEach((element) => {
+      element.classList.remove('dancing');
+      element.firstElementChild.classList.remove('fa-spin');
+    });
+    target.classList.add('dancing');
+    // target.firstElementChild.classList.add('fa-spin');
+  }
+
+  function parseTime() {
+    var current = audioTrackElem.currentTime;
+    var duration = audioTrackElem.duration;
+    // var tillend = audioTrackElem.duration - audioTrackElem.currentTime;
+    var tillend = audioTrackElem.duration;
+    var durationMinute = Math.floor(duration / 60);
+    var durationSecond = Math.floor(duration - durationMinute * 60);
+    var durationLabel = durationMinute + ':' + durationSecond;
+    if(durationSecond < 10) {
+      durationLabel = durationMinute + ':0' + durationSecond;
+    }
+    var tillendMinute = Math.floor(tillend / 60);
+    var tillendSecond = Math.floor(tillend - tillendMinute * 60);
+    if (tillendSecond < 10) {
+      tillendSecond = '0' + tillendSecond;
+    }
+    var tillendLabel = '-' + tillendMinute + ':' + tillendSecond;
+    currentSecond = Math.floor(current);
+    currentMinute = Math.floor(currentSecond / 60);
+    currentSecond = currentSecond - currentMinute * 60;
+    if (currentSecond < 10) {
+      currentSecond = '0' + currentSecond;
+    }
+    var currentLabel = currentMinute + ':' + currentSecond;
+    return [currentLabel, tillendLabel, durationLabel];
+  }
+
 });
