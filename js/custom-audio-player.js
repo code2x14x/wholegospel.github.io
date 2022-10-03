@@ -51,6 +51,7 @@ $(function () {
     audio.addEventListener('click', (e) => {
       // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
       if(e.target.nodeName === 'A') {
+        pause();
         e.preventDefault();
         e.stopPropagation();
         window.open(e.target.href);
@@ -97,15 +98,7 @@ $(function () {
     play(current);
   });
 
-  pauseButton.click(function () {
-    playButton.fadeIn();
-    pauseButton.hide();
-    audioTrackElem.pause();
-    Array.from(allAudioElems).forEach((element) => {
-      element.classList.remove('dancing');
-      element.firstElementChild.classList.remove('fa-spin');
-    });
-  });
+  pauseButton.click(pause);
 
   prev_15.click(function () {
     audioTrackElem.currentTime = audioTrackElem.currentTime - 10;
@@ -223,6 +216,16 @@ $(function () {
     playButton.hide();
     pauseButton.fadeIn();
     audioTrackElem.play();
+  }
+
+  function pause(){
+    playButton.fadeIn();
+    pauseButton.hide();
+    audioTrackElem.pause();
+    Array.from(allAudioElems).forEach((element) => {
+      element.classList.remove('dancing');
+      element.firstElementChild.classList.remove('fa-spin');
+    });
   }
 
   function allLoop() {
