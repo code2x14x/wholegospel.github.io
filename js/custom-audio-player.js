@@ -51,6 +51,7 @@ $(function () {
     audio.addEventListener('click', (e) => {
       // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
       if(e.target.nodeName === 'A') {
+        e.preventDefault();
         e.stopPropagation();
         window.open(e.target.href);
         return;
