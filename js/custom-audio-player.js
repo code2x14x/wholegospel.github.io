@@ -18,55 +18,56 @@ $(function () {
   const allSongElems = document.getElementsByClassName('song');             // 全部歌曲
   let allSongsSources = [];   // 全部歌曲的 source
 
-  // 初始化 全部音频 DOM
-  for(let i = 0; i < allAudioElems.length; i++) {
-    const audio = allAudioElems[i]; 
-    audio.dataset.index = i;
-    if(i == 0) {
-      audio.classList.add('current-audio');
-      audioTrackElem.src = osUrl + audio.dataset.file;
-      audioTrackElem.load();
+  function init(){
+    // 初始化 全部音频 DOM
+    for(let i = 0; i < allAudioElems.length; i++) {
+      const audio = allAudioElems[i]; 
+      audio.dataset.index = i;
+      if(i == 0) {
+        audio.classList.add('current-audio');
+        audioTrackElem.src = osUrl + audio.dataset.file;
+        audioTrackElem.load();
+      }
+    }
+
+    // 初始化 全部歌曲 DOM
+    for(let i = 0; i < allSongElems.length; i++) {
+      allSongElems[i].dataset.index = i;
+    }
+
+    // 兼容之前没有歌曲的 post：如果没有歌曲 DOM，则仍显示老版本的播放器（html 原生 audio 播放器）
+    if(allSongElems.length == 0) {
+      document.getElementById('old-player').style.display = 'block';
+      document.getElementById('v-player').style.display = 'none';
+      return;
+    }
+
+    // 初始化 全部歌曲的 source
+    Array.from(allSongElems).forEach((ele) => {
+      allSongsSources.push(osUrl + ele.getAttribute('data-file'));
+    });
+
+    // 给 证道、歌曲名称 和 歌词按钮 添加点击事件
+    for (const audio of allAudioElems) {
+      audio.addEventListener('click', (e) => {
+        // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
+        if(e.target.nodeName === 'A') {
+          pause();
+          e.preventDefault();
+          e.stopPropagation();
+          window.open(e.target.href);
+          return;
+        }
+        const isPlaying = document.getElementById("play").style.display;
+        // 如果点击的是当前正在播放的音频，则什么也不做 
+        if (isPlaying && audio.classList.contains('current-audio'))  return; 
+        if (audio.classList.contains('teaching')) singleLoop();
+        changeSourceAndPlay(audio);
+      });
     }
   }
 
-  // 初始化 全部歌曲 DOM
-  for(let i = 0; i < allSongElems.length; i++) {
-    allSongElems[i].dataset.index = i;
-  }
-
-  // 兼容之前没有歌曲的 post：如果没有歌曲 DOM，则仍显示老版本的播放器（html 原生 audio 播放器）
-  if(allSongElems.length == 0) {
-    document.getElementById('old-player').style.display = 'block';
-    document.getElementById('v-player').style.display = 'none';
-    return;
-  }
-
-  // 初始化 全部歌曲的 source
-  Array.from(allSongElems).forEach((ele) => {
-    allSongsSources.push(osUrl + ele.getAttribute('data-file'));
-  });
-
-  // 给 证道、歌曲名称 和 歌词按钮 添加点击事件
-  for (const audio of allAudioElems) {
-    audio.addEventListener('click', (e) => {
-      // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
-      if(e.target.nodeName === 'A') {
-        pause();
-        e.preventDefault();
-        e.stopPropagation();
-        window.open(e.target.href);
-        return;
-      }
-      console.log(audio.firstElementChild.classList);
-      const isPlaying = document.getElementById("play").style.display;
-      // 如果点击的是当前正在播放的音频，则什么也不做 
-      if (isPlaying && audio.classList.contains('current-audio'))  return; 
-      if (audio.classList.contains('teaching')) singleLoop();
-      // audio.firstElementChild.classList.add('fa-spin');
-      changeSourceAndPlay(audio);
-    });
-  }
-
+  init();
 
   // 点击循环按钮时
   repeatButton.addEventListener('click', (e) => {
