@@ -272,7 +272,7 @@ $(function () {
     audioTrackElem.load();
     // 更改标题配图
     const imgSrc = audioElem.dataset.image;
-    console.log(imgSrc)
+    console.log("imgSrc = " + imgSrc)
     if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
     else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
     play(audioElem);
