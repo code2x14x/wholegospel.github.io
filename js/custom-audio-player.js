@@ -20,8 +20,8 @@ $(function () {
   let allSongsSources = [];   // 全部歌曲的 source
 
   const postHeadElem = document.querySelector(".post__head"); // 标题配图
-  postHeadElem.style.backgroundImage = "url('" + osUrl + "wg-img/teaching/" + postHeadElem.dataset.bgimg + "')";
-  console.log(postHeadElem.style.backgroundImage);
+  postHeadElem.style.backgroundImage = "url('" + osUrl + postHeadElem.dataset.bgimg + "')";
+  const defultImg = postHeadElem.dataset.bgimg;
 
   function init(){
     // 初始化 全部音频 DOM
@@ -274,7 +274,7 @@ $(function () {
     const imgSrc = audioElem.dataset.image;
     console.log(imgSrc)
     if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
-    else postHeadElem.style.backgroundImage =  "url('" + osUrl + "wg-img/teaching/songs.jpg')";
+    else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
     play(audioElem);
   }
 

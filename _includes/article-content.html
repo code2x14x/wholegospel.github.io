@@ -7,10 +7,10 @@
         {% if post.image %}
           {% assign image = post.image %}
         {% else %}
-          {% assign image = post.date %}
+          {% assign image = post.date  | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg"  %}
         {% endif %}
         <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
-        style="background-image: url({{site.img_url_prefix}}/teaching/{{ image | date: '%Y-%m-%d' }}.jpg)"></a>
+        style="background-image: url({{site.os_url}}{{ image }})"></a>
 
         <div class="article__content {{ without-image }}">
       
