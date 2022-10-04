@@ -20,15 +20,14 @@ layout: default
     </div>
   </div>
 
-    <div class="post__head">
       {% if page.image %}
         {% assign image = page.image %}
       {% else %}
         {% assign image = page.date %}
       {% endif %}
-      <img id="post-img" src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt=""
-      data-default="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg">
-
+    <div class="post__head" style="background: no-repeat center/cover;" data-bgimg="{{ image  | date: '%Y-%m-%d' | append: '.jpg'}}">
+      <!-- <img id="post-img" src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt=""
+      data-default="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg"> -->
       {% if page.permalink == '/songs' %}
         <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
       {% endif %}

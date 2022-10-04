@@ -12,13 +12,16 @@ $(function () {
   const fillBar = $('.fill-bar');             // 进度条 填充条
   const countDown = document.getElementById("count-down"); // 按钮 倒计时
 
-  const postImgElem = document.querySelector("#post-img"); // 标题配图
 
   // 数据
   const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
   const allSongElems = document.getElementsByClassName('song');             // 全部歌曲
   let allSongsSources = [];   // 全部歌曲的 source
+
+  const postHeadElem = document.querySelector(".post__head"); // 标题配图
+  postHeadElem.style.backgroundImage = "url('" + osUrl + "wg-img/teaching/" + postHeadElem.dataset.bgimg + "')";
+  console.log(postHeadElem.style.backgroundImage);
 
   function init(){
     // 初始化 全部音频 DOM
@@ -269,8 +272,9 @@ $(function () {
     audioTrackElem.load();
     // 更改标题配图
     const imgSrc = audioElem.dataset.image;
-    if(imgSrc) postImgElem.src = osUrl + imgSrc;
-    else postImgElem.src = postImgElem.dataset.default;
+    console.log(imgSrc)
+    if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
+    else postHeadElem.style.backgroundImage =  "url('" + osUrl + "wg-img/teaching/songs.jpg')";
     play(audioElem);
   }
 
