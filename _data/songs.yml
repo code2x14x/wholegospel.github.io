@@ -117,9 +117,14 @@ wdsmxgn:
 
 wdz:
   title: 我的主
+  file: 我的主_The_God_I_Know.mp3
+  mainpage: wdz
+
+wdz_csfsjh:
+  title: 我的主
   file: 我的主_城市丰收教会.mp3
   singer: 城市丰收教会
-  mainpage: wdz
+  mainpage: wdz_csfsjh
   image: 我的主_城市丰收教会.jpg
 
 wmds:
