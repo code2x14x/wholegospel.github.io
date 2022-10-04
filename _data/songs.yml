@@ -70,6 +70,11 @@ ourgod:
   title: Our God
   file: Our God.m4a
 
+pwzgcxqd:
+  title: 陪我走过春夏秋冬
+  file: 陪我走过春夏秋冬_小羊诗歌.mp3
+  singer: 小羊诗歌
+
 qslyx:
   title: 求圣灵运行
   file: 求圣灵运行.mp3
@@ -109,6 +114,13 @@ wake:
 wdsmxgn:
   title: 我的生命献给你
   file: 我的生命献给你.mp3
+
+wdz:
+  title: 我的主
+  file: 我的主_城市丰收教会.mp3
+  singer: 城市丰收教会
+  mainpage: wdz
+  image: 我的主_城市丰收教会.jpg
 
 wmds:
   title: 我们的神

@@ -14,8 +14,6 @@ plugins:
 paginate: 5
 paginate_path: "/page/:num"
 
-
-img_url_prefix: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg-img
 os_url: https://typora-1259024198.cos.ap-beijing.myqcloud.com/
 
 # Pages Path
