@@ -9,14 +9,14 @@ layout: post
     <div id="controls">
       <div class="first-part">
         <i id="repeat" class="fas fa-sync-alt"></i>
-        {% if page.permalink == '/hymns' %}
+        {% if page.permalink == '/hymns' or page.permalink == '/hymns_en' %}
         <i id="step-backward" class="fas fa-step-backward"></i>
         {% else %}
         <i id="prev-15" class="fas fa-undo-alt"></i>
         {% endif %}
         <i id="play" class="fa fa-play"></i>
         <i id="pause" class="fa fa-pause"></i>
-        {% if page.permalink == '/hymns' %}
+        {% if page.permalink == '/hymns' or page.permalink == '/hymns_en' %}
         <i id="step-forward" class="fas fa-step-forward"></i>
         {% else %}
         <i id="next-15" class="fas fa-redo-alt"></i>
@@ -45,7 +45,7 @@ layout: post
 </audio>
 {% endif %}
 
-{% if page.permalink == '/hymns' %}
+{% if page.permalink == '/hymns' or page.permalink == '/hymns_en' %}
 <div id="hymn-searching-tool">
   <input id="search-box" type="text" placeholder="搜索">
   <div class="results-container">
@@ -65,13 +65,20 @@ layout: post
 <!-- 主日赞美 及 赞美诗汇总 -->
 {% if page.hymns %}
   {% for id in page.hymns %}
-    {% for item in site.data.hymn_zh %}
-      {% if item.id == id or page.permalink == "/hymns" %}
+
+    {% if page.permalink == "/hymns_en" %}
+      {% assign hymns = site.data.hymn_en %}
+    {% else %}
+      {% assign hymns = site.data.hymn_zh %}
+    {% endif %}
+
+    {% for item in hymns %}
+      {% if item.id == id or page.permalink == "/hymns" or page.permalink == "/hymns_en" %}
         {% assign hymnImg = "" %}
         {% if item.image != null and item.image != "" %}
           {% assign hymnImg = "wg-img/hymn/" | append: item.image %}
         {% endif %}
-        <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-hymn/{{ item.file }}" data-image="{{hymnImg}}" data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> {{ item.singer }}</span>{% endif %}》
+        <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-hymn/{{ item.file }}" data-image="{{hymnImg}}" data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
           {% if item.mainpage %}
             <a href="/hymns/{{item.mainpage}}" class="mainpage">歌词</a>
           {% endif %}

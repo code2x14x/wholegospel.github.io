@@ -26,7 +26,7 @@
   singer: 讚美之泉
 
 - id: edzy
-  title: 恩典之洋(即使我仍会软弱)
+  title: 恩典之洋/即使我仍会软弱
   file: 恩典之洋.mp3
   singer: 約書亞樂團
 
@@ -79,11 +79,6 @@
   title: 你同在如天堂降临
   file: 你同在如天堂降临_约书亚乐团.m4a
   singer: 約書亞樂團
-
-- id: wmds
-  title: 我们的神
-  file: 我们的神.mp3
-  singer: The Lighters
 
 - id: pwzgcxqd
   title: 陪我走过春夏秋冬
@@ -138,6 +133,12 @@
   title: 我们的神
   file: 我们的神_This is Our God_HTBBChurch.mp3
   singer: HTBBChurch 
+  alias: This is Our God
+
+- id: wmds_The_Lighters
+  title: 我们的神
+  file: 我们的神_The Lighters 莱特.mp3
+  singer: The Lighters 莱特
 
 - id: wmztsdf
   title: 我们在天上的父

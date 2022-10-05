@@ -6,7 +6,14 @@
 - id: desert_song
   title: Desert Song
   file: Desert Song.mp3
+  singer: Hillsong Worship
 
 - id: wake
   title: Wake
   file: Wake.mp3
+  singer: Hillsong Young & Free
+
+- id: way_maker
+  title: Way Maker
+  file: Way Maker.mp3
+  singer: Jesus Image ...
