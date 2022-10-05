@@ -16,8 +16,8 @@ $(function () {
   // 数据
   const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
-  const allSongElems = document.getElementsByClassName('song');             // 全部歌曲
-  let allSongsSources = [];   // 全部歌曲的 source
+  const allHymnsElems = document.getElementsByClassName('hymn');             // 全部歌曲
+  let allHymnsSources = [];   // 全部歌曲的 source
 
   const postHeadElem = document.querySelector(".post__head"); // 标题配图
   postHeadElem.style.backgroundImage = "url('" + osUrl + postHeadElem.dataset.bgimg + "')";
@@ -36,27 +36,20 @@ $(function () {
     }
 
     // 初始化 全部歌曲 DOM
-    for(let i = 0; i < allSongElems.length; i++) {
-      allSongElems[i].dataset.index = i;
-    }
-
-    // 兼容之前没有歌曲的 post：如果没有歌曲 DOM，则仍显示老版本的播放器（html 原生 audio 播放器）
-    if(allSongElems.length == 0) {
-      document.getElementById('old-player').style.display = 'block';
-      document.getElementById('v-player').style.display = 'none';
-      return;
+    for(let i = 0; i < allHymnsElems.length; i++) {
+      allHymnsElems[i].dataset.index = i;
     }
 
     // 初始化 全部歌曲的 source
-    Array.from(allSongElems).forEach((ele) => {
-      allSongsSources.push(osUrl + ele.getAttribute('data-file'));
+    Array.from(allHymnsElems).forEach((ele) => {
+      allHymnsSources.push(osUrl + ele.getAttribute('data-file'));
     });
 
     // 给 证道、歌曲名称 和 歌词按钮 添加点击事件
     for (const audio of allAudioElems) {
       audio.addEventListener('click', (e) => {
         // 如果点击的是歌词按钮，则跳转到当前歌曲的歌词页面
-        if(e.target.nodeName === 'A') {
+        if(e.target.classList.contains('mainpage')){
           pause();
           e.preventDefault();
           e.stopPropagation();
@@ -87,8 +80,8 @@ $(function () {
           // we need to write code (a function for filtering through our data to include the search input value)
                   //returning only the results of setList if the value of the search is included in the person's name
           let allAudioElemsArr = [...allAudioElems];
-          setList(allAudioElemsArr.filter(song => {
-            return song.dataset.title.includes(value)
+          setList(allAudioElemsArr.filter(hymn => {
+            return hymn.dataset.title.includes(value)
           }));
       } else {
           //什么也不返回
@@ -101,20 +94,32 @@ $(function () {
     clearList();
     for (const person of results){
         // creating a li element for each result item
-        const resultItem = document.createElement('li')
+        const resultItem = document.createElement('li');
 
         // adding a class to each item of the results
-        resultItem.classList.add('result-item')
+        resultItem.classList.add('result-item');
 
         // grabbing the name of the current point of the loop and adding the name as the list item's text
-        const text = document.createTextNode(person.dataset.title)
+        const titleSpan = document.createElement('span');
+        titleSpan.classList.add('title');
+        const title = document.createTextNode(person.dataset.title);
+        titleSpan.appendChild(title);
 
         // appending the text to the result item
-        resultItem.appendChild(text)
-        resultItem.songIndex = person.dataset.index;
+        resultItem.appendChild(title);
+
+        if(person.dataset.singer) {
+          const singerSpan = document.createElement('span');
+          singerSpan.classList.add('singer');
+          const text = document.createTextNode(" " + person.dataset.singer);
+          singerSpan.appendChild(text);
+          resultItem.appendChild(singerSpan);
+        }
+
+        resultItem.hymnIndex = person.dataset.index;
         resultItem.addEventListener("click", function(e) {
           singleLoop();
-          changeSourceAndPlay(allSongElems[e.target.songIndex]);
+          changeSourceAndPlay(allHymnsElems[e.currentTarget.hymnIndex]);
         }, false); 
 
         // appending the result item to the list
@@ -134,7 +139,7 @@ $(function () {
   repeatButton.addEventListener('click', (e) => {
     const isPlaying = document.getElementById("play").style.display;
     if (!isPlaying){
-      changeSourceAndPlay(allSongElems[0]); // 播放
+      changeSourceAndPlay(allHymnsElems[0]); // 播放
     }
     // 根据按钮当前样式，切换循环模式
     if(repeatButton.classList.contains('all-loop')) singleLoop(); 
@@ -146,7 +151,7 @@ $(function () {
     const current = document.getElementsByClassName('current-audio')[0];
     let idx = parseInt(current.getAttribute('data-index')) - 1;
     idx = idx < 0 ? 0 : idx;
-    changeSourceAndPlay(allSongElems[idx]);
+    changeSourceAndPlay(allHymnsElems[idx]);
   });
 
   // 下一首
@@ -312,8 +317,8 @@ $(function () {
   function playEndedHandler() {
     const current = document.getElementsByClassName('current-audio')[0];
     let idx = parseInt(current.getAttribute('data-index')) + 1;
-    idx = idx < allSongsSources.length ? idx : 0;
-    changeSourceAndPlay(allSongElems[idx]);
+    idx = idx < allHymnsSources.length ? idx : 0;
+    changeSourceAndPlay(allHymnsElems[idx]);
   }
 
   // 音乐播放动画

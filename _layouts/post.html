@@ -5,7 +5,7 @@ layout: default
   <div class="post-title-box">
     <div class="row">
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
-        {% if page.permalink == '/songs' or page.permalink == '/baptism_lessons' %}
+        {% if page.permalink == '/' or page.permalink == '/baptism_lessons' %}
           <h1 class="post-title" style="text-align: center; letter-spacing: 1rem;">{{ page.title | escape }}</h1>
         {% else %}
           <h1 class="post-title">{{ page.title | escape }}</h1>
@@ -30,8 +30,8 @@ layout: default
          data-bgimg="{{ image }}">
       <!-- <img id="post-img" src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt=""
       data-default="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg"> -->
-      {% if page.permalink == '/songs' %}
-        <p id="track-title" class="episode-title">{{ site.data.songs.asbbl.title }}</p>
+      {% if page.permalink == '/hymns' %}
+        <p id="track-title" class="episode-title">{{ site.data.hymns[0].title }}</p>
       {% endif %}
     </div>
   </div>

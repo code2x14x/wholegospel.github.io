@@ -1,9 +1,7 @@
 ---
 layout: post
 ---
-<audio controls id="old-player" style='width: 100%; display: none;' preload="auto">   
-  <source src="{{ site.os_url }}wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
-</audio>
+{% if page.preach or page.hymns or page.permalink == '/baptism_lessons' %}
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
 <div id="v-player">
   <audio id="audio-track" type="audio/mp3" loop preload="auto"></audio>
@@ -11,14 +9,14 @@ layout: post
     <div id="controls">
       <div class="first-part">
         <i id="repeat" class="fas fa-sync-alt"></i>
-        {% if page.permalink == '/songs' %}
+        {% if page.permalink == '/hymns' %}
         <i id="step-backward" class="fas fa-step-backward"></i>
         {% else %}
         <i id="prev-15" class="fas fa-undo-alt"></i>
         {% endif %}
         <i id="play" class="fa fa-play"></i>
         <i id="pause" class="fa fa-pause"></i>
-        {% if page.permalink == '/songs' %}
+        {% if page.permalink == '/hymns' %}
         <i id="step-forward" class="fas fa-step-forward"></i>
         {% else %}
         <i id="next-15" class="fas fa-redo-alt"></i>
@@ -41,9 +39,14 @@ layout: post
     </div>
   </div>
 </div>
+{% else %}
+<audio controls id="old-player" style='width: 100%;' preload="auto">   
+  <source src="{{ site.os_url }}wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
+</audio>
+{% endif %}
 
-{% if page.permalink == '/songs' %}
-<div id="song-searching-tool">
+{% if page.permalink == '/hymns' %}
+<div id="hymn-searching-tool">
   <input id="search-box" type="text" placeholder="搜索">
   <div class="results-container">
     <ul class="results-list" id="list"></ul>
@@ -51,6 +54,7 @@ layout: post
 </div>
 {% endif %}
 
+<!-- 证道录音 -->
 {% if page.preach %}
 <div id="teachingAudio" class="audio teaching bars" data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
@@ -58,25 +62,47 @@ layout: post
 </div><br>
 {% endif %}
 
-{% if page.songs %}
-  {% for py in page.songs %}
-    {% assign song = site.data.songs[py] %}
-    {% assign songImg = "" %}
-    {% if song.image != null and song.image != "" %}
-    {% assign songImg = "wg-img/song/" | append: song.image %}
-    {% endif %}
-    <div class="audio song bars" data-title="{{ song.title }}" data-file="wg-song/{{ song.file }}" data-image="{{songImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ song.title }}{% if song.singer %}<span class="singer"> / {{ song.singer }}</span>{% endif %}》
-      {% if song.mainpage %}
-        <a href="/songs/{{song.mainpage}}" class="lyrics">歌词</a>
+<!-- 主日赞美 及 赞美诗汇总 -->
+{% if page.hymns %}
+  {% for id in page.hymns %}
+    {% for item in site.data.hymn_zh %}
+      {% if item.id == id or page.permalink == "/hymns" %}
+        {% assign hymnImg = "" %}
+        {% if item.image != null and item.image != "" %}
+          {% assign hymnImg = "wg-img/hymn/" | append: item.image %}
+        {% endif %}
+        <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-hymn/{{ item.file }}" data-image="{{hymnImg}}" data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> {{ item.singer }}</span>{% endif %}》
+          {% if item.mainpage %}
+            <a href="/hymns/{{item.mainpage}}" class="mainpage">歌词</a>
+          {% endif %}
+          <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
+            class="bar n5"></span>
+        </div><br>
       {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  <div class="tips">
+    {% if page.permalink != "/hymns" %}
+    <a class="hz" href="/hymns">以往赞美汇总</a>
+    {% endif %}
+    <a class="zd" href="{{ site.os_url }}wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导</a>如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span
+      class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
+  </div><br />
+{% endif %}
+
+<!-- 洗礼课 -->
+{% if page.permalink == "/baptism_lessons" %}
+  {% for item in site.data.baptism_lessons %} 
+    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-baptism-lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
       <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
         class="bar n5"></span>
     </div><br>
   {% endfor %}
-  <div style="margin-top: 10px; line-height: 22px; font-size: 14px; color: #333333b8;">
-    <a href="/songs">以往赞美汇总。</a>
-    <a href="{{ site.os_url }}wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导。</a>如果发现<span style="color: #6868d5">音频经常意外停止</span>（比如当锁屏后），可<span
-      style="color: #6868d5">使用浏览器打开</span>此页面，通常能完全解决此问题。<span id="volume"></span>
+  <div class="tips">
+    <a class="hz" href="/hymns">以往赞美汇总</a>
+    <a class="zd" href="{{ site.os_url }}wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导</a>
+    如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
   </div><br />
 {% endif %}
 

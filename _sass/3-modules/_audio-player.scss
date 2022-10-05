@@ -324,3 +324,29 @@ span#loop-all-indicator {
   }
 }
 
+.tips {
+  margin-top: 10px; 
+  line-height: 22px; 
+  font-size: 14px;
+  color: #333333d4;
+
+  a {
+    color: #fff;
+    padding: 1px 4px;
+    margin-right: 4px;
+  }
+
+  a.hz {
+    background: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=708f00f4");
+  }
+
+  a.zd {
+    background: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=a56203f4");
+  }
+
+  span.tip {
+    color: #fff;
+    background: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-10&color=0f9abd");
+    padding: 1px 4px;
+  }
+}

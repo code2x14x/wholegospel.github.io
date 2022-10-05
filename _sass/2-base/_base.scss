@@ -138,17 +138,17 @@ u {
   padding: 2px  6px;
 }
 
-em {
-  display: block;
-  font-weight: normal !important;
-  font-style: normal !important;
-  color: #167cdd;
-  text-shadow: 1px 1px 4px #bcb7b7c4;
-  margin: 1em 1em;
-}
-
+em, 
 sp {
   color: #167cdd;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-shadow: 1px 1px 4px #bcb7b7c4;
+}
+
+em {
+  display: block;
+  margin: 1em 1em;
 }
 
 .slogan-wrapper-1 {

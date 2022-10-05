@@ -1,187 +1,178 @@
-asbbl:
+- id: asbbl
   title: 爱是不保留
   singer: 陽詠存&何俊鴻
   file: 爱是不保留_陽詠存_何俊鴻.mp3
   mainpage: asbbl_yyc_hjh
   image: 爱是不保留_陽詠存_何俊鴻.jpg
 
-dsgm:
+- id: dsgm
   title: 得胜冠冕
   singer: 天堂敬拜
   file: 得胜冠冕_天堂敬拜.mp3
 
-dswwnk: 
+- id: dswwnk 
   title: 大山为我挪开
   singer: 赞美之泉
   file: 大山为我挪开_赞美之泉.mp3
 
-czcdyw:
+- id: czcdyw
   title: 从早晨到夜晚
   file: 从早晨到夜晚.mp3
+  singer: 讚美之泉
 
-edzl:
+- id: edzl
   title: 恩典之路
   file: 恩典之路.m4a
+  singer: 讚美之泉
 
-edzy:
-  title: 恩典之洋
+- id: edzy
+  title: 恩典之洋(即使我仍会软弱)
   file: 恩典之洋.mp3
+  singer: 約書亞樂團
 
-gjg:
+- id: gjg
   title: 更坚固 Stronger
   file: 更坚固Stronger.mp3
+  singer: Hillsong Global
 
-hded:
+- id: hded
   title: 何等恩典
   file: 何等恩典_赞美之泉.mp3
-  singer: 赞美之泉
+  singer: 讚美之泉
 
-hzwmlm:
+- id: hzwmlm
   title: 活在我们里面
   file: 活在我们里面_天堂敬拜.mp3
   singer: 天堂敬拜
 
-jdswmz:
+- id: jdswmz
   title: 基督是我满足
   file: 基督是我满足.mp3
+  singer: 約書亞樂團
 
-jwjzzl:
+- id: jdswmz_ttjb
+  title: 基督是我满足
+  file: 基督是我满足_天堂敬拜.mp3
+  singer: 天堂敬拜
+
+- id: jwjzzl
   title: 君王就在这里
   file: 君王就在这里.mp3
+  singer: 讚美之泉
 
-klz:
-  title: 开路者/Way Maker
+- id: klz
+  title: 开路者
   file: 开路者_Way Maker.mp3
+  singer: 台北靈糧堂青年牧區
 
-ndje:
+- id: ndje
   title: 祢的救恩
   file: 祢的救恩.mp3
+  singer: 讚美之泉
 
-nbn:
+- id: nbn
   title: 能不能
   file: 能不能.mp3
+  singer: 讚美之泉
 
-ntzrttjl: 
+- id: ntzrttjl 
   title: 你同在如天堂降临
-  singer: 约书亚乐团
   file: 你同在如天堂降临_约书亚乐团.m4a
+  singer: 約書亞樂團
 
-ourgod:
-  title: Our God
-  file: Our God.m4a
+- id: wmds
+  title: 我们的神
+  file: 我们的神.mp3
+  singer: The Lighters
 
-pwzgcxqd:
+- id: pwzgcxqd
   title: 陪我走过春夏秋冬
   file: 陪我走过春夏秋冬_小羊诗歌.mp3
   singer: 小羊诗歌
 
-qslyx:
+- id: qslyx
   title: 求圣灵运行
   file: 求圣灵运行.mp3
+  singer: 祝瑞莲
 
-rhhjbyjp:
+- id: rhhjbyjp
   title: 任何环境不要惧怕
   file: 任何环境不要惧怕.m4a
+  singer: 以斯拉
 
-sdlsrm:
+- id: sdlsrm
   title: 神的良善荣美
   singer: Sherin Lan
   file: 神的良善荣美_Sherin_Lan.mp3
   mainpage: sdlsrm_sherin_lan
   image: 神的良善荣美_Sherin_Lan.jpg
 
-slqnlcmwx:
+- id: slqnlcmwx
   title: 圣灵请你来充满我心
   file: 圣灵请你来充满我心.m4a
-  dataIndex: 0
+  singer: 約書亞樂團
 
-smzg:
-  title: 'Desert Song/沙漠之歌'
-  file: 'Desert Song.mp3'
-
-ssdg:
+- id: ssdg
   title: 世上的光
   file: 世上的光_师母.mp3
+  singer: 师母
 
-tfmsll:
+- id: tfmsll
   title: 天父美善力量
   file: 天父美善力量.mp3
+  singer: Zion Church Beijing
 
-wake:
-  title: Wake
-  file: Wake.mp3
-
-wdsmxgn:
+- id: wdsmxgn
   title: 我的生命献给你
   file: 我的生命献给你.mp3
+  singer: 讚美之泉
 
-wdz:
-  title: 我的主
-  file: 我的主_The_God_I_Know.mp3
-  mainpage: wdz
-
-wdz_csfsjh:
+- id: wdz_csfsjh
   title: 我的主
   file: 我的主_城市丰收教会.mp3
   singer: 城市丰收教会
   mainpage: wdz_csfsjh
   image: 我的主_城市丰收教会.jpg
 
-wmds:
+- id: wmds
   title: 我们的神
   file: 我们的神_This is Our God_HTBBChurch.mp3
   singer: HTBBChurch 
 
-wmztsdf:
+- id: wmztsdf
   title: 我们在天上的父
   file: 我们在天上的父.mp3
+  singer: Bethel 敬拜团
 
-xgdyp:
+- id: xgdyp
   title: 香膏的玉瓶
   file: 香膏的玉瓶_约书亚乐团.mp3
   singer: 约书亚乐团
   mainpage: xgdyp_ysyyt
   image: 香膏的玉瓶.jpeg
   
-yhhbhn:
+- id: yhhbhn
   title: 耶和华保护你
   file: 耶和华保护你.mp3
 
-yscwwzx:
+- id: yscwwzx
   title: 耶稣，成为我中心
   file: 耶稣，成为我中心.mp3
+  singer: 約書亞樂團
 
-zcjwgx: 
+- id: zcjwgx 
   title: 再次将我更新
   singer: 小羊诗歌
   file: 再次将我更新_小羊诗歌.mp3
   mainpage: zcjwgx_xysg
   image: 再次将我更新_小羊诗歌.jpg
 
-znyyywtz:
+- id: znyyywtz
   title: 主你永远与我同在
   file: 主你永远与我同在.mp3
+  singer: 約書亞樂團
 
-zwxx:
+- id: zwxx
   title: 主，我相信
   file: 主，我相信.mp3
-
-baptism_lessons_01:
-  title: 洗礼课 / 第 1 课
-  file: 洗礼课_第1课.mp3
-
-baptism_lessons_02:
-  title: 洗礼课 / 第 2 课
-  file: 洗礼课_第2课.mp3
-
-baptism_lessons_03:
-  title: 洗礼课 / 第 3 课
-  file: 洗礼课_第3课.mp3
-
-baptism_lessons_04:
-  title: 洗礼课 / 第 4 课
-  file: 洗礼课_第4课.mp3
-
-baptism_lessons_05:
-  title: 洗礼课 / 第 5 课
-  file: 洗礼课_第5课.mp3
+  singer: 小羊诗歌
