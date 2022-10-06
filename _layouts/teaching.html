@@ -77,7 +77,6 @@ layout: post
         {% assign hymnImg = "" %}
         {% if item.image != null and item.image != "" %}
           {% assign hymnImg = "wg-img/hymn/" | append: item.image %}
-          {{ hymnImg }}
         {% endif %}
         {% assign fileName = "lyrics_" | append: item.id %}
         {% assign lyrics = site.data[fileName].lyrics %}
