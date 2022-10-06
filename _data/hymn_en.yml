@@ -1,8 +1,3 @@
-- id: our_god
-  title: Our God
-  file: Our God.m4a
-  singer: Chris Tomlin
-
 - id: desert_song
   title: Desert Song
   file: Desert Song.mp3
@@ -13,7 +8,12 @@
   file: Wake.mp3
   singer: Hillsong Young & Free
 
+- id: our_god
+  title: Our God
+  file: Our God.m4a
+  singer: Chris Tomlin
+
 - id: way_maker
   title: Way Maker
-  file: Way Maker.mp3
+  file: Way Maker_Jesus Image_Steffany Gretzinger_John Wilds.mp3
   singer: Jesus Image ...

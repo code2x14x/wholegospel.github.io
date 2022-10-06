@@ -13,6 +13,11 @@ $(function () {
   const countDown = document.getElementById("count-down"); // 按钮 倒计时
 
 
+  let rabbitLyrics = new RabbitLyrics({
+    element: document.getElementById('lyrics-1'),
+    mediaElement: document.getElementById('audio-track')
+  })
+
   // 数据
   const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
@@ -61,6 +66,15 @@ $(function () {
         if (isPlaying && audio.classList.contains('current-audio'))  return; 
         if (audio.classList.contains('teaching')) singleLoop();
         changeSourceAndPlay(audio);
+        const rl = document.getElementById("lyrics-1");
+        rl.innerHTML = '';
+        const ly = document.createTextNode(audio.dataset.lyrics);
+        rl.append(ly);
+        rabbitLyrics = new RabbitLyrics({
+          element: document.getElementById('lyrics-1'),
+          height: 100,
+          mediaElement: document.getElementById('audio-track')
+        })
       });
     }
   }
