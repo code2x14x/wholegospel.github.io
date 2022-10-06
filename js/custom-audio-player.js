@@ -70,6 +70,8 @@ $(function () {
         rl.innerHTML = '';
         const ly = document.createTextNode(audio.dataset.lyrics);
         rl.append(ly);
+        if(audio.dataset.lyrics) document.querySelector("#lyrics-1").classList.add("active");
+        else document.querySelector("#lyrics-1").classList.remove("active");
         rabbitLyrics = new RabbitLyrics({
           element: document.getElementById('lyrics-1'),
           height: 100,

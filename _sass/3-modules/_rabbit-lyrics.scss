@@ -1,19 +1,29 @@
 #lyrics-1 {
   position: relative;
-  height: 90%;
+  height: 70%;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
   font-size: 17px;
-  top: 5%;
+  top: 15%;
 }
+
+#lyrics-1.active {
+  background: #0000006e;
+}
+
 #lyrics-1 .line {
   min-height: 1.5em;
   color: #d1cece;
+  transition: all 0.25s;
+  letter-spacing: 4px;
+  font-style: italic;
 }
 #lyrics-1 .line.active {
   color: #fff;
-  font-size: 1em;
+  font-size: 1.1em;
+  letter-spacing: 4px;
+  font-style: italic;
 }
 #lyrics-1.rabbit-lyrics-mini {
   height: 20em;
