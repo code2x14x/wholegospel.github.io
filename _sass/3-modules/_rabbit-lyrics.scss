@@ -27,8 +27,12 @@
   z-index: 2;
   overflow-x: hidden;
   overflow-y: hidden;
+  overflow-y: scroll;
   text-align: center;
   font-size: 17px;
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 
 #lyrics-1 .line {
