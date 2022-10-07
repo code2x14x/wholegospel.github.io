@@ -8,12 +8,13 @@
   height: 100%;
   -webkit-transition: all 2s ease-in-out;
   transition: all 1.5s ease-in-out;
+  border-radius: 20px;
 }
 
 .post-head-bg-img.active {
   background: no-repeat center/cover;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  // filter: blur(8px);
+  // -webkit-filter: blur(8px);
 }
 
 
@@ -42,11 +43,9 @@
   letter-spacing: 4px;
 }
 #lyrics-1 .line.active {
-  color: #fff;
-  font-size: 1.1em;
+  color: #23beef;
+  font-size: 18px;
   letter-spacing: 4px;
-  text-shadow: 0 0 4px #ffffffab;
-
 }
 #lyrics-1.rabbit-lyrics-mini {
   height: 20em;
