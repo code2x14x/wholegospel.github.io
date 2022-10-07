@@ -12,8 +12,8 @@
 
 .post-head-bg-img.active {
   background: no-repeat center/cover;
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 
@@ -36,13 +36,11 @@
   color: #d1cece;
   transition: all 0.25s;
   letter-spacing: 4px;
-  font-style: italic;
 }
 #lyrics-1 .line.active {
   color: #fff;
   font-size: 1.1em;
   letter-spacing: 4px;
-  font-style: italic;
   text-shadow: 0 0 4px #ffffffab;
 
 }
