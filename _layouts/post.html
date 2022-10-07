@@ -25,9 +25,8 @@ layout: default
       {% else %}
         {% assign image = page.date | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg" %}
       {% endif %}
-    <div class="post__head" 
-         style="background: no-repeat center/cover;" 
-         data-bgimg="{{ image }}">
+    <div class="post__head">
+      <div class="post-head-bg-img" data-bgimg="{{ image }}"></div>
       <!-- <img id="post-img" src="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg" alt=""
       data-default="{{site.os_url}}wg-img/teaching/{{image | date: '%Y-%m-%d'}}.jpg"> -->
       <div id="lyrics-1" class="wg-lyrics-container"></div>

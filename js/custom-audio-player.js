@@ -24,7 +24,7 @@ $(function () {
   const allHymnsElems = document.getElementsByClassName('hymn');             // 全部歌曲
   let allHymnsSources = [];   // 全部歌曲的 source
 
-  const postHeadElem = document.querySelector(".post__head"); // 标题配图
+  const postHeadElem = document.querySelector(".post-head-bg-img"); // 标题配图
   postHeadElem.style.backgroundImage = "url('" + osUrl + postHeadElem.dataset.bgimg + "')";
   const defultImg = postHeadElem.dataset.bgimg;
 
@@ -70,8 +70,8 @@ $(function () {
         rl.innerHTML = '';
         const ly = document.createTextNode(audio.dataset.lyrics);
         rl.append(ly);
-        if(audio.dataset.lyrics) document.querySelector("#lyrics-1").classList.add("active");
-        else document.querySelector("#lyrics-1").classList.remove("active");
+        if(audio.dataset.lyrics) document.querySelector(".post-head-bg-img").classList.add("active");
+        else document.querySelector(".post-head-bg-img").classList.remove("active");
         rabbitLyrics = new RabbitLyrics({
           element: document.getElementById('lyrics-1'),
           height: 100,

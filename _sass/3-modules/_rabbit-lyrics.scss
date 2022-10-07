@@ -1,15 +1,34 @@
+// .post__head {
+//   overflow: hidden;
+// }
+
+.post-head-bg-img {
+  background: no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+
+.post-head-bg-img.active {
+  background: no-repeat center/cover;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+
 #lyrics-1 {
-  position: relative;
-  height: 70%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
   font-size: 17px;
-  top: 15%;
-}
-
-#lyrics-1.active {
-  background: #0000006e;
 }
 
 #lyrics-1 .line {
