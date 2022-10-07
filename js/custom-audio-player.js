@@ -66,17 +66,6 @@ $(function () {
         if (isPlaying && audio.classList.contains('current-audio'))  return; 
         if (audio.classList.contains('teaching')) singleLoop();
         changeSourceAndPlay(audio);
-        const rl = document.getElementById("lyrics-1");
-        rl.innerHTML = '';
-        const ly = document.createTextNode(audio.dataset.lyrics);
-        rl.append(ly);
-        if(audio.dataset.lyrics) document.querySelector(".post-head-bg-img").classList.add("active");
-        else document.querySelector(".post-head-bg-img").classList.remove("active");
-        rabbitLyrics = new RabbitLyrics({
-          element: document.getElementById('lyrics-1'),
-          height: 100,
-          mediaElement: document.getElementById('audio-track')
-        })
       });
     }
   }
@@ -285,21 +274,40 @@ $(function () {
   });
 
   function changeSourceAndPlay(audioElem){
-    if(document.getElementById('track-title')) 
-      $('#track-title').html(audioElem.dataset.title);
+    // if(document.getElementById('track-title')) 
+    //   $('#track-title').html(audioElem.dataset.title);
+
     for(let e of allAudioElems) e.classList.remove('current-audio');
     audioElem.classList.add('current-audio');
     audioTrackElem.src = osUrl + audioElem.getAttribute('data-file');
     audioTrackElem.load();
+
+    play(audioElem);
+  }
+
+  function play(audioElem){
+    var current = audioTrackElem.currentTime;
+    if(current == 0) {
+
     // 更改标题配图
     const imgSrc = audioElem.dataset.image;
     console.log("imgSrc = " + imgSrc)
     if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
     else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
-    play(audioElem);
-  }
 
-  function play(audioElem){
+    const rl = document.getElementById("lyrics-1");
+    rl.innerHTML = '';
+    const ly = document.createTextNode(audioElem.dataset.lyrics);
+    rl.append(ly);
+    if(audioElem.dataset.lyrics) document.querySelector(".post-head-bg-img").classList.add("active");
+    else document.querySelector(".post-head-bg-img").classList.remove("active");
+    rabbitLyrics = new RabbitLyrics({
+      element: document.getElementById('lyrics-1'),
+      height: 100,
+      mediaElement: document.getElementById('audio-track')
+    });
+    
+    }
     barsDancing(audioElem);
     playButton.hide();
     pauseButton.fadeIn();

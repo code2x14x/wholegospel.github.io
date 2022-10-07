@@ -65,7 +65,6 @@ layout: post
 <!-- 主日赞美 及 赞美诗汇总 -->
 {% if page.hymns %}
   {% for id in page.hymns %}
-
     {% if page.permalink == "/hymns_en" %}
       {% assign hymns = site.data.hymn_en %}
     {% else %}
@@ -80,7 +79,19 @@ layout: post
         {% endif %}
         {% assign fileName = "lyrics_" | append: item.id %}
         {% assign lyrics = site.data[fileName].lyrics %}
-        <div class="audio hymn bars" data-lyrics="{{ lyrics }}" data-title="{{ item.title }}" data-file="wg-hymn/{{ item.file }}" data-image="{{hymnImg}}" data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
+
+        {% assign lsize = site.data.lyrics_bg_schemes.size %}
+        {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
+        {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
+
+        <div class="audio hymn bars" 
+             data-lyrics="{{ lyrics }}" 
+             data-title="{{ item.title }}" 
+             data-file="wg-hymn/{{ item.file }}" 
+             data-image="{{ bgScheme.image | prepend: 'wg-img/hymn/'}}" 
+             data-color="{{ bgScheme.color }}" 
+             data-active="{{ bgScheme.active_color }}" 
+             data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
           <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
         </div><br>
       {% endif %}
