@@ -1,8 +1,9 @@
 ---
 layout: pp7
 title: 更新日志
-permalink: /log/ulog
+permalink: /ulog
 image: wg-img/teaching/dlog.jpg
+tags: hidden
 date: 
 ---
 
