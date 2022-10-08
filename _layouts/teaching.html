@@ -75,21 +75,24 @@ layout: post
       {% if item.id == id or page.permalink == "/hymns" or page.permalink == "/hymns_en" %}
         {% assign fileName = "lyrics_" | append: item.id %}
         {% assign lyrics = site.data[fileName].lyrics %}
-
-        {% assign lsize = site.data.lyrics_bg_schemes.size %}
-        {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
-        {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
-
-        {% assign hymnImg = "" %}
-        {% if item.image != null and item.image != "" %}
-          {% assign hymnImg = "wg-img/hymn/" | append: item.image %}
+        {% if lyrics != null and lyrics != "" %}
+          {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
+          {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
+          {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
+          {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
+        {% else %}
+          {% if item.image != null and item.image != "" %}
+            {% assign bgImg = "wg-img/hymn/" | append: item.image %}
+          {% else %}
+            {% assign bgImg = page.image %}
+          {% endif %}
         {% endif %}
 
         <div class="audio hymn bars" 
              data-lyrics="{{ lyrics }}" 
              data-title="{{ item.title }}" 
              data-file="wg-hymn/{{ item.file }}" 
-             data-image="{{ bgScheme.image }}" 
+             data-image="{{ bgImg }}" 
              data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
           <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
         </div><br>

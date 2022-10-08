@@ -286,19 +286,22 @@ $(function () {
   }
 
   function play(audioElem){
-    var current = audioTrackElem.currentTime;
-    if(current == 0 && audioElem.dataset.lyrics) {
+    var currentTime = audioTrackElem.currentTime;
+    if(currentTime == 0) {
       // 更改标题配图
       const imgSrc = audioElem.dataset.image;
-      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + "wg-img/hymn/" + imgSrc + "')";
+      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
       else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
 
       const rl = document.getElementById("lyrics-1");
       rl.innerHTML = '';
       const ly = document.createTextNode(audioElem.dataset.lyrics);
+      if(!ly) {
+        rabbitLyrics = null;
+        return;
+      }
+
       rl.append(ly);
-      if(audioElem.dataset.lyrics) document.querySelector(".post-head-bg-img").classList.add("active");
-      else document.querySelector(".post-head-bg-img").classList.remove("active");
       rabbitLyrics = new RabbitLyrics({
         element: document.getElementById('lyrics-1'),
         height: 100,
