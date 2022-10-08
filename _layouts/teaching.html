@@ -1,7 +1,8 @@
 ---
 layout: post
 ---
-{% if page.preach or page.hymns or page.permalink == '/baptism_lessons' %}
+{% if page.permalink == '/ulog' %}
+{% elsif page.preach or page.hymns or page.permalink == '/baptism_lessons' %}
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" crossorigin="anonymous">
 <div id="v-player">
   <audio id="audio-track" type="audio/mp3" loop preload="auto"></audio>

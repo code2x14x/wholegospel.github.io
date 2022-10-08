@@ -383,4 +383,10 @@ $(function () {
     return [currentLabel, tillendLabel, durationLabel];
   }
 
+
+  document.querySelector('.post__date').addEventListener('click', (e) => {
+    console.log('clicking date');
+    window.open("/log/dlog");
+  });
+
 });
