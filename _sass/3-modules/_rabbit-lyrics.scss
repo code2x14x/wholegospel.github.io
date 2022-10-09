@@ -39,7 +39,7 @@
 
 #lyrics-1 .line {
   min-height: 1.5em;
-  color: #d1cece;
+  color: #eae7e7;
   transition: all 0.25s;
   letter-spacing: 4px;
 }
@@ -47,6 +47,7 @@
   color: #00eeff;
   font-size: 18px;
   letter-spacing: 4px;
+  text-shadow: 1px 1px 3px #000;
 }
 #lyrics-1.rabbit-lyrics-mini {
   height: 20em;
