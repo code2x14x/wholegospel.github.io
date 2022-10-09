@@ -9,6 +9,7 @@
   -webkit-transition: all 2s ease-in-out;
   transition: all 1.5s ease-in-out;
   border-radius: 20px;
+  box-shadow: 2px 2px 8px #80808075;
 }
 
 .post-head-bg-img.active {
@@ -38,16 +39,14 @@
 
 #lyrics-1 .line {
   min-height: 1.5em;
-  color: #f3f1f1;
+  color: #d1cece;
   transition: all 0.25s;
   letter-spacing: 4px;
 }
 #lyrics-1 .line.active {
-  color: #30fde0;
+  color: #00eeff;
   font-size: 18px;
   letter-spacing: 4px;
-  font-weight: bold;
-  text-shadow: 1px 1px black;
 }
 #lyrics-1.rabbit-lyrics-mini {
   height: 20em;
