@@ -287,7 +287,7 @@ $(function () {
 
   function play(audioElem){
     var currentTime = audioTrackElem.currentTime;
-    if(currentTime == 0) {
+    if(currentTime == 0 && audioElem.dataset.lyrics != undefined) {
       // 更改标题配图
       const imgSrc = audioElem.dataset.image;
       if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
