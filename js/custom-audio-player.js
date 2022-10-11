@@ -298,14 +298,14 @@ $(function () {
       const ly = document.createTextNode(audioElem.dataset.lyrics);
       if(audioElem.dataset.lyrics == undefined || !ly) {
         rabbitLyrics = null;
-        return;
+      } else {
+        rl.append(ly);
+        rabbitLyrics = new RabbitLyrics({
+          element: document.getElementById('lyrics-1'),
+          height: 100,
+          mediaElement: document.getElementById('audio-track')
+        });
       }
-      rl.append(ly);
-      rabbitLyrics = new RabbitLyrics({
-        element: document.getElementById('lyrics-1'),
-        height: 100,
-        mediaElement: document.getElementById('audio-track')
-      });
     }
 
     barsDancing(audioElem);
