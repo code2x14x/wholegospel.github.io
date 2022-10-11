@@ -287,7 +287,7 @@ $(function () {
 
   function play(audioElem){
     var currentTime = audioTrackElem.currentTime;
-    if(currentTime == 0 && audioElem.dataset.lyrics != undefined) {
+    if(currentTime == 0) {
       // 更改标题配图
       const imgSrc = audioElem.dataset.image;
       if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
@@ -296,11 +296,10 @@ $(function () {
       const rl = document.getElementById("lyrics-1");
       rl.innerHTML = '';
       const ly = document.createTextNode(audioElem.dataset.lyrics);
-      if(!ly) {
+      if(audioElem.dataset.lyrics == undefined || !ly) {
         rabbitLyrics = null;
         return;
       }
-
       rl.append(ly);
       rabbitLyrics = new RabbitLyrics({
         element: document.getElementById('lyrics-1'),
