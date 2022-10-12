@@ -22,13 +22,12 @@
 #lyrics-1 {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 40px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   overflow-x: hidden;
-  overflow-y: hidden;
   overflow-y: scroll;
   text-align: center;
   font-size: 17px;

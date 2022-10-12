@@ -57,7 +57,9 @@ layout: post
 
 <!-- 证道录音 -->
 {% if page.preach %}
-<div id="teachingAudio" class="audio teaching bars" data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
+<div id="teachingAudio" class="audio teaching bars" 
+    data-image="{{ page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg-img/teaching/'}}"
+    data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
     class="bar n5"></span>
 </div><br>
@@ -67,8 +69,10 @@ layout: post
 {% if page.hymns %}
   {% for id in page.hymns %}
     {% if page.permalink == "/hymns_en" %}
+      <!-- 英文赞美 -->
       {% assign hymns = site.data.hymn_en %}
     {% else %}
+      <!-- 中文赞美 -->
       {% assign hymns = site.data.hymn_zh %}
     {% endif %}
 
@@ -77,16 +81,26 @@ layout: post
         {% assign fileName = "lyrics_" | append: item.id %}
         {% assign lyrics = site.data[fileName].lyrics %}
         {% if lyrics != null and lyrics != "" %}
-          {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
-          {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
-          {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
-          {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
-        {% else %}
+          <!-- 当前歌曲有同步歌词时 -->
           {% if item.image != null and item.image != "" %}
+            <!-- 使用当前歌曲专属图片 -->
             {% assign bgImg = "wg-img/hymn/" | append: item.image %}
           {% else %}
-            {% assign bgImg = page.image %}
+            <!-- 使用随机图片 -->
+            {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
+            {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
+            {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
+            {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
           {% endif %}
+        {% else %}
+            <!-- 当前歌曲没有同步歌词时 -->
+            {% if page.image != null and page.image != "" %}
+              <!-- 使用 frontier 中制定的图片 -->
+              {% assign bgImg = page.image %}
+            {% else %}
+              <!-- 使用当前日期.jpg -->
+              {% assign bgImg = page.date | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg"  %}
+            {% endif %}
         {% endif %}
 
         <div class="audio hymn bars" 
