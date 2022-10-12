@@ -72,7 +72,8 @@
 
 - id: klz
   title: 开路者
-  file: 开路者_Way Maker.mp3
+  #file: 开路者_Way Maker.mp3
+  file: 开路者_台北灵粮堂青年牧区.mp4
   singer: 台北灵粮堂青年牧区
 
 - id: ndje
@@ -166,7 +167,7 @@
 
 - id: wzzl_zmzq
   title: 我在这里
-  file: 我在这里_赞美之泉.mp3
+  file: 我在这里_赞美之泉.mp4
   singer: 赞美之泉
 
 - id: xgdyp
