@@ -5,6 +5,11 @@
   mainpage: asbbl_yyc_hjh
   image: 爱是不保留_陽詠存_何俊鴻.jpg
 
+- id: bpbfq_zmzq
+  title: 奔跑不放弃
+  singer: 赞美之泉
+  file: 奔跑不放弃_赞美之泉.mp3
+
 - id: dsgm
   title: 得胜冠冕
   singer: 天堂敬拜
@@ -39,6 +44,11 @@
   title: 何等恩典
   file: 何等恩典_赞美之泉.mp3
   singer: 赞美之泉
+
+- id: hsz_hillsong
+  title: 和散那
+  file: 和散那_Hillsong.mp3
+  singer: Hillsong
 
 - id: hzwmlm
   title: 活在我们里面
@@ -79,6 +89,11 @@
   title: 你同在如天堂降临
   file: 你同在如天堂降临_约书亚乐团.m4a
   singer: 约书亚乐团
+
+- id: nzh_csfsjh
+  title: 你真好
+  file: 你真好_城市丰收教会.mp3
+  singer: 城市丰收教会
 
 - id: pwzgcxqd
   title: 陪我走过春夏秋冬
@@ -143,6 +158,16 @@
   title: 我们在天上的父
   file: 我们在天上的父.mp3
   singer: Bethel 敬拜团
+
+- id: wzzl_ny
+  title: 我在这里
+  file: 我在这里_挪亚音乐事工.mp3
+  singer: 挪亚音乐事工
+
+- id: wzzl_zmzq
+  title: 我在这里
+  file: 我在这里_赞美之泉.mp3
+  singer: 赞美之泉
 
 - id: xgdyp
   title: 香膏的玉瓶
