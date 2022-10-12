@@ -41,6 +41,10 @@
   color: #eae7e7db;
   transition: all 0.25s;
   letter-spacing: 4px;
+
+  en {
+    letter-spacing: 1px;
+  }
 }
 #lyrics-1 .line.active {
   color: #f4f1f1;

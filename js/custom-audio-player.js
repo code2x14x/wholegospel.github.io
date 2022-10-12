@@ -14,10 +14,6 @@ $(function () {
 
 
   let rabbitLyrics;
-  // let rabbitLyrics = new RabbitLyrics({
-  //   element: document.getElementById('lyrics-1'),
-  //   mediaElement: document.getElementById('audio-track')
-  // });
 
   // 数据
   const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
