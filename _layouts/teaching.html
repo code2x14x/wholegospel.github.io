@@ -27,6 +27,7 @@ layout: post
       <div class="second-part">
         <div class="time current">0:00</div>
         <span id='loop-indicator'></span>
+        <span id='track-title'></span>
         <span id='count-down-timer'></span>
         <div id="end-time" class="time till-end">0:00</div>
       </div>
@@ -58,6 +59,7 @@ layout: post
 <!-- 证道录音 -->
 {% if page.preach %}
 <div id="teachingAudio" class="audio teaching bars" 
+    data-title="证道录音"
     data-image="{{ page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg-img/teaching/'}}"
     data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span

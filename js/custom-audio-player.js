@@ -271,8 +271,6 @@ $(function () {
   });
 
   function changeSourceAndPlay(audioElem){
-    // if(document.getElementById('track-title')) 
-    //   $('#track-title').html(audioElem.dataset.title);
 
     for(let e of allAudioElems) e.classList.remove('current-audio');
     audioElem.classList.add('current-audio');
@@ -285,6 +283,7 @@ $(function () {
   function play(audioElem){
     var currentTime = audioTrackElem.currentTime;
     if(currentTime == 0) {
+      $('#track-title').html("《" + audioElem.dataset.title + "》");
       // 更改标题配图
       const imgSrc = audioElem.dataset.image;
       if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
