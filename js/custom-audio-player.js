@@ -208,9 +208,11 @@ $(function () {
     event.preventDefault();
     durationClickCnt++;
     clearInterval(timer);
+    document.getElementById('count-down-timer').style.display = 'block';
     let duration = 0;
     if (durationClickCnt % 5 == 0) {
       document.getElementById('count-down-timer').innerText = '';
+      document.getElementById('count-down-timer').style.display = 'none';
       return;
     } else if (durationClickCnt % 5 == 1) {
       duration = 10;
@@ -321,14 +323,14 @@ $(function () {
   }
 
   function allLoop() {
-    document.getElementById('loop-indicator').innerText = '全部循环';
+    // document.getElementById('loop-indicator').innerText = '全部循环';
     repeatButton.classList.add('all-loop');
     audioTrackElem.loop = false; //禁止单曲循环，否则无法触发ended事件
     audioTrackElem.addEventListener('ended', playEndedHandler, false);
   }
 
   function singleLoop() {
-    document.getElementById('loop-indicator').innerText = '单曲循环';
+    // document.getElementById('loop-indicator').innerText = '单曲循环';
     repeatButton.classList.remove('all-loop');
     audioTrackElem.loop = true; //开启单曲循环
     audioTrackElem.removeEventListener('ended', playEndedHandler, false);

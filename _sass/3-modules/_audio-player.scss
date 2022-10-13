@@ -80,6 +80,14 @@
 
 .second-part {
   font-size: 13px;
+
+  #count-down-timer {
+    display: none;
+  }
+
+  #track-title {
+    font-size: 14px;
+  }
 }
 
 #controls i {
@@ -142,7 +150,7 @@ span.singer {
 }
 
 #controls .time.current {
-  min-width: 45px;
+  min-width: 50px;
   text-align: left;
 }
 
