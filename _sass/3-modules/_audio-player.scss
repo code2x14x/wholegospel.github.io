@@ -99,6 +99,7 @@
   font-size: 21px;
   // color: #6868d5;
   color: #879EB4;
+  width: 25px;
 }
 
 #pause {
@@ -106,13 +107,13 @@
   color: #6868d5;
 }
 
-#repeat,
+#rotate,
 #prev-15,
 #next-15,
 #count-down {
   font-size: 15px;
   color: #879EB4;
-  min-width: 30px;
+  min-width: 25px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -140,6 +141,10 @@ span.singer {
 }
 
 .all-loop {
+  color: #6868d5 !important;
+}
+
+.fa-solid.active {
   color: #6868d5 !important;
 }
 
