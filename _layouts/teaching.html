@@ -8,7 +8,7 @@ layout: post
   <div id="podcast-player">
     <div id="controls">
       <div class="first-part">
-        <i id="repeat" class="fa-solid fa-rotate"></i>
+        <i id="repeat" class="fas fa-sync-alt"></i>
         {% if page.permalink == '/hymns' or page.permalink == '/hymns_en' %}
         <i id="step-backward" class="fas fa-step-backward"></i>
         {% else %}
@@ -60,7 +60,7 @@ layout: post
 <div id="teachingAudio" class="audio teaching bars" 
     data-title="证道录音"
     data-image="{{ page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg-img/teaching/'}}"
-    data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fa-solid fa-dove"></i>《证道录音》
+    data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
     class="bar n5"></span>
 </div><br>
@@ -109,7 +109,7 @@ layout: post
              data-title="{{ item.title }}" 
              data-file="wg-hymn/{{ item.file }}" 
              data-image="{{ bgImg }}" 
-             data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fa-solid fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
+             data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
           <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
         </div><br>
       {% endif %}
@@ -128,7 +128,7 @@ layout: post
 <!-- 洗礼课 -->
 {% if page.permalink == "/baptism_lessons" %}
   {% for item in site.data.baptism_lessons %} 
-    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-baptism-lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fa-solid fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
+    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-baptism-lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
       <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
     </div><br>
   {% endfor %}
