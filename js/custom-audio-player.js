@@ -243,7 +243,7 @@ $(function () {
       const seconds = Math.floor((timeLeft / 1000) % 60);
 
       // const countDownTimer = document.getElementById('count-down-timer');
-      const minutesStr = minutes < 10 ? '0' + minutes : minutes;
+      const minutesStr = minutes;
       const secondsStr = seconds < 10 ? '0' + seconds : seconds;
       countDownTimer.innerText = minutesStr + ':' + secondsStr;
       // clearing countdown when complete
