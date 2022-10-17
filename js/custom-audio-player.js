@@ -44,7 +44,7 @@ $(function () {
 
     // 初始化 全部歌曲的 source
     Array.from(allHymnsElems).forEach((ele) => {
-      allHymnsSources.push(osUrl + ele.getAttribute('data-file'));
+      allHymnsSources.push(ele.getAttribute('data-file'));
     });
 
     // 给 证道、歌曲名称 和 歌词按钮 添加点击事件
@@ -276,7 +276,7 @@ $(function () {
 
     for(let e of allAudioElems) e.classList.remove('current-audio');
     audioElem.classList.add('current-audio');
-    audioTrackElem.src = osUrl + audioElem.getAttribute('data-file');
+    audioTrackElem.src = audioElem.getAttribute('data-file');
     audioTrackElem.load();
 
     play(audioElem);
