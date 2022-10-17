@@ -9,6 +9,7 @@
   title: 奔跑不放弃
   singer: 赞美之泉
   file: 奔跑不放弃_赞美之泉.mp4
+  image: Deep_Space_08.jpg
 
 - id: dsgm
   title: 得胜冠冕
@@ -44,11 +45,13 @@
   title: 何等恩典
   file: 何等恩典_赞美之泉.mp3
   singer: 赞美之泉
+  image: jesus_marker_HD.jpg
 
 - id: hsz_hillsong
   title: 和散那
   file: 和散那_Hillsong.mp3
   singer: Hillsong
+  image: jesus_marker_HD.jpg
 
 - id: hzwmlm_hillsong
   title: 活在我们里面
@@ -95,6 +98,7 @@
   title: 你真好
   file: 你真好_城市丰收教会.mp3
   singer: 城市丰收教会
+  image: Magazine-scraps.jpg
 
 - id: pwzgcxqd
   title: 陪我走过春夏秋冬
@@ -169,6 +173,7 @@
   title: 我在这里
   file: 我在这里_赞美之泉.mp4
   singer: 赞美之泉
+  image: Nebulous_Bridge_A.jpg
 
 - id: xgdyp
   title: 香膏的玉瓶

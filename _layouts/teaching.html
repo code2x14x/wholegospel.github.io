@@ -42,7 +42,7 @@ layout: post
 </div>
 {% else %}
 <audio controls id="old-player" style='width: 100%;' preload="auto">   
-  <source src="{{ site.os_url }}wg-audio/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
+  <source src="/audios/teaching/{{page.date | date: '%Y-%m-%d'}}.mp3" type="audio/mpeg">   
 </audio>
 {% endif %}
 
@@ -60,7 +60,7 @@ layout: post
 <div id="teachingAudio" class="audio teaching bars" 
     data-title="证道录音"
     data-image="{{ page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg-img/teaching/'}}"
-    data-file="wg-audio/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
+    data-file="/audios/teaching/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
     class="bar n5"></span>
 </div><br>
