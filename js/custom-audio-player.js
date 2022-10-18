@@ -32,7 +32,7 @@ $(function () {
       audio.dataset.index = i;
       if(i == 0) {
         audio.classList.add('current-audio');
-        audioTrackElem.src = osUrl + audio.dataset.file;
+        audioTrackElem.src = audio.dataset.file;
         audioTrackElem.load();
       }
     }
