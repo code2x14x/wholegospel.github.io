@@ -86,6 +86,7 @@ layout: post
           {% if item.image != null and item.image != "" %}
             <!-- 使用当前歌曲专属图片 -->
             {% assign bgImg = "wg-img/hymn/" | append: item.image %}
+            {{"专属图片"}}
           {% else %}
             <!-- 使用随机图片 -->
             {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
@@ -97,6 +98,7 @@ layout: post
             {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
           {% endif %}
         {% else %}
+            {{"没有歌词"}}
             <!-- 当前歌曲没有同步歌词时 -->
             {% if page.image != null and page.image != "" %}
               <!-- 使用 frontier 中制定的图片 -->
