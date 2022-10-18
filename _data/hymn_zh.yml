@@ -53,7 +53,7 @@
 - id: hzwmlm_hillsong
   title: 活在我们里面
   file: 活在我们里面_hillsong.mp3
-  singer: hillsong
+  singer: Hillsong
 
 - id: jdswmz
   title: 基督是我满足
@@ -99,6 +99,11 @@
   title: 陪我走过春夏秋冬
   file: 陪我走过春夏秋冬_小羊诗歌.mp3
   singer: 小羊诗歌
+
+- id: qnsdswdzwds_ysl
+  title: 全能上帝是我的主我的神
+  file: 全能上帝是我的主我的神_以斯拉.mp4
+  singer: 以斯拉
 
 - id: qslyx
   title: 求圣灵运行
@@ -185,12 +190,22 @@
   file: 耶稣，成为我中心.mp3
   singer: 约书亚乐团
 
+- id: yyzq_hillsong
+  title: 永远掌权
+  file: 永远掌权_hillsong.mp3
+  singer: Hillsong
+
 - id: zcjwgx 
   title: 再次将我更新
   singer: 小羊诗歌
   file: 再次将我更新_小羊诗歌.mp3
   mainpage: zcjwgx_xysg
   mainpage_image: 再次将我更新_小羊诗歌.jpg
+
+- id: znhzzd_ysl
+  title: 在你呼召之地
+  file: 在你呼召之地_以斯拉.mp3
+  singer: 以斯拉
 
 - id: znyyywtz
   title: 主你永远与我同在

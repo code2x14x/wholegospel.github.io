@@ -311,7 +311,7 @@ $(function () {
     const rl = document.getElementById("lyrics-1");
     rl.innerHTML = '';
     const ly = document.createTextNode(audioElem.dataset.lyrics);
-    if(audioElem.dataset.lyrics == undefined || !ly) {
+    if(audioElem.dataset.lyrics == "" || audioElem.dataset.lyrics == undefined || !ly) {
       rabbitLyrics = null;
     } else {
       rl.append(ly);
