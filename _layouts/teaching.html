@@ -90,10 +90,13 @@ layout: post
           {% else %}
             <!-- 使用随机图片 -->
             {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
+            {{lsize}}
+            {{"-"}}
             {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
             {{forloop}}
             {{"-"}}
             {{ bgSchemeIdx }}
+            {{"-"}}
             {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
             {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
           {% endif %}
