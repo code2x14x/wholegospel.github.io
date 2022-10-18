@@ -82,21 +82,12 @@ layout: post
         {% assign fileName = "lyrics_" | append: item.id %}
         {% assign lyrics = site.data[fileName].lyrics %}
         {% if lyrics != null and lyrics != "" %}
-          <!-- 当前歌曲有同步歌词时 -->
-          {% if item.image != null and item.image != "" %}
-            <!-- 使用当前歌曲专属图片 -->
-            {% assign bgImg = "wg-img/hymn/" | append: item.image %}
-            {{"专属图片"}}
-          {% else %}
-            <!-- 使用随机图片 -->
-            {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
-            {% assign bgSchemeIdx = forloop.index | random_number: 0, lsize %}
-            {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
-            {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
-            {{bgSchemeIdx}} {{"-"}} {{bgScheme}}{{"-"}}{{bgImg}}
-          {% endif %}
+          <!-- 当前歌曲有同步歌词时；随机使用为同步字幕准备的背景图片 -->
+          {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
+          {% assign bgSchemeIdx = forloop.index | modulo: lsize %}
+          {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
+          {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
         {% else %}
-            {{"没有歌词"}}
             <!-- 当前歌曲没有同步歌词时 -->
             {% if page.image != null and page.image != "" %}
               <!-- 使用 frontier 中制定的图片 -->

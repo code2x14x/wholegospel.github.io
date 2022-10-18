@@ -3,13 +3,12 @@
   singer: 阳咏存&何俊鸿
   file: 爱是不保留_陽詠存_何俊鴻.mp3
   mainpage: asbbl_yyc_hjh
-  image: 爱是不保留_陽詠存_何俊鴻.jpg
+  mainpage_image: 爱是不保留_陽詠存_何俊鴻.jpg
 
 - id: bpbfq_zmzq
   title: 奔跑不放弃
   singer: 赞美之泉
   file: 奔跑不放弃_赞美之泉.mp4
-  image: Deep_Space_08.jpg
 
 - id: dsgm
   title: 得胜冠冕
@@ -45,13 +44,11 @@
   title: 何等恩典
   file: 何等恩典_赞美之泉.mp3
   singer: 赞美之泉
-  image: jesus_marker_HD.jpg
 
 - id: hsz_hillsong
   title: 和散那
   file: 和散那_Hillsong.mp3
   singer: Hillsong
-  image: jesus_marker_HD.jpg
 
 - id: hzwmlm_hillsong
   title: 活在我们里面
@@ -75,7 +72,6 @@
 
 - id: klz
   title: 开路者
-  #file: 开路者_Way Maker.mp3
   file: 开路者_台北灵粮堂青年牧区.mp4
   singer: 台北灵粮堂青年牧区
 
@@ -98,7 +94,6 @@
   title: 你真好
   file: 你真好_城市丰收教会.mp3
   singer: 城市丰收教会
-  image: Magazine-scraps.jpg
 
 - id: pwzgcxqd
   title: 陪我走过春夏秋冬
@@ -120,7 +115,7 @@
   singer: Sherin Lan
   file: 神的良善荣美_Sherin_Lan.mp3
   mainpage: sdlsrm_sherin_lan
-  image: 神的良善荣美_Sherin_Lan.jpg
+  mainpage_image: 神的良善荣美_Sherin_Lan.jpg
 
 - id: slqnlcmwx
   title: 圣灵请你来充满我心
@@ -173,14 +168,13 @@
   title: 我在这里
   file: 我在这里_赞美之泉.mp4
   singer: 赞美之泉
-  image: Nebulous_Bridge_A.jpg
 
 - id: xgdyp
   title: 香膏的玉瓶
   file: 香膏的玉瓶_约书亚乐团.mp3
   singer: 约书亚乐团
   mainpage: xgdyp_ysyyt
-  image: 香膏的玉瓶.jpeg
+  mainpage_image: 香膏的玉瓶.jpeg
   
 - id: yhhbhn
   title: 耶和华保护你
@@ -196,7 +190,7 @@
   singer: 小羊诗歌
   file: 再次将我更新_小羊诗歌.mp3
   mainpage: zcjwgx_xysg
-  image: 再次将我更新_小羊诗歌.jpg
+  mainpage_image: 再次将我更新_小羊诗歌.jpg
 
 - id: znyyywtz
   title: 主你永远与我同在
