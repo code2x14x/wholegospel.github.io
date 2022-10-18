@@ -278,7 +278,6 @@ $(function () {
     audioElem.classList.add('current-audio');
     audioTrackElem.src = audioElem.getAttribute('data-file');
     audioTrackElem.load();
-
     play(audioElem);
   }
 
@@ -286,30 +285,53 @@ $(function () {
     var currentTime = audioTrackElem.currentTime;
     if(currentTime == 0) {
       $('#track-title').html("《" + audioElem.dataset.title + "》");
-      // 更改标题配图
-      const imgSrc = audioElem.dataset.image;
-      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
-      else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
-
-      const rl = document.getElementById("lyrics-1");
-      rl.innerHTML = '';
-      const ly = document.createTextNode(audioElem.dataset.lyrics);
-      if(audioElem.dataset.lyrics == undefined || !ly) {
-        rabbitLyrics = null;
-      } else {
-        rl.append(ly);
-        rabbitLyrics = new RabbitLyrics({
-          element: document.getElementById('lyrics-1'),
-          height: 100,
-          mediaElement: document.getElementById('audio-track')
-        });
-      }
+      changeLoopIndicatorText();
+      changeBackgroundImg(audioElem);
+      changeLyrics(audioElem);
     }
-
     barsDancing(audioElem);
     playButton.hide();
     pauseButton.fadeIn();
     audioTrackElem.play();
+  }
+
+  function changeLoopIndicatorText(){
+    if(repeatButton.classList.contains('all-loop')) {
+      document.getElementById('loop-indicator').innerText = '全部循环';
+    } else {
+      document.getElementById('loop-indicator').innerText = '单曲循环';
+    }
+  }
+
+  /**
+   * 更改同步歌词
+   * @param audioElem 
+   */
+  function changeLyrics(audioElem) {
+    const rl = document.getElementById("lyrics-1");
+    rl.innerHTML = '';
+    const ly = document.createTextNode(audioElem.dataset.lyrics);
+    if(audioElem.dataset.lyrics == undefined || !ly) {
+      rabbitLyrics = null;
+    } else {
+      rl.append(ly);
+      rabbitLyrics = new RabbitLyrics({
+        element: document.getElementById('lyrics-1'),
+        height: 100,
+        mediaElement: document.getElementById('audio-track')
+      });
+    }
+  }
+
+  /**
+   * 更改背景图片
+   * @param audioElem 
+   */
+  function changeBackgroundImg(audioElem){
+      // 更改标题配图
+      const imgSrc = audioElem.dataset.image;
+      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
+      else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
   }
 
   function pause(){
