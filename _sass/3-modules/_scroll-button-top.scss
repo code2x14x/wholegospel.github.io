@@ -8,6 +8,7 @@
   text-align: center;
   line-height: 35px;
 	background-color: $dark;
+  background: no-repeat center/contain url('/images/top.png');
 	color: $white;
 	cursor: pointer;
 	transition: all .25s ease;
@@ -16,9 +17,9 @@
     right: 40px;
   }
 
-  &:hover {
-    background-color: $black;
-  }
+  // &:hover {
+  //   background-color: $black;
+  // }
 
 }
 
