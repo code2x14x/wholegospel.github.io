@@ -16,13 +16,13 @@ $(function () {
   let rabbitLyrics;
 
   // 数据
-  const osUrl = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
+  const tencentCos = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/";
   const allAudioElems = document.getElementsByClassName('audio');           // 全部音频
   const allHymnsElems = document.getElementsByClassName('hymn');             // 全部歌曲
   let allHymnsSources = [];   // 全部歌曲的 source
 
   const postHeadElem = document.querySelector(".post-head-bg-img"); // 标题配图
-  postHeadElem.style.backgroundImage = "url('" + osUrl + postHeadElem.dataset.bgimg + "')";
+  postHeadElem.style.backgroundImage = "url('" + tencentCos + postHeadElem.dataset.bgimg + "')";
   const defultImg = postHeadElem.dataset.bgimg;
 
   function init(){
@@ -32,7 +32,7 @@ $(function () {
       audio.dataset.index = i;
       if(i == 0) {
         audio.classList.add('current-audio');
-        audioTrackElem.src = audio.dataset.file;
+        audioTrackElem.src = tencentCos + audio.dataset.file;
         audioTrackElem.load();
       }
     }
@@ -44,7 +44,7 @@ $(function () {
 
     // 初始化 全部歌曲的 source
     Array.from(allHymnsElems).forEach((ele) => {
-      allHymnsSources.push(ele.getAttribute('data-file'));
+      allHymnsSources.push(tencentCos + ele.getAttribute('data-file'));
     });
 
     // 给 证道、歌曲名称 和 歌词按钮 添加点击事件
@@ -276,7 +276,7 @@ $(function () {
 
     for(let e of allAudioElems) e.classList.remove('current-audio');
     audioElem.classList.add('current-audio');
-    audioTrackElem.src = audioElem.getAttribute('data-file');
+    audioTrackElem.src = tencentCos + audioElem.getAttribute('data-file');
     audioTrackElem.load();
     play(audioElem);
   }
@@ -330,8 +330,8 @@ $(function () {
   function changeBackgroundImg(audioElem){
       // 更改标题配图
       const imgSrc = audioElem.dataset.image;
-      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + osUrl + imgSrc + "')";
-      else postHeadElem.style.backgroundImage =  "url('" + osUrl + defultImg + "')";
+      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + tencentCos + imgSrc + "')";
+      else postHeadElem.style.backgroundImage =  "url('" + tencentCos + defultImg + "')";
   }
 
   function pause(){
