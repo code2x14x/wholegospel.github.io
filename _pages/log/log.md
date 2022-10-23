@@ -2,7 +2,7 @@
 layout: pp7
 title: 更新日志
 permalink: /ulog
-image: wg-img/teaching/dlog.jpg
+image: wg/images/teaching/dlog.jpg
 tags: hidden
 date: 
 ---

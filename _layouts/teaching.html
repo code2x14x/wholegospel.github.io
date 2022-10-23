@@ -57,9 +57,14 @@ layout: post
 
 <!-- 证道录音 -->
 {% if page.preach %}
+{% if page.image %}
+{% assign preachImg = page.image %}
+{% else %}
+{% assign preachImg = page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg/images/teaching/' %}
+{% endif %}
 <div id="teachingAudio" class="audio teaching bars" 
     data-title="证道录音"
-    data-image="{{ page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg-img/teaching/'}}"
+    data-image="{{ preachImg }}"
     data-file="/wg/audios/teaching/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
   <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
     class="bar n5"></span>
@@ -86,7 +91,7 @@ layout: post
           {% assign lsize = site.data.lyrics_bg_schemes.size | minus: 1 %}
           {% assign bgSchemeIdx = forloop.index | modulo: lsize %}
           {% assign bgScheme = site.data.lyrics_bg_schemes[bgSchemeIdx] %}
-          {% assign bgImg = "wg-img/hymn/" | append: bgScheme.image %}
+          {% assign bgImg = "wg/images/hymn/" | append: bgScheme.image %}
         {% else %}
             <!-- 当前歌曲没有同步歌词时 -->
             {% if page.image != null and page.image != "" %}
@@ -94,7 +99,7 @@ layout: post
               {% assign bgImg = page.image %}
             {% else %}
               <!-- 使用当前日期.jpg -->
-              {% assign bgImg = page.date | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg"  %}
+              {% assign bgImg = page.date | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg"  %}
             {% endif %}
         {% endif %}
 
@@ -114,7 +119,7 @@ layout: post
     {% if page.permalink != "/hymns" %}
     <a class="hz" href="/hymns">以往赞美汇总</a>
     {% endif %}
-    <a class="zd" href="{{ site.os_url }}wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导</a>如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span
+    <a class="zd" href="{{ site.os_url }}wg/images/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导</a>如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span
       class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
   </div><br />
 {% endif %}
@@ -128,7 +133,7 @@ layout: post
   {% endfor %}
   <div class="tips">
     <a class="hz" href="/hymns">以往赞美汇总</a>
-    <a class="zd" href="{{ site.os_url }}wg-img/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导</a>
+    <a class="zd" href="{{ site.os_url }}wg/images/teaching/%E6%92%AD%E6%94%BE%E5%99%A8%E7%94%A8%E6%B3%95%E6%8C%87%E5%AF%BC.jpg">播放器用法指导</a>
     如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
   </div><br />
 {% endif %}

@@ -23,7 +23,7 @@ layout: default
       {% if page.image %}
         {% assign image = page.image %}
       {% else %}
-        {% assign image = page.date | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg" %}
+        {% assign image = page.date | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="row">
       <div class="post__head col col-8 col-t-10 col-m-12">
@@ -87,7 +87,7 @@ layout: default
       {% if page.previous.image %}
         {% assign image = page.previous.image %}
       {% else %}
-        {% assign image = page.previous.date  | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg" %}
+        {% assign image = page.previous.date  | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="prev">
       <a class="post__nav__image" href="{{ site.baseurl }}{{page.previous.url}}" 
@@ -110,7 +110,7 @@ layout: default
       {% if page.next.image %}
         {% assign image = page.next.image %}
       {% else %}
-        {% assign image = page.next.date | date: '%Y-%m-%d' | prepend: "wg-img/teaching/" | append: ".jpg" %}
+        {% assign image = page.next.date | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="next">
       <a class="post__nav__image" href="{{ site.baseurl }}{{page.next.url}}" 
