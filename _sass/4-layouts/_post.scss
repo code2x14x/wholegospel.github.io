@@ -273,7 +273,7 @@ div.article-img-wrapper .caption {
   position: relative;
   height: 235px;
   height: 30vw;
-  transition: all 0.9s cubic-bezier(0.04, 0.79, 0.58, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.23, 0.55, 0.69, 0.77) 0s;
   @media only screen and (max-width: $mobile) {
     height: 60vw;
   }
@@ -297,9 +297,11 @@ div.article-img-wrapper .caption {
 .container .stretch-out {
   position : fixed;
   width : 100vw;
-  height : calc(100vh + 4px);;
+  height : calc(100vh + 4px);
   z-index : 99;
   padding : 0;
+  top: 0;
+  left: 0;
 
   .post-head-bg-img {
     border-radius: 0;
