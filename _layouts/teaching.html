@@ -127,7 +127,7 @@ layout: post
 <!-- 洗礼课 -->
 {% if page.permalink == "/baptism_lessons" %}
   {% for item in site.data.baptism_lessons %} 
-    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg-baptism-lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
+    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/baptism_lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
       <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
     </div><br>
   {% endfor %}
