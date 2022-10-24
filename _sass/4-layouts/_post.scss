@@ -297,7 +297,7 @@ div.article-img-wrapper .caption {
 .container .stretch-out {
   position : fixed;
   width : 100vw;
-  height : 100vh;
+  height : calc(100vh + 4px);;
   z-index : 99;
   padding : 0;
 
