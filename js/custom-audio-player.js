@@ -424,7 +424,8 @@ $(function () {
       console.log(domRect);
       const stretchOut = document.querySelector('.stretch-out');
       if(stretchOut){
-        lyricsPostHead.style.marginTop = '-' + domRect.top + 'px';
+        const top = domRect.top - 10;
+        lyricsPostHead.style.marginTop = '-' + top + 'px';
       } else {
         lyricsPostHead.style.marginTop = "10px";
       }
