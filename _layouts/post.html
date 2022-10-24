@@ -26,7 +26,7 @@ layout: default
         {% assign image = page.date | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="row">
-      <div class="post__head col col-8 col-t-10 col-m-12">
+      <div id="lyrics_post_head" class="post__head col col-8 col-t-10 col-m-12">
         <div class="post-head-bg-img" data-bgimg="{{ image }}"></div>
         <div id="lyrics-1" class="wg-lyrics-container"></div>
         {% if page.permalink == '/hymns'  or page.permalink == '/hymns_en' %}

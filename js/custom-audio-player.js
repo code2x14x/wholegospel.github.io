@@ -403,9 +403,32 @@ $(function () {
   }
 
 
-  document.querySelector('.post__date').addEventListener('click', (e) => {
-    console.log('clicking date');
-    window.open("/log/dlog");
-  });
+  // document.querySelector('.post__date').addEventListener('click', (e) => {
+  //   console.log('clicking date');
+  //   window.open("/log/dlog");
+  // });
+
+  function getDomRect(domId) {
+    const dom = document.getElementById(domId);
+    if (!dom)
+        return null;
+    const clientRect = dom.getBoundingClientRect();
+    return clientRect;
+  };
+
+  const lyricsPostHead = document.querySelector("#lyrics_post_head");
+  if(lyricsPostHead) {
+    lyricsPostHead.addEventListener("click", function(){
+      lyricsPostHead.classList.toggle('stretch-out');
+      let domRect = getDomRect("lyrics_post_head");
+      console.log(domRect);
+      const stretchOut = document.querySelector('.stretch-out');
+      if(stretchOut){
+        lyricsPostHead.style.marginTop = '-' + domRect.top + 'px';
+      } else {
+        lyricsPostHead.style.marginTop = "10px";
+      }
+    });
+  }
 
 });
