@@ -30,7 +30,12 @@
   overflow-x: hidden;
   overflow-y: scroll;
   text-align: center;
-  font-size: 17px;
+  @media only screen and (max-width: $tablet) {
+    font-size: 4vw;
+  }
+  @media only screen and (max-width: $mobile) {
+    font-size: 4.5vw;
+  }
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -48,9 +53,14 @@
 }
 #lyrics-1 .line.active {
   color: #f4f1f1;
-  font-size: 18px;
   letter-spacing: 4px;
   text-shadow: 1px 1px 3px #0000004d;
+  @media only screen and (max-width: $tablet) {
+    font-size: 4.3vw;
+  }
+  @media only screen and (max-width: $mobile) {
+    font-size: 5vw;
+  }
 }
 #lyrics-1.rabbit-lyrics-mini {
   height: 20em;
