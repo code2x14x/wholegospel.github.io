@@ -45,7 +45,7 @@
   min-height: 1.5em;
   color: #eae7e7db;
   transition: all 0.25s;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 
   en {
     letter-spacing: 1px;
@@ -53,7 +53,7 @@
 }
 #lyrics-1 .line.active {
   color: #f4f1f1;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-shadow: 1px 1px 3px #0000004d;
   @media only screen and (max-width: $tablet) {
     font-size: 4.3vw;
