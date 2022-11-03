@@ -35,16 +35,6 @@
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 
-    #desp {
-      line-height: 1.7;
-      font-size: 1vw;
-      p {
-        margin-bottom: 1vw;
-      }
-      strong {
-        color: #4b4b4b;
-      }
-    }
     .article__tag {
       font-size: 12px;
       letter-spacing: 0.5px;
@@ -117,15 +107,6 @@
       padding: 20px;
       margin: -10% 0 0 0;
 
-      #desp {
-        font-size: 4vw;
-        p {
-          margin-bottom: 4vw;
-        }
-        li {
-          margin-bottom: 1vw;
-        }
-      }
     }
 
     .article-without-image {
@@ -136,16 +117,6 @@
 
   @media only screen and (max-width: $mobile) {
     .article__content {
-
-      #desp {
-        font-size: 4vw;
-        p {
-          margin-bottom: 4vw;
-        }
-        li {
-          margin-bottom: 1vw;
-        }
-      }
       .article__title {
         font-size: 27px;
       }

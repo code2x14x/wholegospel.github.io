@@ -285,9 +285,40 @@ audio {
   font-size: 16px;
 }
 
-.article .article__content #desp {
+// .post__navigation #desp,
+// .article .article__content #desp,
+#desp {
   line-height: 1.4 !important;
   p, ul {
     margin-bottom: 0.5rem !important;
   }
+  line-height: 1.7;
+  font-size: 1vw;
+  strong {
+    color: #414040;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  #desp {
+    font-size: 4vw;
+    p {
+      margin-bottom: 4vw;
+    }
+    li {
+      margin-bottom: 1vw;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+    #desp {
+      font-size: 4vw;
+      p {
+        margin-bottom: 4vw;
+      }
+      li {
+        margin-bottom: 1vw;
+      }
+    }
 }
