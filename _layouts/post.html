@@ -8,6 +8,9 @@ layout: default
         {% if page.permalink == '/hymns' or page.permalink == '/hymns_en' or page.permalink == '/baptism_lessons' or page.permalink == '/ulog' %}
           <h1 class="post-title" style="text-align: center; letter-spacing: 1rem;">{{ page.title | escape }}</h1>
         {% else %}
+        {% if page.serial %}
+        <h2 class="post-serial">{{ page.serial | escape }}</h2>
+        {% endif %}
           <h1 class="post-title">{{ page.title | escape }}</h1>
           <span class="post__date">
             <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
