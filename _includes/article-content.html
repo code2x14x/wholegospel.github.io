@@ -13,7 +13,9 @@
         style="background-image: url({{site.os_url}}{{ image }})"></a>
 
         <div class="article__content {{ without-image }}">
-      
+          {% if post.serial %}
+          <h3 class="post-serial">{{ post.serial | escape }}</h2>
+          {% endif %} 
           <h2 class="article__title">
             <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
           </h2>
