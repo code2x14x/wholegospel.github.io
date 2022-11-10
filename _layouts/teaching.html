@@ -2,7 +2,7 @@
 layout: post
 ---
 {% if page.permalink == '/ulog' %}
-{% elsif page.preach or page.hymns or page.permalink == '/baptism_lessons' %}
+{% elsif page.preach or page.hymns or page.permalink == '/baptism_lessons' or page.permalink == '/disciple_lessons' %}
 <div id="v-player">
   <audio id="audio-track" type="audio/mp3" loop preload="meta"></audio>
   <div id="podcast-player">
@@ -128,6 +128,20 @@ layout: post
 {% if page.permalink == "/baptism_lessons" %}
   {% for item in site.data.baptism_lessons %} 
     <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/baptism_lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
+      <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
+    </div><br>
+  {% endfor %}
+  <div class="tips">
+    <a class="hz" href="/hymns">以往赞美汇总</a>
+    <a class="zd" href="/images/player-instrction.jpg">播放器用法指导</a>
+    如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
+  </div><br />
+{% endif %}
+
+<!-- 门训课 -->
+{% if page.permalink == "/disciple_lessons" %}
+  {% for item in site.data.disciple_lessons %} 
+    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/disciple_lessons/{{ item.file }}" data-image="{{hymnImg}}"><i class="fas fa-star"></i>《{{ item.title }}》
       <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
     </div><br>
   {% endfor %}
