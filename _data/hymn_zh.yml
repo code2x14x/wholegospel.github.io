@@ -10,7 +10,7 @@
   singer: 赞美之泉
   file: 奔跑不放弃_赞美之泉.mp4
 
-- id: dsgm
+- id: dsgm_ttjb
   title: 得胜冠冕
   singer: 天堂敬拜
   file: 得胜冠冕_天堂敬拜.mp3
@@ -125,7 +125,7 @@
   file: 求圣灵运行.mp3
   singer: 祝瑞莲
 
-- id: rhhjbyjp
+- id: rhhjbyjp_ysl
   title: 任何环境不要惧怕
   file: 任何环境不要惧怕.m4a
   singer: 以斯拉
@@ -152,7 +152,7 @@
   file: 天父美善力量.mp3
   singer: Zion Church Beijing
 
-- id: wdsmxgn
+- id: wdsmxgn_zmzq
   title: 我的生命献给你
   file: 我的生命献给你.mp3
   singer: 赞美之泉
@@ -163,7 +163,7 @@
   singer: 城市丰收教会
   mainpage: wdz_csfsjh
 
-- id: wmds
+- id: wmds_HTBBChurch
   title: 我们的神
   file: 我们的神_This is Our God_HTBBChurch.mp3
   singer: HTBBChurch 
