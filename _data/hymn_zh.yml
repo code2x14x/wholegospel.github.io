@@ -147,6 +147,11 @@
   file: 世上的光_师母.mp3
   singer: 师母
 
+- id: sx_ysyyt
+  title: 苏醒
+  file: 苏醒_约书亚乐团.mp3
+  singer: 约书亚乐团
+
 - id: tfmsll
   title: 天父美善力量
   file: 天父美善力量.mp3
@@ -173,6 +178,11 @@
   title: 我们的神
   file: 我们的神_The Lighters 莱特.mp3
   singer: The Lighters 莱特
+
+- id: wmhyjwjl_zmzq
+  title: 我们欢迎君王降临
+  file: 我们欢迎君王降临-赞美之泉.m4a
+  singer: 赞美之泉
 
 - id: wmztsdf
   title: 我们在天上的父
@@ -229,6 +239,13 @@
   title: 永远掌权
   file: 永远掌权_hillsong.mp3
   singer: Hillsong
+
+- id: yydyk_cgf_xe
+  title: 永远的依靠
+  file: 永远的依靠_陈国富_玺恩.m4a
+  singer: 陈国富 玺恩
+
+  
 
 - id: zcjwgx 
   title: 再次将我更新
