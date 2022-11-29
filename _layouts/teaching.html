@@ -57,18 +57,28 @@ layout: post
 
 <!-- 证道录音 -->
 {% if page.preach %}
-{% if page.image %}
-{% assign preachImg = page.image %}
-{% else %}
-{% assign preachImg = page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg/images/teaching/' %}
-{% endif %}
-<div id="teachingAudio" class="audio teaching bars" 
-    data-title="证道录音"
-    data-image="{{ preachImg }}"
-    data-file="/wg/audios/teaching/{{ page.date | date: '%Y-%m-%d'}}.mp3"><i class="fas fa-dove"></i>《证道录音》
-  <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
-    class="bar n5"></span>
-</div><br>
+  {% if page.image %}
+    {% assign preachImg = page.image %}
+  {% else %}
+    {% assign preachImg = page.date | date: '%Y-%m-%d' | append: '.jpg' | prepend: 'wg/images/teaching/' %}
+  {% endif %}
+  {% if page.audio %}
+    {% assign audio = page.audio %}
+  {% else %}
+    {% assign audio = page.date | date: '%Y-%m-%d' | append: '.mp3' | prepend: '/wg/audios/teaching/' %}
+  {% endif %}
+  {% if page.audioTitle %}
+    {% assign audioTitle = page.audioTitle %}
+  {% else %}
+    {% assign audioTitle = '证道录音' %}
+  {% endif %}
+  <div id="teachingAudio" class="audio teaching bars" 
+      data-title="{{ audioTitle }}"
+      data-image="{{ preachImg }}"
+      data-file="{{ audio }}"><i class="fas fa-dove"></i>《证道录音》
+    <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
+      class="bar n5"></span>
+  </div><br>
 {% endif %}
 
 <!-- 主日赞美 及 赞美诗汇总 -->
@@ -142,6 +152,9 @@ layout: post
 {% if page.permalink == "/disciple_lessons" %}
   {% for item in site.data.disciple_lessons %} 
     <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/disciple_lessons/{{ item.file }}" data-image="{{hymnImg}}"><i class="fas fa-star"></i>《{{ item.title }}》
+      {% if item.doc %}
+        <a href="{{ item.doc }}"><i class="fas fa-file-alt"></i></a>
+      {% endif %}
       <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
     </div><br>
   {% endfor %}
