@@ -137,6 +137,11 @@
   mainpage: sdlsrm_sherin_lan
   mainpage_image: 神的良善荣美_Sherin_Lan.jpg
 
+- id: smzg
+  title: Desert Song
+  file: Desert Song.m4a
+  singer: Hillsong
+
 - id: slqnlcmwx
   title: 圣灵请你来充满我心
   file: 圣灵请你来充满我心.m4a
@@ -225,6 +230,11 @@
   file: 耶稣，成为我中心.mp3
   singer: 约书亚乐团
 
+- id: ysnszx_xe
+  title: 耶稣你是中心
+  file: 耶稣你是中心_玺恩.m4a
+  singer: 玺恩
+
 - id: yswgdpw_smhllt
   title: 耶稣，万国的盼望
   file: 耶稣，万国的盼望_生命河灵粮堂.mp3
@@ -244,8 +254,6 @@
   title: 永远的依靠
   file: 永远的依靠_陈国富_玺恩.m4a
   singer: 陈国富 玺恩
-
-  
 
 - id: zcjwgx 
   title: 再次将我更新
