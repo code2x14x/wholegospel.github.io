@@ -37,8 +37,12 @@
 
 - id: disciple_lessons_10
   title: 门徒训练课 / 第 10/12 课
-  file: 2022秋季一期门训第09课.mp3
+  file: 2022秋季一期门训第10课.mp3
 
 - id: disciple_lessons_11
   title: 门徒训练课 / 第 11/12 课
-  file: 2022秋季一期门训第09课.mp3
+  file: 2022秋季一期门训第11课.mp3
+
+- id: disciple_lessons_12
+  title: 门徒训练课 / 第 12/12 课
+  file: 2022秋季一期门训第12课.mp3
