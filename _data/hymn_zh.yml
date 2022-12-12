@@ -142,15 +142,20 @@
   mainpage: sdlsrm_sherin_lan
   mainpage_image: 神的良善荣美_Sherin_Lan.jpg
 
-- id: smzg
-  title: Desert Song
-  file: Desert Song.mp3
-  singer: Hillsong
+- id: sgypd_ysyyt
+  title: 神羔羊配得
+  singer: 约书亚乐团
+  file: 神羔羊配得_约书亚乐团.mp3
 
 - id: slqnlcmwx
   title: 圣灵请你来充满我心
   file: 圣灵请你来充满我心.m4a
   singer: 约书亚乐团
+
+- id: smzg
+  title: Desert Song
+  file: Desert Song.mp3
+  singer: Hillsong
 
 - id: ssdg
   title: 世上的光
@@ -166,6 +171,11 @@
   title: 天父美善力量
   file: 天父美善力量.mp3
   singer: Zion Church Beijing
+
+- id: tqwdt_smhllt
+  title: 抬起我的头
+  file: 抬起我的头_生命河灵粮堂.mp3
+  singer: 生命河灵粮堂
 
 - id: wdsmxgn_zmzq
   title: 我的生命献给你
@@ -198,6 +208,11 @@
   title: 我们在天上的父
   file: 我们在天上的父.mp3
   singer: Bethel 敬拜团
+
+- id: wzdwdjszhz_slfjbt
+  title: 我知道我的救赎主活着
+  file: 我知道我的救赎主活着_撒拉弗敬拜团.mp3
+  singer: 撒拉弗敬拜团
 
 - id: wzzl_ny
   title: 我在这里
