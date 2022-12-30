@@ -110,6 +110,16 @@
   file: 陪我走过春夏秋冬_小羊诗歌.mp3
   singer: 小羊诗歌
 
+- id: psht_xxyysg
+  title: 普世欢腾
+  file: 普世欢腾_新心音乐事工.mp3
+  singer: 新心音乐事工
+
+- id: psht_zmzq
+  title: 普世欢腾
+  file: 普世欢腾_赞美之泉.mp3
+  singer: 赞美之泉
+
 - id: qd_zmzq
   title: 倾倒
   file: 倾倒_赞美之泉.mp3
@@ -244,6 +254,11 @@
 - id: yhhbhn
   title: 耶和华保护你
   file: 耶和华保护你.mp3
+
+- id: ywyn_csfsjh
+  title: 因为有你
+  file: 因为有你_城市丰收教会.mp3
+  singer: 城市丰收教会
 
 - id: yscwwzx
   title: 耶稣，成为我中心
