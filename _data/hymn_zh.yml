@@ -120,6 +120,11 @@
   file: 普世欢腾_赞美之泉.mp3
   singer: 赞美之泉
 
+- id: qcmzd_ysyyt
+  title: 求充满这地
+  file: 求充满这地_约书亚乐团.m4a
+  singer: 约书亚乐团
+
 - id: qd_zmzq
   title: 倾倒
   file: 倾倒_赞美之泉.mp3
@@ -250,6 +255,11 @@
   title: 谢谢你，耶稣
   file: 谢谢你，耶稣_小羊诗歌.mp3
   singer: 小羊诗歌
+  
+- id: ydddywz_ysl
+  title: 应当单单仰望主
+  file: 应当单单仰望主_以斯拉.mp3
+  singer: 以斯拉
   
 - id: ygzcq_zmzq
   title: 勇敢走出去
