@@ -50,6 +50,11 @@
   file: 更坚固_hillsong.mp3
   singer: Hillsong
 
+- id: gxwxy_csjjh
+  title: 更新我心意
+  file: 更新我心意_传神基金会.mp3
+  singer: 传神基金会
+
 - id: hded
   title: 何等恩典
   file: 何等恩典_赞美之泉.mp3
@@ -79,6 +84,11 @@
   title: 君王就在这里
   file: 君王就在这里.mp3
   singer: 赞美之泉
+
+- id: jxney_ysyyt
+  title: 降下祢恩雨
+  file: 降下祢恩雨_约书亚乐团.mp3
+  singer: 约书亚乐团
 
 - id: klz
   title: 开路者
@@ -208,6 +218,11 @@
   singer: 城市丰收教会
   mainpage: wdz_csfsjh
 
+- id: wfqy_ysyyt
+  title: 万福泉源
+  file: 万福泉源_约书亚乐团.m4a
+  singer: 约书亚乐团
+
 - id: wmds_HTBBChurch
   title: 我们的神
   file: 我们的神_This is Our God_HTBBChurch.mp3
@@ -228,6 +243,16 @@
   title: 我们在天上的父
   file: 我们在天上的父.mp3
   singer: Bethel 敬拜团
+
+- id: wyys_nspd_zmzq
+  title: 唯有耶穌_祢是配得
+  file: 唯有耶穌_祢是配得_赞美之泉.mp3
+  singer: 赞美之泉
+
+- id: wyys_zmzq
+  title: 唯有耶稣
+  file: 唯有耶稣_赞美之泉.m4a
+  singer: 赞美之泉
 
 - id: wzdwdjszhz_slfjbt
   title: 我知道我的救赎主活着
