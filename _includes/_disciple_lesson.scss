@@ -1,0 +1,29 @@
+.post-title-box {
+  height: 10em;
+  border-top: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat   top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/images/disciple_lesson/disciple_lesson_s01.jpg);
+  padding: 15px 15px 0;
+}
+
+.post-serial {
+  background-color: #ffffffad;
+  padding: 0 15px
+}
+
+h1, .post-serial {
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: normal !important;
+  color: #047630;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #02a077;
+  text-align: center;
+  text-shadow: none;
+}
