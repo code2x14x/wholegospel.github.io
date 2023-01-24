@@ -1,3 +1,6 @@
+body {
+  font-size: 18px;
+}
 .post-title-box {
   height: 10em;
   border-top: none;
@@ -5,13 +8,10 @@
   padding: 15px 15px 0;
 }
 
-.post-serial {
+h1, .post-serial {
   background-color: #ffffffad;
   padding: 0 15px
-}
-
-h1, .post-serial {
-  text-shadow: 1px 1px 1px #fff;
+  // text-shadow: 1px 1px 1px #fff;
   font-weight: normal !important;
   color: #047630;
 }
@@ -35,7 +35,7 @@ u {
 }
 
 blockquote {
-  font-size: 17px !important;
+  font-size: 16px !important;
   line-height: inherit !important;
   letter-spacing: 0;
   font-style: normal;
