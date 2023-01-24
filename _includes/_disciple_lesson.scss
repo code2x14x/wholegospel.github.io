@@ -27,3 +27,23 @@ h2 {
   text-align: center;
   text-shadow: none;
 }
+
+u {
+  border: 1px solid #a0d3a8;
+  background-color: #bffec98f;
+  padding: 0;
+}
+
+blockquote {
+  font-size: 17px !important;
+  line-height: inherit !important;
+  letter-spacing: 0;
+  font-style: normal;
+  text-align: left;
+  color: #616161;
+  margin: 0 !important;
+}
+
+blockquote u {
+  color: #616161;
+}
