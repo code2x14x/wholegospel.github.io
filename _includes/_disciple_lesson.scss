@@ -20,6 +20,7 @@ h1, .post-serial {
 
 h1 {
   text-align: center;
+  letter-spacing: 4px;
 }
 
 h2 {
@@ -31,6 +32,7 @@ h2 {
   text-align: left;
   margin-left: -10px;
   margin-right: -10px;
+  letter-spacing: 4px;
 }
 
 h3 {
@@ -39,6 +41,7 @@ h3 {
   background-color: #02a077;
   font-size: 1em;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 u {
@@ -87,4 +90,9 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset,
 
 .container .row {
   margin: 0;
+}
+
+.col {
+  padding-left: 12px;
+  padding-right: 12px;
 }
