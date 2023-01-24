@@ -36,6 +36,46 @@
         <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
 
           <div class="post__content">
+            <div id="v-player">
+              <audio id="audio-track" type="audio/mp3" loop preload="meta"></audio>
+              <div id="podcast-player">
+                <div id="controls">
+                  <div class="first-part">
+                    <i id="repeat" class="fas fa-sync-alt"></i>
+                    <i id="prev-15" class="fas fa-undo-alt"></i>
+                    <i id="play" class="fa fa-play"></i>
+                    <i id="pause" class="fa fa-pause"></i>
+                    <i id="next-15" class="fas fa-redo-alt"></i>
+                    <i id="count-down" class="fas fa-clock"></i>
+                  </div>
+                  <div class="second-part">
+                    <div class="time current">0:00</div>
+                    <span id='loop-indicator'></span>
+                    <span id='track-title'></span>
+                    <span id='count-down-timer'></span>
+                    <div id="end-time" class="time till-end">0:00</div>
+                  </div>
+                  <div class="third-part">
+                    <div class="progress-bar">
+                      <div class="default-bar"></div>
+                      <div class="fill-bar"></div>
+                      <input type="range" id="seek" value="0" min="0" max="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 证道录音 -->
+            {% assign audio = page.audio %}
+            {% assign audioTitle = page.audioTitle %}
+            <div id="teachingAudio" class="audio teaching bars" 
+                data-title="{{ audioTitle }}"
+                data-file="{{ audio }}"><i class="fas fa-dove"></i>《{{ audioTitle }}》
+              <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span
+                class="bar n5"></span>
+            </div><br>
+
             {{ content }}
           </div>
 
