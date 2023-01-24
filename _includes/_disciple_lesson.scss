@@ -1,5 +1,6 @@
 body {
   font-size: 18px;
+  line-height: 1.5em;
 }
 .post-title-box {
   height: 10em;
@@ -45,4 +46,8 @@ blockquote {
 
 blockquote u {
   color: #616161;
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset, figure, pre {
+  margin-bottom: 10px;
 }
