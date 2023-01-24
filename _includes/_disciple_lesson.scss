@@ -29,8 +29,16 @@ h2 {
   padding: 3px 5px;
   font-size: 1.2em;
   text-align: left;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+h3 {
+  color: #fff;
+  text-shadow: none;
+  background-color: #02a077;
+  font-size: 1em;
+  text-align: center;
 }
 
 u {
@@ -70,4 +78,9 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset,
     color: #fff;
     font-size: 16px;
   }
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
 }
