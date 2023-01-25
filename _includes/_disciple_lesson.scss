@@ -44,6 +44,13 @@ h3 {
   letter-spacing: 2px;
 }
 
+h4 {
+  color: #fff;
+  text-shadow: none;
+  background-color: #784f84;
+  text-align: center;
+}
+
 u {
   border: 1px solid #a0d3a8;
   background-color: #bffec98f;
@@ -84,8 +91,6 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset,
 }
 
 .container {
-  // padding-left: 10px;
-  // padding-right: 10px;
   padding: 0;
 }
 

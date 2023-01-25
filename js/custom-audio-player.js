@@ -22,8 +22,11 @@ $(function () {
   let allHymnsSources = [];   // 全部歌曲的 source
 
   const postHeadElem = document.querySelector(".post-head-bg-img"); // 标题配图
-  postHeadElem.style.backgroundImage = "url('" + tencentCos + postHeadElem.dataset.bgimg + "')";
-  const defultImg = postHeadElem.dataset.bgimg;
+  const defultImg = '';
+  if(postHeadElem) {
+    postHeadElem.style.backgroundImage = "url('" + tencentCos + postHeadElem.dataset.bgimg + "')";
+    defultImg = postHeadElem.dataset.bgimg;
+  }
 
   function init(){
     // 初始化 全部音频 DOM
@@ -309,6 +312,7 @@ $(function () {
    */
   function changeLyrics(audioElem) {
     const rl = document.getElementById("lyrics-1");
+    if(!rl) return;
     rl.innerHTML = '';
     const ly = document.createTextNode(audioElem.dataset.lyrics);
     if(audioElem.dataset.lyrics == "" || audioElem.dataset.lyrics == undefined || !ly) {
@@ -329,9 +333,13 @@ $(function () {
    */
   function changeBackgroundImg(audioElem){
       // 更改标题配图
+      if(!postHeadElem) return;
       const imgSrc = audioElem.dataset.image;
-      if(imgSrc) postHeadElem.style.backgroundImage =  "url('" + tencentCos + imgSrc + "')";
-      else postHeadElem.style.backgroundImage =  "url('" + tencentCos + defultImg + "')";
+      if(imgSrc) {
+        postHeadElem.style.backgroundImage =  "url('" + tencentCos + imgSrc + "')";
+      } else {
+        postHeadElem.style.backgroundImage =  "url('" + tencentCos + defultImg + "')";
+      }
   }
 
   function pause(){
