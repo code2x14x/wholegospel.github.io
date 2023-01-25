@@ -22,7 +22,7 @@ $(function () {
   let allHymnsSources = [];   // 全部歌曲的 source
 
   const postHeadElem = document.querySelector(".post-head-bg-img"); // 标题配图
-  const defultImg = '';
+  let defultImg = '';
   if(postHeadElem) {
     postHeadElem.style.backgroundImage = "url('" + tencentCos + postHeadElem.dataset.bgimg + "')";
     defultImg = postHeadElem.dataset.bgimg;
