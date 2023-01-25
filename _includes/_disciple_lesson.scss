@@ -37,6 +37,7 @@ h2 {
   margin-left: -12px;
   margin-right: -12px;
   letter-spacing: 4px;
+  line-height: 1.3em;
 }
 
 h3 {
@@ -46,12 +47,14 @@ h3 {
   font-size: 1em;
   text-align: center;
   letter-spacing: 2px;
+  line-height: 1.5em;
 }
 
 h4 {
   color: #fff;
   text-shadow: none;
-  background-color: #784f84;
+  // background-color: #784f84;
+  background: linear-gradient(to top, #784f84 0%, #9568a3 100%);
   text-align: center;
 }
 
