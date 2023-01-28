@@ -70,7 +70,20 @@ $(function () {
     }
   }
 
+  // 给视频按钮添加点击事件
+  const videoBtns = document.getElementsByClassName('video-btn');
+  for(const vb of videoBtns) {
+    vb.addEventListener('click', (e) => {
+      const v_url = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/" + vb.dataset.url;
+      pause();
+      e.preventDefault();
+      e.stopPropagation();
+      window.open(v_url);
+    })
+  }
+
   init();
+
   let list = document.querySelector("#list");
   const searchInput = document.querySelector('#search-box');
   if(searchInput) {
