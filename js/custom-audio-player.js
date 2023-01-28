@@ -74,7 +74,7 @@ $(function () {
   const videoBtns = document.getElementsByClassName('video-btn');
   for(const vb of videoBtns) {
     vb.addEventListener('click', (e) => {
-      const v_url = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/" + vb.dataset.url;
+      const v_url = "https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/videos/" + vb.dataset.url;
       pause();
       e.preventDefault();
       e.stopPropagation();
