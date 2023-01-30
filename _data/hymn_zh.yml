@@ -51,6 +51,12 @@
   file: 更坚固_hillsong.mp3
   singer: Hillsong
 
+- id: gwmaw_dm
+  title: God Will Make A Way
+  file: God Will Make A Way_Don Moen.mp3
+  singer: Don Moen
+  video: God_Will_Make_A_Way.Don_Moen.Live_Worship.mp4
+
 - id: gxwxy_csjjh
   title: 更新我心意
   file: 更新我心意_传神基金会.mp3
@@ -86,6 +92,12 @@
   file: 君王就在这里.mp3
   singer: 赞美之泉
 
+- id: jwtqtds_zmzq
+  title: 叫我抬起头的神
+  file: 叫我抬起头的神_赞美之泉.mp3
+  singer: 赞美之泉
+  video: 叫我抬起頭的神_赞美之泉.mp4
+
 - id: jxney_ysyyt
   title: 降下祢恩雨
   file: 降下祢恩雨_约书亚乐团.mp3
@@ -115,6 +127,12 @@
   title: 你真好
   file: 你真好_城市丰收教会.mp3
   singer: 城市丰收教会
+
+- id: mlmp_jt
+  title: More Love More Power
+  file: More Love More Power.feat.Jane Tiller.mp3
+  singer: Jane Tiller
+  video: More_Love_More_Power.feat.Jane_Tiller.mp4
 
 - id: pwzgcxqd
   title: 陪我走过春夏秋冬
@@ -230,6 +248,7 @@
   file: 我们的神_This is Our God_HTBBChurch.mp3
   singer: HTBBChurch 
   alias: This is Our God
+  video: 我们的神.This_is_Our_God.HTBB_敬拜.mp4
 
 - id: wmds_The_Lighters
   title: 我们的神
