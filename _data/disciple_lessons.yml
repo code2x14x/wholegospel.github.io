@@ -1,47 +1,55 @@
 - id: disciple_lessons_01
-  title: 门徒训练课 / 第 01/12 课
+  title: 第 01 课：序论——门徒训练
   file: 2022秋季一期门训第01课.mp3
+  doc: /disciple_lessons/s1/1
 
 - id: disciple_lessons_02
-  title: 门徒训练课 / 第 02/12 课
+  title: 第 02 课：上帝的爱和人的罪
   file: 2022秋季一期门训第02课.mp3
+  doc: /disciple_lessons/s1/2
 
 - id: disciple_lessons_03
-  title: 门徒训练课 / 第 03/12 课
+  title: 第 03 课：悔改与相信
   file: 2022秋季一期门训第03课.mp3
+  doc: /disciple_lessons/s1/3
 
 - id: disciple_lessons_04
-  title: 门徒训练课 / 第 04/12 课
+  title: 第 04 课：重生与救恩
   file: 2022秋季一期门训第04课.mp3
+  doc: /disciple_lessons/s1/4
 
 - id: disciple_lessons_05
-  title: 门徒训练课 / 第 05/12 课
+  title: 第 05 课：基督徒的生活
   file: 2022秋季一期门训第05课.mp3
+  doc: /disciple_lessons/s1/5
 
 - id: disciple_lessons_06
-  title: 门徒训练课 / 第 06/12 课
+  title: 第 06 课：圣经与上帝
   file: 2022秋季一期门训第06课.mp3
+  doc: /disciple_lessons/s1/6
 
 - id: disciple_lessons_07
-  title: 门徒训练课 / 第 07/12 课
+  title: 第 07 课：耶稣与圣灵
   file: 2022秋季一期门训第07课.mp3
+  doc: /disciple_lessons/s1/7
 
 - id: disciple_lessons_08
-  title: 门徒训练课 / 第 08/12 课
+  title: 第 08 课：教会是什么
   file: 2022秋季一期门训第08课.mp3
+  doc: /disciple_lessons/s1/8
 
 - id: disciple_lessons_09
-  title: 门徒训练课 / 第 09/12 课
+  title: 第 09 课：教会⽣活
   file: 2022秋季一期门训第09课.mp3
 
 - id: disciple_lessons_10
-  title: 门徒训练课 / 第 10/12 课
+  title: 第 10 课：我们的新身份
   file: 2022秋季一期门训第10课.mp3
 
 - id: disciple_lessons_11
-  title: 门徒训练课 / 第 11/12 课
+  title: 第 11 课：委身
   file: 2022秋季一期门训第11课.mp3
 
 - id: disciple_lessons_12
-  title: 门徒训练课 / 第 12/12 课
+  title: 第 12 课：委身的奖赏
   file: 2022秋季一期门训第12课.mp3

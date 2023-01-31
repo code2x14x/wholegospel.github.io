@@ -153,7 +153,7 @@ layout: post
 {% endif %}
 
 <!-- 门训课 -->
-{% if page.permalink == "/disciple_lessons" %}
+{% if page.permalink == "/disciple_lessons/s1" %}
   {% for item in site.data.disciple_lessons %} 
     <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/disciple_lessons/{{ item.file }}" data-image="{{hymnImg}}"><i class="fas fa-star"></i>《{{ item.title }}》
       {% if item.doc %}
