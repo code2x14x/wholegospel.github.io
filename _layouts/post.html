@@ -12,12 +12,12 @@ layout: default
         <h2 class="post-serial">{{ page.serial | escape }}</h2>
         {% endif %}
           <h1 class="post-title">{{ page.title | escape }}</h1>
-          <span class="post__date">
-            <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
-          </span>
-          {% if page.abstract %}
-          <a class="abstract" href="{{ site.os_url }}wg/images/teaching-abstract/{{page.date | date: '%Y-%m-%d'}}-{{page.serial}}.png">查看摘要</a>
-          {% endif %}
+            <span class="post__date">
+              <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
+            {% if page.abstract %}
+            <a class="abstract" href="{{ site.os_url }}wg/images/teaching-abstract/{{page.date | date: '%Y-%m-%d'}}-{{page.serial}}.png">查看摘要</a>
+            {% endif %}
+            </span>
         {% endif %}
         {% if page.author %}
         <span class="author">{{ page.author }}</span>

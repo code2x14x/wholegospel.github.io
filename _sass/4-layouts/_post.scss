@@ -331,7 +331,15 @@ a.abstract {
   color: #fff;
   background: #338c9cf0;
   border-radius: 1em;
-  padding: 2px 5px;
-  font-size: 12px;
+  padding: 0 5px;
+  font-size: 13px;
   letter-spacing: 1px;
+  line-height: 17px;
+}
+
+span.post__date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
 }
