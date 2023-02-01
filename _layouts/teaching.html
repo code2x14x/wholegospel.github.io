@@ -121,7 +121,7 @@ layout: post
              data-video="{{ item.video | url_encode }}"
              data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
           {% if item.video %}
-          <span class="video-btn" style="cursor: pointer;" data-url="{{ item.video | url_encode }}"><i class="fa fa-film" aria-hidden="true" style="padding: 5px;"></i></span>
+          <span class="video-btn" style="cursor: pointer;" data-url="{{ item.video | url_encode }}"><i class="fa fa-film" aria-hidden="true"></i></span>
           {% endif %}
           <span class="bar n1"></span><span class="baar n2"></span><span class="bar n3"></span><span class="bar n4"></span><span class="bar n5"></span>
         </div><br>
