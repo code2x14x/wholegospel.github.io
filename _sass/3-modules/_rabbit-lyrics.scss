@@ -49,7 +49,7 @@
 
   en {
     letter-spacing: 0px;
-    font-size: 4.2vw;
+    font-size: 18px;
   }
 }
 #lyrics-1 .line.active {
@@ -57,10 +57,10 @@
   letter-spacing: 2px;
   text-shadow: 1px 1px 3px #0000004d;
   @media only screen and (max-width: $tablet) {
-    font-size: 4.3vw;
+    font-size: 19px;
   }
   @media only screen and (max-width: $mobile) {
-    font-size: 4.8vw;
+    font-size: 19px;
   }
 }
 #lyrics-1.rabbit-lyrics-mini {
