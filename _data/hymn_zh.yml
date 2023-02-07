@@ -40,6 +40,8 @@
   title: 恩典之洋
   file: 恩典之洋_约书亚乐团.mp3
   singer: 约书亚乐团
+  video: 恩典之洋_约书亚乐团.mp4
+  video_en: Oceans (Where Feet May Fail) - Hillsong UNITED.mp4
 
 - id: oceans
   title: Oceans
@@ -55,7 +57,7 @@
   title: God Will Make A Way
   file: God Will Make A Way_Don Moen.mp3
   singer: Don Moen
-  video: God_Will_Make_A_Way.Don_Moen.Live_Worship.mp4
+  video_en: God_Will_Make_A_Way.Don_Moen.Live_Worship.mp4
 
 - id: gxwxy_csjjh
   title: 更新我心意
@@ -132,7 +134,7 @@
   title: More Love More Power
   file: More Love More Power.feat.Jane Tiller.mp3
   singer: Jane Tiller
-  video: More_Love_More_Power.feat.Jane_Tiller.mp4
+  video_en: More_Love_More_Power.feat.Jane_Tiller.mp4
 
 - id: pwzgcxqd
   title: 陪我走过春夏秋冬
@@ -158,6 +160,7 @@
   title: 倾倒
   file: 倾倒_赞美之泉.mp3
   singer: 赞美之泉
+  video: 倾倒_赞美之泉.mp4
 
 - id: qnsdswdzwds_ysl
   title: 全能上帝是我的主我的神
@@ -327,6 +330,12 @@
   file: 因为有你_城市丰收教会.mp3
   singer: 城市丰收教会
 
+- id: yswdys_zmzq
+  title: 耶稣，我的耶稣
+  file: 耶稣，我的耶稣_赞美之泉.mp3
+  singer: 赞美之泉
+  video: 耶稣，我的耶稣_赞美之泉.mp4
+
 - id: yscwwzx
   title: 耶稣，成为我中心
   file: 耶稣，成为我中心.mp3
@@ -394,3 +403,4 @@
   title: 主，我相信
   file: 主，我相信.mp3
   singer: 小羊诗歌
+  video: 主，我相信_小羊诗歌.mp4

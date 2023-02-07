@@ -76,7 +76,7 @@ layout: post
       data-title="{{ audioTitle }}"
       data-image="{{ preachImg }}"
       data-file="{{ audio }}"><i class="fas fa-dove"></i>《{{ audioTitle }}》
-    <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span>
+    <!-- <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span> -->
   </div><br>
 {% endif %}
 
@@ -122,7 +122,10 @@ layout: post
           {% if item.video %}
           <span class="video-btn" style="cursor: pointer;" data-url="{{ item.video | url_encode }}"><i class="fa fa-film" aria-hidden="true"></i></span>
           {% endif %}
-          <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span>
+          {% if item.video_en %}
+          <span class="video-btn" style="cursor: pointer;" data-url="{{ item.video | url_encode }}"><i class="fas fa-video"></i></span>
+          {% endif %}
+          <!-- <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span> -->
         </div><br>
       {% endif %}
     {% endfor %}
@@ -141,7 +144,7 @@ layout: post
 {% if page.permalink == "/baptism_lessons" %}
   {% for item in site.data.baptism_lessons %} 
     <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/baptism_lesson/{{ item.file }}" data-image="{{hymnImg}}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}《{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}》
-      <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span>
+      <!-- <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span> -->
     </div><br>
   {% endfor %}
   <div class="tips">
@@ -158,7 +161,7 @@ layout: post
       {% if item.doc %}
         <a href="{{ item.doc }}"><i class="fas fa-file-alt" style="padding: 0 0.5em;"></i></a>
       {% endif %}
-      <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span>
+      <!-- <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span> -->
     </div><br>
   {% endfor %}
   <div class="tips">
