@@ -4,6 +4,7 @@
   file: 爱是不保留_陽詠存_何俊鴻.mp3
   mainpage: asbbl_yyc_hjh
   mainpage_image: 爱是不保留_陽詠存_何俊鴻.jpg
+  video: KUA_MUSIC_愛是不保留_陽詠存_何俊鴻.mp4
 
 - id: bpbfq_zmzq
   title: 奔跑不放弃
@@ -15,7 +16,7 @@
   singer: 天堂敬拜
   file: 得胜冠冕_天堂敬拜.mp3
 
-- id: dswwnk_zmzq 
+- id: dswwnk_zmzq
   title: 大山为我挪开
   singer: 赞美之泉
   file: 大山为我挪开_赞美之泉.mp3
@@ -51,6 +52,7 @@
   title: 更坚固
   file: 更坚固_hillsong.mp3
   singer: Hillsong
+  video: 更坚固_在你没有难成的事.mp4
 
 - id: gwmaw_dm
   title: God Will Make A Way
@@ -62,6 +64,8 @@
   title: 更新我心意
   file: 更新我心意_传神基金会.mp3
   singer: 传神基金会
+  video: 更新我心意.mp4
+  video_en: Change_My_Heart_Oh_God.mp4
 
 - id: hded
   title: 何等恩典
@@ -119,7 +123,7 @@
   file: 能不能.mp3
   singer: 赞美之泉
 
-- id: ntzrttjl 
+- id: ntzrttjl
   title: 你同在如天堂降临
   file: 你同在如天堂降临_约书亚乐团.m4a
   singer: 约书亚乐团
@@ -248,7 +252,7 @@
 - id: wmds_HTBBChurch
   title: 我们的神
   file: 我们的神_This is Our God_HTBBChurch.mp3
-  singer: HTBBChurch 
+  singer: HTBBChurch
   alias: This is Our God
   video: 我们的神.This_is_Our_God.HTBB_敬拜.mp4
 
@@ -297,29 +301,29 @@
   file: 新的异象，新的方向_赞美之泉.mp3
   singer: 赞美之泉
   video: 新的异象，新的方向_赞美之泉.mp4
-  
+
 - id: xgdyp
   title: 香膏的玉瓶
   file: 香膏的玉瓶_约书亚乐团.mp3
   singer: 约书亚乐团
   mainpage: xgdyp_ysyyt
   mainpage_image: 香膏的玉瓶.jpeg
-  
+
 - id: xxnys_xysg
   title: 谢谢你，耶稣
   file: 谢谢你，耶稣_小羊诗歌.mp3
   singer: 小羊诗歌
-  
+
 - id: ydddywz_ysl
   title: 应当单单仰望主
   file: 应当单单仰望主_以斯拉.mp3
   singer: 以斯拉
-  
+
 - id: ygzcq_zmzq
   title: 勇敢走出去
   file: 勇敢走出去_赞美之泉.mp3
   singer: 赞美之泉
-  
+
 - id: yhhbhn
   title: 耶和华保护你
   file: 耶和华保护你.mp3
@@ -370,7 +374,7 @@
   file: 永远的依靠_陈国富_玺恩.m4a
   singer: 陈国富 玺恩
 
-- id: zcjwgx_xysg 
+- id: zcjwgx_xysg
   title: 再次将我更新
   singer: 小羊诗歌
   file: 再次将我更新_小羊诗歌.mp3
