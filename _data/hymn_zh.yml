@@ -52,7 +52,7 @@
   title: 更坚固
   file: 更坚固_hillsong.mp3
   singer: Hillsong
-  video: 更坚固_在你没有难成的事.mp4
+  video_lyrics: 更坚固_在你没有难成的事.mp4
 
 - id: gwmaw_dm
   title: God Will Make A Way
@@ -64,7 +64,7 @@
   title: 更新我心意
   file: 更新我心意_传神基金会.mp3
   singer: 传神基金会
-  video: 更新我心意.mp4
+  video_lyrics: 更新我心意.mp4
   video_en: Change_My_Heart_Oh_God.mp4
 
 - id: hded
@@ -337,7 +337,7 @@
   title: 耶稣，我的耶稣
   file: 耶稣，我的耶稣_赞美之泉.mp3
   singer: 赞美之泉
-  video: 耶稣，我的耶稣_赞美之泉.mp4
+  video_lyrics: 耶稣，我的耶稣_赞美之泉.mp4
 
 - id: yscwwzx
   title: 耶稣，成为我中心
@@ -380,7 +380,7 @@
   file: 再次将我更新_小羊诗歌.mp3
   mainpage: zcjwgx_xysg
   mainpage_image: 再次将我更新_小羊诗歌.jpg
-  video: 再次将我更新_小羊诗歌.mp4
+  video_lyrics: 再次将我更新_小羊诗歌.mp4
 
 - id: znhzzd_ysl
   title: 在你呼召之地
@@ -406,4 +406,4 @@
   title: 主，我相信
   file: 主，我相信.mp3
   singer: 小羊诗歌
-  video: 主，我相信_小羊诗歌.mp4
+  video_lyrics: 主，我相信_小羊诗歌.mp4
