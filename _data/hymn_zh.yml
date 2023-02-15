@@ -227,6 +227,7 @@
   title: 天父美善力量
   file: 天父美善力量.mp3
   singer: Zion Church Beijing
+  video_lyrics: 天父美善力量.mp4
 
 - id: tqwdt_smhllt
   title: 抬起我的头
@@ -265,6 +266,7 @@
   title: 我们欢迎君王降临
   file: 我们欢迎君王降临-赞美之泉.m4a
   singer: 赞美之泉
+  video: 我们欢迎君王降临_赞美之泉.mp4
 
 - id: wmztsdf
   title: 我们在天上的父
@@ -368,6 +370,9 @@
   title: 永远掌权
   file: 永远掌权_hillsong.mp3
   singer: Hillsong
+  video_lyrics: 永远掌权_歌词版.mp4
+  video: 永远掌权_HTBB.mp4
+  video_en: Forever_Reign.Hillsong.mp4
 
 - id: yydyk_cgf_xe
   title: 永远的依靠
