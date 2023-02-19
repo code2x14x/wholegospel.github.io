@@ -2,17 +2,15 @@
   position: fixed;
   bottom: 40px;
   right: -100px;
-	z-index: 1;
-	width: 40px;
-  height: 100px;
-  // max-width: 50px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
   text-align: center;
   line-height: 35px;
-	background-color: $dark;
-  background: no-repeat center/contain url('/images/top.png');
-	color: $white;
-	cursor: pointer;
-	transition: all .25s ease;
+  background-color: #393e46;
+  color: #fff;
+  cursor: pointer;
+  transition: all .25s ease;
   
   &.is-active {
     right: 40px;
