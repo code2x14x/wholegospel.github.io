@@ -1,3 +1,9 @@
+- id: abzjsn_zmzq
+  title: 阿爸这就是你
+  singer: KUA
+  file: 阿爸這就是祢_KUA敬拜团.mp3
+  video: 阿爸這就是祢_KUA敬拜团.mp4
+
 - id: asbbl
   title: 爱是不保留
   singer: 阳咏存&何俊鸿
@@ -107,6 +113,8 @@
   title: 降下祢恩雨
   file: 降下祢恩雨_约书亚乐团.mp3
   singer: 约书亚乐团
+  video_lyrics: 降下你恩雨_约书亚乐团_歌词版.mp4
+  video: 降下你恩雨_约书亚乐团_MV.mp4
 
 - id: klz
   title: 开路者
@@ -217,6 +225,14 @@
   title: 世上的光
   file: 世上的光_师母.mp3
   singer: 师母
+
+- id: sjzg
+  title: 世界真光
+  file: 世界真光_HTBB.mp3
+  singer: HTBB
+  video: 世界真光_HTBB.mp4
+  video_en: Here_I_Am_To_Worship.TRIBL.mp4
+  video_lyrics: 世界真光_内巷.mp4
 
 - id: sx_ysyyt
   title: 苏醒
@@ -329,6 +345,13 @@
 - id: yhhbhn
   title: 耶和华保护你
   file: 耶和华保护你.mp3
+
+- id: yhwydpw_zmzq
+  singer: 赞美之泉
+  title: 永恒唯一的盼望
+  file: 永恒唯一的盼望_赞美之泉.mp3
+  video_lyrics: 永恒唯一的盼望_赞美之泉_歌词版.mp4
+  video: 永恒唯一的盼望_赞美之泉_MV.mp4
 
 - id: ywyn_csfsjh
   title: 因为有你
