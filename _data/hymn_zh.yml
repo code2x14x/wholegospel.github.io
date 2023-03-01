@@ -60,6 +60,7 @@
   title: One Way
   file: One_Way.约书亚乐团.mp3
   singer: 约书亚乐团
+  video_en: One_Way_城市丰收教会_MV.mp4
 
 - id: gjg_hillsong
   title: 更坚固
@@ -262,6 +263,8 @@
   title: 我的生命献给你
   file: 我的生命献给你_赞美之泉.mp3
   singer: 赞美之泉
+  video_lyrics: 我的生命献给你_赞美之泉_歌词版.mp4
+  video: 我的生命献给你_赞美之泉_MV.mp4
 
 - id: wdz_csfsjh
   title: 我的主
