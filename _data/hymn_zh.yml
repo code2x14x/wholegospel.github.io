@@ -33,6 +33,7 @@
   file: 充满在这里_赞美之泉.mp3
   singer: 赞美之泉
   video_lyrics: 充满在这里_赞美之泉_歌词版.mp4
+  video: 充满在这里_赞美之泉.mp4
 
 - id: czcdyw
   title: 从早晨到夜晚
@@ -54,6 +55,11 @@
   title: Oceans
   file: Oceans_Hillsong.mp3
   singer: Hillsong
+
+- id: one_way
+  title: One Way
+  file: One_Way.约书亚乐团.mp3
+  singer: 约书亚乐团
 
 - id: gjg_hillsong
   title: 更坚固
@@ -250,6 +256,7 @@
   title: 抬起我的头
   file: 抬起我的头_生命河灵粮堂.mp3
   singer: 生命河灵粮堂
+  video_lyrics: 抬起我的头_生命河灵粮堂_歌词版.mp4
 
 - id: wdsmxgn_zmzq
   title: 我的生命献给你
