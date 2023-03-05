@@ -86,10 +86,19 @@
   file: 何等恩典_赞美之泉.mp3
   singer: 赞美之泉
 
-- id: hsz_hillsong
+- id: hrda_ttjb
+  title: 火热的爱
+  file: 火热的爱_天堂敬拜.mp4
+  singer: 天堂敬拜
+  video: 火热的爱_约书亚乐团_MV.mp4
+  video_en: Passion_Reckless_Love.mp4
+
+- id: hsn_hillsong
   title: 和散那
   file: 和散那_Hillsong.mp3
   singer: Hillsong
+  video: 和散那_HTBB_MV.mp4
+  video_lyrics: 和散那_约书亚乐团_歌词版.mp4
 
 - id: hzwmlm_hillsong
   title: 活在我们里面
@@ -399,6 +408,9 @@
   title: 一万个理由赞美主
   file: 一万个理由赞美主_陈杰瑞.mp3
   singer: 陈杰瑞
+  video: 千万个理由_天堂敬拜_MV.mp4
+  video_lyrics: 千万个理由_黄友闻_歌词版.mp4
+  video_en: 10000_Reasons.mp4
 
 - id: yyzq_hillsong
   title: 永远掌权
@@ -420,6 +432,13 @@
   mainpage: zcjwgx_xysg
   mainpage_image: 再次将我更新_小羊诗歌.jpg
   video_lyrics: 再次将我更新_小羊诗歌.mp4
+
+- id: zdarj_zrl
+  title: 主的爱如今
+  singer: 祝瑞莲
+  file: 主的爱如今_祝瑞莲.mp4
+  video: 主的爱如今_祝瑞莲_MV.mp4
+  video_lyrics: 主的爱如今_祝瑞莲_歌词版.mp4
 
 - id: znhzzd_ysl
   title: 在你呼召之地
