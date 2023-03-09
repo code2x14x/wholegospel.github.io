@@ -18,11 +18,7 @@ layout: default
                 <span class="author">{{ page.author }}</span>
               {% endif %}
               {% if page.abstract %}
-                {% if page.abstract == 'yes' %}
-                <a class="abstract" href="{{ site.os_url }}wg/images/teaching-abstract/{{page.date | date: '%Y-%m-%d'}}-{{page.serial}}.png">查看摘要</a>
-                {% else %}
                 <a class="abstract" href="{{ site.os_url }}wg/images/teaching-abstract/{{page.abstract}}">查看摘要</a>
-                {% endif %}
               {% endif %}
             </span>
         {% endif %}
