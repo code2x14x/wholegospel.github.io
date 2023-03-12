@@ -291,9 +291,10 @@
 
 - id: wjzb_ysyyt
   title: 无价至宝
-  file: 无价至宝_约书亚乐团.m4a
+  file: 无价至宝_约书亚乐团.mp3
   singer: 约书亚乐团
-  video: 无价至宝_新店行道會.webm
+  video: 无价至宝_新店行道會.mp4
+  video_lyrics: 无价至宝_新店行道會_歌词版.mp4
 
 - id: wmds_HTBBChurch
   title: 我们的神
