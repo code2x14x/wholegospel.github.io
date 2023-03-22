@@ -302,8 +302,9 @@ $(function () {
     if(currentTime == 0) {
       $('#track-title').html("《" + audioElem.dataset.title + "》");
       changeLoopIndicatorText();
-      changeBackgroundImg(audioElem);
-      changeLyrics(audioElem);
+      // 暂停显示同步歌词 2023-03-22
+      // changeBackgroundImg(audioElem);
+      // changeLyrics(audioElem);
     }
     barsDancing(audioElem);
     playButton.hide();
