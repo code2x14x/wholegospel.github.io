@@ -78,7 +78,7 @@ $(function () {
       pause();
       e.preventDefault();
       e.stopPropagation();
-      window.open(v_url);
+      window.open(v_url, "_self");
     })
   }
 
