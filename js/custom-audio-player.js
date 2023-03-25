@@ -438,20 +438,20 @@ $(function () {
     return clientRect;
   };
 
-  const lyricsPostHead = document.querySelector("#lyrics_post_head");
-  if(lyricsPostHead) {
-    lyricsPostHead.addEventListener("click", function(){
-      lyricsPostHead.classList.toggle('stretch-out');
-      let domRect = getDomRect("lyrics_post_head");
-      console.log(domRect);
-      const stretchOut = document.querySelector('.stretch-out');
-      if(stretchOut){
-        const top = domRect.top - 10;
-        lyricsPostHead.style.marginTop = '-' + top + 'px';
-      } else {
-        lyricsPostHead.style.marginTop = "10px";
-      }
-    });
-  }
+  // const lyricsPostHead = document.querySelector("#lyrics_post_head");
+  // if(lyricsPostHead) {
+  //   lyricsPostHead.addEventListener("click", function(){
+  //     lyricsPostHead.classList.toggle('stretch-out');
+  //     let domRect = getDomRect("lyrics_post_head");
+  //     console.log(domRect);
+  //     const stretchOut = document.querySelector('.stretch-out');
+  //     if(stretchOut){
+  //       const top = domRect.top - 10;
+  //       lyricsPostHead.style.marginTop = '-' + top + 'px';
+  //     } else {
+  //       lyricsPostHead.style.marginTop = "10px";
+  //     }
+  //   });
+  // }
 
 });
