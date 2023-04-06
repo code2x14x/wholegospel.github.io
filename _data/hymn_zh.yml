@@ -81,6 +81,12 @@
   video_lyrics: 更新我心意.mp4
   video_en: Change_My_Heart_Oh_God.mp4
 
+- id: hca
+  title: 活出爱
+  file: 活出爱.mp3
+  singer: 陈奇恩
+  video: 活出爱.mp4
+
 - id: hded
   title: 何等恩典
   file: 何等恩典_赞美之泉.mp3
@@ -327,6 +333,12 @@
   video: 我們在天上的父-天堂敬拜-MV.mp4
   video_en: Our_Father.Bethel_Music.Jenn_Johnson.mp4
   video_lyrics: 我們在天上的父-Bethel敬拜團-歌词版.mp4
+
+- id: wszwd
+  title: 我神真伟大
+  file: 我神真伟大.mp3
+  singer: KUA 敬拜团
+  video: 我神真伟大.mp4
 
 - id: wyys_nspd_zmzq
   title: 唯有耶穌_祢是配得
