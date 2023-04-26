@@ -147,6 +147,12 @@
   video_en: Way_Maker.Official_Live_Video.Holy_Ground.Jeremy_Riddle.mp4
   video: 開路者_KUA敬拜团_MV.mp4
 
+- id: kzysds
+  title: 靠着耶稣得胜
+  file: 靠着耶稣得胜_全华音乐.m4a
+  singer: 全华音乐
+  video_lyrics: 靠着耶稣得胜_全华音乐.mp4
+
 - id: ndje
   title: 你的救恩
   file: 祢的救恩.mp3
@@ -293,6 +299,12 @@
   singer: 赞美之泉
   video_lyrics: 我的生命献给你_赞美之泉_歌词版.mp4
   video: 我的生命献给你_赞美之泉_MV.mp4
+
+- id: wdxqmn_xysg
+  title: 我的心切慕你
+  file: 我的心切慕你_小羊诗歌.m4a
+  singer: 小羊诗歌
+  video_lyrics: 我的心切慕你_小羊诗歌.mp4
 
 - id: wdz_csfsjh
   title: 我的主
