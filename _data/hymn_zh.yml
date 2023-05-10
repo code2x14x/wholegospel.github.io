@@ -17,6 +17,11 @@
   singer: 赞美之泉
   file: 奔跑不放弃_赞美之泉.mp4
 
+- id: ddazys_cui
+  title: 单单爱主耶稣
+  singer: 师母
+  file: 单单爱主耶稣_师母.mp4
+
 - id: dsgm_ttjb
   title: 得胜冠冕
   singer: 天堂敬拜
@@ -267,7 +272,7 @@
 - id: ssdg
   title: 世上的光
   file: 世上的光_师母.mp3
-  singer: 诺亚音乐事工
+  singer: 挪亚音乐事工
 
 - id: sjzg
   title: 世界真光
@@ -401,6 +406,13 @@
   file: 谢谢你，耶稣_小羊诗歌.mp3
   singer: 小羊诗歌
 
+- id: ycw_hillsong
+  title: Still
+  file: Still_Hillsong.mp3
+  singer: Hillsong
+  video: Still_Hillsong.mp4
+  video_lyrics: Still_Hillsong_Lyrics.mp4
+
 - id: ydddywz_ysl
   title: 应当单单仰望主
   file: 应当单单仰望主_以斯拉.mp3
@@ -421,6 +433,13 @@
   file: 永恒唯一的盼望_赞美之泉.mp3
   video_lyrics: 永恒唯一的盼望_赞美之泉_歌词版.mp4
   video: 永恒唯一的盼望_赞美之泉_MV.mp4
+
+- id: yschlly_ysyyt
+  singer: 約書亞樂團
+  title: 扬声唱哈利路亚
+  file: 扬声唱哈利路亚_約書亞樂團.mp3
+  video: 扬声唱哈利路亚_約書亞樂團.mp4
+  video_en: Raise_A_Hallelujah.mp4
 
 - id: ywyn_csfsjh
   title: 因为有你
