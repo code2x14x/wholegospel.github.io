@@ -16,7 +16,7 @@
   title: 不停赞美
   singer: 泥土音乐事工
   file: 不停赞美_泥土音乐事工.mp3
-  video_lyric: 不停赞美_泥土音乐事工.mp4
+  video_lyrics: 不停赞美_泥土音乐事工.mp4
 
 - id: bpbfq_zmzq
   title: 奔跑不放弃
@@ -175,6 +175,13 @@
   file: 能不能.mp3
   singer: 赞美之泉
 
+- id: nswdyq_KUA
+  title: 祢是我的一切
+  file: 祢是我的一切_KUA.mp3
+  singer: KUA
+  video: 祢是我的一切_KUA.mp4
+  video_en: You_Are_My_All_In_All.Brentwood_Baptist_Worship.mp4
+
 - id: ntzrttjl
   title: 你同在如天堂降临
   file: 你同在如天堂降临_约书亚乐团.m4a
@@ -298,6 +305,12 @@
   file: 天父美善力量.mp3
   #singer: Zion Church Beijing
   video_lyrics: 天父美善力量.mp4
+
+- id: tkl_smhllt
+  title: 天开了
+  file: 天开了_生命河灵粮堂.mp3
+  singer: 生命河灵粮堂
+  video_lyrics: 天开了_生命河灵粮堂_歌词版.mp4
 
 - id: tqwdt_smhllt
   title: 抬起我的头
@@ -529,6 +542,8 @@
   title: 这是圣洁之地
   file: 这是圣洁之地_赞美之泉.mp3
   singer: 赞美之泉
+  video: 这是圣洁之地_赞美之泉.mp4
+  video_lyrics: 这是圣洁之地_赞美之泉_歌词版.mp4
 
 - id: goodness_of_god
   title: Goodness of God
