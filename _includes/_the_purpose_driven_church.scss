@@ -119,12 +119,38 @@ sp {
   color: #8b0224;
 }
 
-
 .center {
+  margin: 0.5em;
   text-align: center;
+}
+
+.fs-18{
+  font-size: 18px;
 }
 
 .italic {
   font-style: italic;
 }
 
+.center p{
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.chapter {
+  font-size: 18px;
+}
+
+.chapter a {
+  color: #3a3a3a
+}
+
+p.sp-verse, .sp-verse{
+  color: #878787;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.script{
+  color:#0ba360;
+}
