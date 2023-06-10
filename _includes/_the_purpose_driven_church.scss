@@ -154,3 +154,7 @@ p.sp-verse, .sp-verse{
   letter-spacing: 1px;
 }
 
+p.first::first-letter {
+  font-size: 2em;
+  color: #8b0224;
+}
