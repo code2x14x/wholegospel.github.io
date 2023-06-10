@@ -67,6 +67,13 @@
                 </div>
               </div>
 
+              {% assign audio = page.audio %}
+              {% assign audioTitle = page.audioTitle %}
+              <div id="teachingAudio" class="audio teaching bars" 
+                  data-title="{{ audioTitle }}"
+                  data-file="{{ audio }}"><i class="fas fa-book-alt"></i>《{{ audioTitle }}》
+                <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span>
+              </div><br>
             {% endif %}
 
             {{ content }}
