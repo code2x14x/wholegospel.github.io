@@ -31,15 +31,37 @@ layout: post
   </div>
 </div> -->
 
+<style>
+a {
+  color: #0c4fa4;
+  margin-left: 0.5em !important;
+}
+
+.tpdc-h1{
+  margin: 1em 0;
+  font-size: 1.1em;
+  padding: 5px;
+  background: #3a3a3a;
+  color: #fff;
+}
+
+.center {
+  margin: 0.5em;
+  text-align: center;
+}
+
+.fs-18{
+  font-size: 18px;
+}
+
+.italic {
+  font-style: italic;
+}
+.center p{
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+</style>
 {{ content }}
-<br>
-<!-- 标杆人生 -->
-<p style="font-size: 1.3em">目录</p>
-{% if page.permalink == "/the_purpose_driven_church" %}
-  {% for item in site.data.the_purpose_driven_church %} 
-    <div><i class="fas fa-book"></i>
-        <a href="{{ item.doc }}" style="color: #393e46">{{ item.title }}</a>
-    </div>
-  {% endfor %}
-{% endif %}
 <br>

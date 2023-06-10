@@ -8,7 +8,7 @@ body {
 .post-title-box {
   height: 10em;
   border-top: none;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat   top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/images/specials/tpdc.jpg);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/images/specials/tpdc.jpg);
   padding: 15px 15px 0;
 
   .post-title {
@@ -16,7 +16,8 @@ body {
   }
 }
 
-h1, .post-serial {
+h1,
+.post-serial {
   background-color: #ffffffad;
   padding: 0 15px;
   font-weight: normal !important;
@@ -32,7 +33,7 @@ h2 {
   color: #fff;
   text-shadow: none;
   background: linear-gradient(to right, #8b0224, #8b0224 40%, #fff);
-  padding: 3px 5px;
+  padding: 3px 10px;
   font-size: 1.2em;
   text-align: left;
   margin-left: -20px;
@@ -82,7 +83,23 @@ blockquote u {
   color: #616161;
 }
 
-h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset, figure, pre {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre {
   margin-bottom: 10px;
 }
 
@@ -103,6 +120,12 @@ sp {
   color: #8b0224;
 }
 
-a{
-  color: #424242
+
+.center {
+  text-align: center;
 }
+
+.italic {
+  font-style: italic;
+}
+
