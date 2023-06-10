@@ -1,7 +1,7 @@
 ---
 layout: post
 ---
-<div id="v-player">
+<!-- <div id="v-player">
   <audio id="audio-track" type="audio/mp3" loop preload="meta"></audio>
   <div id="podcast-player">
     <div id="controls">
@@ -29,22 +29,18 @@ layout: post
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
-{{ content }}
 
 <!-- 标杆人生 -->
+<p style="font-size: 1.3em">目录</p>
 {% if page.permalink == "/the_purpose_driven_church" %}
   {% for item in site.data.the_purpose_driven_church %} 
-    <div class="audio hymn bars" data-title="{{ item.title }}" data-file="wg/audios/the_purpose_driven_church/{{ item.file }}"><i class="fas fa-star"></i>《{{ item.title }}》
-      {% if item.doc %}
-        <a href="{{ item.doc }}"><i class="fas fa-file-alt" style="padding: 0 0.5em;"></i></a>
-      {% endif %}
+    <div><i class="fas fa-book"></i>
+        <a href="{{ item.doc }}" style="color: #393e46">{{ item.title }}</a>
     </div><br>
   {% endfor %}
-  <div class="tips">
-    <a class="zd" href="/images/player-instrction.jpg">播放器用法指导</a>
-    如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
-  </div><br />
 {% endif %}
 
+<br>
+{{ content }}

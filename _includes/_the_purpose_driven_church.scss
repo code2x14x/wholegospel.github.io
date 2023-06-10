@@ -2,6 +2,7 @@ body {
   font-size: 19px;
   line-height: 1.7em;
   color: #383838;
+  color: #5e5e5e;
 }
 
 .post-title-box {
@@ -19,7 +20,7 @@ h1, .post-serial {
   background-color: #ffffffad;
   padding: 0 15px;
   font-weight: normal !important;
-  color: #028b68;
+  color: #8b0224;
 }
 
 h1 {
@@ -30,7 +31,7 @@ h1 {
 h2 {
   color: #fff;
   text-shadow: none;
-  background: linear-gradient(to right, #02a077, #02a077 40%, #fff);
+  background: linear-gradient(to right, #8b0224, #8b0224 40%, #fff);
   padding: 3px 5px;
   font-size: 1.2em;
   text-align: left;
@@ -61,7 +62,7 @@ h4 {
 
 u {
   background: none;
-  color: #0ba360;
+  color: #8b0224;
 }
 
 blockquote {
@@ -96,4 +97,12 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset,
 .col {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+sp {
+  color: #8b0224;
+}
+
+a{
+  color: #5e5e5e;
 }
