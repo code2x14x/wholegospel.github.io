@@ -1,8 +1,12 @@
-- id: tpdc_01
-  title: 引言
-  doc: /the_purpose_driven_church/tpdc_01
+- id: qy
+  title: 标竿旅程（前言）
+  doc: /the_purpose_driven_church/qy
+
+- id: rhsycs
+  title: 如何善用此书
+  doc: /the_purpose_driven_church/rhsycs
 
 - id: day01
-  title: 引言
+  title: 第 1 天 万物皆由神开始
   file: tpdc_day01.mp3
   doc: /the_purpose_driven_church/day01
