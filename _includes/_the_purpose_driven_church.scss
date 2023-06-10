@@ -135,6 +135,7 @@ sp {
 .center p{
   margin-bottom: 0;
   font-size: 18px;
+  margin-bottom: 1em;
 }
 
 .chapter {
@@ -151,6 +152,6 @@ p.sp-verse, .sp-verse{
   letter-spacing: 1px;
 }
 
-.script{
+.script .sp-verse, .script{
   color:#e45b1b;
 }
