@@ -18,10 +18,14 @@ body {
 
 h1,
 .post-serial {
-  background-color: #ffffffad;
-  padding: 0 15px;
+  // background-color: #ffffffad;
+  // padding: 0 15px;
   font-weight: normal !important;
   color: #8b0224;
+}
+
+.post-title-box .post-title{
+margin:0;
 }
 
 h1 {
@@ -170,4 +174,13 @@ p.first::first-letter {
   border-radius: 10px;
   font-size: 16px;
   margin: 0 2px;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px #ffffff;
+  font-weight: normal !important;
+}
+
+h1.post-title {
+  margin: 0;
 }
