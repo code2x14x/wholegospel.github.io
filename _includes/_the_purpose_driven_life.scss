@@ -8,7 +8,8 @@ body {
 .post-title-box {
   height: 10em;
   border-top: none;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
+  // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
+  background: linear-gradient(to bottom, #ffffff63 0, #fff),no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
   padding: 15px 15px 0;
 
   .post-title {
@@ -24,8 +25,9 @@ h1,
   color: #8b0224;
 }
 
-.post-title-box .post-title{
-margin:0;
+.post-title-box .post-title {
+  margin: 0;
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -131,7 +133,7 @@ pre {
   margin-bottom: 1em;
 }
 
-.fs-18{
+.fs-18 {
   font-size: 18px;
 }
 
@@ -139,7 +141,7 @@ pre {
   font-style: italic;
 }
 
-.center p{
+.center p {
   margin-bottom: 0;
   font-size: 18px;
 }
@@ -152,7 +154,8 @@ pre {
   color: #3a3a3a
 }
 
-p.sp-verse, .sp-verse{
+p.sp-verse,
+.sp-verse {
   color: #878787;
   font-size: 16px;
   letter-spacing: 1px;
@@ -174,9 +177,4 @@ p.first::first-letter {
   border-radius: 10px;
   font-size: 16px;
   margin: 0 2px;
-}
-
-h1 {
-  text-shadow: 2px 2px 5px #ffffff;
-  font-weight: normal !important;
 }
