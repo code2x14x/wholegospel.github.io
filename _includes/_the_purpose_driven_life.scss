@@ -12,7 +12,7 @@ body {
   padding: 15px 15px 0;
 
   .post-title {
-    margin: 40px 0 !important;
+    margin: 0 !important;
   }
 }
 
@@ -179,8 +179,4 @@ p.first::first-letter {
 h1 {
   text-shadow: 2px 2px 5px #ffffff;
   font-weight: normal !important;
-}
-
-h1.post-title {
-  margin: 0;
 }
