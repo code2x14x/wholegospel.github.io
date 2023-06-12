@@ -9,7 +9,7 @@ body {
   height: 10em;
   border-top: none;
   // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
-  background: linear-gradient(to bottom, #ffffff63 0, #fff),no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
+  background: linear-gradient(to bottom, #ffffff63 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
   padding: 15px 15px 0;
 
   .post-title {
@@ -69,8 +69,13 @@ h4 {
 }
 
 u {
-  background: none;
-  color: #028b03;
+  color: #393e46;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-decoration: none;
+  border-radius: 3px;
+  background: linear-gradient(181deg, rgba(249, 230, 43, 0.2392156863), rgba(249, 230, 43, 0.2392156863));
+  padding: 2px 2px;
 }
 
 blockquote {
@@ -181,4 +186,10 @@ p.first::first-letter {
 
 h1 {
   text-shadow: 2px 2px 5px #ffffffbf;
+}
+
+strong {
+  color: #e45b1b;
+  font-weight: normal !important;
+  font-style: normal !important;
 }
