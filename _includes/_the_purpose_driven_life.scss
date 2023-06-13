@@ -166,6 +166,14 @@ p.sp-verse,
   letter-spacing: 1px;
 }
 
+.script {
+  color: #e45b1b;
+}
+
+.script p.sp-verse {
+  color: #ea9066;
+}
+
 p.first::first-letter {
   font-size: 28px;
   color: #8b0224;
