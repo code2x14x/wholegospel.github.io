@@ -81,11 +81,11 @@
           </div>
           <div class="tips">
             {% if page.prev-url %}
-            <a class="tpdf_toc" href="{{ page.prev-url | prepend: '/the_purpose_driven_life' }}">{{ page.prev-name }}</a>
+            <a class="tpdf_toc" href="{{ page.prev-url | prepend: '/the_purpose_driven_life/' }}">{{ page.prev-name }}</a>
             {% endif %}
             <a class="tpdf_toc" href="/the_purpose_driven_life">返回目录</a>
             {% if page.next-url %}
-            <a class="tpdf_toc" href="{{ page.next-url | prepend: '/the_purpose_driven_life' }}">{{ page.next-name }}</a>
+            <a class="tpdf_toc" href="{{ page.next-url | prepend: '/the_purpose_driven_life/' }}">{{ page.next-name }}</a>
             {% endif %}
           </div>
 
