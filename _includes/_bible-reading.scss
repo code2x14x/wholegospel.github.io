@@ -1,6 +1,68 @@
 $old-testament-bg-color: #515152;
 $new-testament-bg-color: #c33c3c;
 
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 .7rem rgba(255, 255, 255, 0.2),
+      0 0 0 1.5rem rgba(255, 255, 255, 0.2),
+      0 0 0 5rem rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.2),
+      0 0 0 4rem rgba(255, 255, 255, 0.2),
+      0 0 0 8rem rgba(255, 255, 255, 0);
+  }
+}
+
 .bible-reading {
 
   //目录部分
@@ -48,6 +110,10 @@ $new-testament-bg-color: #c33c3c;
       div.audio {
         background: rgba($old-testament-bg-color, 0.9);
       }
+
+      div.audio.dancing {
+        background-color: $new-testament-bg-color;
+      }
     }
 
     .new {
@@ -58,6 +124,11 @@ $new-testament-bg-color: #c33c3c;
       div.audio {
         background: rgba($new-testament-bg-color, 0.9);
       }
+
+      div.audio.dancing {
+        background-color: $old-testament-bg-color;
+      }
+
     }
 
     //音频部分
@@ -82,6 +153,11 @@ $new-testament-bg-color: #c33c3c;
         color: #fff;
         border-radius: 10px;
       }
+
+      div.audio.dancing {
+        animation: ripple 2s ease-out infinite normal;
+      }
+
 
     }
 
