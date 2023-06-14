@@ -43,7 +43,7 @@ layout: post
   <div class="toc">
     <!-- 目录：旧约 -->
     <div class="old-testament">
-      <div class="title">旧约</div>
+      <div class="title">旧&nbsp;&nbsp;&nbsp;约</div>
       {% for item in site.data.bible-reading %}
       {% if item.testament == 'old' %}
       <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
@@ -53,7 +53,7 @@ layout: post
 
     <!-- 目录：新约 -->
     <div class="new-testament">
-      <div class="title">新约</div>
+      <div class="title">新&nbsp;&nbsp;约</div>
       {% for item in site.data.bible-reading %}
       {% if item.testament == 'new' %}
       <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
