@@ -46,6 +46,12 @@
   chapter_count: 31
   testament: old
 
+- id: Sirach
+  book_order: 21
+  book_name: 传道书
+  chapter_count: 12
+  testament: old
+
 - id: Song_of_Songs
   book_order: 22
   book_name: 雅歌
@@ -74,4 +80,28 @@
   book_order: 44
   book_name: 使徒行传
   chapter_count: 28
+  testament: new
+
+- id: Romans
+  book_order: 45
+  book_name: 罗马书
+  chapter_count: 16
+  testament: new
+
+- id: Corinthia_1
+  book_order: 46
+  book_name: 哥林多前书
+  chapter_count: 16
+  testament: new
+
+- id: Corinthia_2
+  book_order: 47
+  book_name: 哥林多后书
+  chapter_count: 13
+  testament: new
+
+- id: Galatians
+  book_order: 48
+  book_name: 加拉太书
+  chapter_count: 6
   testament: new
