@@ -64,21 +64,23 @@ layout: post
 
 </style>
 
-<div class="bible-reading-book-title">路加福音</div>
-<div class="bible-reading-chapters-wrapper">
-  {% for i in (1..24) %}
-    {% if i < 10 %}
-    {% assign idx = i | prepend: '0' %}
-    {% else %}
-    {% assign idx = i %}
-    {% endif %}
-    <div class="audio hymn bible-reading-chapter" 
-        data-title="路加福音 {{ idx }}" 
-        data-file="wg/bible_reading/42_路加福音/路加福音{{ idx }}.mp3">
-        <i class="fas fa-book-alt" style="display: none;"></i>{{ idx }}
-    </div><br>
-  {% endfor %}
-</div>
+{% for item in site.data.bible-reading %} 
+  <div class="bible-reading-book-title">{{item.book_name}}</div>
+  <div class="bible-reading-chapters-wrapper">
+    {% for i in (1..{{item.chapter_count}}) %}
+      {% if i < 10 %}
+      {% assign idx = i | prepend: '0' %}
+      {% else %}
+      {% assign idx = i %}
+      {% endif %}
+      <div class="audio hymn bible-reading-chapter" 
+          data-title="{{ item.book_name | append: idx }}" 
+          data-file="wg/bible_reading/audio/{{item.book_order | append: {{item.book_name}}}}/{{item.book_name | append: idx}}.mp3">
+          <i class="fas fa-book-alt" style="display: none;"></i>{{ idx }}
+      </div><br>
+    {% endfor %}
+  </div>
+{% endfor %}
 
 <div class="tips">
   <a class="hz" href="/hymns">以往赞美汇总</a>

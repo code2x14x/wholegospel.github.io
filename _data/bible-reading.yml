@@ -1,0 +1,77 @@
+- id: Genesis
+  book_order: '01'
+  book_name: 创世记
+  chapter_count: 50
+  testament: old
+
+- id: Joshua
+  book_order: '06'
+  book_name: 约书亚记
+  chapter_count: 24
+  testament: old
+
+- id: Judges
+  book_order: '07'
+  book_name: 士师记
+  chapter_count: 21
+  testament: old
+
+- id: Ruth
+  book_order: '08'
+  book_name: 路得记
+  chapter_count: 4 
+  testament: old
+
+- id: Samuel_1
+  book_order: '09'
+  book_name: 撒母耳记上
+  chapter_count: 31
+  testament: old
+
+- id: Samuel_2
+  book_order: 10
+  book_name: 撒母耳记下
+  chapter_count: 32
+  testament: old
+
+- id: Psalms
+  book_order: 19
+  book_name: 诗篇
+  chapter_count: 150
+  testament: old
+
+- id: Wisdom
+  book_order: 20
+  book_name: 箴言
+  chapter_count: 31
+  testament: old
+
+- id: Song_of_Songs
+  book_order: 22
+  book_name: 雅歌
+  chapter_count: 8
+  testament: old
+
+- id: Matthew
+  book_order: 40
+  book_name: 马太福音
+  chapter_count: 28
+  testament: new
+
+- id: Luke
+  book_order: 42
+  book_name: 路加福音
+  chapter_count: 24
+  testament: new
+
+- id: John
+  book_order: 43
+  book_name: 约翰福音
+  chapter_count: 21
+  testament: new
+
+- id: Acts
+  book_order: 44
+  book_name: 使徒行传
+  chapter_count: 28
+  testament: new
