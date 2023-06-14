@@ -65,7 +65,13 @@ layout: post
 </style>
 
 {% for item in site.data.bible-reading %} 
-  <div class="bible-reading-book-title">{{item.book_name}}</div>
+<div>
+  <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
+</div>
+{% endfor %}
+
+{% for item in site.data.bible-reading %} 
+  <div class="bible-reading-book-title" id="{{item.book_order}}">{{item.book_name}}</div>
   <div class="bible-reading-chapters-wrapper">
     {% for i in (1..item.chapter_count) %}
       {% if i < 10 %}
