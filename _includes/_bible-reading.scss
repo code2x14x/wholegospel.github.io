@@ -94,9 +94,14 @@ $new-testament-bg-color: #c33c3c;
     }
 
     a {
-      display: block;
       font-size: 18px;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      >span:first-child {
+        color: #8a8989;
+      }
     }
   }
 

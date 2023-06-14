@@ -46,7 +46,7 @@ layout: post
       <div class="title">旧&nbsp;&nbsp;&nbsp;约</div>
       {% for item in site.data.bible-reading %}
       {% if item.testament == 'old' %}
-      <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
+      <a href="{{item.book_order | prepend: '#'}}"><span>{{item.book_order}}</span><span>{{item.book_name}}</span></a>
       {% endif %}
       {% endfor %}
     </div>
@@ -56,7 +56,7 @@ layout: post
       <div class="title">新&nbsp;&nbsp;约</div>
       {% for item in site.data.bible-reading %}
       {% if item.testament == 'new' %}
-      <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
+      <a href="{{item.book_order | prepend: '#'}}"><span>{{item.book_order}}</span><span>{{item.book_name}}</span></a>
       {% endif %}
       {% endfor %}
     </div>
