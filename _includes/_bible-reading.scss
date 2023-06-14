@@ -1,0 +1,95 @@
+$old-testament-bg-color: #575c65;
+$new-testament-bg-color: #da5c5c;
+
+.bible-reading {
+
+  //目录部分
+  .toc {
+    display: flex;
+    justify-content: space-between;
+
+    >div {
+      width: 45%;
+    }
+
+    .title {
+      color: #fff;
+      text-align: center;
+    }
+
+    .old-testament {
+      .title {
+        background: $old-testament-bg-color;
+      }
+    }
+
+    .new-testament {
+      .title {
+        background: $new-testament-bg-color;
+      }
+    }
+
+    a {
+      display: block;
+    }
+
+
+  }
+
+
+  .audios {
+    .old {
+      .book-title {
+        background: $old-testament-bg-color;
+
+      }
+
+      div.audio {
+        background: $old-testament-bg-color;
+      }
+    }
+
+    .new {
+      .book-title {
+        background: $new-testament-bg-color;
+      }
+
+      div.audio {
+        background: $new-testament-bg-color;
+      }
+    }
+
+    //音频部分
+    .book-title {
+      margin: 1em 0;
+      font-size: 20px;
+      padding: 5px;
+      color: #fff;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .chapters-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      div.audio {
+        margin: 0.5em 0.5em;
+        padding: 0.5em;
+        line-height: 1.5;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+    }
+
+    .chapters-wrapper::after {
+      content: "";
+      flex: auto;
+    }
+  }
+
+
+
+}

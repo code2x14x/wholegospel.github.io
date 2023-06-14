@@ -32,61 +32,57 @@ layout: post
 </div>
 
 <style>
-  .bible-reading-book-title {
-    margin: 1em 0;
-    font-size: 20px;
-    padding: 5px;
-    background: #da5c5c;
-    color: #fff;
-    letter-spacing: 2px;
-    text-align: center;
-  }
-
-  .bible-reading-chapters-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  div.bible-reading-chapter {
-    margin: 0.5em 0.5em;
-    padding: 0.5em;
-    background: #575c65;
-    line-height: 1.5;
-    color: #fff;
-    border-radius: 10px;
-  }
-
-  .bible-reading-chapters-wrapper::after {
-    content: "";
-    flex: auto;
-  }
-
+  {% capture bible-reading %}
+    {% include _bible-reading.scss %}
+  {% endcapture %}
+  {{ bible-reading | scssify }}
 </style>
 
-{% for item in site.data.bible-reading %} 
-<div>
-  <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
-</div>
-{% endfor %}
+<div class="bible-reading">
 
-{% for item in site.data.bible-reading %} 
-  <div class="bible-reading-book-title" id="{{item.book_order}}">{{item.book_name}}</div>
-  <div class="bible-reading-chapters-wrapper">
-    {% for i in (1..item.chapter_count) %}
-      {% if i < 10 %}
-      {% assign idx = i | prepend: '0' %}
-      {% else %}
-      {% assign idx = i %}
+  <div class="toc">
+    <!-- 目录：旧约 -->
+    <div class="old-testament">
+      <div class="title">旧约</div>
+      {% for item in site.data.bible-reading %}
+      {% if item.testament == 'old' %}
+      <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
       {% endif %}
-      <div class="audio hymn bible-reading-chapter" 
-          data-title="{{ item.book_name | append: idx }}" 
-          data-file="wg/bible_reading/audio/{{item.book_order | append: item.book_name}}/{{item.book_name | append: idx}}.mp3">
-          <i class="fas fa-book-alt" style="display: none;"></i>{{ idx }}
-      </div><br>
+      {% endfor %}
+    </div>
+
+    <!-- 目录：新约 -->
+    <div class="new-testament">
+      <div class="title">新约</div>
+      {% for item in site.data.bible-reading %}
+      {% if item.testament == 'new' %}
+      <a href="{{item.book_order | prepend: '#'}}">{{item.book_order}} {{item.book_name}}</a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 音频：旧约 -->
+  <div class="audios">
+    {% for item in site.data.bible-reading %}
+      <div class="{{item.testament}}">
+        <div class="book-title" id="{{item.book_order}}">{{item.book_name}}</div>
+        <div class="chapters-wrapper">
+          {% for i in (1..item.chapter_count) %}
+          {% if i < 10 %} {% assign idx=i | prepend: '0' %} {% else %} {% assign idx=i %} {% endif %} 
+          <div
+            class="audio hymn" 
+            data-title="{{ item.book_name | append: idx }}"
+            data-file="wg/bible_reading/audio/{{item.book_order | append: item.book_name}}/{{item.book_name | append: idx}}.mp3">
+            <i class="fas fa-book-alt" style="display: none;"></i>{{ idx }}
+          </div><br>
+          {% endfor %}
+        </div>
+      </div>
     {% endfor %}
   </div>
-{% endfor %}
+
+</div>
 
 <div class="tips">
   <a class="hz" href="/hymns">以往赞美汇总</a>
