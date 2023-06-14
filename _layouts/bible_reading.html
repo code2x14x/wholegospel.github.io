@@ -67,7 +67,7 @@ layout: post
 {% for item in site.data.bible-reading %} 
   <div class="bible-reading-book-title">{{item.book_name}}</div>
   <div class="bible-reading-chapters-wrapper">
-    {% for i in (1..{{item.chapter_count}}) %}
+    {% for i in (1..item.chapter_count) %}
       {% if i < 10 %}
       {% assign idx = i | prepend: '0' %}
       {% else %}
