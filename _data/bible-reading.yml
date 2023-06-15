@@ -19,7 +19,7 @@
 - id: Ruth
   book_order: '08'
   book_name: 路得记
-  chapter_count: 4 
+  chapter_count: 4
   testament: old
 
 - id: Samuel_1
@@ -31,7 +31,7 @@
 - id: Samuel_2
   book_order: 10
   book_name: 撒母耳记下
-  chapter_count: 32
+  chapter_count: 24
   testament: old
 
 - id: Psalms
