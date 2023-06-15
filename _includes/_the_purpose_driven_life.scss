@@ -215,7 +215,11 @@ a.tpdf_toc {
 }
 
 #v-player {
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
+
+  .second-part {
+    margin-top: 20px;
+  }
 }
