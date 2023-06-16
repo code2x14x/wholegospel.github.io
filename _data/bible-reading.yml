@@ -130,6 +130,108 @@
   chapter_count: 8
   testament: old
 
+- id: Genesis
+  book_order: 23
+  book_name: 以赛亚书
+  chapter_count: 56
+  testament: old
+
+- id: Genesis
+  book_order: 24
+  book_name: 耶利米书
+  chapter_count: 52
+  testament: old
+
+- id: Genesis
+  book_order: 25
+  book_name: 耶利米哀歌
+  chapter_count: 5
+  testament: old
+
+- id: Genesis
+  book_order: 26
+  book_name: 以西结书
+  chapter_count: 48
+  testament: old
+
+- id: Genesis
+  book_order: 27
+  book_name: 但以理书
+  chapter_count: 12
+  testament: old
+
+- id: Genesis
+  book_order: 28
+  book_name: 何西阿书
+  chapter_count: 14
+  testament: old
+
+- id: Genesis
+  book_order: 29
+  book_name: 约珥书
+  chapter_count: 3
+  testament: old
+
+- id: Genesis
+  book_order: 30
+  book_name: 阿摩司书
+  chapter_count: 9
+  testament: old
+
+- id: Genesis
+  book_order: 31
+  book_name: 俄巴底亚书
+  chapter_count: 1
+  testament: old
+
+- id: Genesis
+  book_order: 32
+  book_name: 约拿书
+  chapter_count: 4
+  testament: old
+
+- id: Genesis
+  book_order: 33
+  book_name: 弥迦书
+  chapter_count: 7
+  testament: old
+
+- id: Genesis
+  book_order: 34
+  book_name: 那鸿书
+  chapter_count: 3
+  testament: old
+
+- id: Genesis
+  book_order: 35
+  book_name: 哈巴谷书
+  chapter_count: 3
+  testament: old
+
+- id: Genesis
+  book_order: 36
+  book_name: 西番雅书
+  chapter_count: 3
+  testament: old
+
+- id: Genesis
+  book_order: 37
+  book_name: 哈该书
+  chapter_count: 2
+  testament: old
+
+- id: Genesis
+  book_order: 38
+  book_name: 撒迦利亚书
+  chapter_count: 14
+  testament: old
+
+- id: Genesis
+  book_order: 39
+  book_name: 玛拉基书
+  chapter_count: 14
+  testament: old
+
 - id: Matthew
   book_order: 40
   book_name: 马太福音
