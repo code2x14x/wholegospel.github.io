@@ -4,6 +4,30 @@
   chapter_count: 50
   testament: old
 
+- id: Genesis
+  book_order: '02'
+  book_name: 出埃及记
+  chapter_count: 40
+  testament: old
+
+- id: Genesis
+  book_order: '03'
+  book_name: 利未记
+  chapter_count: 27
+  testament: old
+
+- id: Genesis
+  book_order: '04'
+  book_name: 民数记
+  chapter_count: 36
+  testament: old
+
+- id: Genesis
+  book_order: '05'
+  book_name: 申命记
+  chapter_count: 34
+  testament: old
+
 - id: Joshua
   book_order: '06'
   book_name: 约书亚记
@@ -32,6 +56,54 @@
   book_order: 10
   book_name: 撒母耳记下
   chapter_count: 24
+  testament: old
+
+- id: Genesis
+  book_order: 11
+  book_name: 列王纪上
+  chapter_count: 25
+  testament: old
+
+- id: Genesis
+  book_order: 12
+  book_name: 列王纪下
+  chapter_count:
+  testament: old
+
+- id: Genesis
+  book_order: 13
+  book_name: 历代志上
+  chapter_count: 29
+  testament: old
+
+- id: Genesis
+  book_order: 14
+  book_name: 历代志下
+  chapter_count: 36
+  testament: old
+
+- id: Genesis
+  book_order: 15
+  book_name: 以斯拉记
+  chapter_count: 10
+  testament: old
+
+- id: Genesis
+  book_order: 16
+  book_name: 尼希米记
+  chapter_count: 13
+  testament: old
+
+- id: Genesis
+  book_order: 17
+  book_name: 以斯帖记
+  chapter_count: 10
+  testament: old
+
+- id: Genesis
+  book_order: 18
+  book_name: 约伯记
+  chapter_count: 42
   testament: old
 
 - id: Psalms
