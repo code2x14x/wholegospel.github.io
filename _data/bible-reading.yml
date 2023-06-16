@@ -229,7 +229,7 @@
 - id: Genesis
   book_order: 39
   book_name: 玛拉基书
-  chapter_count: 14
+  chapter_count: 4
   testament: old
 
 - id: Matthew
@@ -290,7 +290,7 @@
   book_name: 以弗所书
   chapter_count: 6
   testament: new
-  
+
 - id: Genesis
   book_order: 50
   book_name: 腓立比书
@@ -302,7 +302,7 @@
   book_name: 歌罗西书
   chapter_count: 4
   testament: new
-  
+
 - id: Genesis
   book_order: 52
   book_name: 帖撒罗尼迦前书
@@ -314,7 +314,7 @@
   book_name: 帖撒罗尼迦后书
   chapter_count: 3
   testament: new
-   
+
 - id: Genesis
   book_order: 54
   book_name: 提摩太前书
@@ -326,7 +326,7 @@
   book_name: 提摩太后书
   chapter_count: 4
   testament: new
-    
+
 - id: Genesis
   book_order: 56
   book_name: 提多书
@@ -338,7 +338,7 @@
   book_name: 腓利门书
   chapter_count: 1
   testament: new
-    
+
 - id: Genesis
   book_order: 58
   book_name: 希伯来书
@@ -350,7 +350,7 @@
   book_name: 雅各书
   chapter_count: 5
   testament: new
-    
+
 - id: Genesis
   book_order: 60
   book_name: 彼得前书
@@ -362,7 +362,7 @@
   book_name: 彼得后书
   chapter_count: 3
   testament: new
-    
+
 - id: Genesis
   book_order: 62
   book_name: 约翰一书
@@ -374,7 +374,7 @@
   book_name: 约翰二书
   chapter_count: 1
   testament: new
-    
+
 - id: Genesis
   book_order: 64
   book_name: 约翰三书
@@ -386,7 +386,7 @@
   book_name: 犹大书
   chapter_count: 1
   testament: new
-    
+
 - id: Genesis
   book_order: 66
   book_name: 启示录
