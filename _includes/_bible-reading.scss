@@ -135,18 +135,63 @@ $new-testament-bg-color: #c33c3c;
       justify-content: flex-start;
       flex-wrap: wrap;
 
+      // div.audio {
+      //   margin: 0.5em 0.5em;
+      //   padding: 0.5em;
+      //   line-height: 1.5;
+      //   color: #514f4f;
+      //   border-radius: 5px;
+      //   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      // }
+
+      // div.audio.dancing {
+      //   box-shadow: rgba(20, 30, 63, 0.25) -3px 10px 13px -11px inset, rgba(0, 0, 0, 0.3) 1px 1px 12px -3px inset;
+      // }
+
       div.audio {
-        margin: 0.5em 0.5em;
-        padding: 0.5em;
-        line-height: 1.5;
-        color: #514f4f;
-        border-radius: 5px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        align-items: center;
+        appearance: none;
+        background-image: radial-gradient(100% 100% at 100% 0, #ffffff 0, #ffffff 100%);
+        border: 0;
+        border-radius: 6px;
+        box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+        box-shadow: rgb(159 148 181 / 40%) 0 2px 4px, rgb(162 152 186 / 30%) 0 7px 13px -3px, rgb(148 152 177 / 50%) 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #565555;
+        cursor: pointer;
+        display: inline-flex;
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,transform;
+        padding: 5px 10px;
+        margin: 7px;
       }
 
+      // div.audio:hover {
+      //   box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a5a5a5 0 -3px 0 inset;
+      //   transform: translateY(-2px);
+      // }
+
+      // div.audio:focus {
+      //     box-shadow: #e0dfdf 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #c1c1c1 0 -3px 0 inset;
+      // }
+
       div.audio.dancing {
-        // animation: ripple 2s ease-out infinite normal;
-        box-shadow: rgba(20, 30, 63, 0.25) -3px 10px 13px -11px inset, rgba(0, 0, 0, 0.3) 1px 1px 12px -3px inset;
+          box-shadow: #a8a8a8 0 3px 7px inset;
+          transform: translateY(2px);
       }
 
     }
