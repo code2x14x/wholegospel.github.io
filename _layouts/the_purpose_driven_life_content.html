@@ -3,19 +3,12 @@
 
 {% include head.html %}
 
-<style>
-  {% capture the_purpose_driven_life %}
-    {% include _the_purpose_driven_life.scss %}
-  {% endcapture %}
-  {{ the_purpose_driven_life | scssify }}
-</style>
-
 <body>
 
   {% include header.html %}
 
   <!-- begin content -->
-  <main class="content" aria-label="Content">
+  <main class="content the_purpose_driven_life_content" aria-label="Content">
 
     <div class="container" style="padding: 0;">
       <div class="post-title-box">

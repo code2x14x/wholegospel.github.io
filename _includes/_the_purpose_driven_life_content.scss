@@ -1,0 +1,224 @@
+body {
+  font-size: 19px;
+  line-height: 1.7em;
+  color: #383838;
+  color: #494949;
+}
+
+.the_purpose_driven_life_content {
+  .post-title-box {
+    height: 10em;
+    border-top: none;
+    // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
+    background: linear-gradient(to bottom, #ffffff63 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
+    padding: 15px 15px 0;
+
+    .post-title {
+      margin: 0 !important;
+    }
+  }
+
+  h1,
+  .post-serial {
+    // background-color: #ffffffad;
+    // padding: 0 15px;
+    font-weight: normal !important;
+    color: #8b0224;
+  }
+
+  .post-title-box .post-title {
+    margin: 0;
+    font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  h2 {
+    color: #8b0224;
+    text-shadow: none;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    letter-spacing: 4px;
+    line-height: 1.3em;
+  }
+
+  h3 {
+    color: #fff;
+    text-shadow: none;
+    background: #86132fcc;
+    padding: 4px;
+    // background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+  }
+
+  h4 {
+    color: #fff;
+    text-shadow: none;
+    // background-color: #784f84;
+    background: linear-gradient(to top, #784f84 0%, #ad75bd 100%);
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  u {
+    color: #393e46;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-decoration: none;
+    border-radius: 3px;
+    background: linear-gradient(181deg, rgba(249, 230, 43, 0.2392156863), rgba(249, 230, 43, 0.2392156863));
+    padding: 2px 2px;
+  }
+
+  blockquote {
+    font-size: 16px !important;
+    line-height: inherit !important;
+    letter-spacing: 0;
+    font-style: normal;
+    text-align: left;
+    color: #616161;
+    margin: 0 !important;
+    border-left: 2px solid #777676;
+    padding: 0 15px;
+    color: #525050;
+  }
+
+  blockquote u {
+    color: #616161;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  dl,
+  blockquote,
+  p,
+  address,
+  hr,
+  table,
+  fieldset,
+  figure,
+  pre {
+    margin-bottom: 10px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .container .row {
+    margin: 0;
+  }
+
+  .col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .center {
+    margin: 0.5em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .fs-18 {
+    font-size: 18px;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .center p {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  .chapter {
+    color: #3a3a3a;
+  }
+
+  p.sp-verse,
+  .sp-verse {
+    color: #878787;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .script {
+    color: #e45b1b;
+  }
+
+  .script p.sp-verse {
+    color: #ee814f;
+  }
+
+  p.first::first-letter {
+    font-size: 28px;
+    color: #8b0224;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .blue-link {
+    color: #fff;
+    background: #0b6fb4;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 0 2px;
+  }
+
+  h1 {
+    text-shadow: 2px 2px 5px #ffffffbf;
+  }
+
+  strong {
+    color: #e45b1b;
+    font-weight: normal !important;
+    font-style: normal !important;
+  }
+
+  div.tips {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a.tpdf_toc {
+    //background: url("https://s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=8b0224cc");
+    font-size: 18px;
+    padding: 4px 8px;
+    color: #8b0224cc;
+  }
+
+  #v-player {
+    padding: 2rem 1rem 1.5rem;
+    ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+
+    .second-part {
+      margin-top: 20px;
+    }
+  }
+}
