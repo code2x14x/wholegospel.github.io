@@ -61,7 +61,7 @@
 - id: Genesis
   book_order: 11
   book_name: 列王纪上
-  chapter_count: 25
+  chapter_count: 22
   testament: old
 
 - id: Genesis
