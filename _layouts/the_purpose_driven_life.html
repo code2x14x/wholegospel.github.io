@@ -32,45 +32,45 @@ layout: post
 </div> -->
 
 <style>
-a {
-  color: #0c4fa4;
-  margin-left: 0.5em !important;
-}
+  a {
+    color: #0c4fa4;
+    margin-left: 0.5em !important;
+  }
 
-.tpdf-h1{
-  margin: 1em 0;
-  font-size: 20px;
-  padding: 5px;
-  background: #3a3a3a;
-  color: #fff;
-  letter-spacing: 2px;
-  text-align: center;
-}
+  .tpdf-h1 {
+    margin: 1em 0;
+    font-size: 20px;
+    padding: 5px;
+    background: #3a3a3a;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+  }
 
-.center {
-  margin: 0.5em;
-  text-align: center;
-  margin-bottom: 1em;
-}
+  .center {
+    margin: 0.5em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
 
-.fs-18{
-  font-size: 18px;
-}
+  .fs-18 {
+    font-size: 18px;
+  }
 
-.fs-19{
-  font-size: 19px;
-}
+  .fs-19 {
+    font-size: 19px;
+  }
 
-.italic {
-  font-style: italic;
-}
+  .italic {
+    font-style: italic;
+  }
 
-.center p{
-  margin-bottom: 0;
-  font-size: 18px;
-}
+  .center p {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
 
-/* .chapter {
+  /* .chapter {
   font-size: 18px;
   margin: 0.5rem 0;
   font-size: 18px;
@@ -104,66 +104,75 @@ a {
 }
  */
 
-.chapter {
-  margin: 2px 0;
-  align-items: center;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #ffffff 0, #ffffff 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #565555;
-  cursor: pointer;
-  display: inline-flex;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
+  .chapter {
+    margin: 2px 0;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #ffffff 0, #ffffff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #565555;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+  }
 
-.chapter:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a5a5a5 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
+  .chapter span {
+    color: #3a3a3a;
+    margin: auto 0.5rem;
+  }
 
-.chapter:focus {
+  .chapter span:nth-child(3) {
+    color: #df6b25;
+    text-shadow: 1px 1px 4px #9d9a9a8c;
+  }
+
+  .chapter:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a5a5a5 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  .chapter:focus {
     box-shadow: #e0dfdf 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #c1c1c1 0 -3px 0 inset;
-}
+  }
 
-.chapter:active {
+  .chapter:active {
     box-shadow: #a8a8a8 0 3px 7px inset;
     transform: translateY(2px);
-}
+  }
 
-.chapter a {
-  color: #3a3a3a
-}
+  .chapter a {
+    color: #3a3a3a
+  }
 
-p.sp-verse, .sp-verse{
-  color: #878787;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
+  p.sp-verse,
+  .sp-verse {
+    color: #878787;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
 
-.right {
-  text-align: right;
-}
-
-
+  .right {
+    text-align: right;
+  }
 </style>
 {{ content }}
 <br>
