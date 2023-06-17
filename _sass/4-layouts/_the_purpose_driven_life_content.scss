@@ -11,6 +11,17 @@ body {
   border-top: none;
   padding: 15px 15px 0;
 
+  p.post-serial {
+    padding: 0 .5rem;
+    color: #7c7c7c;
+    width: 100%;
+    margin: auto;
+    font-style: italic;
+    letter-spacing: 1rem;
+    text-align: center;
+    background: #eee;
+  }
+
   .post-title {
     margin: 0;
     padding: 4rem 0;
@@ -98,26 +109,6 @@ blockquote {
 
 blockquote u {
   color: #616161;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-dl,
-blockquote,
-p,
-address,
-hr,
-table,
-fieldset,
-figure,
-pre {
-  margin-bottom: 10px;
 }
 
 .container {
