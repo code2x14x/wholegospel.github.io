@@ -7,14 +7,25 @@ body {
 
 .the_purpose_driven_life_content {
 .post-title-box {
-  height: 10em;
+  // height: 10em;
   border-top: none;
-  // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
-  background: linear-gradient(to bottom, #ffffff63 0, #fff), no-repeat top/cover url(https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/the_purpose_driven_life/image/tpdf.jpg);
   padding: 15px 15px 0;
 
   .post-title {
-    margin: 0 !important;
+    margin: 0;
+    padding: 4rem 0;
+    line-height: 1.2;
+  }
+
+  p.day-count {
+    position: absolute;
+    z-index: -1;
+    font-size: 10rem;
+    color: #eee;
+    font-style: italic;
+    line-height: 1;
+    left: 2rem;
+    margin: auto;
   }
 }
 
