@@ -69,7 +69,7 @@ $(function () {
       });
     }
 
-    const audio = new Audio('https://preview.tosound.com:3321/preview?file=freesound%2F0%2F210%2F312342.mp3');
+    const audio = new Audio('/audio/bible-reading-button-click.mp3');
     const buttons = document.querySelectorAll('.bible-audio');
 
     buttons.forEach((button) => {
