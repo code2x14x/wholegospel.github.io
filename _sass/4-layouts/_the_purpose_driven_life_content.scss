@@ -10,6 +10,24 @@ body {
     // height: 10em;
     border-top: none;
     padding: 15px 15px 0;
+    margin: auto;
+
+    @media only screen and (max-width: $desktop) {
+      width: 66.6666666667%;
+    }
+
+    @media only screen and (max-width: $tablet) {
+      width: 66.6666666667%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+    }
+
+
+    .row .col {
+      position: relative;
+    }
 
     p.post-serial {
       color: #7c7c7c;
