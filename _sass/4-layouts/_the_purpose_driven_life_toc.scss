@@ -1,0 +1,200 @@
+.the_purpose_driven_life_toc {
+
+  a {
+    color: #0c4fa4;
+    margin-left: 0.5em !important;
+  }
+
+  .post-title {
+    text-align: center;
+    letter-spacing: 0.4rem;
+  }
+
+  .article-img-wrapper {
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    .rick-warren-photo {
+      margin: 0 20%;
+      width: 60%;
+      height: 60%;
+    }
+
+    .caption {
+      margin: 1em 0;
+      letter-spacing: 0;
+      line-height: 1.5em;
+      text-align: left;
+      text-align: justify;
+      color: gray;
+    }
+
+  }
+
+  /* .tpdf-h1 {
+  margin: 1em 0;
+  font-size: 20px;
+  padding: 5px;
+  background: #3a3a3a;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+} */
+
+  .topic {
+    margin: 2rem auto;
+
+    .topic-title {
+      color: #494949;
+      text-align: center;
+      margin: 3rem auto 1rem;
+      
+      .lonely {
+        font-size: 2.5rem;
+    letter-spacing: 1rem;
+      }
+
+      >.up {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 3vw;
+        margin-bottom: 1rem;
+      }
+
+      >.down {
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+          font-size: 4rem;
+          line-height: 1.5;
+          color: #fff;
+          background: linear-gradient(33deg, #42c19a, #bd6bc0);
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          font-style: italic;
+          margin-left: 4vw;
+        }
+
+        .right {
+          text-align: left;
+          width: calc(100% - 35vw);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .up {
+            font-size: 2.5rem;
+            line-height: 1.2;
+          }
+
+          .down {
+            font-size: 20px;
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+
+
+  .center {
+    margin: 0.5em;
+    text-align: center;
+    margin-bottom: 1em;
+
+    p {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+  }
+
+  .fs-18 {
+    font-size: 18px;
+  }
+
+  .fs-19 {
+    font-size: 19px;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .chapter {
+    margin: 2px 0;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #ffffff 0, #ffffff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(159, 148, 181, .4) 0 2px 4px, rgba(162, 152, 186, .3) 0 7px 13px -3px, rgba(148, 152, 177, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #565555;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+
+    span {
+      color: #3a3a3a;
+      margin: auto 0.5rem;
+    }
+
+    span:nth-child(3) {
+      color: #06965a;
+      /* text-shadow: 1px 1px 4px #9d9a9a8c; */
+    }
+
+    &:hover {
+      box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a5a5a5 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+
+    &:focus {
+      box-shadow: #e0dfdf 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #c1c1c1 0 -3px 0 inset;
+    }
+
+    &:active {
+      box-shadow: #a8a8a8 0 3px 7px inset;
+      transform: translateY(2px);
+    }
+
+    a {
+      color: #3a3a3a
+    }
+
+  }
+
+
+  p.sp-verse,
+  .sp-verse {
+    color: #878787;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+}
