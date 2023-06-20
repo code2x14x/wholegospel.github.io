@@ -137,7 +137,7 @@
   }
 
   .chapter {
-    margin: 10px 0;
+    margin: 15px 0;
     align-items: center;
     border: 0;
     border-radius: 6px;
@@ -158,9 +158,13 @@
     }
 
     .fas {
+      color: #3a3a3a;
       margin: auto 0.5rem;
     }
 
+    span:nth-child(1) {
+      color: #999;
+    }
     span:nth-child(2) {
       color: #06965a;
       /* text-shadow: 1px 1px 4px #9d9a9a8c; */
