@@ -54,7 +54,7 @@
     }
 
     .topic-title {
-      color: #494949bd;
+      color: #494949d6;
       text-align: center;
       margin: 3rem auto 2rem;
       
@@ -82,11 +82,13 @@
           color: #fff;
           width: 6rem;
           height: 6rem;
-          border-radius: 50%;
+          border-radius: 15%;
           font-style: italic;
           margin-left: 4vw;
           box-shadow: #bababa85 0px 8px 14px;
           background: linear-gradient(217deg, #22b0ef, #ad4df3);
+          background: linear-gradient(to bottom right, #FF3E9D, #0E1F40);
+
         }
 
         .right {
