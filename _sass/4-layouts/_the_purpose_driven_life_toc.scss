@@ -132,13 +132,14 @@
   }
 
   .chapter {
-    margin: 15px 0;
+    margin: 7px 0;
     align-items: center;
     border: 0;
     border-radius: 6px;
     box-sizing: border-box;
     color: #565555;
-    display: flex;
+    display: inline-flex;
+    gap: 1rem;
     justify-content: space-between;
     height: 48px;
     line-height: 1;
@@ -158,7 +159,7 @@
     }
 
     span:nth-child(1) {
-      color: #999;
+      color: #94949;
     }
     span:nth-child(2) {
       color: #06965a;
