@@ -1,10 +1,5 @@
 .the_purpose_driven_life_toc {
 
-  a {
-    color: #0c4fa4;
-    margin-left: 0.5em !important;
-  }
-
   .post-title {
     text-align: center;
     letter-spacing: 0.4rem;
@@ -142,28 +137,31 @@
   }
 
   .chapter {
-    margin: 4px 0;
+    margin: 10px 0;
     align-items: center;
     border: 0;
     border-radius: 6px;
-    box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
     box-sizing: border-box;
     color: #565555;
-    display: inline-flex;
-    height: 48px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
     line-height: 1;
-    padding-left: 16px;
+    padding-left: 8px;
     padding-right: 16px;
     position: relative;
     font-size: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
     span {
       color: #3a3a3a;
+    }
+
+    .fas {
       margin: auto 0.5rem;
     }
 
-    span:nth-child(3) {
+    span:nth-child(2) {
       color: #06965a;
       /* text-shadow: 1px 1px 4px #9d9a9a8c; */
     }
