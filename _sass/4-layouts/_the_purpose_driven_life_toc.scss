@@ -45,20 +45,28 @@
   .topic {
     margin: 2rem auto;
 
+    .script {
+      color: #e45b1b;
+    }
+  
+    .script p.sp-verse {
+      color: #ee814f;
+    }
+
     .topic-title {
       color: #494949;
       text-align: center;
-      margin: 3rem auto 1rem;
+      margin: 3rem auto 2rem;
       
       .lonely {
         font-size: 2.5rem;
-    letter-spacing: 1rem;
+        letter-spacing: 1rem;
       }
 
       >.up {
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: 3vw;
+        letter-spacing: 18px;
         margin-bottom: 1rem;
       }
 
@@ -90,6 +98,7 @@
           .up {
             font-size: 2.5rem;
             line-height: 1.2;
+            letter-spacing: 5px;
           }
 
           .down {
