@@ -80,12 +80,13 @@
           font-size: 4rem;
           line-height: 1.5;
           color: #fff;
-          background: linear-gradient(33deg, #42c19a, #bd6bc0);
           width: 6rem;
           height: 6rem;
           border-radius: 50%;
           font-style: italic;
           margin-left: 4vw;
+          box-shadow: rgb(186 186 186 / 52%) 0px 8px 14px;
+          background: linear-gradient(217deg, #22b0ef, #ad4df3);
         }
 
         .right {
