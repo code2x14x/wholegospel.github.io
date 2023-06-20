@@ -41,23 +41,22 @@
   letter-spacing: 2px;
   text-align: center;
 } */
+  .script {
+    color: #e45b1b;
+  }
+
+  .script p.sp-verse {
+    color: #999999;
+  }
 
   .topic {
     margin: 2rem auto;
-
-    .script {
-      color: #e45b1b;
-    }
-  
-    .script p.sp-verse {
-      color: #999999;
-    }
 
     .topic-title {
       color: #494949d6;
       text-align: center;
       margin: 3rem auto 2rem;
-      
+
       .lonely {
         font-size: 2.5rem;
         letter-spacing: 1rem;
@@ -91,7 +90,7 @@
           box-shadow: #bababa85 0px 8px 14px;
           border: double 8px transparent;
           border-radius: 20px;
-          background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f69ec4,#32557f);
+          background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f69ec4, #32557f);
           background-origin: border-box;
           background-clip: content-box, border-box;
 
@@ -147,7 +146,7 @@
     align-items: center;
     border: 0;
     border-radius: 6px;
-    box-shadow: rgba(149,157,165,.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
     box-sizing: border-box;
     color: #565555;
     display: inline-flex;
@@ -170,15 +169,15 @@
     }
 
     &:hover {
-      box-shadow: rgba(149,157,165,.2) 0px 8px 24px;
+      box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
     }
 
     &:focus {
-      box-shadow: rgba(149,157,165,.2) 0px 8px 24px;
+      box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
     }
 
     &:active {
-      box-shadow: rgba(149,157,165,.2) 0px 8px 24px;
+      box-shadow: rgba(149, 157, 165, .2) 0px 8px 24px;
       transform: translateY(2px);
     }
 
