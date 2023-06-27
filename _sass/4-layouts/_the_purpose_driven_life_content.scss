@@ -173,6 +173,11 @@ body {
     letter-spacing: 1px;
   }
 
+  .poem {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+
   .script {
     color: #e45b1b;
   }
