@@ -123,6 +123,192 @@
   {% include footer.html %}
 
   {% include javascripts.html %}
+
+    <button class="show-modal">Show Modal</button>
+  <section>
+    <span class="overlay"></span>
+    <div class="modal-box">
+      <!-- 本章经文 -->
+      <div class="scripts">
+      {% for item in site.data.the_purpose_driven_life %}
+        {% if item.id == page.day %}
+          {% for note in item.notes %}
+            <div id="{{note.id | prepend: n}}" class="note">
+              {% if note.CUNPSS %}
+              <div class="script .script-cunpss">
+                <p class="content">{{note.CUNPSS.content}}</p>
+                <p class="verse">{{note.CUNPSS.verse}} 和合本</p>
+              </div>
+              {% endif %}
+              {% if note.NIV %}
+              <div class="script .script-niv">
+                <p class="content">{{note.NIV.content}}</p>
+                <p class="verse">{{note.NIV.verse}} NIV</p>
+              </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      </div>
+      <div class="buttons">
+        <button class="close-btn">关&nbsp;&nbsp;&nbsp;闭</button>
+        <button class="copy-btn">复&nbsp;&nbsp;&nbsp;制</button>
+        <!-- <button>Open File</button> -->
+      </div>
+    </div>
+  </section>
+  <script>
+    const section = document.querySelector("section"),
+      overlay = document.querySelector(".overlay"),
+      showBtns = document.querySelectorAll(".show-modal"),
+      closeBtn = document.querySelector(".close-btn"),
+      copyBtn = document.querySelector(".copy-btn");
+      console.log('clicked hhhah')
+
+    showBtns.forEach(showBtn => {
+      showBtn.addEventListener("click", () => {
+        section.classList.add("active");
+        document.querySelectorAll(".note").forEach(note => note.classList.remove("active"));
+        const id_selector = "#n" + showBtn.innerText;
+        const div_note = document.querySelector(id_selector);
+        div_note.classList.add("active");
+      });
+    });
+    overlay.addEventListener("click", () =>
+      section.classList.remove("active")
+    );
+    closeBtn.addEventListener("click", () =>
+      section.classList.remove("active")
+    );
+    copyBtn.addEventListener("click", () => {
+      const activeNoteInnerText = document.querySelector(".note.active").innerText;
+      const textAreaC = document.createElement("textarea");
+      textAreaC.setAttribute("readonly", "readonly");
+      textAreaC.value = activeNoteInnerText;
+      document.body.appendChild(textAreaC);
+      textAreaC.select();
+      document.execCommand("copy");
+      document.body.removeChild(textAreaC);
+    });
+  </script>
+  <style>
+  section {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #e3f2fd;
+  }
+  button {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #4070f4;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #265df2;
+  }
+  button.show-modal {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .modal-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+  }
+  section.active .show-modal {
+    /* display: none; */
+    display: inherit;
+  }
+  .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+  }
+  section.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  .modal-box .scripts {
+    overflow-y: scroll;
+    max-height: 300px;
+    font-size: 17px;
+   }
+  /* .modal-box .buttons { } */
+  section.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  section .note {
+    display: none;
+  }
+  section .note.active {
+    display: block;
+  }
+  .modal-box i {
+    font-size: 70px;
+    color: #4070f4;
+  }
+  .modal-box h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+  }
+  .modal-box h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+  }
+  .modal-box .buttons {
+    margin-top: 15px;
+  }
+  .modal-box button {
+    font-size: 17px;
+    padding: 6px 1rem;
+    margin: 0 10px;
+  }
+  button.circle{
+    color: #fff;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 3px;
+    border-radius: 50%;
+    font-size: 16px;
+    background: linear-gradient(45deg, #fb9d47, #FF5722);
+    padding: 0;
+    vertical-align: top;
+  }
+  </style>
 </body>
 
 </html>
