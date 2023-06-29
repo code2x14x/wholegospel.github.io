@@ -103,6 +103,11 @@ section.script-popup {
       font-size: 17px;
       line-height: 1.5;
       padding: 0 2px;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+
       .script {
         .verse {
           color: #df6060;

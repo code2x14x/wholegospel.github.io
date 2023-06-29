@@ -8,12 +8,12 @@
           {% for note in item.notes %}
             <div id="{{note.id | prepend: n}}" class="note">
               {% if note.CUNPSS %}
-              <div class="script .script-cunpss">
+              <div class="script script-cunpss">
                 <p class="content">{{note.CUNPSS.content}}<span class="verse">{{note.CUNPSS.verse}} 和合本</span></p>
               </div>
               {% endif %}
               {% if note.NIV %}
-              <div class="script .script-niv">
+              <div class="script script-niv">
                 <p class="content">{{note.NIV.content}}<span class="verse"> {{note.NIV.verse}} NIV</span></p>
               </div>
               {% endif %}
