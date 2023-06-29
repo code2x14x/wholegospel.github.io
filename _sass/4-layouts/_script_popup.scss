@@ -1,0 +1,126 @@
+button.circle {
+  color: #fff;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: 3px;
+  border-radius: 50%;
+  font-size: 16px;
+  background: linear-gradient(45deg, #557ce8, #4070f4);
+  padding: 0;
+  border: none;
+}
+
+section.script-popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #e3f2fd;
+
+  &.active .show-modal {
+    /* display: none; */
+    display: inherit;
+  }
+
+  &.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* .modal-box .buttons { } */
+  &.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  & .note {
+    display: none;
+  }
+
+  & .note.active {
+    display: block;
+  }
+
+
+  button {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #4070f4;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #265df2;
+    }
+
+    &.show-modal {
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+  }
+
+
+  .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .modal-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.2);
+
+    .scripts {
+      overflow-y: scroll;
+      max-height: 300px;
+      font-size: 17px;
+      line-height: 1.5;
+      .script {
+        .verse {
+          color: #999;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 15px;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 6px 1rem;
+      margin: 0 10px;
+    }
+  }
+
+  @media(max-width: 576px) {
+    .modal-box {
+      max-width: 90%;
+    }
+  }
+
+
+}

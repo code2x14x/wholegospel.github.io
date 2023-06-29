@@ -1,0 +1,32 @@
+<section class="script-popup">
+    <span class="overlay"></span>
+    <div class="modal-box">
+      <!-- 本章经文 -->
+      <div class="scripts">
+      {% for item in site.data.the_purpose_driven_life %}
+        {% if item.id == page.day %}
+          {% for note in item.notes %}
+            <div id="{{note.id | prepend: n}}" class="note">
+              {% if note.CUNPSS %}
+              <div class="script .script-cunpss">
+                <p class="content">{{note.CUNPSS.content}}<span class="verse">{{note.CUNPSS.verse}} 和合本</span></p>
+              </div>
+              {% endif %}
+              {% if note.NIV %}
+              <div class="script .script-niv">
+                <p class="content">{{note.NIV.content}}</p>
+                <p class="verse">{{note.NIV.verse}} NIV</p>
+              </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      </div>
+      <div class="buttons">
+        <button class="close-btn">关&nbsp;&nbsp;&nbsp;闭</button>
+        <button class="copy-btn">复&nbsp;&nbsp;&nbsp;制</button>
+        <!-- <button>Open File</button> -->
+      </div>
+    </div>
+  </section>
