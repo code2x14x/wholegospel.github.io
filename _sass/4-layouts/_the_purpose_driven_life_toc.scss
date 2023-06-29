@@ -22,15 +22,6 @@
 
   }
 
-  /* .tpdf-h1 {
-  margin: 1em 0;
-  font-size: 20px;
-  padding: 5px;
-  background: #3a3a3a;
-  color: #fff;
-  letter-spacing: 2px;
-  text-align: center;
-} */
   .script {
     color: #e45b1b;
   }
@@ -162,6 +153,7 @@
     span:nth-child(1) {
       color: #494949;
     }
+
     span:nth-child(2) {
       color: #06965a;
       /* text-shadow: 1px 1px 4px #9d9a9a8c; */
@@ -197,9 +189,5 @@
   .right {
     text-align: right;
   }
-}
 
-.post-title {
-  text-align: center;
-  letter-spacing: 0.4rem;
 }
