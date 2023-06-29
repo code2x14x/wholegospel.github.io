@@ -176,7 +176,8 @@
         max-width: 330px;
         padding: 0 10px;
         vertical-align: middle;
-        white-space: nowrap;
+        // white-space: nowrap;
+        line-height: 1.2;
         overflow: hidden;
         text-overflow: ellipsis;
         color: $dark;
