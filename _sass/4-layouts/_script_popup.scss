@@ -6,7 +6,7 @@ button.circle {
   margin-left: 3px;
   border-radius: 50%;
   font-size: 16px;
-  background: linear-gradient(45deg, #557ce8, #4070f4);
+  background: #4a4a7d;
   padding: 0;
   border: none;
 }
@@ -49,12 +49,12 @@ section.script-popup {
     color: #fff;
     padding: 14px 22px;
     border: none;
-    background: #4070f4;
+    background: #4a4a7d;
     border-radius: 6px;
     cursor: pointer;
 
     &:hover {
-      background-color: #265df2;
+      background-color: #4a4a7d;
     }
 
     &.show-modal {
@@ -78,15 +78,15 @@ section.script-popup {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
     width: 100%;
     padding: 30px 20px;
-    border-radius: 24px;
-    background-color: #fff;
+    border-radius: 15px;
+    background-color: #f8f3e8;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -97,6 +97,7 @@ section.script-popup {
       max-height: 300px;
       font-size: 17px;
       line-height: 1.5;
+      padding: 0 2px;
       .script {
         .verse {
           color: #999;
