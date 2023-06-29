@@ -178,9 +178,10 @@
     overlay.addEventListener("click", () =>
       section.classList.remove("active")
     );
-    closeBtn.addEventListener("click", () =>
-      section.classList.remove("active")
-    );
+    closeBtn.addEventListener("click", () => {
+      section.classList.remove("active");
+      copyBtn.innerText = "复&nbsp;&nbsp;制";
+    });
     copyBtn.addEventListener("click", () => {
       const activeNoteInnerText = document.querySelector(".note.active").innerText;
       const textAreaC = document.createElement("textarea");
@@ -190,6 +191,7 @@
       textAreaC.select();
       document.execCommand("copy");
       document.body.removeChild(textAreaC);
+      copyBtn.innerText = "去粘贴吧!";
     });
   </script>
   <style>
