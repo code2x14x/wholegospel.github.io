@@ -180,7 +180,7 @@
     );
     closeBtn.addEventListener("click", () => {
       section.classList.remove("active");
-      copyBtn.innerText = "复&nbsp;&nbsp;制";
+      copyBtn.innerHTML = "复&nbsp;&nbsp;制";
     });
     copyBtn.addEventListener("click", () => {
       const activeNoteInnerText = document.querySelector(".note.active").innerText;
@@ -191,7 +191,7 @@
       textAreaC.select();
       document.execCommand("copy");
       document.body.removeChild(textAreaC);
-      copyBtn.innerText = "去粘贴吧!";
+      copyBtn.innerText = "去粘贴吧";
     });
   </script>
   <style>
@@ -308,7 +308,6 @@
     font-size: 16px;
     background: linear-gradient(45deg, #557ce8, #4070f4);
     padding: 0;
-    vertical-align: top;
   }
   </style>
 </body>
