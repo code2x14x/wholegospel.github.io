@@ -10,7 +10,13 @@
               {% if note.verses %}
                 {% for v in note.verses %}
                 <div class="script script-cunpss">
-                  <p class="content">{{v.content}} <span class="verse">{{v.number}}</span></p>
+                  <span class="content">{{v.content}}</span>
+                  <span class="verse">{{v.number}}</span>
+                  {% if v.version %}
+                  <span class="verse">{{v.version}}</span>
+                  {% else %}
+                  <span class="verse">和合本</span>
+                  {% endif %}
                 </div>
                 {% endfor %}
               {% endif %}
