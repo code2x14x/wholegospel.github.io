@@ -3,15 +3,9 @@
   doc: /the_purpose_driven_life/qy
   notes:
   - id: n1
-    CUNPSS: 
-      verse: 林前 12:4
+    verses: 
+      number: 林前 12:4 和合本
       content: 你们如此侍奉是理所当然的
-    NIV: hello feng xin bao!
-  - id: n2
-    CUNPSS: 
-      verse: 林后 12:4
-      content: 2222 你们如此侍奉是理所当然的
-    NIV: 222 hello feng xin bao!
 
 - id: 2
   title: 如何善用此书
@@ -26,38 +20,42 @@
   title: 第 20 天 重建破裂的团契生活
   notes:
   - id: n1
-    CUNPSS: 
-      verse: 林后 5:18
+    verses: 
+    - number: 林后 5:18 和合本
       content: 一切都是出于神；他藉着基督使我们与他和好，又将劝人与他和好的职分赐给我们。
   - id: n2
-    CUNPSS: 
-      verse: 腓 2:1-2
+    verses: 
+    - number: 腓 2:1-2 和合本 
       content: 所以，在基督里若有什么劝勉，爱心有什么安慰，圣灵有什么交通，心中有什么慈悲怜悯， 你们就要意念相同，爱心相同，有一样的心思，有一样的意念，使我的喜乐可以满足。
-    NIV:
-      verse: Philippians 2:1-2
+    - number: Philippians 2:1-2 NIV
       content: Therefore if you have any encouragement from being united with Christ, if any comfort from his love, if any common sharing in the Spirit, if any tenderness and compassion, then make my joy complete by being like-minded, having the same love, being one in spirit and of one mind.
 
 - id: 21
   title: 第 21 天 维护你的教会
   notes:
   - id: nA
-    CUNPSS: 
-      verse: 弗 4:3
+    verses: 
+    - number: 弗 4:3 和合本
       content: <sup>3</sup>用和平彼此联络，竭力保守圣灵所赐合而为一的心。
-    NIV:
-      verse: Ephesians 4:3
+    - number: Ephesians 4:3 NIV
       content: <sup>3</sup>Make every effort to keep the unity of the Spirit through the bond of peace.
   - id: nB
-    CUNPSS: 
-      verse: 歌罗西书 3:14
+    verses: 
+    - number: 歌罗西书 3:14 和合本
       content: <sup>14</sup>在这一切之外，要存着爱心，爱心就是联络全德的。
-    NIV:
-      verse: Colossians 3:14
+    - number: Colossians 3:14 NIV
       content: <sup>14</sup>And over all these virtues put on love, which binds them all together in perfect unity.
   - id: n1
-    CUNPSS: 
-      verse: 约翰福音 17:20-23
+    verses: 
+    - number: 约翰福音 17:20-23 和合本
       content: <sup>20</sup>「我不但为这些人祈求，也为那些因他们的话信我的人祈求， <sup>21</sup>使他们都合而为一。正如你父在我里面，我在你里面，使他们也在我们里面，叫世人可以信你差了我来。 <sup>22</sup>你所赐给我的荣耀，我已赐给他们，使他们合而为一，像我们合而为一。 <sup>23</sup>我在他们里面，你在我里面，使他们完完全全地合而为一，叫世人知道你差了我来，也知道你爱他们如同爱我一样。
-    NIV:
-      verse: John 17:20-23
+    - number: John 17:20-23 NIV
       content: <sup>20</sup>“My prayer is not for them alone. I pray also for those who will believe in me through their message,<sup>21</sup>that all of them may be one, Father, just as you are in me and I am in you. May they also be in us so that the world may believe that you have sent me. <sup>22</sup>I have given them the glory that you gave me, that they may be one as we are one—<sup>23</sup>I in them and you in me—so that they may be brought to complete unity. Then the world will know that you sent me and have loved them even as you have loved me.
+  - id: n2
+    verses: 
+    - number: 以弗所书 4:3 和合本
+      content: 用和平彼此联络，竭力保守圣灵所赐合而为一的心。
+  - id: n3
+    verses: 
+    - number: 罗马书 14:19 和合本
+      content: 务要追求和睦的事与彼此建立德行的事。

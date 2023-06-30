@@ -7,15 +7,12 @@
         {% if item.id == page.day %}
           {% for note in item.notes %}
             <div id="{{note.id | prepend: n}}" class="note">
-              {% if note.CUNPSS %}
-              <div class="script script-cunpss">
-                <p class="content">{{note.CUNPSS.content}}<span class="verse">{{note.CUNPSS.verse}} 和合本</span></p>
-              </div>
-              {% endif %}
-              {% if note.NIV %}
-              <div class="script script-niv">
-                <p class="content">{{note.NIV.content}}<span class="verse"> {{note.NIV.verse}} NIV</span></p>
-              </div>
+              {% if note.verses %}
+                {% for v in note.verses %}
+                <div class="script script-cunpss">
+                  <p class="content">{{v.content}} <span class="verse">{{v.number}}</span></p>
+                </div>
+                {% endfor %}
               {% endif %}
             </div>
           {% endfor %}
