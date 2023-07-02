@@ -172,7 +172,9 @@ $(function () {
   }
 
   // 点击循环按钮时
-  repeatButton.addEventListener('click', (e) => {
+  function clickRepeatButton(e){
+    e.stopPropagation();
+    console.log("repeat button clicked")
     const isPlaying = document.getElementById('play').style.display;
     if (!isPlaying) {
       changeSourceAndPlay(allHymnsElems[0]); // 播放
@@ -180,7 +182,19 @@ $(function () {
     // 根据按钮当前样式，切换循环模式
     if (repeatButton.classList.contains('all-loop')) singleLoop();
     else allLoop();
-  });
+  }
+  repeatButton.removeEventListener("click", clickRepeatButton);
+  repeatButton.addEventListener("click", e=> clickRepeatButton(e));
+  // repeatButton.addEventListener('click', (e) => {
+  //   e.stopPropagation();
+  //   const isPlaying = document.getElementById('play').style.display;
+  //   if (!isPlaying) {
+  //     changeSourceAndPlay(allHymnsElems[0]); // 播放
+  //   }
+  //   // 根据按钮当前样式，切换循环模式
+  //   if (repeatButton.classList.contains('all-loop')) singleLoop();
+  //   else allLoop();
+  // });
 
   // 上一首
   stepBackward.click(function () {

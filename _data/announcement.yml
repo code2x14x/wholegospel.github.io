@@ -1,0 +1,4 @@
+header:
+  show: yes
+  content: 最近更新：修复了播放器不能全部循环的问题。
+  duration: 60
