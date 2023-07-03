@@ -8,15 +8,16 @@ tags: hidden
 <video controls width="100%"  poster="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/movies/Son_of_God2010_poster.jpg">
 <source src="https://mpvideo.qpic.cn/0b78guabgaaaxmaplqz5vnqfanodcm2qaeya.f10002.mp4?dis_k=3a212dbdfed7b51164534b64dcc1ab4f&dis_t=1688400740&play_scene=10120&auth_info=CIvI/NguHQM2gMaG5wBQd0svJ2VYMRJAPAJibWgASjM2ADMz&auth_key=31424e2b58c70a6d5e3890d4cffbb05f&vid=wxv_1762902599755759616&format_id=10002&support_redirect=0&mmversion=false" type="video/mp4">
 </video>
-BBC 纪录片《上帝之子耶稣基督》
-Son of God (2001)
-主演: 杰瑞米·鲍文 / 李伦·勒夫
-类型: 纪录片制片
-国家/地区: 英国
-语言: 英语
-首播: 2001-04-01
-集数: 3
-又名: 耶稣：真实的故事 / Jesus: The Complete Story / Jesus: The Real Story
+<div class="center poem">
+<p>BBC 纪录片《上帝之子耶稣基督》Son of God (2001)</p>
+<p>主演: 杰瑞米·鲍文 / 李伦·勒夫</p>
+<p>类型: 纪录片制片</p>
+<p>国家/地区: 英国</p>
+<p>语言: 英语</p>
+<p>首播: 2001-04-01</p>
+<p>集数: 3</p>
+<p>又名: 耶稣：真实的故事 / Jesus: The Complete Story / Jesus: The Real Story</p>
+</div>
 
 ## 剧情简介
 
