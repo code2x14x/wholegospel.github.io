@@ -165,36 +165,36 @@
   font-size: 18px;
   height: 2rem;
   /* animation properties */
-  -moz-transform: translateX(200%);
-  -webkit-transform: translateX(200%);
-  transform: translateX(200%);
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
   
-  -moz-animation: my-animation 25s linear infinite;
-  -webkit-animation: my-animation 25s linear infinite;
-  animation: my-animation 25s linear infinite;
+  -moz-animation: my-animation 30s linear infinite;
+  -webkit-animation: my-animation 30s linear infinite;
+  animation: my-animation 30s linear infinite;
 }
 
 /* for Firefox */
 @-moz-keyframes my-animation {
-  from { -moz-transform: translateX(200%); }
-  to { -moz-transform: translateX(-200%); }
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-70em); }
 }
 
 /* for Chrome */
 @-webkit-keyframes my-animation {
-  from { -webkit-transform: translateX(200%); }
-  to { -webkit-transform: translateX(-200%); }
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-70em); }
 }
 
 @keyframes my-animation {
   from {
-    -moz-transform: translateX(200%);
-    -webkit-transform: translateX(200%);
-    transform: translateX(200%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
   to {
-    -moz-transform: translateX(-200%);
-    -webkit-transform: translateX(-200%);
-    transform: translateX(-200%);
+    -moz-transform: translateX(-70em);
+    -webkit-transform: translateX(-70em);
+    transform: translateX(-70em);
   }
 }
