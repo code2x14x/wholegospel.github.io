@@ -2,7 +2,7 @@
 layout: movie
 title:  上帝之子耶稣基督
 permalink: /movies/jesus_the_real_story
-tag: hidden
+tags: hidden
 ---
 
 <video controls width="100%"  poster="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/movies/Son_of_God2010_poster.jpg">
