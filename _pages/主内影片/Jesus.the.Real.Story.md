@@ -6,7 +6,7 @@ tags: hidden
 ---
 
 <video controls width="100%"  poster="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/movies/Son_of_God2010_poster.jpg">
-<source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/BC.Son.of.God.mp4" type="video/mp4">
+<source src="https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/BBC.Son.of.God.mp4" type="video/mp4">
 </video>
 <div class="center poem">
 <p>BBC 纪录片《上帝之子耶稣基督》</p>
