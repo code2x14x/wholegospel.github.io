@@ -1,11 +1,6 @@
 ---
 layout: default
 ---
-<style>
-  .post p:first {
-    margin-top: 20px;
-  }
-</style>
 <div class="container">
   <div class="row">
     <!-- begin post -->
@@ -21,10 +16,10 @@ layout: default
         </div>
           {% endif %}
 
-
         <audio controls loop autoplay id="old-player" style='width: 100%;' preload="auto">   
           <source src="{{ site.os_url }}{{page.filename}}" type="audio/mpeg">   
         </audio>
+        <br>
         {{ content }}
       </div>
 
