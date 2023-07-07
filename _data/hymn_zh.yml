@@ -587,3 +587,28 @@
 - id: 2023_easter_WG
   title: 佳全 2023 复活节联合敬拜现场原声
   file: 2023_easter_WG.mp3
+
+- id: 10000_Reasons
+  title: 10000 Reasons
+  file: 10000 Reasons (Bless the Lord)_Matt Redman.mp3
+  singer: Matt Redman
+
+- id: desert_song
+  title: Desert Song
+  file: Desert Song.mp3
+  singer: Hillsong Worship
+
+- id: wake
+  title: Wake
+  file: Wake.mp3
+  singer: Hillsong Young & Free
+
+- id: our_god
+  title: Our God
+  file: Our God.m4a
+  singer: Chris Tomlin
+
+- id: way_maker
+  title: Way Maker
+  file: Way Maker_Jesus Image_Steffany Gretzinger_John Wilds.mp3
+  singer: Jesus Image ...
