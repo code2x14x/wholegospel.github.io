@@ -28,6 +28,12 @@
   singer: 挪亚音乐事工
   file: 单单爱主耶稣_师母.mp4
 
+- id: dnzj
+  title: 大能拯救
+  singer: Hillsong
+  file: 大能拯救.Hillsong.mp3
+  video_lyrics: 大能拯救.Hillsong.mp4
+
 - id: dsgm_ttjb
   title: 得胜冠冕
   singer: 天堂敬拜
@@ -143,6 +149,7 @@
   title: 君王就在这里
   file: 君王就在这里.mp3
   singer: 赞美之泉
+  video_lyrics: 君王就在這裡.讚美之泉.歌词版.mp4
 
 - id: jwtqtds_zmzq
   title: 叫我抬起头的神
@@ -399,6 +406,12 @@
   file: 我神真伟大.mp3
   singer: KUA 敬拜团
   video: 我神真伟大.mp4
+
+- id: wxyynzwsmz
+  title: 我需要有你在我生命中
+  file: 我需要有你在我生命中.Trevor_Poh.mp3
+  singer: Trevor Poh
+  video: 我需要有你在我生命中.Trevor_Poh.mp4
 
 - id: wyys_nspd_zmzq
   title: 唯有耶穌_祢是配得
