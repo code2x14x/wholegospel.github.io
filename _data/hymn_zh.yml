@@ -129,6 +129,12 @@
   file: 活在我们里面_hillsong.mp3
   singer: Hillsong
 
+- id: jbdx
+  title: 敬拜的心
+  file: 敬拜的心.mp3
+  singer: 约书亚乐团
+  video_lyrics: 敬拜的心.約書亞樂團.mp4
+
 - id: jdswmz
   title: 基督是我满足
   file: 基督是我满足.mp3
@@ -585,20 +591,26 @@
   video: 这是圣洁之地_赞美之泉.mp4
   video_lyrics: 这是圣洁之地_赞美之泉_歌词版.mp4
 
-- id: goodness_of_god
-  title: Goodness of God
-  file: Goodness_of_God.mp3
-  singer: Jenn Johnson
-
 - id: zwxx
   title: 主，我相信
   file: 主，我相信.mp3
   singer: 小羊诗歌
   video_lyrics: 主，我相信_小羊诗歌.mp4
 
+- id: zydzn
+  title: 只愿得着你
+  file: 只愿得着你.mp3
+  singer: 生命河敬拜
+  video_lyrics: 只願得著你.生命河敬拜.歌词版.mp4
+
 - id: 2023_easter_WG
   title: 佳全 2023 复活节联合敬拜现场原声
   file: 2023_easter_WG.mp3
+
+- id: goodness_of_god
+  title: Goodness of God
+  file: Goodness_of_God.mp3
+  singer: Jenn Johnson
 
 - id: 10000_Reasons
   title: 10000 Reasons
