@@ -262,10 +262,11 @@
   file: 全能上帝是我的主我的神_以斯拉.mp3
   singer: 以斯拉
 
-- id: qrwn
+- id: qrwn_ysyyt
   title: 全然为你
-  file: 全然为你.mp3
-  singer:
+  file: 全然为你_约书亚乐团.mp3
+  singer: 约书亚乐团
+  video_lyrics: 約書亞樂團_全然為祢_歌詞mp4
 
 - id: qslyx
   title: 求圣灵运行
