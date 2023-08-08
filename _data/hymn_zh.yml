@@ -153,6 +153,12 @@
   video_en: NLC_Worship_Christ_Is_Enough.mp4
   video_lyrics: 基督是我滿足_約書亞樂團(點燃)_歌词版.mp4
 
+- id: jqdjb_smhllt
+  title: 尽情的敬拜
+  file: 尽情的敬拜_生命河灵粮堂.mp3
+  singer: 生命河灵粮堂
+  video_lyrics: 尽情的敬拜_生命河灵粮堂_歌词版.mp4
+
 - id: jwjzzl
   title: 君王就在这里
   file: 君王就在这里.mp3
@@ -484,6 +490,13 @@
   title: 谢谢你，耶稣
   file: 谢谢你，耶稣_小羊诗歌.mp3
   singer: 小羊诗歌
+
+- id: yngqj_ysyyt
+  title: 与你更亲近
+  file: 与你更亲近_约书亚乐团.mp3
+  singer: 约书亚乐团
+  video: 与你更亲近_约书亚乐团.mp4
+  video_lyrics: 与你更亲近_约书亚乐团_歌词版.mp4
 
 - id: ycw_hillsong
   title: Still
