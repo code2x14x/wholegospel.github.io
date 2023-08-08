@@ -69,6 +69,7 @@
   file: 恩典之洋_约书亚乐团.mp3
   singer: 约书亚乐团
   video_en: Oceans.Hillsong_UNITED.mp4
+  video_lyrics: 恩典之洋_约书亚乐团_歌词版.mp4
 
 - id: oceans
   title: Oceans
@@ -420,6 +421,12 @@
   video_en: Our_Father.Bethel_Music.Jenn_Johnson.mp4
   video_lyrics: 我們在天上的父-Bethel敬拜團-歌词版.mp4
 
+- id: wrnxn
+  title: 无人能像你
+  file: 无人能像你_撒拉弗敬拜团.mp3
+  singer: 撒拉弗敬拜团
+  video_lyrics: 无人能像你_撒拉弗敬拜团_歌词版.mp4
+
 - id: wszwd
   title: 我神真伟大
   file: 我神真伟大.mp3
@@ -576,6 +583,12 @@
   title: 永远的依靠
   file: 永远的依靠_陈国富_玺恩.m4a
   singer: 陈国富 玺恩
+
+- id: yzw_zmzq
+  title: 医治我
+  file: 医治我_赞美之泉.mp3
+  singer: 赞美之泉
+  video_lyrics: 医治我_赞美之泉_歌词版.mp4
 
 - id: zcjwgx_xysg
   title: 再次将我更新
