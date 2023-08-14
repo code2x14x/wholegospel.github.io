@@ -491,13 +491,6 @@
   file: 谢谢你，耶稣_小羊诗歌.mp3
   singer: 小羊诗歌
 
-- id: yngqj_ysyyt
-  title: 与你更亲近
-  file: 与你更亲近_约书亚乐团.mp3
-  singer: 约书亚乐团
-  video: 与你更亲近_约书亚乐团.mp4
-  video_lyrics: 与你更亲近_约书亚乐团_歌词版.mp4
-
 - id: ycw_hillsong
   title: Still
   file: Still_Hillsong.mp3
@@ -526,11 +519,25 @@
   video_lyrics: 永恒唯一的盼望_赞美之泉_歌词版.mp4
   video: 永恒唯一的盼望_赞美之泉_MV.mp4
 
+- id: ymnl_zmzq
+  singer: 赞美之泉
+  title: 以马内利
+  file: 以马内利_赞美之泉.mp3
+  video: 以马内利_赞美之泉.mp4
+  video_lyrics: 以马内利_赞美之泉_歌词版.mp4
+
 - id: yntx_xysg
   singer: 小羊诗歌
   title: 有你同行
   file: 有祢同行_小羊詩歌.mp3
   video_lyrics: 有祢同行_小羊詩歌_歌词版.mp4
+
+- id: yngqj_ysyyt
+  title: 与你更亲近
+  file: 与你更亲近_约书亚乐团.mp3
+  singer: 约书亚乐团
+  video: 与你更亲近_约书亚乐团.mp4
+  video_lyrics: 与你更亲近_约书亚乐团_歌词版.mp4
 
 - id: yschlly_ysyyt
   singer: 約書亞樂團
