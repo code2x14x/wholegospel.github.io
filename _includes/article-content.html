@@ -2,10 +2,10 @@
 <!-- begin article -->
 {% if post.type %}
 <div class="article">
-  <div class="container">
+  <div class="container" style="margin-top: 40px;">
     <div class="article__wrapper">
       <!-- 周二祷告会 -->
-      <div class="article__content {{ without-image }}" style="width: 100%;">
+      <div class="article__content {{ without-image }}" >
         <h2 class="article__title">
           <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
         </h2>
