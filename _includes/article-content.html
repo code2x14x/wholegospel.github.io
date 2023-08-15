@@ -4,35 +4,47 @@
   <div class="container">
 
     <div class="article__wrapper">
-        {% if post.image %}
-          {% assign image = post.image %}
-        {% else %}
-          {% assign image = post.date  | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg"  %}
-        {% endif %}
-        <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
-        style="background-image: url({{site.os_url}}{{ image }})"></a>
-
-        <div class="article__content {{ without-image }}">
-          {% if post.serial %}
-          <h3 class="post-serial">{{ post.serial | escape }}</h2>
-          {% endif %} 
+      {% if post.type %}
+        <!-- 周二祷告会 -->
+        <div class="article__content {{ without-image }}" style="width: 100%;">
           <h2 class="article__title">
             <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
           </h2>
-      
           <p class="article__excerpt">{% if post.dscp %}{{ post.dscp }}{% else %}{{ post.content | strip_html | truncate: 185 }}{% endif %}</p>
-          
           <div class="article__footer">
             <div class="article__meta">
               <span class="article__date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%Y/%m/%d" %}{{ post.date | date: date_format }}</time></span>
             </div>
-
             <a href="{{post.url | prepend: site.baseurl}}" class="read-more">阅 读 全 文 <i class="ion ion-ios-arrow-forward"></i></a>
           </div>
-
         </div>
+      {% else %}
+          {% if post.image %}
+            {% assign image = post.image %}
+          {% else %}
+            {% assign image = post.date  | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg"  %}
+          {% endif %}
+          <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
+          style="background-image: url({{site.os_url}}{{ image }})"></a>
 
-      </div>
+          <div class="article__content {{ without-image }}">
+            {% if post.serial %}
+            <h3 class="post-serial">{{ post.serial | escape }}</h2>
+            {% endif %} 
+            <h2 class="article__title">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+            </h2>
+        
+            <p class="article__excerpt">{% if post.dscp %}{{ post.dscp }}{% else %}{{ post.content | strip_html | truncate: 185 }}{% endif %}</p>
+            <div class="article__footer">
+              <div class="article__meta">
+                <span class="article__date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%Y/%m/%d" %}{{ post.date | date: date_format }}</time></span>
+              </div>
+              <a href="{{post.url | prepend: site.baseurl}}" class="read-more">阅 读 全 文 <i class="ion ion-ios-arrow-forward"></i></a>
+            </div>
+          </div>
+      {% endif %}
+    </div>
       
   </div>
 </div>
