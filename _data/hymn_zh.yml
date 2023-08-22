@@ -206,6 +206,13 @@
   file: 能不能.mp3
   singer: 赞美之泉
 
+- id: npdqsy
+  title: 你配得全所有
+  file: 你配得全所有.约书亚乐团.mp3
+  singer: 约书亚乐团
+  video: 你配得全所有.约书亚乐团.mp4
+  video_lyrics: 你配得全所有.约书亚乐团.歌词版.mp4
+
 - id: nswdyq_KUA
   title: 祢是我的一切
   file: 祢是我的一切_KUA.mp3
@@ -614,6 +621,11 @@
   singer: 赞美之泉
   video_lyrics: 医治我_赞美之泉_歌词版.mp4
 
+- id: zawdnmq
+  title: 主啊，我到你面前
+  file: 主啊，我到你面前.mp3
+  video_lyrics: 主啊，我到你面前.mp4
+
 - id: zcjwgx_xysg
   title: 再次将我更新
   singer: 小羊诗歌
@@ -677,6 +689,11 @@
   title: 10000 Reasons
   file: 10000_Reasons.mp3
   singer: Matt Redman
+
+- id: jesus_jesus
+  title: Jesus, Jesus
+  file: Jesus, Jesus_Skillet.mp3
+  singer: Skillet
 
 - id: desert_song
   title: Desert Song
