@@ -596,10 +596,11 @@
 
 - id: ysys_sjsgz
   title: 圣洁受膏者(耶稣，耶稣)
-  file: 圣洁受膏者_KUA.mp3
-  singer: KUA
-  video: 圣洁受膏者_KUA.mp4
+  file: 圣洁受膏者_Charis.mp3
+  singer: Charis 蔡佳靈
+  video: 圣洁受膏者_Charis.mp4
   video_en: Jesus_Jesus.Holy_and_anointed_one.Vineyard_Worship.mp4
+  video_lyrics: 圣洁受膏者_KUA.mp4
 
 - id: ywglyzmz_cjr
   title: 一万个理由赞美主
