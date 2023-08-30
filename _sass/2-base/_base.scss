@@ -129,16 +129,17 @@ hr {
 
 /* For WG */
 u {
-  color: #393e46;
+  // color: #393e46;
   font-weight: normal !important;
   font-style: normal !important;
   text-decoration: none;
-  border-radius: 3px;
-  background-color: #ffbdc98f;
-  background-color: #f7f8b294;
+  // border-radius: 3px;
+  // background-color: #ffbdc98f;
+  // background-color: #f7f8b294;
   /* border-bottom: solid 1px #e4f600; */
-  background: linear-gradient(181deg, #f9e62b3d, #f9e62b3d);
-  padding: 2px 2px;
+  // background: linear-gradient(181deg, #f9e62b3d, #f9e62b3d);
+  padding: 2px 0px;
+  border-bottom: 2px dashed #45b745;
 }
 
 em, 
@@ -261,23 +262,23 @@ h1, h2, h3, h4 {
 
 h2 {
   font-size: 1.2em;
-  color: #000000e0;
+  color: #383838;
   // text-shadow: 2px 2px 3px #bcb7b7c4;
 
-  color: transparent;
-  background-image: linear-gradient(
-     to right,
-     #553c9a,
-     #ee4b2b,
-     #00c2cb,
-     #ff7f50,
-     #553c9a
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-size: 200%;
-  background-position: -200%;
-  animation: animated-gradient 10s infinite alternate-reverse;
+  // color: transparent;
+  // background-image: linear-gradient(
+  //    to right,
+  //    #553c9a,
+  //    #ee4b2b,
+  //    #00c2cb,
+  //    #ff7f50,
+  //    #553c9a
+  // );
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  // background-size: 200%;
+  // background-position: -200%;
+  // animation: animated-gradient 10s infinite alternate-reverse;
 }
 
 h3 {

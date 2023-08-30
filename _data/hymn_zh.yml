@@ -543,6 +543,13 @@
   video_lyrics: 永恒唯一的盼望_赞美之泉_歌词版.mp4
   video: 永恒唯一的盼望_赞美之泉_MV.mp4
 
+- id: ylydrz
+  singer: 万国敬拜团
+  title: 以利亚的日子
+  file: 以利亚的日子_万国敬拜团.mp3
+  video: 以利亚的日子_2019烈火特会.mp4
+  video_lyrics: 以利亚的日子_以斯拉_歌词版.mp4
+
 - id: ymnl_zmzq
   singer: 赞美之泉
   title: 以马内利
@@ -668,6 +675,12 @@
   file: 主的爱如今_祝瑞莲.mp3
   video: 主的爱如今_祝瑞莲_MV.mp4
   video_lyrics: 主的爱如今_祝瑞莲_歌词版.mp4
+
+- id: zdzyszlsh
+  title: 直到主耶稣再来时候
+  singer: 因约敬拜
+  file: 直到主耶稣再来时候_因约敬拜.mp3
+  video_lyrics: 直到主耶稣再来时候_因约敬拜_歌词版.mp4
 
 - id: zed_sxm
   title: 主恩典
