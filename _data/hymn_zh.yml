@@ -320,6 +320,13 @@
   singer: 以斯拉
   video_lyrics: 任何環境不要懼怕_以斯拉詩歌.mp4
 
+- id: rrdwbgq
+  title: 软弱的我变刚强
+  file: 软弱的我变刚强.mp3
+  singer: 以斯拉
+  video_lyrics: 软弱的我变刚强_以斯拉_歌词版.mp4
+  vidoe_en: What.The.Lord.Has.Done.In.Me_Korean.mp4
+
 - id: ryg_htbbchurch
   title: 荣耀歌
   file: 荣耀歌_HTBBChurch.mp3
@@ -354,6 +361,13 @@
   title: 世上的光
   file: 世上的光_师母.mp3
   singer: 挪亚音乐事工
+
+- id: sjzdcdz
+  title: 十字架的传达者
+  file: 十字架的传达者.mp3
+  singer: 以斯拉
+  video: 十字架的传达者_以斯拉_MV.mp4
+  video_lyrics: 十字架的传达者_以斯拉_歌词版.mp4
 
 - id: sjzg
   title: 世界真光
