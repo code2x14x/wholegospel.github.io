@@ -281,6 +281,12 @@
   video: 倾倒_赞美之泉.mp4
   video_lyrics: 傾倒_歌詞版_讚美之泉敬拜讚美.mp4
 
+- id: qncmw
+  title: 求你充满我
+  file: 求你充满我.mp3
+  singer: 约书亚乐团
+  video_lyrics: 求你充满我_约书亚乐团_歌词版.mp4
+
 - id: qnsdswdzwds_ysl
   title: 全能上帝是我的主我的神
   file: 全能上帝是我的主我的神_以斯拉.mp3
@@ -334,8 +340,10 @@
 
 - id: slqnlcmwx
   title: 圣灵请你来充满我心
-  file: 圣灵请你来充满我心.m4a
+  file: 圣灵请你来充满我心_约书亚乐团.mp3
   singer: 约书亚乐团
+  video: 圣灵请你来充满我心_约书亚乐团_MV.mp4
+  video_lyrics: 圣灵请你来充满我心_约书亚乐团_歌词版.mp4
 
 - id: smzg
   title: Desert Song
@@ -496,6 +504,11 @@
   video: 我在這裡_讚美之泉_现场版.mp4
   video_en: Here.I.Am.To.Worship_Maverick.City.Music.mp4
   video_lyrics: 我在這裡_讚美之泉_歌词版.mp4
+
+- id: wzpwyntz
+  title: 我只盼望与你同在
+  file: 我只盼望与你同在.mp3
+  video: 我只盼望与你同在_歌词版.mp4
 
 - id: xdyxxdfx_zmzq
   title: 新的异象，新的方向
