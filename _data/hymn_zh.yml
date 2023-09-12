@@ -139,7 +139,8 @@
   title: 敬拜的心
   file: 敬拜的心.mp3
   singer: 约书亚乐团
-  video_lyrics: 敬拜的心.約書亞樂團.mp4
+  # video_lyrics: 敬拜的心.約書亞樂團.mp4
+  video_lyrics: 敬拜的心_约书亚_歌词版.mp4
 
 - id: jdswmz
   title: 基督是我满足
