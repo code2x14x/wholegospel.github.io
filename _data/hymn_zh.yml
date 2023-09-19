@@ -165,6 +165,12 @@
   singer: 生命河灵粮堂
   video_lyrics: 尽情的敬拜_生命河灵粮堂_歌词版.mp4
 
+- id: jwdx
+  title: 敬畏的心
+  file: 敬畏的心_约书亚乐团.mp3
+  singer: 约书亚乐团
+  video_lyrics: 敬畏的心_约书亚乐团.mp4
+
 - id: jwjzzl
   title: 君王就在这里
   file: 君王就在这里.mp3
@@ -743,6 +749,12 @@
   file: 主，我相信.mp3
   singer: 小羊诗歌
   video_lyrics: 主，我相信_小羊诗歌.mp4
+
+- id: zwxssmgn
+  title: 主我献上生命给你
+  file: 主我献上生命给你.mp3
+  singer:
+  video_lyrics: 主我献上生命给你.mp4
 
 - id: zydzn
   title: 只愿得着你
