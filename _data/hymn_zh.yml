@@ -169,7 +169,7 @@
   title: 敬畏的心
   file: 敬畏的心_约书亚乐团.mp3
   singer: 约书亚乐团
-  video_lyrics: 敬畏的心_约书亚乐团.mp4
+  video_lyrics: 敬畏的心_约书亚乐团_歌词版.mp4
 
 - id: jwjzzl
   title: 君王就在这里
@@ -727,6 +727,12 @@
   file: 主恩典_盛晓玫.mp3
   video_lyrics: 主恩典_盛晓玫_歌词版.mp4
 
+- id: zmkys
+  title: 注目看耶稣
+  file: 注目看耶稣_赞美之泉.mp3
+  singer: 赞美之泉
+  video_lyrics: 注目看耶稣_赞美之泉_歌词版.mp4
+
 - id: znhzzd_ysl
   title: 在你呼召之地
   file: 在你呼召之地_以斯拉.mp3
@@ -752,9 +758,9 @@
 
 - id: zwxssmgn
   title: 主我献上生命给你
-  file: 主我献上生命给你.mp3
-  singer:
-  video_lyrics: 主我献上生命给你.mp4
+  file: 主我献上生命给你_约书亚乐团.mp3
+  singer: 约书亚乐团
+  video_lyrics: 主我献上生命给你_约书亚乐团_歌词版.mp4
 
 - id: zydzn
   title: 只愿得着你
