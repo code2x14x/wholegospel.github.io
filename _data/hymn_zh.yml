@@ -362,6 +362,11 @@
   video_lyrics: 圣灵请你来充满我心_约书亚乐团_歌词版.mp4
 
 - id: smzg
+  title: 沙漠之歌
+  file: 沙漠之歌.mp3
+  video_lyrics: 沙漠之歌_歌词版.mp4
+
+- id: desert_song
   title: Desert Song
   file: Desert Song.mp3
   singer: Hillsong
