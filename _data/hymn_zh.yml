@@ -169,7 +169,7 @@
   title: 敬畏的心
   file: 敬畏的心_约书亚乐团.mp3
   singer: 约书亚乐团
-  vidoe: 敬畏的心_约书亚乐团_MV.mp4
+  video: 敬畏的心_约书亚乐团_MV.mp4
   video_lyrics: 敬畏的心_约书亚乐团_歌词版.mp4
 
 - id: jwjzzl
@@ -546,6 +546,7 @@
   file: 新的异象，新的方向_赞美之泉.mp3
   singer: 赞美之泉
   video: 新的异象，新的方向_赞美之泉.mp4
+  video_lyrics: 新的异像新的方向_赞美之泉_歌词版.mp4
 
 - id: xgdyp
   title: 香膏的玉瓶
