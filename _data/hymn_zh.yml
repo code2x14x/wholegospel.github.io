@@ -209,6 +209,13 @@
   title: 你的恩典每天够我用
   file: 你的恩典每天够我用.mp3
 
+- id: nymbkgzd
+  title: 你眼目必看顾这地
+  file: 你眼目必看顾这地.mp3
+  singer: 赞美之泉
+  video: 你眼目必看顾这地_KUA.mp4
+  video_lyrics: 你眼目必看顾这地_赞美之泉_歌词版.mp4
+
 - id: ndje
   title: 你的救恩
   file: 祢的救恩.mp3
@@ -278,7 +285,7 @@
   file: 普世欢腾_赞美之泉.mp3
   singer: 赞美之泉
 
-- id: qcmzd_ysyyt
+- id: qcmzd
   title: 求充满这地
   file: 求充满这地_约书亚乐团.m4a
   singer: 约书亚乐团
