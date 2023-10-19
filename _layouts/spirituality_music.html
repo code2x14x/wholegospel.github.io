@@ -1,0 +1,64 @@
+---
+layout: post
+---
+<div id="v-player">
+  <audio id="audio-track" type="audio/mp3" loop preload="meta"></audio>
+  <div id="podcast-player">
+    <div id="controls">
+      <div class="first-part">
+        <i id="repeat" class="fas fa-sync-alt"></i>
+        <i id="step-backward" class="fas fa-step-backward"></i>
+        <i id="play" class="fa fa-play"></i>
+        <i id="pause" class="fa fa-pause"></i>
+        <i id="step-forward" class="fas fa-step-forward"></i>
+        <i id="count-down" class="fas fa-clock"></i>
+      </div>
+      <div class="second-part">
+        <div class="time current">0:00</div>
+        <span id='loop-indicator'></span>
+        <span id='track-title'></span>
+        <span id='count-down-timer'></span>
+        <div id="end-time" class="time till-end">0:00</div>
+      </div>
+      <div class="third-part">
+        <div class="progress-bar">
+          <div class="default-bar"></div>
+          <div class="fill-bar"></div>
+          <input type="range" id="seek" value="0" min="0" max="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 主日赞美 及 赞美诗汇总 -->
+    {% assign hymns  = site.data.spirituality_music %}
+
+    {% for item in hymns %}
+        <div class="audio hymn bars" 
+             data-lyrics="{{ lyrics }}" 
+             data-title="{{ item.title }}"
+             data-file="/wg/audios/spirituality_music/{{ item.file }}" 
+             data-image="{{ bgImg }}" 
+             data-video="{{ item.video | url_encode }}"
+             data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
+          {% if item.video %}
+          <span class="video-btn" style="cursor: pointer; margin-right: 5px;" data-url="{{ item.video | url_encode }}"><i class="fa fa-video" aria-hidden="true"></i></span>
+          {% endif %}
+          {% if item.video_en %}
+          <span class="video-btn" style="cursor: pointer; margin-right: 5px; color: #979797;" data-url="{{ item.video_en | url_encode }}"><i class="fas fa-video"></i></span>
+          {% endif %}
+          {% if item.video_lyrics %}
+          <span class="video-btn" style="cursor: pointer; margin-right: 5px;" data-url="{{ item.video_lyrics | url_encode }}"><i class="fas fa-film"></i></span>
+          {% endif %} 
+          <!-- <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span> -->
+        </div><br>
+    {% endfor %}
+
+  <div class="tips">
+    {% if page.permalink != "/hymns" %}
+    <a class="hz" href="/hymns">以往赞美汇总</a>
+    {% endif %}
+    <a class="zd" href="/images/player-instrction.jpg">播放器用法指导</a>如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span
+      class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
+  </div><br />
