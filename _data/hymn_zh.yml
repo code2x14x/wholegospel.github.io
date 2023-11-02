@@ -605,9 +605,10 @@
 - id: yhpw
   title: 永活盼望
   singer: KUA
-  file: 永活盼望.mp3
+  file: 永活盼望_KUA.mp3
   video_lyrics: 永活盼望_KUA_歌词版.mp4
   video: 永活盼望_KUA.mp4
+  video_en: Living_Hope.Phil_Wickham.mp4
 
 - id: yhwydpw_zmzq
   singer: 赞美之泉
