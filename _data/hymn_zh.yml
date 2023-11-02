@@ -602,6 +602,13 @@
   title: 耶和华保护你
   file: 耶和华保护你.mp3
 
+- id: yhpw
+  title: 永活盼望
+  singer: KUA
+  file: 永活盼望.mp3
+  video_lyrics: 永活盼望_KUA_歌词版.mp4
+  video: 永活盼望_KUA.mp4
+
 - id: yhwydpw_zmzq
   singer: 赞美之泉
   title: 永恒唯一的盼望
@@ -763,7 +770,7 @@
   singer: 赞美之泉
   video_lyrics: 注目看耶稣_赞美之泉_歌词版.mp4
 
-- id: znhzzd_ysl
+- id: znhzzd
   title: 在你呼召之地
   file: 在你呼召之地_以斯拉.mp3
   singer: 以斯拉
