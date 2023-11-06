@@ -15,7 +15,10 @@ layout: default
             <span class="post__date">
               <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
               {% if page.author %}
-                <span class="author">{{ page.author }}</span>
+                <span class="author">| 讲员：{{ page.author }}</span>
+              {% endif %}
+              {% if page.editors %}
+                <span class="author" style="padding-left: 2rem;">| 编辑整理：{{ page.editors}}</span>
               {% endif %}
               {% if page.abstract %}
                 <a class="abstract" href="{{ site.os_url }}wg/images/teaching-abstract/{{page.abstract}}">查看摘要</a>
