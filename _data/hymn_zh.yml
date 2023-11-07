@@ -18,7 +18,7 @@
   file: 不停赞美_泥土音乐事工.mp3
   video_lyrics: 不停赞美_泥土音乐事工.mp4
 
-- id: bpbfq_zmzq
+- id: bpbfq
   title: 奔跑不放弃
   singer: 赞美之泉
   file: 奔跑不放弃_赞美之泉.mp4
@@ -87,7 +87,7 @@
   singer: 约书亚乐团
   video_en: One_Way_城市丰收教会_MV.mp4
 
-- id: gjg_hillsong
+- id: gjg
   title: 更坚固
   file: 更坚固_hillsong.mp3
   singer: Hillsong
@@ -727,7 +727,7 @@
   file: 永远的依靠_陈国富_玺恩.m4a
   singer: 陈国富 玺恩
 
-- id: yzw_zmzq
+- id: yzw
   title: 医治我
   file: 医治我_赞美之泉.mp3
   singer: 赞美之泉
