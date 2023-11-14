@@ -24,7 +24,7 @@ $(function () {
   let defultImg = '';
   if (postHeadElem) {
     postHeadElem.style.backgroundImage =
-      "url('" + tencentCos + postHeadElem.dataset.bgimg + "')";
+      "url('" + postHeadElem.dataset.bgimg + "')";
     defultImg = postHeadElem.dataset.bgimg;
   }
 
