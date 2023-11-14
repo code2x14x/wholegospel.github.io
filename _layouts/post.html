@@ -21,7 +21,7 @@ layout: default
                 <span class="author">编辑：{{ page.editors}}</span>
               {% endif %}
               {% if page.abstract %}
-                <a class="abstract" href="{{ site.os_url }}wg/images/teaching-abstract/{{page.abstract}}">查看摘要</a>
+                <a class="abstract" href="/images/teaching-abstract/{{page.abstract}}">查看摘要</a>
               {% endif %}
             </span>
         {% endif %}
@@ -32,7 +32,7 @@ layout: default
       {% if page.image %}
         {% assign image = page.image %}
       {% else %}
-        {% assign image = page.date | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
+        {% assign image = page.date | date: '%Y-%m-%d' | prepend: "/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="row">
       <div id="lyrics_post_head" class="post__head col col-8 col-t-10 col-m-12">
@@ -96,11 +96,11 @@ layout: default
       {% if page.previous.image %}
         {% assign image = page.previous.image %}
       {% else %}
-        {% assign image = page.previous.date  | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
+        {% assign image = page.previous.date  | date: '%Y-%m-%d' | prepend: "/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="prev">
       <a class="post__nav__image" href="{{ site.baseurl }}{{page.previous.url}}" 
-      style="background-image: url({{ site.os_url }}{{ image }})"></a>
+      style="background-image: url({{ image }})"></a>
       <h2 class="post__nav__title">
         <a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a>
         <!-- <i class="fa-regular fa-arrow-right"></i> -->
@@ -119,7 +119,7 @@ layout: default
       {% if page.next.image %}
         {% assign image = page.next.image %}
       {% else %}
-        {% assign image = page.next.date | date: '%Y-%m-%d' | prepend: "wg/images/teaching/" | append: ".jpg" %}
+        {% assign image = page.next.date | date: '%Y-%m-%d' | prepend: "/images/teaching/" | append: ".jpg" %}
       {% endif %}
     <div class="next">
       <a class="post__nav__image" href="{{ site.baseurl }}{{page.next.url}}" 

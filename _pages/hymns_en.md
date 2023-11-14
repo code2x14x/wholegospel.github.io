@@ -2,7 +2,7 @@
 layout: teaching
 title: HYMNS
 permalink: /hymns_en
-image: wg/images/teaching/hymns_en.jpg
+image: /images/teaching/hymns_en.jpg
 date: 2022-09-01
 hymns: [all]
 tags: hidden
