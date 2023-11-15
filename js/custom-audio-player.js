@@ -15,8 +15,8 @@ $(function () {
   let rabbitLyrics;
 
   // 数据
-  const tencentCos = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/';
-  //const tencentCos = '';
+  //const tencentCos = 'https://typora-1259024198.cos.ap-beijing.myqcloud.com/';
+  const tencentCos = '';
   const allAudioElems = document.getElementsByClassName('audio'); // 全部音频
   const allHymnsElems = document.getElementsByClassName('hymn'); // 全部歌曲
   let allHymnsSources = []; // 全部歌曲的 source
