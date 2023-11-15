@@ -95,7 +95,7 @@
 
 - id: gwmaw_dm
   title: God Will Make A Way
-  file: God Will Make A Way_Don Moen.mp3
+  file: God_Will_Make_A_Way.Don_Moen.mp3
   singer: Don Moen
   video_en: God_Will_Make_A_Way.Don_Moen.Live_Worship.mp4
 
@@ -266,7 +266,7 @@
 
 - id: mlmp_jt
   title: More Love More Power
-  file: More Love More Power.feat.Jane Tiller.mp3
+  file: More_Love_More_Power.feat.Jane_Tiller.mp3
   singer: Jane Tiller
   video_en: More_Love_More_Power.feat.Jane_Tiller.mp4
 
@@ -381,7 +381,7 @@
 
 - id: desert_song
   title: Desert Song
-  file: Desert Song.mp3
+  file: Desert_Song.mp3
   singer: Hillsong
   video: Desert.Song_Brooke.Ligertwood.mp4
 
@@ -478,14 +478,14 @@
 
 - id: wmds_HTBBChurch
   title: 我们的神
-  file: 我们的神_This is Our God_HTBBChurch.mp3
+  file: 我们的神.This_is_Our_God.HTBB_Church.mp3
   singer: HTBBChurch
   alias: This is Our God
   video: 我们的神.This_is_Our_God.HTBB_敬拜.mp4
 
 - id: wmds_The_Lighters
   title: 我们的神
-  file: 我们的神_The Lighters 莱特.mp3
+  file: 我们的神.The_Lighters.莱特.mp3
   singer: The Lighters 莱特
   video: 我們的神_KUA.MUSIC_The.Lighters_现场版.mp4
   video_en: Chris.Tomlin_Our.God_Live.mp4
@@ -825,7 +825,7 @@
 
 - id: jesus_jesus
   title: Jesus, Jesus
-  file: Jesus_Jesus_Skillet.mp3
+  file: Jesus,Jesus_Skillet.mp3
   singer: Skillet
   video_en: Jesus_Jesus.Holy_and_anointed_one.Vineyard_Worship.mp4
 
@@ -836,7 +836,7 @@
 
 - id: our_god
   title: Our God
-  file: Our God.m4a
+  file: Our_God.m4a
   singer: Chris Tomlin
 
 - id: way_maker
