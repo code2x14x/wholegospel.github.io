@@ -38,7 +38,7 @@ layout: post
         <div class="audio hymn bars" 
              data-lyrics="{{ lyrics }}" 
              data-title="{{ item.title }}"
-             data-file="/wg/audios/spirituality_music/{{ item.file }}" 
+             data-file="/audio/spirituality_music/{{ item.file }}" 
              data-image="{{ bgImg }}" 
              data-video="{{ item.video | url_encode }}"
              data-singer="{{ item.singer }}">{% if page.permalink == '/baptism_lessons' %}<i class="fas fa-star-of-david"></i>{% else %}<i class="fas fa-fish"></i>{% endif %}{% if page.permalink != "/hymns_en" %}《{% else %}{{" "}}{% endif %}{{ item.title }}{% if item.singer %}<span class="singer"> / {{ item.singer }}</span>{% endif %}{% if page.permalink != "/hymns_en" %}》{% endif %}
