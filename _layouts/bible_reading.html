@@ -73,7 +73,7 @@ layout: post
           <div
             class="audio bible-audio hymn" 
             data-title="{{ item.book_name | append: idx }}"
-            data-file="wg/bible_reading/audio/{{item.book_order | append: item.book_name}}/{{item.book_name | append: idx}}.mp3">
+            data-file="/audio/bible_reading/{{item.book_order | append: item.book_name}}/{{item.book_name | append: idx}}.mp3">
             <i class="fas fa-book-alt" style="display: none;"></i>{{ idx }}
           </div>
           {% endfor %}
@@ -87,7 +87,7 @@ layout: post
 <br>
 <div class="tips">
   <a class="hz" href="/hymns">以往赞美汇总</a>
-  <a class="zd" href="/images/player-instrction.jpg">播放器用法指导</a>
+  <a class="zd" href="/image/player-instrction.jpg">播放器用法指导</a>
   如果发现<span class="tip">音频经常意外停止</span>（比如当锁屏后），可<span class="tip">使用浏览器打开</span>此页面，通常能完全解决此问题。
 </div>
 

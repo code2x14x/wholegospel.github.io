@@ -27,7 +27,7 @@
       {% if post.image %}
         {% assign image = post.image %}
       {% else %}
-        {% assign image = post.date  | date: '%Y-%m-%d' | prepend: "/images/teaching/" | append: ".jpg"  %}
+        {% assign image = post.date  | date: '%Y-%m-%d' | prepend: "/image/teaching/" | append: ".jpg"  %}
       {% endif %}
       <a href="{{post.url | prepend: site.baseurl}}" class="article__image" 
       style="background-image: url({{image }})"></a>

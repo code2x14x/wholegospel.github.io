@@ -48,11 +48,11 @@ Table of Contents
 
 Check the theme in action [Demo](https://zolan-jekyll.netlify.app/)
 
-![Main page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-main-page.png?raw=true)
+![Main page preview](https://github.com/artemsheludko/zolan/blob/master/image/zolan-main-page.png?raw=true)
 
 The post page would look like this:
 
-![Post page preview](https://github.com/artemsheludko/zolan/blob/master/images/zolan-post.png?raw=true)
+![Post page preview](https://github.com/artemsheludko/zolan/blob/master/image/zolan-post.png?raw=true)
 
 * * *
 
@@ -79,7 +79,7 @@ To create a new post, you can create a new markdown file inside the \_posts dire
 
 You can set the tags and the post image.
 
-Add post images to **/images/** directory.
+Add post images to **/image/** directory.
 
 For tags, try to not add space between two words, for example, `Ruby on Rails`, could be something like (`ruby-on-rails`, `Ruby_on_Rails`, or `Ruby-on-Rails`).
 

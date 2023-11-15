@@ -2,7 +2,7 @@
 layout: teaching
 title: 赞美诗
 permalink: /hymns
-image: /images/teaching/hymns.jpg
+image: /image/teaching/hymns.jpg
 date: 2022-09-01
 hymns: [all]
 ---
