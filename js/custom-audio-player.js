@@ -86,7 +86,8 @@ $(function () {
   for (const vb of videoBtns) {
     vb.addEventListener('click', (e) => {
       const v_url =
-        'https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/videos/' +
+        //'https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/videos/' +
+        '/video/' +
         vb.dataset.url;
       pause();
       e.preventDefault();
