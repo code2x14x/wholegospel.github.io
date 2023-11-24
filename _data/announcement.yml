@@ -1,4 +1,4 @@
 header:
-  show: false
-  content: '10 月 01 日主日信息已更新；9 月 26 日祷告会内容已更新'
+  show: true
+  content: '修复了安卓和 Windows 设备主日证道录音无法正常播放的问题。祝大家平安健康！！'
   duration: 60
