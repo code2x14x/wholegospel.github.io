@@ -36,11 +36,12 @@ $(function () {
       audio.dataset.index = i;
       if (i == 0) {
         audio.classList.add('current-audio');
+        const filePath = audio.dataset.file;
         if(audio.dataset.title === '证道录音') {
-          audioTrackElem.src = tencentCos + audio.dataset.file;
+          const filePathArr = filePath.split("/");
+          audioTrackElem.src = tencentCos + "wg/audios/teaching" + filePathArr[filePathArr.length - 1];
         } else {
-          audioTrackElem.src = audio.dataset.file;
-          // audioTrackElem.src = tencentCos + audio.dataset.file;
+          audioTrackElem.src =  filePath;
         }
         audioTrackElem.load();
       }
@@ -330,10 +331,12 @@ $(function () {
   function changeSourceAndPlay(audioElem) {
     for (let e of allAudioElems) e.classList.remove('current-audio');
     audioElem.classList.add('current-audio');
+    const filePath = audioElem.getAttribute('data-file');
     if(audioElem.getAttribute('data-title') === '证道录音') {
-      audioTrackElem.src = tencentCos + audioElem.getAttribute('data-file');
+      const filePathArr = filePath.split("/");
+      audioTrackElem.src = tencentCos + "wg/audios/teaching" + filePathArr[filePathArr.length - 1];
     } else {
-      audioTrackElem.src = audioElem.getAttribute('data-file');
+      audioTrackElem.src = filePath;
     }
     audioTrackElem.load();
     play(audioElem);
