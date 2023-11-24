@@ -39,7 +39,7 @@ $(function () {
         const filePath = audio.dataset.file;
         if(audio.dataset.title === '证道录音') {
           const filePathArr = filePath.split("/");
-          audioTrackElem.src = tencentCos + "wg/audios/teaching" + filePathArr[filePathArr.length - 1];
+          audioTrackElem.src = tencentCos + "wg/audios/teaching/" + filePathArr[filePathArr.length - 1];
         } else {
           audioTrackElem.src =  filePath;
         }
@@ -334,7 +334,7 @@ $(function () {
     const filePath = audioElem.getAttribute('data-file');
     if(audioElem.getAttribute('data-title') === '证道录音') {
       const filePathArr = filePath.split("/");
-      audioTrackElem.src = tencentCos + "wg/audios/teaching" + filePathArr[filePathArr.length - 1];
+      audioTrackElem.src = tencentCos + "wg/audios/teaching/" + filePathArr[filePathArr.length - 1];
     } else {
       audioTrackElem.src = filePath;
     }
