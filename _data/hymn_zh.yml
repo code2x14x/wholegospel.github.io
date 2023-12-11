@@ -124,7 +124,7 @@
   video: 火热的爱_约书亚乐团_MV.mp4
   video_en: Passion_Reckless_Love.mp4
 
-- id: hsn_hillsong
+- id: hsn
   title: 和散那
   file: 和散那_Hillsong.mp3
   singer: Hillsong
@@ -367,7 +367,7 @@
   mainpage: sdlsrm_sherin_lan
   mainpage_image: 神的良善荣美_Sherin_Lan.jpg
 
-- id: sgypd_ysyyt
+- id: sgypd
   title: 神羔羊配得
   singer: 约书亚乐团
   file: 神羔羊配得_约书亚乐团.mp3
@@ -551,7 +551,7 @@
   file: 唯有耶稣_赞美之泉.m4a
   singer: 赞美之泉
 
-- id: wzdwdjszhz_slfjbt
+- id: wzdwdjszhz
   title: 我知道我的救赎主活着
   file: 我知道我的救赎主活着_撒拉弗敬拜团.mp3
   singer: 撒拉弗敬拜团
