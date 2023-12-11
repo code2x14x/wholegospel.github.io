@@ -151,7 +151,7 @@
   video_en: NLC_Worship_Christ_Is_Enough.mp4
   video_lyrics: 基督是我滿足_約書亞樂團(點燃)_歌词版.mp4
 
-- id: jdswmz_ttjb
+- id: jdswmz
   title: 基督是我满足
   file: 基督是我满足_天堂敬拜.mp3
   singer: 天堂敬拜
@@ -159,7 +159,7 @@
   video_en: NLC_Worship_Christ_Is_Enough.mp4
   video_lyrics: 基督是我滿足_約書亞樂團(點燃)_歌词版.mp4
 
-- id: jqdjb_smhllt
+- id: jqdjb
   title: 尽情的敬拜
   file: 尽情的敬拜_生命河灵粮堂.mp3
   singer: 生命河灵粮堂
@@ -178,7 +178,7 @@
   singer: 赞美之泉
   video_lyrics: 君王就在這裡.讚美之泉.歌词版.mp4
 
-- id: jwtqtds_zmzq
+- id: jwtqtds
   title: 叫我抬起头的神
   file: 叫我抬起头的神_赞美之泉.mp3
   singer: 赞美之泉
@@ -241,7 +241,7 @@
   video: 你配得全所有.约书亚乐团.mp4
   video_lyrics: 你配得全所有.约书亚乐团.歌词版.mp4
 
-- id: nswdyq_KUA
+- id: nswdyq
   title: 祢是我的一切
   file: 祢是我的一切_KUA.mp3
   singer: KUA
@@ -270,7 +270,7 @@
   singer: 城市丰收教会
   video_lyrics: 你真好_约书亚乐团.mp4
 
-- id: mlmp_jt
+- id: mlmp
   title: More Love More Power
   file: More_Love_More_Power.feat.Jane_Tiller.mp3
   singer: Jane Tiller
@@ -477,12 +477,12 @@
   singer: 城市丰收教会
   mainpage: wdz_csfsjh
 
-- id: wfqy_ysyyt
+- id: wfqy
   title: 万福泉源
   file: 万福泉源_约书亚乐团.m4a
   singer: 约书亚乐团
 
-- id: wjzb_ysyyt
+- id: wjzb
   title: 无价至宝
   file: 无价至宝_约书亚乐团.mp3
   singer: 约书亚乐团
@@ -504,7 +504,7 @@
   video_en: Chris.Tomlin_Our.God_Live.mp4
   video_lyrics: 我們的神_張家綺_歌词版.mp4
 
-- id: wmhyjwjl_zmzq
+- id: wmhyjwjl
   title: 我们欢迎君王降临
   file: 我们欢迎君王降临-赞美之泉.m4a
   singer: 赞美之泉
@@ -535,7 +535,7 @@
   file: 我需要有你在我生命中.mp3
   video: 我需要有你在我生命中.Trevor_Poh.mp4
 
-- id: wyys_nspd_zmzq
+- id: wyys_nspd
   title: 唯有耶穌_祢是配得
   file: 唯有耶穌_祢是配得_赞美之泉.mp3
   singer: 赞美之泉
@@ -546,7 +546,7 @@
   singer: 小羊诗歌
   video_lyrics: 我愿为你去_小羊诗歌_歌词版.mp4
 
-- id: wyys_zmzq
+- id: wyys
   title: 唯有耶稣
   file: 唯有耶稣_赞美之泉.m4a
   singer: 赞美之泉
@@ -589,7 +589,7 @@
   mainpage: xgdyp_ysyyt
   mainpage_image: 香膏的玉瓶.jpeg
 
-- id: xxnys_xysg
+- id: xxnys
   title: 谢谢你，耶稣
   file: 谢谢你，耶稣_小羊诗歌.mp3
   singer: 小羊诗歌
@@ -601,12 +601,12 @@
   video_en: Still_Hillsong.mp4
   video_lyrics: Still_Hillsong_Lyrics.mp4
 
-- id: ydddywz_ysl
+- id: ydddywz
   title: 应当单单仰望主
   file: 应当单单仰望主_以斯拉.mp3
   singer: 以斯拉
 
-- id: ygzcq_zmzq
+- id: ygzcq
   title: 勇敢走出去
   file: 勇敢走出去_赞美之泉.mp3
   singer: 赞美之泉
@@ -623,7 +623,7 @@
   video: 永活盼望_KUA.mp4
   video_en: Living_Hope.Phil_Wickham.mp4
 
-- id: yhwydpw_zmzq
+- id: yhwydpw
   singer: 赞美之泉
   title: 永恒唯一的盼望
   file: 永恒唯一的盼望_赞美之泉.mp3
@@ -637,7 +637,7 @@
   video: 以利亚的日子_2019烈火特会.mp4
   video_lyrics: 以利亚的日子_以斯拉_歌词版.mp4
 
-- id: ymnl_zmzq
+- id: ymnl
   singer: 赞美之泉
   title: 以马内利
   file: 以马内利_赞美之泉.mp3
@@ -676,7 +676,7 @@
   title: 永生神的军队
   file: 永生神的军队_小啵.mp3
 
-- id: ywyn_csfsjh
+- id: ywyn
   title: 因为有你
   file: 因为有你_城市丰收教会.mp3
   singer: 城市丰收教会
@@ -687,7 +687,7 @@
   file: Be_the_centre.mp3
   video_lyrics: Be_the_Centre.Michael_Frye_歌词版.mp4
 
-- id: yswdys_zmzq
+- id: yswdys
   title: 耶稣，我的耶稣
   file: 耶稣，我的耶稣_赞美之泉.mp3
   singer: 赞美之泉
@@ -701,17 +701,17 @@
   video_lyrics: 耶稣你是中心_约书亚乐团_歌词版.mp4
   video_en: Jesus.At.the.Center_Israel.&.New.Breed.mp4
 
-- id: yswgdpw_smhllt
+- id: yswgdpw
   title: 耶稣，万国的盼望
   file: 耶稣，万国的盼望_生命河灵粮堂.mp3
   singer: 生命河灵粮堂
 
-- id: yswyamn_ysl
+- id: yswyamn
   title: 耶稣，我要爱慕你
   file: 耶稣，我要爱慕你_以斯拉.mp3
   singer: 以斯拉
 
-- id: ysys_sjsgz
+- id: ysys
   title: 圣洁受膏者
   file: 圣洁受膏者_Charis.mp3
   singer: Charis 蔡佳靈
@@ -719,7 +719,7 @@
   video_en: Jesus_Jesus.Holy_and_anointed_one.Vineyard_Worship.mp4
   video_lyrics: 圣洁受膏者_KUA.mp4
 
-- id: ywglyzmz_cjr
+- id: ywglyzmz
   title: 一万个理由赞美主
   file: 一万个理由赞美主_陈杰瑞.mp3
   singer: 陈杰瑞
@@ -735,7 +735,7 @@
   video: 永远掌权_HTBB.mp4
   video_en: Forever_Reign.Hillsong.mp4
 
-- id: yydyk_cgf_xe
+- id: yydyk
   title: 永远的依靠
   file: 永远的依靠_陈国富_玺恩.m4a
   singer: 陈国富 玺恩
@@ -751,7 +751,7 @@
   file: 主啊，我到你面前.mp3
   video_lyrics: 主啊，我到你面前.mp4
 
-- id: zcjwgx_xysg
+- id: zcjwgx
   title: 再次将我更新
   singer: 小羊诗歌
   file: 再次将我更新_小羊诗歌.mp3
@@ -772,7 +772,7 @@
   file: 直到主耶稣再来时候_因约敬拜.mp3
   video_lyrics: 直到主耶稣再来时候_因约敬拜_歌词版.mp4
 
-- id: zed_sxm
+- id: zed
   title: 主恩典
   singer: 盛晓玫
   file: 主恩典_盛晓玫.mp3
