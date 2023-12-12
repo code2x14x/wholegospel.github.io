@@ -372,6 +372,7 @@
   singer: 约书亚乐团
   file: 神羔羊配得_约书亚乐团.mp3
   video: 神羔羊配得_KUA_MUSI_曾晨恩.mp4
+  video_lyrics: 神羔羊配的_约书亚乐团_歌词版.mp4
 
 - id: slqnl
   title: 圣灵请你来
@@ -551,11 +552,12 @@
   file: 唯有耶稣_赞美之泉.m4a
   singer: 赞美之泉
 
-- id: wzdwdjszhz
-  title: 我知道我的救赎主活着
+- id: wdjszhz
+  title: 我的救赎主活着
   file: 我知道我的救赎主活着_撒拉弗敬拜团.mp3
   singer: 撒拉弗敬拜团
   video: 我知道我的救赎主活着.mp4
+  video_lyrics: 我的救赎者活着_赞美之泉_歌词版.mp4
 
 - id: wzzl_ny
   title: 我在这里
