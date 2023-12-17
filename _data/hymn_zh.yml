@@ -140,7 +140,6 @@
   title: 敬拜的心
   file: 敬拜的心.mp3
   singer: 约书亚乐团
-  # video_lyrics: 敬拜的心.約書亞樂團.mp4
   video_lyrics: 敬拜的心_约书亚_歌词版.mp4
 
 - id: jdswmz
@@ -255,6 +254,12 @@
   video: 你是圣洁_赞美之泉.mp4
   video_lyrics: 你是圣洁_赞美之泉_歌词版.mp4
   video_en: You_are_Holy_Lyric.mp4
+
+- id: nssj_kua
+  title: 你是圣洁
+  file: 你是圣洁_KUA.mp3
+  singer: KUA
+  video: 你是圣洁_KUA_MV.mp4
 
 - id: ntzrttjl
   title: 你同在如天堂降临
@@ -458,6 +463,13 @@
   file: 抬起我的头_生命河灵粮堂.mp3
   singer: 生命河灵粮堂
   video_lyrics: 抬起我的头_生命河灵粮堂_歌词版.mp4
+
+- id: warjz
+  title: 我安然居住
+  singer: 约书亚乐团
+  file: 我安然居住_约书亚乐团.mp3
+  video_lyrics: 我安然居住_约书亚乐团_歌词版.mp4
+  video: 我安然居住.The_Hope.MV.mp4
 
 - id: wdsmxgn
   title: 我的生命献给你
@@ -786,6 +798,12 @@
   singer: 盛晓玫
   file: 主恩典_盛晓玫.mp3
   video_lyrics: 主恩典_盛晓玫_歌词版.mp4
+
+- id: zgjw
+  title: 尊贵君王
+  file: 尊贵君王_盛晓玫_歌词版.mp3
+  singer: 盛晓玫
+  video_lyrics: 尊贵君王_盛晓玫_歌词版.mp4
 
 - id: zmkys
   title: 注目看耶稣
