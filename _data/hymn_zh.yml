@@ -458,7 +458,7 @@
   singer: 生命河灵粮堂
   video_lyrics: 天开了_生命河灵粮堂_歌词版.mp4
 
-- id: tqwdt_smhllt
+- id: tqwdt
   title: 抬起我的头
   file: 抬起我的头_生命河灵粮堂.mp3
   singer: 生命河灵粮堂
@@ -521,6 +521,7 @@
   title: 我们欢迎君王降临
   file: 我们欢迎君王降临-赞美之泉.m4a
   singer: 赞美之泉
+  video: 我们欢迎君王降临_赞美之泉_MV.mp4
   video_lyrics: 我们欢迎君王降临_赞美之泉.mp4
 
 - id: wmztsdf
@@ -684,6 +685,11 @@
   file: 扬声唱哈利路亚_約書亞樂團.mp3
   video: 扬声唱哈利路亚_約書亞樂團.mp4
   video_en: Raise_A_Hallelujah.mp4
+
+- id: ysldsz
+  title: 以色列的圣者
+  file: 以色列的圣者.mp3
+  video_lyrics: 以色列的圣者_张哈拿牧师_歌词版.mp4
 
 - id: yssdjd
   singer: 小啵
