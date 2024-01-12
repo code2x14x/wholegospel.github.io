@@ -33,7 +33,9 @@
                 {% if item.id == today %}
                   {% assign the_flag = true %}
                   {% assign today_verse = item %}
-                  {% break %}
+                {% else %}
+                  {% assign the_flag = true %}
+                  {% assign today_verse = item %}
                 {% endif %}
                 {{the_flag}}
               {% endfor %}
