@@ -23,7 +23,7 @@
               <img src="/image/cross.png"/>
               <img src="/image/dove-right.png"/>
             </div>
-            <div class="card_content">下 周 推 出 ...</div>
+            <div class="card_content"><div class="card_content_script">下 周 推 出 ...</div></div>
             <div class="card_footer">
               <div class="card_footer_left">今日默想</div>
               <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
@@ -130,6 +130,13 @@
     align-items: center;
     color: #fff;
     padding-bottom: 20px;
+  }
+
+  #meditation .card .card_content .card_content_script {
+    background: #00000094;
+    padding: 1rem;
+    border-radius: 10px;
+    min-height: 3rem;
   }
 
   #meditation .card .card_header,
