@@ -17,4 +17,21 @@ $(document).ready(function () {
     document.getElementById("meditation").style.display = "none";
     $("body").css("overflow", "auto"); //ADD THIS
   });
+
+  function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('card_footer_left_clock').innerHTML =  h + ":" + m + ":" + s;
+  }
+  
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+
+  setTimeout(startTime, 1000);
 });
