@@ -28,7 +28,7 @@
               {% assign today = site.time | date: '%Y-%m-%d' %}
               {% assign flag = false %}
               {{flag}}
-              {% today_verse = "" %}
+              {% assign today_verse = "" %}
               {% for item in meditation %}
                 {% if item.id == today %}
                   [{{item.id}}] -> [{{today}}]
