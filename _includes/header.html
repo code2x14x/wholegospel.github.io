@@ -24,11 +24,11 @@
               <img src="/image/dove-right.png"/>
             </div>
             <div class="card_content"><div class="card_content_script">下 周 推 出 ...</div></div>
-            <div class="card_instruction">静默 > 诵读 > 默想 > 祈祷 > 默观 > 记录</div>
+            <div class="card_instruction" style="padding: 1.2rem;">静默 > 诵读 > 默想 > 祈祷 > 默观 > 记录</div>
             <div class="card_footer">
               <div class="card_footer_left">
-                <div style="letter-spacing: 5px;">今日默想</div>
-                <div>{{ site.time | date: '%Y/%m/%d'}}</div>
+                <div style="letter-spacing: 2px; margin-right: 10px; ">今日默想</div>
+                <div style="letter-spacing: 2px;">{{ site.time | date: '%Y/%m/%d'}}</div>
               </div>
               <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
             </div>
@@ -112,9 +112,10 @@
     width: 90vw;
     height: 70%;
     flex-wrap: wrap;
-    background: no-repeat center/cover url(/image/meditation-bg.jpg),#a62121;
+    background: no-repeat center/cover url(/image/meditation-bg.jpg), linear-gradient(138deg, #414850, #131720);
     border-radius: 20px;
     justify-content: center;
+    color: #fff;
   }
   
   #meditation .card .card_header{
@@ -132,7 +133,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     padding-bottom: 20px;
   }
 
@@ -146,7 +146,6 @@
   #meditation .card .card_header,
   #meditation .card .card_footer{
     width: 100%;
-    color: #fff;
     padding: 1rem 1.2rem;
   }
 
