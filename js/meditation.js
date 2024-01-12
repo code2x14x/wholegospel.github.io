@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
   $(document).on("click", "#meditation_card_closeBtn", function () {
-    $("div#meditation").fadeOut("300");
+    $("div#meditation").fadeOut("500");
     document.getElementById("meditation").style.display = "none";
     $("body").css("overflow", "auto"); //ADD THIS
   });

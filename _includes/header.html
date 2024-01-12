@@ -18,6 +18,11 @@
         <!-- 今日默想经文 -->
         <div id="meditation">
           <div class="card">
+            <div class="card_header">
+              <img src="/image/dove-left.svg"/>
+              <img src="/image/cross.png"/>
+              <img src="/image/dove-right.svg"/>
+            </div>
             <div class="card_content">下 周 推 出 ...</div>
             <div class="card_footer">
               <div class="card_footer_left">今日默想</div>
@@ -101,12 +106,17 @@
     display: flex;
     flex-direction: column;
     width: 90vw;
-    height: 50%;
+    height: 60%;
     flex-wrap: wrap;
     background: #a62121;
     border-radius: 20px;
     justify-content: center;
   }
+  
+  #meditation .card .card_header{
+    justify-content: space-between;
+  }
+
   #meditation .card .card_content{
     font-size: 1.3rem;
     width: 100%;
@@ -127,6 +137,7 @@
     justify-content: space-between;
   }
 
+  #meditation .card .card_header,
   #meditation .card .card_footer,
   #meditation .card .card_footer .card_footer_left,
   #meditation .card .card_footer .card_footer_right
