@@ -4,7 +4,7 @@
       <header class="header">
 
         <div class="logo">
-          <div class="logo__link" onclick="showMeditation()">
+          <div class="logo__link" id="meditation_img" >
             {%if site.data.settings.logo %}
             <!-- <img class="logo__image" src="{{ site.baseurl }}/image/{{ site.data.settings.logo }}" -->
             <img class="logo__image" src="/image/bible.svg">
@@ -20,7 +20,7 @@
           <div class="card">
             <div class="card_header">今&nbsp;日&nbsp;默&nbsp;想&nbsp;经&nbsp;文</div>
             <div class="content">下 周 推 出 ...</div>
-            <div class="closeBtn" onclick="hideMeditation()">关&nbsp;&nbsp;&nbsp;闭</div>
+            <div class="closeBtn" id="meditation_card_closeBtn">关&nbsp;&nbsp;&nbsp;闭</div>
           </div>
         </div>
 
@@ -72,14 +72,6 @@
     </div>
   </div>
 </div>
-<script>
- function showMeditation(){
-   document.getElementById('meditation').style.display = 'flex';
- } 
- function hideMeditation(){
-   document.getElementById('meditation').style.display = 'none';
- }
-</script>
 <style>
   #meditation{
     position: fixed;
