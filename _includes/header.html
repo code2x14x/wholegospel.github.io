@@ -35,6 +35,10 @@
                 {% endif %}
               {% endfor %}
               {{flag}}
+              {% if "A" == "A" %}
+                {% assign flag = true %}
+              {% endif %}
+              {{flag}}
               <div class="card_content_script">
                 {% if flag %}
                 <p class="verses">{{ item.verses }}</p>
