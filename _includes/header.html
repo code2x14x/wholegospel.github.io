@@ -16,7 +16,8 @@
         </div>
 
         <div id="meditation" onclick="hideMeditation()">
-          下周推出！
+          <button class="closeBtn">关闭</button>
+          <p class="content">下 周 推 出 ...</p>
         </div>
 
         <nav class="main-nav">
@@ -87,5 +88,14 @@
     display: none;
     justify-content: center;
     align-items: center;
+    color: #fff;
+  }
+  #meditation .content{
+    font-size: 2rem;
+  }
+  #meditation .closeBtn{
+    position: relative;
+    top: 20px;
+    right: 20px;;
   }
 </style>
