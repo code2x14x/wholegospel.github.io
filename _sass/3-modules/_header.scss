@@ -36,13 +36,14 @@
     letter-spacing: 0.5px;
     color: $dark;
     text-decoration: none;
+    padding-top: 20px;
     &:hover {
       color: $black;
     }
   }
   
   .logo__image {
-    max-height: 70px;
+    max-width: 72px;
   }
 }
 

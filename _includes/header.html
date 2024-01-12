@@ -4,14 +4,19 @@
       <header class="header">
 
         <div class="logo">
-          <a class="logo__link" href="{{site.baseurl}}/">
+          <div class="logo__link" onclick="showMeditation()">
             {%if site.data.settings.logo %}
             <!-- <img class="logo__image" src="{{ site.baseurl }}/image/{{ site.data.settings.logo }}" -->
-              <!-- alt="{{ site.data.settings.title }}"> -->
+            <img class="logo__image" src="/image/bible.svg">
+            <div style="font-size: 12px; font-weight: 400;">今日默想经句</div>
             {% else %}
             <!-- {{ site.data.settings.title }} -->
             {% endif %}
-          </a>
+          </div>
+        </div>
+
+        <div id="meditation" onclick="hideMeditation()">
+          下周推出！
         </div>
 
         <nav class="main-nav">
@@ -62,3 +67,25 @@
     </div>
   </div>
 </div>
+<script>
+ function showMeditation(){
+   document.getElementById('meditation').style.display = 'flex';
+ } 
+ function hideMeditation(){
+   document.getElementById('meditation').style.display = 'none';
+ }
+</script>
+<style>
+  .meditation{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
