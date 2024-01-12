@@ -27,8 +27,9 @@
               {% assign meditation = site.data.meditation %}
               {% assign today = site.time | date: '%Y-%m-%d' %}
               {% assign flag = false %}
-              {{toady}} - {{flag}}
+              {{today}} - {{flag}}
               {% for item in meditation %}
+              {{item.id}} - {{item.id == today}}
                 {% if item.id == today %}
                   {% assign flag = true %}
                 {% endif %}
