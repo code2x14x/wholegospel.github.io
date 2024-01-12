@@ -43,13 +43,15 @@
                 {% endif %}
               </div>
             </div>
-            <div class="card_instruction" style="padding: 0 1.2rem; font-size: 1rem; background: #00000070;">默想六部曲：静默、诵读、默想、祈祷、默观、记录</div>
             <div class="card_footer">
-              <div class="card_footer_left" style="font-size: 1rem;">
-                <div style="letter-spacing: 2px; margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div>
-                <div id="card_footer_left_clock" style="letter-spacing: 2px;"></div>
-              </div>
+              <div class="card_instruction" style="padding: 0 1.2rem; font-size: 1rem; background: #00000070;">默想六部曲：静默、诵读、默想、祈祷、默观、记录</div>
+              <div class="card_footer_bottom">
+                <div class="card_footer_left" style="font-size: 1rem;">
+                  <div style="letter-spacing: 2px; margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div>
+                  <div id="card_footer_left_clock" style="letter-spacing: 2px;"></div>
+                </div>
               <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
+              </div>
             </div>
           </div>
         </div>
@@ -161,13 +163,7 @@
   }
 
   #meditation .card .card_content .card_content_script {
-    background: #00000047;
     padding: 2rem 1rem;
-    text-align: justify;
-    min-height: 3rem;
-    font-size: 18px;
-    margin: 1rem;
-    border: 6px solid #ffffff85;
   }
 
   #meditation .card .card_content .card_content_script p.range {
