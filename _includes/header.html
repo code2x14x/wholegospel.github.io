@@ -28,10 +28,12 @@
               {% assign today = site.time | date: '%Y-%m-%d' %}
               {% assign flag = false %}
               {{flag}}
+              {% today_verse = "" %}
               {% for item in meditation %}
                 {% if item.id == today %}
                   [{{item.id}}] -> [{{today}}]
                   {% assign flag = true %}
+                  {% assign today_verse = item %}
                 {% endif %}
               {% endfor %}
               {{flag}}
@@ -42,8 +44,8 @@
               {{flag}}
               <div class="card_content_script">
                 {% if flag %}
-                <p class="verses">{{ item.verses }}</p>
-                <p class="range">{{ item.range }}</p>
+                <p class="verses">{{ today_verse.verses }}</p>
+                <p class="range">{{ today_verse.range }}</p>
                 {% else %}
                 <p class="verses">下周推出...</p>
                 <p class="range"></p>
