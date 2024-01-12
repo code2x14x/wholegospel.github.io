@@ -16,11 +16,11 @@
         </div>
 
         <!-- 今日默想经文 -->
-        <div id="meditation" onclick="hideMeditation()">
+        <div id="meditation">
           <div class="card">
             <div class="card_header">今&nbsp;日&nbsp;默&nbsp;想&nbsp;经&nbsp;文</div>
             <div class="content">下 周 推 出 ...</div>
-            <div class="closeBtn">关&nbsp;&nbsp;&nbsp;闭</div>
+            <div class="closeBtn" onclick="hideMeditation()">关&nbsp;&nbsp;&nbsp;闭</div>
           </div>
         </div>
 
@@ -86,7 +86,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90vh;
     background-color: rgba(0,0,0,0.5);
     z-index: 9999;
     display: none;
@@ -97,7 +97,7 @@
     display: flex;
     flex-direction: column;
     width: 90vw;
-    height: 90vh;
+    height: 100%;
     flex-wrap: wrap;
     background: #fff;
     border-radius: 20px;
@@ -114,7 +114,7 @@
   #meditation .card .card_header,
   #meditation .card .closeBtn{
     width: 100%;
-    height: 7rem;
+    height: 5rem;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
