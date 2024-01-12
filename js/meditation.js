@@ -26,6 +26,7 @@ $(document).ready(function () {
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('card_footer_left_clock').innerHTML =  h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
   }
   
   function checkTime(i) {
@@ -33,5 +34,5 @@ $(document).ready(function () {
     return i;
   }
 
-  setTimeout(startTime, 1000);
+  startTime();
 });
