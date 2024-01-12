@@ -25,24 +25,27 @@
             </div>
             <div class="card_content">
               {% assign meditation = site.data.meditation %}
-              {% assign today = site.time | date: '%Y/%m/%d' %}
+              {% assign today = site.time | date: '%Y-%m-%d' %}
+              {% for item in meditation %}
+                {% if item.id == today %}
+                  {% assign contains = 1 %}
+                {% endif %}
+              {% endfor %}
               <div class="card_content_script">
-                {% for item in meditation %}
-                  {% if item.id == today %}
-                  <p class="verses">{{ item.verses}}</p>
-                  <p class="range">{{ item.range }}</p>
-                  {% else %}
-                  <p class="verses">下周推出...</p>
-                  <p class="range"></p>
-                  {% endif %}
-                {% endfor %}
+                {% if contains == 1 %}
+                <p class="verses">{{ item.verses }}</p>
+                <p class="range">{{ item.range }}</p>
+                {% else %}
+                <p class="verses">下周推出...</p>
+                <p class="range"></p>
+                {% endif %}
               </div>
             </div>
-            <div class="card_instruction" style="padding: 0 1.2rem; font-size: 1rem;">静默 > 诵读 > 默想 > 祈祷 > 默观 > 记录</div>
+            <div class="card_instruction" style="padding: 0 1.2rem; font-size: 1rem;">默想六部曲：静默、诵读、默想、祈祷、默观、记录</div>
             <div class="card_footer">
               <div class="card_footer_left">
                 <div style="letter-spacing: 2px; margin-right: 10px; font-size: 1rem;">今日默想</div>
-                <div style="letter-spacing: 2px;">{{ site.time | date: '%Y/%m/%d'}}</div>
+                <div style="letter-spacing: 2px; font-size: 1rem;">{{ site.time | date: '%Y/%m/%d'}}</div>
               </div>
               <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
             </div>
