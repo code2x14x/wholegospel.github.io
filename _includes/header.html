@@ -8,7 +8,7 @@
             {%if site.data.settings.logo %}
             <!-- <img class="logo__image" src="{{ site.baseurl }}/image/{{ site.data.settings.logo }}" -->
             <img class="logo__image" src="/image/bible.svg">
-            <div style="font-size: 12px; font-weight: 400;">今日默想经句</div>
+            <div style="font-size: 12px; font-weight: 400;">今日默想</div>
             {% else %}
             <!-- {{ site.data.settings.title }} -->
             {% endif %}
@@ -18,9 +18,11 @@
         <!-- 今日默想经文 -->
         <div id="meditation">
           <div class="card">
-            <div class="card_header">今&nbsp;日&nbsp;默&nbsp;想&nbsp;经&nbsp;文</div>
-            <div class="content">下 周 推 出 ...</div>
-            <div class="closeBtn" id="meditation_card_closeBtn">关&nbsp;&nbsp;&nbsp;闭</div>
+            <div class="card_content">下 周 推 出 ...</div>
+            <div class="card_footer">
+              <div class="card_header">今日默想</div>
+              <div class="card_closeBtn" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
+            </div>
           </div>
         </div>
 
@@ -89,7 +91,7 @@
     width: 100vw;
     max-width: 500px;
     height: 100vh;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgb(255 255 255 / 70%);
     z-index: 9999;
     display: none;
     justify-content: center;
@@ -101,21 +103,22 @@
     width: 90vw;
     height: 50%;
     flex-wrap: wrap;
-    background: #fff;
+    background: #a62121;
     border-radius: 20px;
     justify-content: center;
   }
-  #meditation .card .content{
+  #meditation .card .card_content{
     font-size: 1.3rem;
     width: 100%;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #8c8c8c;
+    color: #fff;
+    padding-bottom: 20px;
   }
   #meditation .card .card_header,
-  #meditation .card .closeBtn{
+  #meditation .card .card_closeBtn{
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -126,13 +129,14 @@
     padding: 0.7rem 1rem;
   }
 
-  #meditation .card .card_header{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+  #meditation_card_closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  #meditation .card .closeBtn{
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+  #meditation_card_closeBtn img{
+    width: 1rem;
+    height: 1rem;
   }
 </style>
