@@ -27,10 +27,10 @@
               {% assign meditation = site.data.meditation %}
               {% assign today = site.time | date: '%Y-%m-%d' %}
               {% assign flag = false %}
-              {{today}} - {{flag}}
+              {{flag}}
               {% for item in meditation %}
-              [{{item.id}}] -> [{{today}}]
                 {% if item.id == today %}
+                  [{{item.id}}] -> [{{today}}]
                   {% assign flag = true %}
                 {% endif %}
               {% endfor %}
