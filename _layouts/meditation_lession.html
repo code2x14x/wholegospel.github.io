@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
+
+  <!-- begin content -->
+  <main class="content the_purpose_driven_life_content" aria-label="Content">
+
+    <div class="container">
+      <div class="row">
+        <!-- begin post -->
+        <article class="post {{ no-image }} col col-8 col-t-10 col-m-12">
+
+          <div class="post__content">
+
+            {% if page.audio %}
+              <div id="v-player">
+                <audio id="audio-track" type="audio/mp3" loop preload="meta"></audio>
+                <div id="podcast-player">
+                  <div id="controls">
+                    <div class="first-part">
+                      <i id="repeat" class="fas fa-sync-alt"></i>
+                      <i id="prev-15" class="fas fa-undo-alt"></i>
+                      <i id="play" class="fa fa-play"></i>
+                      <i id="pause" class="fa fa-pause"></i>
+                      <i id="next-15" class="fas fa-redo-alt"></i>
+                      <i id="count-down" class="fas fa-clock"></i>
+                    </div>
+                    <div class="second-part">
+                      <div class="time current">0:00</div>
+                      <span id='loop-indicator'></span>
+                      <span id='track-title'></span>
+                      <span id='count-down-timer'></span>
+                      <div id="end-time" class="time till-end">0:00</div>
+                    </div>
+                    <div class="third-part">
+                      <div class="progress-bar">
+                        <div class="default-bar"></div>
+                        <div class="fill-bar"></div>
+                        <input type="range" id="seek" value="0" min="0" max="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {% assign audio = page.audio %}
+              {% assign audioTitle = page.audioTitle %}
+              <div id="teachingAudio" style="display: none;" class="audio teaching bars" 
+                  data-title="{{ audioTitle }}"
+                  data-file="{{ audio }}"><i class="fas fa-book-alt"></i>《{{ audioTitle }}》
+                <span class="bar n1"></span><span class="bar n2"></span><span class="bar n3"></span><span class="bar n4"></span>
+              </div>
+            {% endif %}
+
+            {{ content }}
+          </div>
+
+          <div class="slogan-wrapper-1">
+            <div class="slogan-wrapper-2">
+              <div class="slogan">
+                <span>上</span> <span>帝</span> <span>让</span> <span>你</span>
+                <span>成</span> <span>为</span> <span>创</span> <span>造</span>
+                <span>故</span> <span>事</span> <span>的</span> <span>主</span>
+                <span>人</span> <span>公</span> <span>！</span>
+              </div>
+            </div>
+          </div>
+
+        </article>
+        <!-- end post -->
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="post__navigation"></div>
+    </div>
+  </main>
+  <!-- end content -->
+
+  <div class="top ion ion-ios-arrow-up " title="Top"></div>
+
+  {% include search.html %}
+  {% include footer.html %}
+  {% include script_popup.html %}
+  {% include javascripts.html %}
+
+</body>
+
+</html>
