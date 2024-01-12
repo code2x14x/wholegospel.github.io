@@ -30,15 +30,13 @@
               {{the_flag}}
               {% assign today_verse = "" %}
               {% for item in meditation %}
-                {% if item.id == today %}
-                  {% assign the_flag = true %}
-                  {% assign today_verse = item %}
-                {% else %}
+                {% if item.id contains today %}
                   {% assign the_flag = true %}
                   {% assign today_verse = item %}
                 {% endif %}
                 {{the_flag}}
               {% endfor %}
+              <p>contains</p>
               <div class="card_content_script">
                 {% if the_flag %}
                 <p class="verses">{{ today_verse.verses }}</p>
