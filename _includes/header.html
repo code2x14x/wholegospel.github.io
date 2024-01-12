@@ -20,8 +20,8 @@
           <div class="card">
             <div class="card_content">下 周 推 出 ...</div>
             <div class="card_footer">
-              <div class="card_header">今日默想</div>
-              <div class="card_closeBtn" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
+              <div class="card_footer_left">今日默想</div>
+              <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
             </div>
           </div>
         </div>
@@ -118,24 +118,26 @@
     padding-bottom: 20px;
   }
   #meditation .card .card_header,
-  #meditation .card .card_closeBtn{
+  #meditation .card .card_footer{
     width: 100%;
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
     display: flex;
-    background: linear-gradient(225deg, #009688, #4CAF50);
     color: #fff;
     padding: 0.7rem 1rem;
   }
 
-  #meditation_card_closeBtn {
+  #meditation .card .card_footer,
+  #meditation .card .card_footer .card_footer_left,
+  #meditation .card .card_footer .card_footer_right
+  {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  #meditation_card_closeBtn img{
+  #meditation .card .card_footer .card_footer_right img{
     width: 1rem;
     height: 1rem;
   }
