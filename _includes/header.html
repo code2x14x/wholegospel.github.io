@@ -26,13 +26,16 @@
             <div class="card_content">
               {% assign meditation = site.data.meditation %}
               {% assign today = site.time | date: '%Y-%m-%d' %}
+              {% assign flag = false %}
+              {{toady}} - {{flag}}
               {% for item in meditation %}
                 {% if item.id == today %}
-                  {% assign flag = 1 %}
+                  {% assign flag = true %}
                 {% endif %}
               {% endfor %}
+              {{flag}}
               <div class="card_content_script">
-                {% if flag == 1 %}
+                {% if flag %}
                 <p class="verses">{{ item.verses }}</p>
                 <p class="range">{{ item.range }}</p>
                 {% else %}
