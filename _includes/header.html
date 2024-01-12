@@ -24,10 +24,19 @@
               <img src="/image/dove-right.png"/>
             </div>
             <div class="card_content">
-              {% assign hymns = site.data.meditation %}
+              {% assign meditation = site.data.meditation %}
               {% assign today = site.time | date: '%Y/%m/%d' %}
-              <div class="card_content_script">{{today}}</div>
-             
+              <div class="card_content_script">
+                {% for item in meditation %}
+                  {% if item.id == today %}
+                  <p class="verses">{{ item.verses}}</p>
+                  <p class="range">{{ item.range }}</p>
+                  {% else %}
+                  <p class="verses">下周推出...</p>
+                  <p class="range"></p>
+                  {% endif %}
+                {% endfor %}
+              </div>
             </div>
             <div class="card_instruction" style="padding: 0 1.2rem; font-size: 1rem;">静默 > 诵读 > 默想 > 祈祷 > 默观 > 记录</div>
             <div class="card_footer">
