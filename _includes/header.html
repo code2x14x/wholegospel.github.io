@@ -16,8 +16,10 @@
         </div>
 
         <div id="meditation" onclick="hideMeditation()">
-          <button class="closeBtn">关闭</button>
-          <p class="content">下 周 推 出 ...</p>
+          <div>
+            <div class="content">下 周 推 出 ...</div>
+            <div class="closeBtn">关&nbsp;&nbsp;&nbsp;闭</div>
+          </div>
         </div>
 
         <nav class="main-nav">
@@ -90,12 +92,34 @@
     align-items: center;
     color: #fff;
   }
-  #meditation .content{
-    font-size: 2rem;
+  #meditation .card {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 20px;
+    justify-content: center;
   }
-  #meditation .closeBtn{
-    position: relative;
-    top: 20px;
-    right: 20px;;
+  #meditation .card .content{
+    font-size: 2rem;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #meditation .card .closeBtn{
+    width: 100%;
+    height: 5em;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    display: flex;
+    background: #75aa38;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #fff;
   }
 </style>
