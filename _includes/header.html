@@ -28,7 +28,7 @@
             <div class="card_footer">
               <div class="card_footer_left">
                 <div style="letter-spacing: 5px;">今日默想</div>
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%Y/%m/%d'}}</time>
+                <div>{{ site.time | date: '%Y/%m/%d'}}</div>
               </div>
               <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
             </div>
