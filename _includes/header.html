@@ -28,11 +28,11 @@
               {% assign today = site.time | date: '%Y-%m-%d' %}
               {% for item in meditation %}
                 {% if item.id == today %}
-                  {% assign contains = 1 %}
+                  {% assign flag = 1 %}
                 {% endif %}
               {% endfor %}
               <div class="card_content_script">
-                {% if contains == 1 %}
+                {% if flag == 1 %}
                 <p class="verses">{{ item.verses }}</p>
                 <p class="range">{{ item.range }}</p>
                 {% else %}
