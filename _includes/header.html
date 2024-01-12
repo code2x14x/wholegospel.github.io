@@ -30,8 +30,8 @@
               {{flag}}
               {% assign today_verse = "" %}
               {% for item in meditation %}
+                  <p>[{{item.id}}] -> [{{today}}]</p>
                 {% if item.id == today %}
-                  [{{item.id}}] -> [{{today}}]
                   {% assign flag = true %}
                   {% assign today_verse = item %}
                   {% break %}
