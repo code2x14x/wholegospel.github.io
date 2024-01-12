@@ -134,16 +134,17 @@
     width: 95vw;
     max-width: 500px;
     height: 70%;
-    box-shadow: 0px 0px 20px #6666669e;
+    box-shadow: 0px 1px 10px 3px #6666665e;
     flex-wrap: wrap;
     background: no-repeat center/cover url(/image/meditation-bg-02.jpg), linear-gradient(138deg, #414850, #131720);
-    border-radius: 20px;
+    border-radius: 14px;
     justify-content: center;
     color: #fff;
   }
   
   #meditation .card .card_header{
     justify-content: space-between;
+    display: none;
   }
 
   #meditation .card .card_header img {
@@ -151,13 +152,16 @@
   }
 
   #meditation .card .card_content{
-    font-size: 1.3rem;
-    width: 100%;
-    flex: 1;
+    background: #00000047;
+    padding: 2rem 1rem;
+    text-align: justify;
+    min-height: 40%;
+    font-size: 18px;
+    margin: 1rem;
+    border: 6px solid #ffffff85;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+    flex-direction: column;
   }
 
   #meditation .card .card_content .card_content_script {
