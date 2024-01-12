@@ -29,7 +29,7 @@
               {% assign flag = false %}
               {{today}} - {{flag}}
               {% for item in meditation %}
-              {{item.id}} - {{item.id == today}}
+              [{{item.id}}] -> [{{today}}]
                 {% if item.id == today %}
                   {% assign flag = true %}
                 {% endif %}
