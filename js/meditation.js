@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#meditation_img").click(function () {
     $("div#meditation").fadeIn("300");
-    document.getElementById("meditation").style.display = "block";
+    document.getElementById("meditation").style.display = "flex";
     $("body").css("overflow", "hidden"); //ADD THIS
   });
 

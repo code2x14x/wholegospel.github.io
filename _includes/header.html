@@ -16,15 +16,15 @@
         </div>
 
         <!-- 今日默想经文 -->
-        {% assign today_meditation_img = site.time | date: '%Y-%m-%d' | append: ".jpg" | prepend: "/image/" %}
+        {% assign today_meditation_img = site.time | date: '%Y-%m-%d' | append: ".jpg" | prepend: "/image/meditation/" %}
         <img src="{{today_meditation_img}}" style="position: absolute; left: -1000px; width: 5px;"/>
         <div id="meditation">
           <img src="{{today_meditation_img}}" style="width: 100vw;"/>
           <div class="meditation_clock">
-              <div style=" margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div>
+              <!-- <div style=" margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div> -->
+              <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
               <div id="card_footer_left_clock"></div>
           </div>
-          <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
         </div>
 
         <nav class="main-nav">
@@ -86,9 +86,10 @@
     right: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255 255 255 / 70%);
+    background-color: rgb(36 36 36 / 79%);
     z-index: 9999;
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -108,6 +109,11 @@
   .card_footer_right {
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    top: 10px;
+    width: 30px;
+  }
+
+  #meditation_card_closeBtn {
+    width: 35px;
   }
 </style>
