@@ -22,8 +22,8 @@
           <img src="{{today_meditation_img}}" style="width: 100vw;"/>
           <div class="meditation_clock">
               <!-- <div style=" margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div> -->
-              <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
               <div id="card_footer_left_clock"></div>
+              <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
           </div>
         </div>
 
@@ -96,21 +96,12 @@
 
   .meditation_clock {
     display: flex;
-    position: absolute;
-    top: 10px;
     letter-spacing: 2px;
     width: 100%;
     padding: 1rem 1.2rem;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-  }
-
-  .card_footer_right {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 30px;
+    padding: 5px 1rem;;
   }
 
   #meditation_card_closeBtn {
