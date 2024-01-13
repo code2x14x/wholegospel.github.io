@@ -16,45 +16,15 @@
         </div>
 
         <!-- 今日默想经文 -->
-        <img src="/image/meditation-bg-02.jpg" style="position: absolute; left: -100px; width: 10px;"/>
+        {% assign today_meditation_img = site.time | date: '%Y-%m-%d' | append: ".jpg" | prepend: "/image/" %}
+        <img src="{{today_meditation_img}}" style="position: absolute; left: -1000px; width: 5px;"/>
         <div id="meditation">
-          <div class="card">
-            <div class="card_header">
-            </div>
-            <div class="card_content">
-              {% assign meditation = site.data.meditation %}
-              {% assign today = site.time | date: '%Y%m%d' | plus: 0 %}
-              {% assign the_flag = false %}
-              {% assign today_verse = "" %}
-              {% for item in meditation %}
-                {% assign item_id = item.id | plus: 0 %}
-                {% if item_id == today %}
-                  {% assign the_flag = true %}
-                  {% assign today_verse = item %}
-                  {% break %}
-                {% endif %}
-              {% endfor %}
-              <div class="card_content_script">
-                {% if the_flag %}
-                <p class="verses">{{ today_verse.verses }}</p>
-                <p class="range">{{ today_verse.range }}</p>
-                {% else %}
-                <p class="verses">下周推出...</p>
-                <p class="range"></p>
-                {% endif %}
-              </div>
-            </div>
-            <div class="card_footer">
-              <div class="card_instruction" style="padding: 0 1.2rem; font-size: 1rem; background: #00000070; width: 100%;">默想六部曲：静默、诵读、默想、祈祷、默观、记录</div>
-              <div class="card_footer_bottom">
-                <div class="card_footer_left" style="font-size: 1rem;">
-                  <div style="letter-spacing: 2px; margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div>
-                  <div id="card_footer_left_clock" style="letter-spacing: 2px;"></div>
-                </div>
-              <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
-              </div>
-            </div>
+          <img src="{{today_meditation_img}}" style="width: 100vw;"/>
+          <div class="meditation_clock">
+              <div style=" margin-right: 10px; ">{{ site.time | date: '%Y/%m/%d'}}</div>
+              <div id="card_footer_left_clock"></div>
           </div>
+          <div class="card_footer_right" id="meditation_card_closeBtn"><img src="/image/close-circle.svg"/></div>
         </div>
 
         <nav class="main-nav">
@@ -109,12 +79,6 @@
   .logo__image{
     width: 40px;
   }
-  #meditation_img {
-    padding-top: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   #meditation{
     position: fixed;
     bottom: 0;
@@ -128,79 +92,22 @@
     justify-content: center;
     align-items: center;
   }
-  #meditation .card {
+
+  .meditation_clock {
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    max-width: 500px;
-    height: 100vh;
-    box-shadow: 0px 1px 10px 3px #6666665e;
-    flex-wrap: wrap;
-    background: no-repeat center/cover url(/image/meditation-bg-02.jpg), linear-gradient(138deg, #414850, #131720);
-    justify-content: space-between;
-    color: #fff;
-  }
-  
-  #meditation .card .card_header{
-    justify-content: space-between;
-    display: none;
-  }
-
-  #meditation .card .card_header img {
-    width: 50px;
-  }
-
-  #meditation .card .card_content{
-    background: #00000047;
-    text-align: justify;
-    min-height: 5rem;
-    font-size: 18px;
-    margin: 1rem;
-    border: 6px solid #ffffff85;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-  #meditation .card .card_content .card_content_script {
-    padding: 2rem 1rem;
-  }
-
-  #meditation .card .card_content .card_content_script p.range {
-    margin: 0;
-    text-align: right;
-    font-size: 16px;
-  }
-
-  #meditation .card .card_header,
-  #meditation .card .card_footer{
+    position: absolute;
+    top: 10px;
+    letter-spacing: 2px;
     width: 100%;
     padding: 1rem 1.2rem;
-  }
-
-  #meditation .card .card_footer{
     justify-content: space-between;
-    flex-direction: column;
+    align-items: center;
     padding: 0;
   }
 
-  #meditation .card .card_header,
-  #meditation .card .card_footer,
-  #meditation .card .card_footer .card_footer_left,
-  #meditation .card .card_footer .card_footer_right
-  {
-    display: flex;
-    align-items: center;
-  }
-
-  #meditation .card .card_footer .card_footer_right img{
-    width: 2rem;
-  }
-
-  #meditation .card .card_footer .card_footer_bottom {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2rem 1rem;
+  .card_footer_right {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 </style>
