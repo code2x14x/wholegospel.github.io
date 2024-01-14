@@ -8,7 +8,7 @@
             {%if site.data.settings.logo %}
             <!-- <img class="logo__image" src="{{ site.baseurl }}/image/{{ site.data.settings.logo }}" -->
             <img class="logo__image" src="/image/bush.png">
-            <div style="font-size: 12px; font-weight: 400; line-height: 12px;">今日默想</div>
+            <div style="font-size: 12px; font-weight: 400; line-height: 1rem;">今日默想</div>
             {% else %}
             <!-- {{ site.data.settings.title }} -->
             {% endif %}
@@ -19,10 +19,11 @@
         {% assign today_meditation_img = site.time | date: '%Y-%m-%d' | append: ".jpg" | prepend: "/image/meditation/" %}
         <img src="{{today_meditation_img}}" style="position: absolute; left: -1000px; width: 5px;"/>
         <div id="meditation">
-          <div style="position: relative; width: 80%">
+          <div style="position: relative; width: 90%; max-width: 500px;">
             <img src="{{today_meditation_img}}" style="width: 100vw;"/>
             <img id="meditation_card_closeBtn" src="/image/close.png"/>
           </div>
+          <div style="color: #fff; font-size: 1.1rem;">长按图片可以保存或转发</div>
         </div>
 
         <nav class="main-nav">
@@ -90,7 +91,6 @@
     left: 0;
     right: 0;
     width: 100vw;
-    max-width: 500px;
     height: 100vh;
     background-color: rgb(36 36 36 / 79%);
     z-index: 9999;
