@@ -19,7 +19,7 @@
         {% assign today_meditation_img = site.time | date: '%Y-%m-%d' | append: ".jpg" | prepend: "/image/meditation/" %}
         <img src="{{today_meditation_img}}" style="position: absolute; left: -1000px; width: 5px;"/>
         <div id="meditation">
-          <div style="position: relative;">
+          <div style="position: relative; width: 80%">
             <img src="{{today_meditation_img}}" style="width: 100vw;"/>
             <img id="meditation_card_closeBtn" src="/image/close.png"/>
           </div>
@@ -101,9 +101,9 @@
   }
 
   #meditation_card_closeBtn {
-    width: 35px;
+    width: 30px;
     position: absolute;
     right: 20px;
-    bottom: 15px;
+    bottom: 10px;
   }
 </style>
