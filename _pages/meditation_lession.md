@@ -6,3 +6,8 @@ audio: https://typora-1259024198.cos.ap-beijing.myqcloud.com/wg/audios/%E9%BB%98
 audioTitle: 默想课
 ---
 
+我要默想你的训词，
+
+看重你的道路。
+
+—— 诗篇 119:15
