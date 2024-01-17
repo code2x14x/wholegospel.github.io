@@ -17,13 +17,11 @@
 
         <!-- 今日默想经文 -->
         {% assign today_meditation_img = site.time | date: '%Y-%m-%d' | append: ".jpg" | prepend: "/image/meditation/" %}
-        {% assign meditation_calendar_img = site.time | date: '%Y-%m' | append: ".jpg" | prepend: "/image/meditation/" %}
         <img src="{{today_meditation_img}}" style="position: absolute; left: -1000px; width: 5px;"/>
         <div id="meditation">
           <div style="position: relative; width: 90%; max-width: 500px;">
             <img id="meditation_img" src="{{today_meditation_img}}" style="width: 100vw;"/>
-            <img id="meditation_calendar_img" src="{{meditation_calendar_img}}" style="width: 100vw; display: none;"/>
-            <img id="meditation_card_closeBtn" src="/image/close.png" class="rotatingx"/>
+            <img src="{{today_meditation_img}}" style="width: 100vw;"/>
           </div>
           <div 
           style="color: #fff; 
