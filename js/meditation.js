@@ -6,26 +6,26 @@ $(document).ready(function () {
   });
 
   $(document).on("click", "#meditation_card_closeBtn", function () {
-    if(document.getElementById("meditation_calendar_img").style.display === "none"){
+    // if(document.getElementById("meditation_calendar_img").style.display === "none"){
       $("div#meditation").fadeOut("500");
       // document.getElementById("meditation").style.display = "none";
       $("body").css("overflow", "auto"); //ADD THIS
-    } else {
-      document.getElementById("meditation_calendar_img").style.display = "none";
-      $("#meditation_img").fadeIn("300");
-    }
+    // } else {
+      // document.getElementById("meditation_calendar_img").style.display = "none";
+      // $("#meditation_img").fadeIn("300");
+    // }
   });
 
-  $(document).on("click", "#meditation_calendar_btn", function () {
-    if(document.getElementById("meditation_calendar_img").style.display === "none"){
-      $("#meditation_calendar_img").fadeIn("500");
-      //document.getElementById("meditation").style.display = "flex";
-      //$("body").css("overflow", "hidden"); //ADD THIS
-      $("#meditation_img").fadeOut("500");
-    }
-    //$("div#meditation").fadeOut("500");
-    //$("body").css("overflow", "auto"); //ADD THIS
-  });
+  // $(document).on("click", "#meditation_calendar_btn", function () {
+  //   if(document.getElementById("meditation_calendar_img").style.display === "none"){
+  //     $("#meditation_calendar_img").fadeIn("500");
+  //     //document.getElementById("meditation").style.display = "flex";
+  //     //$("body").css("overflow", "hidden"); //ADD THIS
+  //     $("#meditation_img").fadeOut("500");
+  //   }
+  //   //$("div#meditation").fadeOut("500");
+  //   //$("body").css("overflow", "auto"); //ADD THIS
+  // });
 
 
   function startTime() {
