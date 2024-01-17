@@ -6,10 +6,27 @@ $(document).ready(function () {
   });
 
   $(document).on("click", "#meditation_card_closeBtn", function () {
-    $("div#meditation").fadeOut("500");
-    // document.getElementById("meditation").style.display = "none";
-    $("body").css("overflow", "auto"); //ADD THIS
+    if(document.getElementById("meditation_calendar_img").style.display === "none"){
+      $("div#meditation").fadeOut("500");
+      // document.getElementById("meditation").style.display = "none";
+      $("body").css("overflow", "auto"); //ADD THIS
+    } else {
+      document.getElementById("meditation_calendar_img").style.display = "none";
+      $("div#meditation_img").fadeIn("300");
+    }
   });
+
+  $(document).on("click", "#meditation_calendar_btn", function () {
+    if(document.getElementById("meditation_calendar_img").style.display === "none"){
+      $("div#meditation_calendar_img").fadeIn("500");
+      //document.getElementById("meditation").style.display = "flex";
+      //$("body").css("overflow", "hidden"); //ADD THIS
+      $("div#meditation_img").fadeOut("500");
+    }
+    //$("div#meditation").fadeOut("500");
+    //$("body").css("overflow", "auto"); //ADD THIS
+  });
+
 
   function startTime() {
     const today = new Date();
